@@ -27,6 +27,11 @@ public class PlayerMovement : MonoBehaviour
         TrackInput();
     }
 
+    void FixedUpdate()
+    {
+        MovePlayer();
+    }
+
     void TrackInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -35,7 +40,8 @@ public class PlayerMovement : MonoBehaviour
 
     void MovePlayer()
     {
-        
+        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
     }
 
 
