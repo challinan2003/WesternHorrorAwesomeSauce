@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 734753319}
   - component: {fileID: 734753318}
   - component: {fileID: 734753317}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,15 +582,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 7
-  groundDrag: 5
-  jumpForce: 12
-  jumpCooldown: 0.25
-  airMultiplier: 0.4
-  playerHeight: 2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  jumpKey: 32
   orientation: {fileID: 202053308}
 --- !u!54 &1073019325
 Rigidbody:
