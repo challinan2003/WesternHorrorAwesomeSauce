@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
     bool readyToJump;
 
     [Header("Ground Check")]
-    public float playerHeight;
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
     public LayerMask whatIsGround;
     bool grounded;
 
@@ -36,16 +37,17 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
+        readyToJump = true;
     }
 
     void Update()
     {
         //check if player is grounded 
-        grounded = Physics.Raycast(transform.position, UnityEngine.Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+        grounded = Physics.CheckSphere(groundCheck.position, groundDistance, whatIsGround);
 
         TrackInput();
         SpeedControl();
-        //Debug.Log(grounded);
 
         //handle drag
         if (grounded)
@@ -65,12 +67,13 @@ public class PlayerMovement : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         //queue jump 
-        if (readyToJump && Input.GetKey(jumpKey) && grounded)
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
-            Debug.Log("jumping");
             readyToJump = false;
 
             Jump();
+
+            Invoke(nameof(ResetJump), jumpCooldown);
         }
     }
 
@@ -110,4 +113,5 @@ public class PlayerMovement : MonoBehaviour
     {
         readyToJump = true;
     }
+
 }
