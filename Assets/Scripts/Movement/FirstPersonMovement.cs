@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -7,7 +8,6 @@ public class FirstPersonMovement : MonoBehaviour
     public float ySens;
 
     public Transform orientation;
-
     float xRotation;
     float yRotation;
 
@@ -33,7 +33,13 @@ public class FirstPersonMovement : MonoBehaviour
 
         //rotate camera
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+
+
         //rotate player along y axis
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+
+
+        //Gun.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0);
+        
     }
 }
