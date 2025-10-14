@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 1115016866546730172}
   - component: {fileID: 5614091194951611336}
   - component: {fileID: 3904284925613203369}
-  - component: {fileID: 2921618590143321721}
-  - component: {fileID: -3886141641861734019}
+  - component: {fileID: -3179975599351091016}
   m_Layer: 0
   m_Name: Cigs
   m_TagString: Untagged
@@ -107,13 +106,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2921618590143321721
+--- !u!114 &-3179975599351091016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,20 +121,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3854005655955732964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98dabe232b8a3a644a018cfb258660a4, type: 3}
+  m_Script: {fileID: 11500000, guid: b5ec162acc48b964898cc869bc776cc2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemController
-  Item: {fileID: 11400000, guid: 2ea8daff113b4b24e939d0bb4ed3b6b8, type: 2}
---- !u!114 &-3886141641861734019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3854005655955732964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd9c7f457bd9b0a4099a953a020a0e44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
-  Item: {fileID: 11400000, guid: 2ea8daff113b4b24e939d0bb4ed3b6b8, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  itemName: Pack of Cigarettes
+  quantity: 1
+  sprite: {fileID: 0}

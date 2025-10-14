@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 774314448317964625}
   - component: {fileID: 3489714077179509755}
   - component: {fileID: 4387342580043672944}
-  - component: {fileID: -506852795161173190}
-  - component: {fileID: 3100188729017204096}
+  - component: {fileID: 8579804595089139224}
   m_Layer: 0
   m_Name: Bullets
   m_TagString: Untagged
@@ -107,13 +106,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-506852795161173190
+--- !u!114 &8579804595089139224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,20 +121,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7752798975949527886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98dabe232b8a3a644a018cfb258660a4, type: 3}
+  m_Script: {fileID: 11500000, guid: b5ec162acc48b964898cc869bc776cc2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemController
-  Item: {fileID: 11400000, guid: 7253928d63000ff4caa1a342dce73d45, type: 2}
---- !u!114 &3100188729017204096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7752798975949527886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd9c7f457bd9b0a4099a953a020a0e44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
-  Item: {fileID: 11400000, guid: 7253928d63000ff4caa1a342dce73d45, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  itemName: Bullets
+  quantity: 6
+  sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
