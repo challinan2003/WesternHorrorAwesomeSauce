@@ -1,32 +1,42 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class DialogueSystem : MonoBehaviour
 {
 
-    //public Camera myCamera;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private string selectableTag = "Selectable";
+    [SerializeField] private Material highlightMaterial;
+    [SerializeField] private Material defaultMaterial;
 
-
+    private Transform _selection;
     // Update is called once per frame
     void Update()
     {
-        //get the mouse position
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (_selection != null)
+        {
+            var selectionRenderer = _selection.GetComponent<Renderer>();
+            selectionRenderer.material = defaultMaterial;
+            _selection = null;
+        }
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         //Debug.DrawRay(myCamera.transform.position, mousePosition-myCamera.transform.position, Color.green);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
             var selection = hit.transform;
-            var selectionRenderer = selection.GetComponent<Renderer>();
-            if (selectionRenderer != null)
+            if (selection.CompareTag(selectableTag))
             {
-                Debug.Log("we hit something");
+                if (Input.GetMouseButtonDown(0))
+                {
+                    var selectionRenderer = selection.GetComponent<Renderer>();
+                    if (selectionRenderer != null)
+                    {
+                        selectionRenderer.material = highlightMaterial;
+                    }
+                    _selection = selection;
+                }
             }
         }
     }
