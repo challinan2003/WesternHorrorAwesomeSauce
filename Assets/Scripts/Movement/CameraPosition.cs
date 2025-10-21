@@ -6,6 +6,5 @@ public class CameraPosition : MonoBehaviour
     void Update()
     {
         transform.position = cameraPosition.position;
-        Debug.Log(cameraPosition);
     }
 }
