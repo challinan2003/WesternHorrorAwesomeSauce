@@ -10,12 +10,19 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
 
+    public GameObject Letter;
+
+
+
+    public Object itemField;
+
     private Transform _selection;
     // Update is called once per frame
     void Update()
     {
         if (_selection != null)
         {
+            //deactivate dialogue
             var selectionRenderer = _selection.GetComponent<Renderer>();
             selectionRenderer.material = defaultMaterial;
             _selection = null;
@@ -30,15 +37,16 @@ public class DialogueSystem : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    // activates dialogue
                     var selectionRenderer = selection.GetComponent<Renderer>();
                     if (selectionRenderer != null)
                     {
-                        selectionRenderer.material = highlightMaterial;
+                            Debug.Log("active letter");
+                           Letter.SetActive(true);
+                        }
                     }
                     _selection = selection;
                 }
             }
         }
     }
-
-}
