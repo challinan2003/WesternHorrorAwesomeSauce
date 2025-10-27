@@ -2,51 +2,100 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using System.ComponentModel.Design;
 
 public class DialogueSystem : MonoBehaviour
 {
 
-    [SerializeField] private string selectableTag = "Selectable";
+    [SerializeField] private string Letter1Tag = "Letter";
+    [SerializeField] private string Letter2Tag = "Letter2";
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
 
     public GameObject Letter;
+    public GameObject Letter2;
 
-
+    public int Letter1SFX = 0;
+     public int Letter2SFX = 0;
 
     public Object itemField;
+    public GameObject fpsController;
 
     private Transform _selection;
+    public GameObject SFXObject;
+
     // Update is called once per frame
+
     void Update()
     {
-        if (_selection != null)
-        {
-            //deactivate dialogue
-            var selectionRenderer = _selection.GetComponent<Renderer>();
-            selectionRenderer.material = defaultMaterial;
-            _selection = null;
-        }
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
+        //SFXObject = GameObject.Find("SFXOneShotPrefab");
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         //Debug.DrawRay(myCamera.transform.position, mousePosition-myCamera.transform.position, Color.green);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
             var selection = hit.transform;
-            if (selection.CompareTag(selectableTag))
+            if (selection.CompareTag(Letter1Tag))
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    // activates dialogue
-                    var selectionRenderer = selection.GetComponent<Renderer>();
-                    if (selectionRenderer != null)
+                    if (SFXObject == null)
                     {
+                        // activates dialogue
+                        var selectionRenderer = selection.GetComponent<Renderer>();
+                        if (selectionRenderer != null)
+                        {
                             Debug.Log("active letter");
-                           Letter.SetActive(true);
+                            Letter.SetActive(true);
+                            //Time.timeScale = 0;
+                            SoundManager.instance.PlaySFX(Letter1SFX);
+                            StartDialogue();
                         }
                     }
                     _selection = selection;
                 }
             }
+            if (selection.CompareTag(Letter2Tag))
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (SFXObject == null)
+                    {
+                        // activates dialogue
+                        var selectionRenderer = selection.GetComponent<Renderer>();
+                        if (selectionRenderer != null)
+                        {
+                            Debug.Log("active letter");
+                            Letter2.SetActive(true);
+                            //Time.timeScale = 0;
+                            SoundManager.instance.PlaySFX(Letter2SFX);
+                            StartDialogue();
+                        }
+                    }
+                    _selection = selection;
+                }
+            }
+            else
+            {
+                
+            }
         }
     }
+
+    public void EndDialogue()
+    {
+        Destroy(SFXObject);
+       fpsController.GetComponent<FirstPersonMovement>().enabled = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
+    }
+    
+    public void StartDialogue()
+    {
+      fpsController.GetComponent<FirstPersonMovement>().enabled = false;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+  
+    }
+}

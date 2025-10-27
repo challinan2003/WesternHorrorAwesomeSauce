@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Selectable
   - Letter
+  - Letter2
   layers:
   - Default
   - TransparentFX
