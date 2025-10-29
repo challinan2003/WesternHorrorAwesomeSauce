@@ -88,14 +88,14 @@ public class DialogueSystem : MonoBehaviour
         Destroy(SFXObject);
        fpsController.GetComponent<FirstPersonMovement>().enabled = true;
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
     }
     
     public void StartDialogue()
     {
       fpsController.GetComponent<FirstPersonMovement>().enabled = false;
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
   
     }
 }

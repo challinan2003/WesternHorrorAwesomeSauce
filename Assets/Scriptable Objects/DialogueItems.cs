@@ -7,4 +7,6 @@ public class DialogueItems : ScriptableObject
 {
     public Object Item;
     public Object itemModel;
+
+    
 }
