@@ -88,7 +88,7 @@ public class DialogueSystem : MonoBehaviour
         Destroy(SFXObject);
        fpsController.GetComponent<FirstPersonMovement>().enabled = true;
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     
     public void StartDialogue()
