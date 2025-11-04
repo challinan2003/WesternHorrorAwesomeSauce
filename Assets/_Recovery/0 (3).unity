@@ -341,7 +341,7 @@ PrefabInstance:
       addedObject: {fileID: 965162019}
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 965162018}
+      addedObject: {fileID: 965162022}
   m_SourcePrefab: {fileID: 100100000, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
 --- !u!43 &175019451
 Mesh:
@@ -1307,6 +1307,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f06b4d06e0931f45aa9c2624cc64d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Patrol
+  waypoints:
+  - {fileID: 614605178}
+  - {fileID: 302000941}
+  - {fileID: 1014416712}
+  - {fileID: 945426996}
+  _currentWaypointIndex: 0
+  _speed: 1.5
+  _waitTime: 0.2
+  _waitCounter: 0
+  _waiting: 0
 --- !u!135 &488104535
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3451,43 +3461,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
   m_PrefabInstance: {fileID: 160095424}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &965162018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965162017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: -9145886953487815686, guid: b053417c46943b744a42d752161abe42, type: 2}
-  m_BlackboardVariableOverridesList:
-  - rid: 6551914416717955196
-  - rid: 6551914416717955197
-  m_IsInitialised: 0
-  m_IsStarted: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 6551914416717955196
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 1
-          m_Value1: 0
-        Name: Self
-        m_Value: {fileID: 965162017}
-    - rid: 6551914416717955197
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 4230781991643567171
-          m_Value1: 1812359338533089803
-        Name: Target
-        m_Value: {fileID: 1073019322}
 --- !u!195 &965162019
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3532,6 +3505,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &965162022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965162017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b2be2169c0cd2445abbfeb69ba4bf11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  agent: {fileID: 965162019}
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  timeBetweenAttacks: 0
+  projectile: {fileID: 0}
+  sightRange: 0
+  attackRange: 0
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!1 &1014416711
 GameObject:
   m_ObjectHideFlags: 0
@@ -9568,7 +9570,7 @@ MonoBehaviour:
   Player:
     serializedVersion: 2
     m_Bits: 256
-  chasePos: {fileID: 2090929997}
+  playerPos: {fileID: 1073019323}
   points:
   - {fileID: 614605178}
   - {fileID: 302000941}

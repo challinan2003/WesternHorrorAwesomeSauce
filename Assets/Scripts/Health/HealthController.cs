@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,9 @@ public class HealthController : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image hurtImage = null;
     [SerializeField] private float hurtTimer = 0.1f;
 
+    //test for health
+    public KeyCode loseHealth = KeyCode.Space;
+
     private void Start()
     {
 
@@ -22,16 +26,37 @@ public class HealthController : MonoBehaviour
 
     void UpdateHealth()
     {
+        if (Input.GetKey(loseHealth))
+        {
+            currentPlayerHealth -= 10;
+        }
         Color splatterAlpha = redSplatterImage.color;
         splatterAlpha.a = 1 - (currentPlayerHealth / maxPlayerHealth);
         redSplatterImage.color = splatterAlpha;
+
+        Color hurtAlpha = hurtImage.color;
+        hurtAlpha.a = 1 - (currentPlayerHealth / maxPlayerHealth);
+        hurtImage.color = hurtAlpha;
+
     }
+
 
     public void TakeDamage()
     {
-        if(currentPlayerHealth >= 0 )
+        if (currentPlayerHealth >= 0)
         {
             UpdateHealth();
+        }
+    }
+
+    void Update()
+    {
+        UpdateHealth();
+        UnityEngine.Debug.Log(currentPlayerHealth);
+
+        if (currentPlayerHealth <= 0)
+        {
+            currentPlayerHealth = 0;
         }
     }
 }

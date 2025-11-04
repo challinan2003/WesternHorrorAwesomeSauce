@@ -9568,7 +9568,7 @@ MonoBehaviour:
   Player:
     serializedVersion: 2
     m_Bits: 256
-  chasePos: {fileID: 2090929997}
+  playerPos: {fileID: 1073019323}
   points:
   - {fileID: 614605178}
   - {fileID: 302000941}

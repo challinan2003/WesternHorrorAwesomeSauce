@@ -4,12 +4,17 @@ using System.Diagnostics;
 using System.Configuration.Assemblies;
 using System.Drawing;
 using System.Threading.Tasks;
+using System.Numerics;
+using UnityEngine.AI;
 
 
 public class Patrols : MonoBehaviour 
 {
-    public float FieldOfView;
-    
+
+    private bool canSeePlayer = false;
+    private float sightTimer = 0;
+    public LayerMask Player;
+    public Transform chasePos;
         public Transform[] points;
         private int destPoint = 0;
         private UnityEngine.AI.NavMeshAgent agent;
@@ -45,9 +50,19 @@ public class Patrols : MonoBehaviour
 
     void Update()
     {
+        if (UnityEngine.Physics.Raycast(transform.position, transform.TransformDirection(UnityEngine.Vector3.forward), out RaycastHit hitinfo, 20f, Player))
+        {
+            UnityEngine.Debug.Log("Hit Player");
+            canSeePlayer = true;
+        }
+        
+        if (canSeePlayer == true)
+        {
+            agent.SetDestination(chasePos.position);
+        }
         // Choose the next destination point when the agent gets
         // close to the current one.
-        if (agent.remainingDistance < 1f)
+        if (agent.remainingDistance < 1f && !canSeePlayer)
         {
             GotoNextPoint();
         }
