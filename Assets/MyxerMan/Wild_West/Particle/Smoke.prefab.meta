@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8430f89a5b71d5647b4db7c1ee2c470e
+timeCreated: 1516616715
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 155887
+  packageName: Wild West Town Pack
+  packageVersion: 1.0
+  assetPath: Assets/MyxerMan/Wild_West/Particle/Smoke.prefab
+  uploadId: 334911
