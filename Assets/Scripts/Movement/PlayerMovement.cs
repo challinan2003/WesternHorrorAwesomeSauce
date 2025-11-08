@@ -1,4 +1,6 @@
 using System.Numerics;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,7 +8,10 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
+    private float moveSpeed;
+    public float walkSpeed;
+    public float sprintSpeed;
+    public float crouchSpeed;
 
     public float groundDrag;
 
@@ -14,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     public float jumpCooldown;
     public float airMultiplier;
     bool readyToJump;
+    public float crouchYScale;
+    private float startYScale;
+
 
     [Header("Ground Check")]
     public Transform groundCheck;
@@ -23,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
+    public KeyCode sprintKey = KeyCode.LeftShift;
+    public KeyCode crouchKey = KeyCode.LeftControl;
 
     public Transform orientation;
 
@@ -33,12 +43,23 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    public MovementState state;
+
+    public enum MovementState
+    {
+        walking,
+        sprinting,
+        crouching,
+        air
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
         readyToJump = true;
+
+        startYScale = transform.localScale.y;
     }
 
     void Update()
@@ -48,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
         TrackInput();
         SpeedControl();
+        StateHandler();
 
         //handle drag
         if (grounded)
@@ -75,7 +97,52 @@ public class PlayerMovement : MonoBehaviour
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
+
+        //Is crouching
+        if (Input.GetKeyDown(crouchKey))
+        {
+            transform.localScale = new UnityEngine.Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+            rb.AddForce(UnityEngine.Vector3.down * 5f, ForceMode.Impulse);
+        }
+
+        //not crouching 
+        if (Input.GetKeyUp(crouchKey))
+        {
+            transform.localScale = new UnityEngine.Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+        }
     }
+
+    private void StateHandler()
+    {
+        // 
+        if (Input.GetKeyDown(crouchKey))
+        {
+            state = MovementState.crouching;
+            moveSpeed = crouchSpeed;
+        }
+
+        //"Walk it like I talk it" - Migos 
+        // WALKING
+        if (grounded && Input.GetKey(sprintKey))
+        {
+            state = MovementState.sprinting;
+            moveSpeed = sprintSpeed;
+        }
+
+        //"Ride like the wind" - Christopher Cross 
+        // RUNNING
+        else if (grounded)
+        {
+            state = MovementState.walking;
+            moveSpeed = walkSpeed;
+        }
+
+        else
+        {
+            state = MovementState.air;
+        }
+    }
+    
 
     void MovePlayer()
     {

@@ -15,10 +15,10 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.01
-  m_LinearFogStart: 0
+  m_FogColor: {r: 0.5660378, g: 0.5395994, b: 0.47258815, a: 1}
+  m_FogMode: 2
+  m_FogDensity: 0.206
+  m_LinearFogStart: 101.15
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
@@ -3614,18 +3614,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ce1b6bdb5b4324fa20637fbe98c571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 7
+  walkSpeed: 4
+  sprintSpeed: 7
+  crouchSpeed: 2.5
   groundDrag: 5
   jumpForce: 5
   jumpCooldown: 0.4
   airMultiplier: 0.4
+  crouchYScale: 0.5
   groundCheck: {fileID: 241129446}
   groundDistance: 0.4
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   jumpKey: 32
+  sprintKey: 304
+  crouchKey: 306
   orientation: {fileID: 202053308}
+  state: 0
 --- !u!54 &1073019325
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9574,6 +9580,7 @@ MonoBehaviour:
   - {fileID: 302000941}
   - {fileID: 1014416712}
   - {fileID: 945426996}
+  ZombieAnim: {fileID: 0}
 --- !u!1 &1444954951
 GameObject:
   m_ObjectHideFlags: 0

@@ -52,7 +52,6 @@ public class HealthController : MonoBehaviour
     void Update()
     {
         UpdateHealth();
-        UnityEngine.Debug.Log(currentPlayerHealth);
 
         if (currentPlayerHealth <= 0)
         {
