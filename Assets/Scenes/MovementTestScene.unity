@@ -3616,7 +3616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   walkSpeed: 4
   sprintSpeed: 7
-  crouchSpeed: 1
+  crouchSpeed: 2
   groundDrag: 5
   jumpForce: 5
   jumpCooldown: 0.4

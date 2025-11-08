@@ -1,4 +1,5 @@
 using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using Unity.VisualScripting;
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public float crouchYScale;
     private float startYScale;
     public float staminaDuration;
+    private bool isCrouching = false;
 
 
     [Header("Ground Check")]
@@ -114,12 +116,15 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new UnityEngine.Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
             rb.AddForce(UnityEngine.Vector3.down * 5f, ForceMode.Impulse);
+            isCrouching = true;
         }
 
         //not crouching 
         if (Input.GetKeyUp(crouchKey))
         {
             transform.localScale = new UnityEngine.Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+            rb.AddForce(UnityEngine.Vector3.up * 3f, ForceMode.Impulse);
+            isCrouching = false;
         }
     }
 
@@ -137,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
 
         //"Walk it like I talk it" - Migos 
         // WALKING
-        else if (grounded)
+        else if (grounded && !isCrouching)
         {
             state = MovementState.walking;
             moveSpeed = walkSpeed;
@@ -149,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
 
         //I cant come up with a song for short people
         //CROUCHING
-        else if (grounded && Input.GetKey(crouchKey))
+        else if (grounded && isCrouching)
         {
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
