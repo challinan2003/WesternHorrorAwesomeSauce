@@ -54,7 +54,6 @@ public class Patrols : MonoBehaviour
         void SightTimer()
         {
             sightTimerCountdown -= Time.deltaTime;
-            UnityEngine.Debug.Log(sightTimerCountdown);
         }
 
 

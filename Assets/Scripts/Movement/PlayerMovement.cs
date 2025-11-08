@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     bool readyToJump;
     public float crouchYScale;
     private float startYScale;
+    public float staminaDuration;
 
 
     [Header("Ground Check")]
@@ -50,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         walking,
         sprinting,
         crouching,
+        movingIntoWalk,
         air
     }
 
@@ -76,6 +78,15 @@ public class PlayerMovement : MonoBehaviour
             rb.linearDamping = groundDrag;
         else
             rb.linearDamping = 0;
+
+        if (staminaDuration <= 0)
+            staminaDuration = 0;
+
+        if (staminaDuration >= 4)
+        {
+            staminaDuration = 4;
+        }
+
     }
 
     void FixedUpdate()
@@ -114,33 +125,47 @@ public class PlayerMovement : MonoBehaviour
 
     private void StateHandler()
     {
-        // 
-        if (Input.GetKeyDown(crouchKey))
+
+        //"Ride like the wind" - Christopher Cross 
+        // RUNNING
+        if (grounded && Input.GetKey(sprintKey) && staminaDuration > 0)
         {
-            state = MovementState.crouching;
-            moveSpeed = crouchSpeed;
+            state = MovementState.sprinting;
+            moveSpeed = sprintSpeed;
+            staminaDuration -= Time.deltaTime;
         }
 
         //"Walk it like I talk it" - Migos 
         // WALKING
-        if (grounded && Input.GetKey(sprintKey))
-        {
-            state = MovementState.sprinting;
-            moveSpeed = sprintSpeed;
-        }
-
-        //"Ride like the wind" - Christopher Cross 
-        // RUNNING
         else if (grounded)
         {
             state = MovementState.walking;
             moveSpeed = walkSpeed;
+            if (staminaDuration < 4)
+            {
+                staminaDuration += Time.deltaTime;
+            }
         }
 
+        //I cant come up with a song for short people
+        //CROUCHING
+        else if (grounded && Input.GetKey(crouchKey))
+        {
+            state = MovementState.crouching;
+            moveSpeed = crouchSpeed;
+            if (staminaDuration < 4)
+            {
+                staminaDuration += Time.deltaTime;
+            }
+        }
+
+        //AIR
         else
         {
             state = MovementState.air;
         }
+
+
     }
     
 
