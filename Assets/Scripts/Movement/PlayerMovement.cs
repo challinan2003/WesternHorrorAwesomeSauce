@@ -1,4 +1,7 @@
 using System.Numerics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,7 +9,10 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
+    private float moveSpeed;
+    public float walkSpeed;
+    public float sprintSpeed;
+    public float crouchSpeed;
 
     public float groundDrag;
 
@@ -14,6 +20,11 @@ public class PlayerMovement : MonoBehaviour
     public float jumpCooldown;
     public float airMultiplier;
     bool readyToJump;
+    public float crouchYScale;
+    private float startYScale;
+    public float staminaDuration;
+    private bool isCrouching = false;
+
 
     [Header("Ground Check")]
     public Transform groundCheck;
@@ -23,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
+    public KeyCode sprintKey = KeyCode.LeftShift;
+    public KeyCode crouchKey = KeyCode.LeftControl;
 
     public Transform orientation;
 
@@ -33,12 +46,24 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    public MovementState state;
+
+    public enum MovementState
+    {
+        walking,
+        sprinting,
+        crouching,
+        movingIntoWalk,
+        air
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
         readyToJump = true;
+
+        startYScale = transform.localScale.y;
     }
 
     void Update()
@@ -48,12 +73,22 @@ public class PlayerMovement : MonoBehaviour
 
         TrackInput();
         SpeedControl();
+        StateHandler();
 
         //handle drag
         if (grounded)
             rb.linearDamping = groundDrag;
         else
             rb.linearDamping = 0;
+
+        if (staminaDuration <= 0)
+            staminaDuration = 0;
+
+        if (staminaDuration >= 4)
+        {
+            staminaDuration = 4;
+        }
+
     }
 
     void FixedUpdate()
@@ -75,7 +110,69 @@ public class PlayerMovement : MonoBehaviour
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
+
+        //Is crouching
+        if (Input.GetKeyDown(crouchKey))
+        {
+            transform.localScale = new UnityEngine.Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+            rb.AddForce(UnityEngine.Vector3.down * 5f, ForceMode.Impulse);
+            isCrouching = true;
+        }
+
+        //not crouching 
+        if (Input.GetKeyUp(crouchKey))
+        {
+            transform.localScale = new UnityEngine.Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+            rb.AddForce(UnityEngine.Vector3.up * 3f, ForceMode.Impulse);
+            isCrouching = false;
+        }
     }
+
+    private void StateHandler()
+    {
+
+        //"Ride like the wind" - Christopher Cross 
+        // RUNNING
+        if (grounded && Input.GetKey(sprintKey) && staminaDuration > 0)
+        {
+            state = MovementState.sprinting;
+            moveSpeed = sprintSpeed;
+            staminaDuration -= Time.deltaTime;
+        }
+
+        //"Walk it like I talk it" - Migos 
+        // WALKING
+        else if (grounded && !isCrouching)
+        {
+            state = MovementState.walking;
+            moveSpeed = walkSpeed;
+            if (staminaDuration < 4)
+            {
+                staminaDuration += Time.deltaTime;
+            }
+        }
+
+        //I cant come up with a song for short people
+        //CROUCHING
+        else if (grounded && isCrouching)
+        {
+            state = MovementState.crouching;
+            moveSpeed = crouchSpeed;
+            if (staminaDuration < 4)
+            {
+                staminaDuration += Time.deltaTime;
+            }
+        }
+
+        //AIR
+        else
+        {
+            state = MovementState.air;
+        }
+
+
+    }
+    
 
     void MovePlayer()
     {
