@@ -1,3 +1,4 @@
+using System.Numerics;
 using TMPro;
 using UnityEngine;
 
@@ -34,6 +35,8 @@ public class GunSystem : MonoBehaviour
     {
         MyInput();
         text.SetText(bulletsLeft + " / " + magazineSize);
+        UnityEngine.Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward, UnityEngine.Color.green);
+
     }
 
     //shooting input
@@ -61,12 +64,12 @@ public class GunSystem : MonoBehaviour
         float y = Random.Range(-spread, spread);
 
         //calculating direction with spread
-        Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
+        UnityEngine.Vector3 direction = fpsCam.transform.forward + new UnityEngine.Vector3(x, y, 0);
 
         //raycast
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy))
         {
-            Debug.Log(rayHit.collider.name);
+            UnityEngine.Debug.Log("running ray");
 
             //if (rayHit.collider.CompareTag("Enemy"))
                // rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);

@@ -7,6 +7,7 @@ public class HealthController : MonoBehaviour
 {
     [Header("Player Health Amount")]
     public float currentPlayerHealth = 100f;
+    public float recoveryTimer = 4f;
     [SerializeField] private float maxPlayerHealth = 100f;
 
     [Header("Splatter Effect")]
@@ -38,6 +39,17 @@ public class HealthController : MonoBehaviour
         hurtAlpha.a = 1 - (currentPlayerHealth / maxPlayerHealth);
         hurtImage.color = hurtAlpha;
 
+        if (currentPlayerHealth < 100)
+        {
+            recoveryTimer -= Time.deltaTime;
+        }
+
+        if (recoveryTimer == 0)
+        {
+            recoveryTimer = 0;
+            currentPlayerHealth += 1;
+        }
+
     }
 
 
@@ -46,6 +58,7 @@ public class HealthController : MonoBehaviour
         if (currentPlayerHealth >= 0)
         {
             UpdateHealth();
+
         }
     }
 

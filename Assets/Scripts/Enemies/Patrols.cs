@@ -13,14 +13,28 @@ using System.Runtime.InteropServices;
 public class Patrols : MonoBehaviour 
 {
 
-    private bool canSeePlayer = false;
-    private float sightTimerCountdown = 5f;
-    public LayerMask Player;
-    public Transform chasePos;
-    public Transform[] points;
-    private int destPoint = 0;
-    private UnityEngine.AI.NavMeshAgent agent;
-    public Animator ZombieAnim;
+    [Header("Movement Variables")]
+        private bool canSeePlayer = false;
+        private float sightTimerCountdown = 5f;
+        public LayerMask Player;
+        public Transform chasePos;
+        public Transform[] points;
+        private int destPoint = 0;
+        private UnityEngine.AI.NavMeshAgent agent;
+        public Animator ZombieAnim;
+    [Header("Health")]
+    public float enemyHealth = 3;
+        
+    public enum EnemyState
+    {
+        patrolling,
+        chasingPlayer,
+        idleling,
+        dying,
+        
+    }
+        
+
 
 
         void Start ()
