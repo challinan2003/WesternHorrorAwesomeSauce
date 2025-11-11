@@ -20,7 +20,7 @@ public class DialogueSystem : MonoBehaviour
     public GameObject Letter4;
 
     public int Letter1SFX = 0;
-     public int Letter2SFX = 0;
+    public int Letter2SFX = 0;
     public int Letter3SFX = 0;
     public int Letter4SFX = 0;
      
