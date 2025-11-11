@@ -211,6 +211,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
+    - target: {fileID: -3179975599351091016, guid: 6f5608aac64f88346912283408841fa9, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -130.97826
@@ -904,6 +908,10 @@ PrefabInstance:
     - target: {fileID: 7752798975949527886, guid: 0710cf979039919418e55a9d29131995, type: 3}
       propertyPath: m_Name
       value: Bullets (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579804595089139224, guid: 0710cf979039919418e55a9d29131995, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1642,6 +1650,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
+    - target: {fileID: -3179975599351091016, guid: 6f5608aac64f88346912283408841fa9, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.506096
@@ -2284,6 +2296,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
+    - target: {fileID: -3179975599351091016, guid: 6f5608aac64f88346912283408841fa9, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.43
@@ -3492,6 +3508,10 @@ PrefabInstance:
     - target: {fileID: 465958270811882260, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
@@ -4809,6 +4829,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
+    - target: {fileID: -3179975599351091016, guid: 6f5608aac64f88346912283408841fa9, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -157.02
@@ -6187,6 +6211,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
       value: Gin
@@ -6970,6 +6998,10 @@ PrefabInstance:
     - target: {fileID: 465958270811882260, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
@@ -10839,6 +10871,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
+    - target: {fileID: -3179975599351091016, guid: 6f5608aac64f88346912283408841fa9, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -123.27
@@ -11243,14 +11279,10 @@ MonoBehaviour:
   Player:
     serializedVersion: 2
     m_Bits: 256
-  Bullet:
-    serializedVersion: 2
-    m_Bits: 0
   chasePos: {fileID: 794906458}
   points: []
   ZombieAnim: {fileID: 653443458}
   enemyHealth: 60
-  gunSystem: {fileID: 0}
 --- !u!136 &653443462
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11820,6 +11852,10 @@ PrefabInstance:
     - target: {fileID: 7752798975949527886, guid: 0710cf979039919418e55a9d29131995, type: 3}
       propertyPath: m_Name
       value: Bullets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579804595089139224, guid: 0710cf979039919418e55a9d29131995, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13537,6 +13573,10 @@ PrefabInstance:
     - target: {fileID: 465958270811882260, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
@@ -15704,6 +15744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullets (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8579804595089139224, guid: 0710cf979039919418e55a9d29131995, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16369,6 +16413,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
       value: Gin (12)
@@ -16496,6 +16544,10 @@ PrefabInstance:
     - target: {fileID: 7752798975949527886, guid: 0710cf979039919418e55a9d29131995, type: 3}
       propertyPath: m_Name
       value: Bullets (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579804595089139224, guid: 0710cf979039919418e55a9d29131995, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17087,6 +17139,10 @@ PrefabInstance:
     - target: {fileID: 465958270811882260, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
@@ -18750,6 +18806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullets (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8579804595089139224, guid: 0710cf979039919418e55a9d29131995, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20004,6 +20064,10 @@ PrefabInstance:
     - target: {fileID: 465958270811882260, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
@@ -21864,6 +21928,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullets (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8579804595089139224, guid: 0710cf979039919418e55a9d29131995, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22715,9 +22783,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef2352633ad04048a126b710ef17be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunSystem
-  bullet: {fileID: 1312081192}
-  shootForce: 500
-  upwardForce: 0
   reloadSFXIndex: 0
   gunShootSFXIndex: 0
   damage: 10
@@ -24889,6 +24954,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
       value: Gin (7)
@@ -25727,6 +25796,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
+    - target: {fileID: -3179975599351091016, guid: 6f5608aac64f88346912283408841fa9, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -168.5953
@@ -26496,6 +26569,10 @@ PrefabInstance:
     - target: {fileID: 465958270811882260, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
@@ -27402,6 +27479,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
+    - target: {fileID: -3179975599351091016, guid: 6f5608aac64f88346912283408841fa9, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -59.24
@@ -28742,6 +28823,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
       value: Gin (11)
@@ -28764,6 +28849,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
+    - target: {fileID: -3179975599351091016, guid: 6f5608aac64f88346912283408841fa9, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -65.77759
@@ -29376,6 +29465,10 @@ PrefabInstance:
     - target: {fileID: 465958270811882260, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
@@ -31993,6 +32086,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
       value: Gin (6)
@@ -32653,6 +32750,10 @@ PrefabInstance:
     - target: {fileID: 465958270811882260, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
@@ -33994,6 +34095,10 @@ PrefabInstance:
     - target: {fileID: 465958270811882260, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
@@ -35360,6 +35465,10 @@ PrefabInstance:
     - target: {fileID: 465958270811882260, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
