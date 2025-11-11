@@ -10,7 +10,7 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        //activates menu
+        //deactivates menu and pauses game
         if (Input.GetButtonDown("Inventory") && menuActivated)
         {
             Time.timeScale = 1;
@@ -18,7 +18,7 @@ public class InventoryManager : MonoBehaviour
             menuActivated = false;
         }
 
-        //deactivates menu
+        //activates menu and unpauses game
         else if (Input.GetButtonDown("Inventory") && !menuActivated)
         {
             Time.timeScale = 0;

@@ -13648,6 +13648,8 @@ GameObject:
   - component: {fileID: 794906460}
   - component: {fileID: 794906459}
   - component: {fileID: 794906461}
+  - component: {fileID: 794906463}
+  - component: {fileID: 794906462}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -13762,6 +13764,41 @@ MonoBehaviour:
   itemField: {fileID: 0}
   fpsController: {fileID: 1870483546}
   SFXObject: {fileID: 0}
+--- !u!114 &794906462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794906457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f3d659ea4b623428e008f5f7165f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Drunk
+  drunkenness: 0
+  isDrunk: 0
+  gunsystem: {fileID: 1681794313}
+  madness: {fileID: 794906463}
+  inventory: {fileID: 0}
+  drunkTimer: 0
+--- !u!114 &794906463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794906457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81885fefe58fd8b408e4acf15fd96196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Madness
+  madbuildup: 0
+  IsMad: 0
+  gunsystem: {fileID: 1681794313}
+  pmovement: {fileID: 794906459}
+  madnessTimer: 0
 --- !u!4 &805283377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4596667510343998, guid: a76415d90e57bdc4cb40d97501555c18, type: 3}
@@ -24592,7 +24629,7 @@ GameObject:
   - component: {fileID: 1439032301}
   - component: {fileID: 1439032300}
   - component: {fileID: 1439032299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
