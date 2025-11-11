@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 
 public class Patrols : MonoBehaviour 
 {
-
+    public int enemyWalkSFX = 0;
     [Header("Movement Variables")]
         private bool canSeePlayer = false;
         private float sightTimerCountdown = 5f;
@@ -73,12 +73,14 @@ public class Patrols : MonoBehaviour
 
         void Update()
         {
-            //Player Spotted
-            if (UnityEngine.Physics.Raycast(transform.position, transform.TransformDirection(UnityEngine.Vector3.forward), out RaycastHit hitinfo, 20f, Player))
+
+        //Player Spotted
+        if (UnityEngine.Physics.Raycast(transform.position, transform.TransformDirection(UnityEngine.Vector3.forward), out RaycastHit hitinfo, 20f, Player))
             {
                 sightTimerCountdown = 5;
                 canSeePlayer = true;
-            }
+                SoundManager.instance.PlaySFX(enemyWalkSFX);
+        }
             
             //Enemy chases down player - Start Timer if enemy can no longer see player
             if (canSeePlayer == true)
