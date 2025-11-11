@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GunSystem : MonoBehaviour
 {
-    public int reloadSFXIndex = 0;
-    public int gunShootSFXIndex = 0;
+    public int reloadSFXIndex = 21;
+    public int gunShootSFXIndex = 21;
     //gun statistics
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
