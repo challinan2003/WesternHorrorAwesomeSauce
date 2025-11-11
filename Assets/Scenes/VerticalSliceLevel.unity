@@ -30895,6 +30895,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef2352633ad04048a126b710ef17be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunSystem
+  reloadSFXIndex: 15
+  gunShootSFXIndex: 16
   damage: 10
   timeBetweenShooting: 0.52
   spread: 0

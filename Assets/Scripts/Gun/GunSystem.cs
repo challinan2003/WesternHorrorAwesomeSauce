@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GunSystem : MonoBehaviour
 {
+    public int reloadSFXIndex = 0;
+    public int gunShootSFXIndex = 0;
     //gun statistics
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
@@ -52,6 +54,7 @@ public class GunSystem : MonoBehaviour
         {
             bulletsShot = bulletsPerTap;
             Shoot();
+            SoundManager.instance.PlaySFX(gunShootSFXIndex);
         }
     }
 
@@ -93,6 +96,7 @@ public class GunSystem : MonoBehaviour
     private void Reload()
     {
         reloading = true;
+        SoundManager.instance.PlaySFX(reloadSFXIndex);
         Invoke("ReloadFinished", reloadTime);
     }
     private void ReloadFinished()
