@@ -13944,6 +13944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56dfef754dfb333489369652ef29506a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Madness
+  SFXObject: {fileID: 0}
+  MaddnessSFX: 9
   madbuildup: 0
   IsMad: 0
   gunsystem: {fileID: 1267085236}
