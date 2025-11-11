@@ -8387,7 +8387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &482592764
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12654,7 +12654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &757269150
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22399,15 +22399,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e2073718e5edc8f47b3d0bbce346f202, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10.420605
+      value: 4.7095923
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2073718e5edc8f47b3d0bbce346f202, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10.420605
+      value: 4.7095923
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2073718e5edc8f47b3d0bbce346f202, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10.420605
+      value: 4.7095923
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2073718e5edc8f47b3d0bbce346f202, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22415,11 +22415,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2073718e5edc8f47b3d0bbce346f202, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2188.1
+      value: -2188
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2073718e5edc8f47b3d0bbce346f202, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.7029
+      value: 9.7011
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2073718e5edc8f47b3d0bbce346f202, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22715,8 +22715,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef2352633ad04048a126b710ef17be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunSystem
-  bullet: {fileID: 0}
-  shootForce: 0
+  bullet: {fileID: 1312081192}
+  shootForce: 500
   upwardForce: 0
   reloadSFXIndex: 0
   gunShootSFXIndex: 0
@@ -27535,6 +27535,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4001969200261726, guid: 41165376852919b4dbdf58d033204553, type: 3}
   m_PrefabInstance: {fileID: 766010161}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1607383704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1607383705}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1607383705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607383704}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 51.02124, y: 0, z: 2.36015}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1612013287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33339,7 +33370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1944210260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37517,3 +37548,4 @@ SceneRoots:
   - {fileID: 1420520304}
   - {fileID: 1561717140}
   - {fileID: 2143310170}
+  - {fileID: 1607383705}
