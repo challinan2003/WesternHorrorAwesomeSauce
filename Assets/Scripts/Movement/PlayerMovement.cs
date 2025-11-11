@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int playerWalkSFX = 0;
+    public int playerWalkSFX = 21;
     //SoundManager.instance.PlaySFX(playerWalkSFX);
     [Header("Movement")]
     private float moveSpeed;

@@ -6570,6 +6570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullets
       objectReference: {fileID: 0}
+    - target: {fileID: 8579804595089139224, guid: 0710cf979039919418e55a9d29131995, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7425,7 +7429,7 @@ PrefabInstance:
       objectReference: {fileID: 5173983664519720195, guid: 7e86e7f0bfc83dd4894fdd8c67c585e8, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: sfxList.Array.size
-      value: 20
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'sfxList.Array.data[0]'
@@ -7507,6 +7511,14 @@ PrefabInstance:
       propertyPath: 'sfxList.Array.data[19]'
       value: 
       objectReference: {fileID: 8300000, guid: 1c46aed90662cf240b3e3bde87f58e4f, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[20]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ed13139964a3d554d8e25dd890b84c39, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[21]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: audioResources.Array.size
       value: 0
@@ -13826,10 +13838,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ce1b6bdb5b4324fa20637fbe98c571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  playerWalkSFX: 0
-  walkSpeed: 3.5
-  sprintSpeed: 6
-  crouchSpeed: 2
+  playerWalkSFX: 17
+  walkSpeed: 5.5
+  sprintSpeed: 7.5
+  crouchSpeed: 3
   groundDrag: 5
   jumpForce: 5.35
   jumpCooldown: 0.5
@@ -20715,6 +20727,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
+    - target: {fileID: -3179975599351091016, guid: 6f5608aac64f88346912283408841fa9, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.98
@@ -34012,6 +34028,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullets
       objectReference: {fileID: 0}
+    - target: {fileID: 8579804595089139224, guid: 0710cf979039919418e55a9d29131995, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37178,6 +37198,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2970460246836718458, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6175285233171721112, guid: 23a8ad88bbbd7934eadb04dbb2758f07, type: 3}
       propertyPath: m_Name
       value: Gin
@@ -37195,6 +37219,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
+    - target: {fileID: -3179975599351091016, guid: 6f5608aac64f88346912283408841fa9, type: 3}
+      propertyPath: pickupSFX
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.3199997
@@ -37449,6 +37477,10 @@ PrefabInstance:
     - target: {fileID: 7752798975949527886, guid: 0710cf979039919418e55a9d29131995, type: 3}
       propertyPath: m_Name
       value: Bullets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579804595089139224, guid: 0710cf979039919418e55a9d29131995, type: 3}
+      propertyPath: pickupSFX
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

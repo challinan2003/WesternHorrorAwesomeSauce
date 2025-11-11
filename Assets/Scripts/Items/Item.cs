@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public int pickupSFX = 21;
     [SerializeField]
     private string itemName;
 
@@ -23,7 +24,9 @@ public class Item : MonoBehaviour
         if (collision.gameObject.tag == "Player");
         {
             inventoryManager.AddItem(itemName, quantity, sprite);
+           
             Destroy(gameObject);
+            SoundManager.instance.PlaySFX(pickupSFX);
         }
     }
 }
