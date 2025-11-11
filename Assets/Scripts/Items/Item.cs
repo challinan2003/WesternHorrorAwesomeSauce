@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public int pickupSFX = 21;
+    public int pickupSFX = 0;
     [SerializeField]
     private string itemName;
 
