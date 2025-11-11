@@ -60,7 +60,7 @@ public class Patrols : MonoBehaviour
             agent.destination = points[destPoint].position;
             //IT WAS THIS ONE
             destPoint = (destPoint + 1) % points.Length;
-            SoundManager.instance.PlaySFX(enemyWalkSFX);
+            //SoundManager.instance.PlaySFX(enemyWalkSFX);
 
         }
         
@@ -85,7 +85,7 @@ public class Patrols : MonoBehaviour
         {
             sightTimerCountdown = 5;
             canSeePlayer = true;
-            SoundManager.instance.PlaySFX(enemyWalkSFX);
+            //SoundManager.instance.PlaySFX(enemyWalkSFX);
         }
 
         //Enemy chases down player - Start Timer if enemy can no longer see player

@@ -4,7 +4,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Madness : MonoBehaviour
 {
-    public GameObject SFXObject;
+    //public GameObject SFXObject;
     public int MaddnessSFX = 0;
     public float madbuildup;
     public bool IsMad;
@@ -58,8 +58,8 @@ public class Madness : MonoBehaviour
     public void EnterMadness() // renamed method
     {
         IsMad = true;
-        if (SFXObject == null)
-            SoundManager.instance.PlaySFX(MaddnessSFX);
+       // if (SFXObject == null)
+         //   SoundManager.instance.PlaySFX(MaddnessSFX);
         if (gunsystem != null)
         {
             gunsystem.damage = 15;

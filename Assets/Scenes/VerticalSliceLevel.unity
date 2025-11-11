@@ -11279,10 +11279,14 @@ MonoBehaviour:
   Player:
     serializedVersion: 2
     m_Bits: 256
+  Bullet:
+    serializedVersion: 2
+    m_Bits: 0
   chasePos: {fileID: 794906458}
   points: []
   ZombieAnim: {fileID: 653443458}
   enemyHealth: 60
+  gunSystem: {fileID: 0}
 --- !u!136 &653443462
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13840,6 +13844,8 @@ GameObject:
   - component: {fileID: 794906461}
   - component: {fileID: 794906463}
   - component: {fileID: 794906462}
+  - component: {fileID: 794906465}
+  - component: {fileID: 794906464}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -13984,13 +13990,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56dfef754dfb333489369652ef29506a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Madness
-  SFXObject: {fileID: 0}
   MaddnessSFX: 9
   madbuildup: 0
   IsMad: 0
   gunsystem: {fileID: 1267085236}
   pmovement: {fileID: 794906459}
   madnessTimer: 0
+--- !u!114 &794906464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794906457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81885fefe58fd8b408e4acf15fd96196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Madness
+  MaddnessSFX: 0
+  madbuildup: 0
+  IsMad: 0
+  gunsystem: {fileID: 1267085236}
+  pmovement: {fileID: 794906459}
+  madnessTimer: 0
+--- !u!114 &794906465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794906457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f3d659ea4b623428e008f5f7165f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Drunk
+  drunkenness: 0
+  isDrunk: 0
+  gunsystem: {fileID: 1267085236}
+  madness: {fileID: 794906464}
+  inventory: {fileID: 0}
+  drunkTimer: 0
 --- !u!4 &805283377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4596667510343998, guid: a76415d90e57bdc4cb40d97501555c18, type: 3}
@@ -22783,8 +22824,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef2352633ad04048a126b710ef17be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunSystem
-  reloadSFXIndex: 0
-  gunShootSFXIndex: 0
+  bullet: {fileID: 1312081192}
+  shootForce: 500
+  upwardForce: 0
+  reloadSFXIndex: 15
+  gunShootSFXIndex: 16
   damage: 10
   timeBetweenShooting: 1
   spread: 0

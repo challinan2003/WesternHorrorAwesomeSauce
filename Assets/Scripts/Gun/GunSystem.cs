@@ -113,7 +113,7 @@ public class GunSystem : MonoBehaviour
     private void Reload()
     {
         reloading = true;
-        //SoundManager.instance.PlaySFX(reloadSFXIndex);
+        SoundManager.instance.PlaySFX(reloadSFXIndex);
         Invoke("ReloadFinished", reloadTime);
     }
     private void ReloadFinished()
