@@ -17,13 +17,16 @@ public class Patrols : MonoBehaviour
         private bool canSeePlayer = false;
         private float sightTimerCountdown = 5f;
         public LayerMask Player;
+        public LayerMask Bullet;
+
         public Transform chasePos;
         public Transform[] points;
         private int destPoint = 0;
         private UnityEngine.AI.NavMeshAgent agent;
         public Animator ZombieAnim;
     [Header("Health")]
-    public float enemyHealth = 3;
+    public int enemyHealth = 60;
+    public GunSystem gunSystem;
         
     public enum EnemyState
     {
@@ -57,6 +60,8 @@ public class Patrols : MonoBehaviour
             agent.destination = points[destPoint].position;
             //IT WAS THIS ONE
             destPoint = (destPoint + 1) % points.Length;
+            SoundManager.instance.PlaySFX(enemyWalkSFX);
+
         }
         
         void IdleAtPosition()
@@ -71,36 +76,53 @@ public class Patrols : MonoBehaviour
         }
 
 
-        void Update()
-        {
+    void Update()
+    {
+
 
         //Player Spotted
         if (UnityEngine.Physics.Raycast(transform.position, transform.TransformDirection(UnityEngine.Vector3.forward), out RaycastHit hitinfo, 20f, Player))
-            {
-                sightTimerCountdown = 5;
-                canSeePlayer = true;
-                SoundManager.instance.PlaySFX(enemyWalkSFX);
+        {
+            sightTimerCountdown = 5;
+            canSeePlayer = true;
+            SoundManager.instance.PlaySFX(enemyWalkSFX);
         }
-            
-            //Enemy chases down player - Start Timer if enemy can no longer see player
-            if (canSeePlayer == true)
-            {
-                agent.SetDestination(chasePos.position);
-                SightTimer();
-            }
 
-            //Go back to patrol when the timer hits zero
-            if (sightTimerCountdown <= 0)
-            {
-                canSeePlayer = false;
-                GotoNextPoint();
-                sightTimerCountdown = Random.Range(2, 6);
-            }
-
-            //When in patrol, if enemy doesn't see player, enemy moves to next position
-            if (agent.remainingDistance < 1f && !canSeePlayer)
-            {
-                GotoNextPoint();
-            }
+        //Enemy chases down player - Start Timer if enemy can no longer see player
+        if (canSeePlayer == true)
+        {
+            agent.SetDestination(chasePos.position);
+            SightTimer();
         }
+
+        //Go back to patrol when the timer hits zero
+        if (sightTimerCountdown <= 0)
+        {
+            canSeePlayer = false;
+            GotoNextPoint();
+            sightTimerCountdown = Random.Range(2, 6);
+        }
+
+        //When in patrol, if enemy doesn't see player, enemy moves to next position
+        if (agent.remainingDistance < 1f && !canSeePlayer)
+        {
+            GotoNextPoint();
+        }
+
+        if (enemyHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+        
+    void OnTriggerEnter(Collider bullet)
+    {
+        if (bullet.CompareTag("Bullet"))
+        {
+            UnityEngine.Debug.Log("bullet hit!");
+            enemyHealth -= gunSystem.damage;
+            UnityEngine.Debug.Log(enemyHealth);
+            Destroy(bullet.gameObject);
+        }
+    }
 }

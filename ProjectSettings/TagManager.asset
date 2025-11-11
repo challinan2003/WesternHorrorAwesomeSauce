@@ -9,6 +9,7 @@ TagManager:
   - Letter2
   - Letter3
   - Letter4
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - whatIsGround
   - Enemy
   - Player
-  - 
-  - 
+  - Bullet
+  - maincamera
   - 
   - 
   - 
