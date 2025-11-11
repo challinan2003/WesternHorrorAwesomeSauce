@@ -8096,7 +8096,7 @@ PrefabInstance:
       objectReference: {fileID: 5173983664519720195, guid: 7e86e7f0bfc83dd4894fdd8c67c585e8, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: sfxList.Array.size
-      value: 14
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'sfxList.Array.data[0]'
@@ -8154,6 +8154,30 @@ PrefabInstance:
       propertyPath: 'sfxList.Array.data[13]'
       value: 
       objectReference: {fileID: 8300000, guid: 0f80f05b51a7aca44adfc43dff4fa161, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[14]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 25ca8391bfe77c24aaa3386afa21d274, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[15]'
+      value: 
+      objectReference: {fileID: 8300000, guid: df738c57e8eea8049a784beea73a8afb, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[16]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 03cd3973275e2094da6f993c4f1b8b91, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[17]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 8930632eed1d0bf4fb32c739b37b114a, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[18]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f376b136c93e6546af8c8dac47ad049, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[19]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 1c46aed90662cf240b3e3bde87f58e4f, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: audioResources.Array.size
       value: 0
