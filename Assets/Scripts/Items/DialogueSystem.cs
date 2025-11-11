@@ -9,15 +9,21 @@ public class DialogueSystem : MonoBehaviour
 
     [SerializeField] private string Letter1Tag = "Letter";
     [SerializeField] private string Letter2Tag = "Letter2";
+    [SerializeField] private string Letter3Tag = "Letter3";
+    [SerializeField] private string Letter4Tag = "Letter4";
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
 
     public GameObject Letter;
     public GameObject Letter2;
+    public GameObject Letter3;
+    public GameObject Letter4;
 
     public int Letter1SFX = 0;
      public int Letter2SFX = 0;
-
+    public int Letter3SFX = 0;
+    public int Letter4SFX = 0;
+     
     public Object itemField;
     public GameObject fpsController;
 
@@ -76,9 +82,49 @@ public class DialogueSystem : MonoBehaviour
                     _selection = selection;
                 }
             }
+            if (selection.CompareTag(Letter3Tag))
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (SFXObject == null)
+                    {
+                        // activates dialogue
+                        var selectionRenderer = selection.GetComponent<Renderer>();
+                        if (selectionRenderer != null)
+                        {
+                            Debug.Log("active letter");
+                            Letter3.SetActive(true);
+                            //Time.timeScale = 0;
+                            SoundManager.instance.PlaySFX(Letter3SFX);
+                            StartDialogue();
+                        }
+                    }
+                    _selection = selection;
+                }
+            }
+        if (selection.CompareTag(Letter4Tag))
+                    {
+                        if (Input.GetMouseButtonDown(0))
+                        {
+                            if (SFXObject == null)
+                            {
+                                // activates dialogue
+                                var selectionRenderer = selection.GetComponent<Renderer>();
+                                if (selectionRenderer != null)
+                                {
+                                    Debug.Log("active letter");
+                                    Letter4.SetActive(true);
+                                    //Time.timeScale = 0;
+                                    SoundManager.instance.PlaySFX(Letter4SFX);
+                                    StartDialogue();
+                                }
+                            }
+                            _selection = selection;
+                        }
+                    }
             else
             {
-                
+
             }
         }
     }

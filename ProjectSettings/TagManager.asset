@@ -7,6 +7,8 @@ TagManager:
   - Selectable
   - Letter
   - Letter2
+  - Letter3
+  - Letter4
   layers:
   - Default
   - TransparentFX
