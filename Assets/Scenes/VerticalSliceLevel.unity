@@ -11233,7 +11233,7 @@ MonoBehaviour:
     m_Bits: 256
   Bullet:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
   chasePos: {fileID: 794906458}
   points: []
   ZombieAnim: {fileID: 653443458}
@@ -13934,8 +13934,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Madness
   madbuildup: 0
   IsMad: 0
-  gunsystem: {fileID: 0}
-  pmovement: {fileID: 0}
+  gunsystem: {fileID: 1267085236}
+  pmovement: {fileID: 794906459}
   madnessTimer: 0
 --- !u!4 &805283377 stripped
 Transform:
@@ -22697,8 +22697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef2352633ad04048a126b710ef17be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunSystem
-  bullet: {fileID: 1312081192}
-  shootForce: 400
+  bullet: {fileID: 0}
+  shootForce: 0
   upwardForce: 0
   reloadSFXIndex: 0
   gunShootSFXIndex: 0
