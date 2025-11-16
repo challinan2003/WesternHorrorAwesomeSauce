@@ -7,16 +7,17 @@ using UnityEngine.UI;
 
 public class ObjectiveText : MonoBehaviour
 {
-    public GameObject FirstObjective;
-    public GameObject SecondObjective;
+    public TextMeshProUGUI FirstObjective;
+    //public GameObject SecondObjective;
         private void OnTriggerEnter(Collider collision)
         {
             if (collision.gameObject.tag == "Player")
         {
+            Destroy(gameObject);
             Debug.Log("changes objective");
-            FirstObjective.SetActive(false);
-            SecondObjective.SetActive(true);
+            FirstObjective.text = "Find the station key";
         }
+
     }
 
 }

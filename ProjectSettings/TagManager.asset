@@ -10,6 +10,7 @@ TagManager:
   - Letter3
   - Letter4
   - Bullet
+  - Key
   layers:
   - Default
   - TransparentFX
