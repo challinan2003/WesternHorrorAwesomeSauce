@@ -98,6 +98,7 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        SoundManager.instance.PlayAudioResource(Random.Range(0,3));
         health -= damage;
 
         if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);

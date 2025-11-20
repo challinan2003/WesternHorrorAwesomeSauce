@@ -7398,6 +7398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyReferences
   navMeshagent: {fileID: 387835426}
   EnemyAnimator: {fileID: 387835427}
+  enemySFXPrefab: {fileID: 0}
   pathUpdateDelay: 0.2
 --- !u!195 &387835426
 NavMeshAgent:
@@ -7984,6 +7985,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: EnemySFXPrefab
+      value: 
+      objectReference: {fileID: 5881577710961670273, guid: 7c3edb2df9a49244cb0c170fafb46565, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: sfxOneShotPrefab
       value: 
       objectReference: {fileID: 5173983664519720195, guid: 7e86e7f0bfc83dd4894fdd8c67c585e8, type: 3}
@@ -7991,6 +7996,10 @@ PrefabInstance:
       propertyPath: sfxList.Array.size
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: enemySFXOneShotPrefab
+      value: 
+      objectReference: {fileID: 653443456}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'sfxList.Array.data[0]'
       value: 
@@ -8081,11 +8090,23 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: f113314c1068d5d45a367a3ac0c51929, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: audioResources.Array.size
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'audioResources.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 25ca8391bfe77c24aaa3386afa21d274, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'audioResources.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ff512eba46513484f83cb6ba6d81ce96, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'audioResources.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 1c46aed90662cf240b3e3bde87f58e4f, type: 3}
     - target: {fileID: 4352756237776159613, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.74865
+      value: 43.77
       objectReference: {fileID: 0}
     - target: {fileID: 4352756237776159613, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8093,7 +8114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4352756237776159613, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.77488
+      value: -50.48
       objectReference: {fileID: 0}
     - target: {fileID: 4352756237776159613, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11959,6 +11980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyReferences
   navMeshagent: {fileID: 653443457}
   EnemyAnimator: {fileID: 653443458}
+  enemySFXPrefab: {fileID: 0}
   pathUpdateDelay: 0.2
 --- !u!195 &653443457
 NavMeshAgent:
@@ -13224,6 +13246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyReferences
   navMeshagent: {fileID: 712245293}
   EnemyAnimator: {fileID: 712245294}
+  enemySFXPrefab: {fileID: 5881577710961670273, guid: 7c3edb2df9a49244cb0c170fafb46565, type: 3}
   pathUpdateDelay: 0.2
 --- !u!195 &712245293
 NavMeshAgent:
@@ -17628,6 +17651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyReferences
   navMeshagent: {fileID: 898156442}
   EnemyAnimator: {fileID: 898156443}
+  enemySFXPrefab: {fileID: 0}
   pathUpdateDelay: 0.2
 --- !u!195 &898156442
 NavMeshAgent:
@@ -19744,6 +19768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyReferences
   navMeshagent: {fileID: 972335357}
   EnemyAnimator: {fileID: 972335358}
+  enemySFXPrefab: {fileID: 0}
   pathUpdateDelay: 0.2
 --- !u!195 &972335357
 NavMeshAgent:
@@ -21810,8 +21835,8 @@ Transform:
   - {fileID: 1607383705}
   - {fileID: 2113003760}
   - {fileID: 1511249260}
-  - {fileID: 2031909992}
   - {fileID: 1916602058}
+  - {fileID: 2031909992}
   - {fileID: 831658455}
   - {fileID: 1875055827}
   - {fileID: 1439032301}
@@ -25911,8 +25936,8 @@ MonoBehaviour:
   bullet: {fileID: 1312081192}
   shootForce: 22.2
   upwardForce: 0
-  reloadSFXIndex: 0
-  gunShootSFXIndex: 0
+  reloadSFXIndex: 15
+  gunShootSFXIndex: 16
   damage: 10
   timeBetweenShooting: 0.5
   spread: 0

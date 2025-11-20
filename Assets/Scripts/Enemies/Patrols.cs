@@ -119,6 +119,7 @@ public class Patrols : MonoBehaviour
     {
         if (bullet.CompareTag("Bullet"))
         {
+            SoundManager.instance.PlayAudioResource(Random.Range(0,3));
             UnityEngine.Debug.Log("bullet hit!");
             enemyHealth -= gunSystem.damage;
             UnityEngine.Debug.Log(enemyHealth);
