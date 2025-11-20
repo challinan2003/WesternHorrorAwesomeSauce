@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class SoundManager : MonoBehaviour
+public class EnemySoundManager : MonoBehaviour
 {
-    public static SoundManager instance;
+    public static EnemySoundManager instance;
 
     public AudioClip[] sfxList;
     public List<AudioResource> audioResources = new List<AudioResource>();
 
-    public GameObject sfxOneShotPrefab;
-    //public GameObject EnemySFXPrefab;
+    //public GameObject sfxOneShotPrefab;
+    public GameObject EnemySFXPrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
@@ -30,19 +30,15 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
-    public void PlaySFX(int index, float pitchMultiplier = 1)
+
+    public void PlayAudioResource(int index, float pitchMultiplier = 1)
     {
-        GameObject sfx;
-        
-        
-        sfx = Instantiate(sfxOneShotPrefab, transform.position, Quaternion.identity);
-        
-        
+        //EnemySFXPrefab = GameObject.Find("enemySFXOneShotPrefab");
+        print("sound manager playing audio resource");
+        var sfx = Instantiate(EnemySFXPrefab, transform.position, Quaternion.identity);
         AudioSource audioSource = sfx.GetComponent<AudioSource>();
         audioSource.pitch = audioSource.pitch * pitchMultiplier;
-        sfx.GetComponent<SFXOneShotPrefab>().PlaySFXOneShot(sfxList[index]);
+        sfx.GetComponent<EnemySFXScript>().PlaySFXOneShot(audioResources[index]);
     }
-
-
 }
+

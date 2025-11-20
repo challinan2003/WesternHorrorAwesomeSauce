@@ -5,7 +5,7 @@ public class EnemyReferences : MonoBehaviour
 {
     public NavMeshAgent navMeshagent;
     public Animator EnemyAnimator;
-    public GameObject enemySFXPrefab;
+    //public GameObject enemySFXPrefab;
 
     [Header("Stats")]
 
