@@ -27,6 +27,7 @@ public class Patrols : MonoBehaviour
     [Header("Health")]
     public int enemyHealth = 60;
     public GunSystem gunSystem;
+    public GameObject EnemySFXObject;
         
     public enum EnemyState
     {
@@ -78,8 +79,7 @@ public class Patrols : MonoBehaviour
 
     void Update()
     {
-
-
+        
         //Player Spotted
         if (UnityEngine.Physics.Raycast(transform.position, transform.TransformDirection(UnityEngine.Vector3.forward), out RaycastHit hitinfo, 20f, Player))
         {
@@ -111,6 +111,9 @@ public class Patrols : MonoBehaviour
 
         if (enemyHealth <= 0)
         {
+        
+            EnemySoundManager.instance.PlayAudioResource(Random.Range(5,6));
+            
             Destroy(gameObject);
         }
     }
@@ -119,7 +122,9 @@ public class Patrols : MonoBehaviour
     {
         if (bullet.CompareTag("Bullet"))
         {
+     
             EnemySoundManager.instance.PlayAudioResource(Random.Range(0,3));
+            
             UnityEngine.Debug.Log("bullet hit!");
             enemyHealth -= gunSystem.damage;
             UnityEngine.Debug.Log(enemyHealth);

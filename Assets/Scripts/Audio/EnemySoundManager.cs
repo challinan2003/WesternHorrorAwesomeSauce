@@ -12,10 +12,12 @@ public class EnemySoundManager : MonoBehaviour
 
     //public GameObject sfxOneShotPrefab;
     public GameObject EnemySFXPrefab;
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void Start()
+    public void Update()
     {
+        
        // EnemySFXPrefab = GameObject.Find("enemySFXOneShotPrefab");
     }
     private void OnEnable()
@@ -27,13 +29,14 @@ public class EnemySoundManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
     public void PlayAudioResource(int index, float pitchMultiplier = 1)
     {
         //EnemySFXPrefab = GameObject.Find("enemySFXOneShotPrefab");
+        
         print("sound manager playing audio resource");
         var sfx = Instantiate(EnemySFXPrefab, transform.position, Quaternion.identity);
         AudioSource audioSource = sfx.GetComponent<AudioSource>();
