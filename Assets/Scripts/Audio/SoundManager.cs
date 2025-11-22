@@ -44,5 +44,14 @@ public class SoundManager : MonoBehaviour
         sfx.GetComponent<SFXOneShotPrefab>().PlaySFXOneShot(sfxList[index]);
     }
 
-
+    public void PlayAudioResource(int index, float pitchMultiplier = 1)
+    {
+        print("sound manager playing audio resource");
+        var sfx = Instantiate(sfxOneShotPrefab, transform.position, Quaternion.identity);
+        AudioSource audioSource = sfx.GetComponent<AudioSource>();
+        audioSource.pitch = audioSource.pitch * pitchMultiplier;
+        sfx.GetComponent<SFXOneShotPrefab>().PlaySFXOneShot(audioResources[index]);
+    }
 }
+
+
