@@ -113,7 +113,7 @@ public class Patrols : MonoBehaviour
         if (enemyHealth <= 0)
         {
         
-           SoundManager.instance.PlayAudioResource(Random.Range(5,7));
+           SoundManager.instance.PlayAudioResource(Random.Range(4,5));
             
             Destroy(gameObject);
         }
