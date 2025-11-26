@@ -1,11 +1,8 @@
-using System.Xml.Linq;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
 public class Madness : MonoBehaviour
 {
-    //public GameObject SFXObject;
-    public int MaddnessSFX = 0;
     public float madbuildup;
     public bool IsMad;
 
@@ -19,7 +16,6 @@ public class Madness : MonoBehaviour
     void Start()
     {
         madbuildup = 0;
-   //     target = GameObject.Find ("Gun");
     }
     // Update is called once per frame
     void Update()
@@ -38,13 +34,15 @@ public class Madness : MonoBehaviour
     public void CheckForMadness()
     {
         if (IsMad)
-            EnterMadness(); // renamed from Madness()
+            EnterMadness();
     }
 
     public void MadBuildup(int mad)
     {
-        madbuildup += mad;
-
+        if (madbuildup < 1000)
+        {
+            madbuildup += mad;
+        }
         // clamp to [0,100] using Unity's Mathf
         madbuildup = Mathf.Clamp(madbuildup, 0, 1000);
 
@@ -52,14 +50,16 @@ public class Madness : MonoBehaviour
         {
             IsMad = true;
         }
+        else
+        {
+            IsMad = false;
+        }
 
     }
 
     public void EnterMadness() // renamed method
     {
         IsMad = true;
-       // if (SFXObject == null)
-         //   SoundManager.instance.PlaySFX(MaddnessSFX);
         if (gunsystem != null)
         {
             gunsystem.damage = 15;
@@ -68,9 +68,9 @@ public class Madness : MonoBehaviour
 
         if (pmovement != null)
         {
-            pmovement.walkSpeed = 7;
-            pmovement.crouchSpeed = 5;
-            pmovement.sprintSpeed = 10;
+            pmovement.walkSpeed = 9;
+            pmovement.crouchSpeed = 7;
+            pmovement.sprintSpeed = 12;
         }
     }
 

@@ -4,9 +4,8 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public GameObject InventoryMenu;
+    public GameObject InventoryInterface;
     private bool menuActivated;
-    public ItemSlot[] itemSlot;
 
     void Update()
     {
@@ -14,7 +13,7 @@ public class InventoryManager : MonoBehaviour
         if (Input.GetButtonDown("Inventory") && menuActivated)
         {
             Time.timeScale = 1;
-            InventoryMenu.SetActive(false);
+            InventoryInterface.SetActive(false);
             menuActivated = false;
         }
 
@@ -22,20 +21,8 @@ public class InventoryManager : MonoBehaviour
         else if (Input.GetButtonDown("Inventory") && !menuActivated)
         {
             Time.timeScale = 0;
-            InventoryMenu.SetActive(true);
+            InventoryInterface.SetActive(true);
             menuActivated = true;
-        }
-    }
-
-    public void AddItem(string itemName, int quantity, Sprite itemSprite)
-    {
-        for (int i = 0; i < itemSlot.Length; i++)
-        {
-            if(itemSlot[i].isFull == false)
-            {
-                itemSlot[i].AddItem(itemName, quantity, itemSprite);
-                return;
-            }
         }
     }
 }
