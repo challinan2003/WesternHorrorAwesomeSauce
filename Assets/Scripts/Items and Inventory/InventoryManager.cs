@@ -2,11 +2,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
 public class InventoryManager : MonoBehaviour
 {
     public GameObject InventoryInterface;
     private bool menuActivated;
+    public InventoryItemData data {get; private set;}
+    public int stackSize {get; private set;}
 
+    private void Awake()
+    {
+        //InventoryInterface = new List<InventoryItem>();
+        //m_itemDictionary = new Dictionary<InventoryItemData, InventoryItem>();
+    }
     void Update()
     {
         //activates menu

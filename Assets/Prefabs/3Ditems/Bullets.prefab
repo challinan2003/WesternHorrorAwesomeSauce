@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 774314448317964625}
   - component: {fileID: 3489714077179509755}
   - component: {fileID: 4387342580043672944}
-  - component: {fileID: 8579804595089139224}
   m_Layer: 0
   m_Name: Bullets
   m_TagString: Untagged
@@ -112,18 +111,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8579804595089139224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7752798975949527886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5ec162acc48b964898cc869bc776cc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemName: Bullets
-  quantity: 6
-  sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
