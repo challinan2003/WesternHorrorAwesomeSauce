@@ -3,7 +3,7 @@ using UnityEngine;
 public class EndingTrigger : MonoBehaviour
 {
     public int KeyValue;
-
+    public GameObject Ending;
     // Update is called once per frame
     public void Update()
     {
@@ -16,6 +16,7 @@ public class EndingTrigger : MonoBehaviour
         {
             if (KeyValue == 1)
         {
+            Ending.SetActive(true);
             Debug.Log("Completed the level");
         }
         else
