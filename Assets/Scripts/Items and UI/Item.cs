@@ -13,7 +13,7 @@ public class Item : MonoBehaviour
 
     void Start()
     {
-        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+//        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
     }
 
     private void OnCollisionEnter(Collision collision)
