@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public int playerWalkSFX = 21;
     //SoundManager.instance.PlaySFX(playerWalkSFX);
     [Header("Movement")]
-    private float moveSpeed;
+    public float moveSpeed;
     public float walkSpeed;
     public float sprintSpeed;
     public float crouchSpeed;
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask whatIsGround;
-    bool grounded;
+    public bool grounded;
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;

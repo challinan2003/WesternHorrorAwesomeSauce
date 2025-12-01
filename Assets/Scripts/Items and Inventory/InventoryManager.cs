@@ -2,19 +2,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
 public class InventoryManager : MonoBehaviour
 {
-    public GameObject InventoryMenu;
+    public GameObject InventoryInterface;
     private bool menuActivated;
-    public ItemSlot[] itemSlot;
+    public InventoryItemData data {get; private set;}
+    public int stackSize {get; private set;}
 
+    private void Awake()
+    {
+        //InventoryInterface = new List<InventoryItem>();
+        //m_itemDictionary = new Dictionary<InventoryItemData, InventoryItem>();
+    }
     void Update()
     {
         //activates menu
         if (Input.GetButtonDown("Inventory") && menuActivated)
         {
             Time.timeScale = 1;
-            InventoryMenu.SetActive(false);
+            InventoryInterface.SetActive(false);
             menuActivated = false;
         }
 
@@ -22,20 +29,8 @@ public class InventoryManager : MonoBehaviour
         else if (Input.GetButtonDown("Inventory") && !menuActivated)
         {
             Time.timeScale = 0;
-            InventoryMenu.SetActive(true);
+            InventoryInterface.SetActive(true);
             menuActivated = true;
-        }
-    }
-
-    public void AddItem(string itemName, int quantity, Sprite itemSprite)
-    {
-        for (int i = 0; i < itemSlot.Length; i++)
-        {
-            if(itemSlot[i].isFull == false)
-            {
-                itemSlot[i].AddItem(itemName, quantity, itemSprite);
-                return;
-            }
         }
     }
 }

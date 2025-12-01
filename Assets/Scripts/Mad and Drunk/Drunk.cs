@@ -2,14 +2,18 @@ using UnityEngine;
 
 public class Drunk : MonoBehaviour
 {
-    public int drunkenness;
-    public bool isDrunk;
+    public float drunkenness;
+    public bool isDrunk = false;
     public GunSystem gunsystem;
     public Madness madness;
     public InventoryManager inventory;
     public float drunkTimer = 0.0f;
 
     //getting drunk
+    public void Update()
+    {
+        ConsumeAlc();
+    }
     public void ConsumeAlc()
     {
         //once inventory is reworked, this function will check inventory for alcohol
@@ -30,13 +34,13 @@ public class Drunk : MonoBehaviour
         {
             isDrunk = true;
             gunsystem.reloadTime = 5;
-            drunkenness -= 1;
+            drunkenness -= 0.5f;
         }
     }
     
     public void drunkDeath()
     {
-        if (isDrunk)
+        if (isDrunk == true)
         {
             drunkTimer = 60.0f;
             drunkTimer -= Time.deltaTime;

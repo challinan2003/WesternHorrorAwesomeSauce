@@ -3,7 +3,7 @@ using UnityEngine;
 public class GunPosition : MonoBehaviour
 {
     public Transform gunPosition;
-    void Update()
+    void Start()
     {
         transform.position = gunPosition.position;
     }
