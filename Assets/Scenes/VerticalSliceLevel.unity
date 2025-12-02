@@ -201,10 +201,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -130.97826
@@ -893,10 +889,6 @@ PrefabInstance:
     - target: {fileID: 7752798975949527886, guid: 0710cf979039919418e55a9d29131995, type: 3}
       propertyPath: m_Name
       value: Bullets (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1743,10 +1735,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.506096
@@ -2406,10 +2394,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.43
@@ -4778,10 +4762,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -157.02
@@ -6507,10 +6487,6 @@ PrefabInstance:
     - target: {fileID: 7752798975949527886, guid: 0710cf979039919418e55a9d29131995, type: 3}
       propertyPath: m_Name
       value: Bullets
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10587,10 +10563,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -135.4
@@ -11661,10 +11633,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullets
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12331,7 +12299,6 @@ GameObject:
   m_Component:
   - component: {fileID: 714810736}
   - component: {fileID: 714810737}
-  - component: {fileID: 714810738}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -12348,12 +12315,12 @@ Transform:
   m_GameObject: {fileID: 714810735}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.98992, y: 7.346, z: -23.16914}
+  m_LocalPosition: {x: 0, y: 0.24570036, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1870483551}
-  m_Father: {fileID: 881326588}
+  m_Father: {fileID: 794906458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &714810737
 MonoBehaviour:
@@ -12368,23 +12335,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraPosition
   cameraPosition: {fileID: 2008680671}
---- !u!114 &714810738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714810735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3a50c4cc4b06874d8bb4d4da79967de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HeadBob
-  playerMovement: {fileID: 0}
-  isEnabled: 1
-  headBobHeight: 0.015
-  headBobFrequency: 10
-  cameraPos: {fileID: 0}
 --- !u!1 &738021224
 GameObject:
   m_ObjectHideFlags: 0
@@ -13646,6 +13596,7 @@ Transform:
   - {fileID: 490296463}
   - {fileID: 2008680671}
   - {fileID: 583667605}
+  - {fileID: 714810736}
   m_Father: {fileID: 881326588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &794906459
@@ -15017,7 +14968,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 714810736}
   - {fileID: 794906458}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -91.855, z: 0}
@@ -15805,10 +15755,6 @@ PrefabInstance:
     - target: {fileID: 7752798975949527886, guid: 0710cf979039919418e55a9d29131995, type: 3}
       propertyPath: m_Name
       value: Bullets (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16844,10 +16790,6 @@ PrefabInstance:
     - target: {fileID: 7752798975949527886, guid: 0710cf979039919418e55a9d29131995, type: 3}
       propertyPath: m_Name
       value: Bullets (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19849,10 +19791,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullets (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21418,10 +21356,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.98
@@ -22246,10 +22180,6 @@ PrefabInstance:
     - target: {fileID: 7752798975949527886, guid: 0710cf979039919418e55a9d29131995, type: 3}
       propertyPath: m_Name
       value: Bullets (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25610,10 +25540,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -168.5953
@@ -27294,10 +27220,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -59.24
@@ -29093,10 +29015,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -65.77759
@@ -29657,6 +29575,78 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662316804}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1667280621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1667280622}
+  - component: {fileID: 1667280624}
+  - component: {fileID: 1667280623}
+  m_Layer: 0
+  m_Name: InventoryInterface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1667280622
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667280621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2111735164}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 700, y: 700}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1667280623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667280621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 7a65755f2b149e54baf61bd192ce5126, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1667280624
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667280621}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1668264225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34747,10 +34737,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullets
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36627,6 +36613,52 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &2080125561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2080125563}
+  - component: {fileID: 2080125562}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2080125562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080125561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 2111735163}
+--- !u!4 &2080125563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080125561}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 59.95795, y: 8.00499, z: -19.53505}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2111735164}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2085785993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37161,6 +37193,108 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4558076501824638, guid: 44a1a43347604914cbe9dab0fcee58ad, type: 3}
   m_PrefabInstance: {fileID: 2110928199}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2111735163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2111735164}
+  - component: {fileID: 2111735167}
+  - component: {fileID: 2111735166}
+  - component: {fileID: 2111735165}
+  m_Layer: 0
+  m_Name: InventoryCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2111735164
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111735163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1667280622}
+  m_Father: {fileID: 2080125563}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &2111735165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111735163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2111735166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111735163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &2111735167
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111735163}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &2113003759
 GameObject:
   m_ObjectHideFlags: 0
@@ -37777,10 +37911,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908691352}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2727538937281948357, guid: 6f5608aac64f88346912283408841fa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.3199997
@@ -37939,10 +38069,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullets
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: pickupSFX
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37958,6 +38084,7 @@ SceneRoots:
   - {fileID: 1376435679}
   - {fileID: 49613461}
   - {fileID: 1671714345}
+  - {fileID: 2080125563}
   - {fileID: 1371177069}
   - {fileID: 1261719538}
   - {fileID: 1944210263}
