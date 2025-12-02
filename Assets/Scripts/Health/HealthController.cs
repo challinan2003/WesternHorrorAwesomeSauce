@@ -19,6 +19,7 @@ public class HealthController : MonoBehaviour
 
     //test for health
     public KeyCode loseHealth = KeyCode.Space;
+    public GameObject Death;
 
     private void Start()
     {
@@ -68,6 +69,7 @@ public class HealthController : MonoBehaviour
 
         if (currentPlayerHealth <= 0)
         {
+            Death.SetActive(true);
             currentPlayerHealth = 0;
         }
     }
