@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using System.ComponentModel.Design;
+using NUnit.Framework;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class DialogueSystem : MonoBehaviour
      
     public Object itemField;
     public GameObject fpsController;
-
+    
     private Transform _selection;
     public GameObject SFXObject;
 
@@ -127,6 +128,8 @@ public class DialogueSystem : MonoBehaviour
 
             }
         }
+
+
     }
 
     public void EndDialogue()
@@ -144,4 +147,7 @@ public class DialogueSystem : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
   
     }
+
+
+
 }
