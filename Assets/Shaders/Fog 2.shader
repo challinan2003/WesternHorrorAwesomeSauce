@@ -53,7 +53,7 @@ Shader "Unlit/FogPlane"
                 half4 fog = (_Strength * (depth - i.scrPos.w));// fog by comparing depth and screenposition
                 half4 col = fog * _Tint;// add the color
                 col = saturate(col);// clamp to prevent weird artifacts
-                UNITY_APPLY_FOG(i.fogCoord, col); // comment out this line if you want this fog to override the fog in lighting settings
+                //UNITY_APPLY_FOG(i.fogCoord, col); // comment out this line if you want this fog to override the fog in lighting settings
                 return col;
             }
             ENDCG
