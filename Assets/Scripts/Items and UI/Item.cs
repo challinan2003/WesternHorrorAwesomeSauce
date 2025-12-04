@@ -3,28 +3,18 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public int pickupSFX = 0;
-    [SerializeField]
-    private string itemName;
-
-    [SerializeField]
-    private int quantity;
-
-    private InventoryManager inventoryManager;
+    public InventoryManager inventoryManager;
+    public InventoryItemData referenceItem;
 
     void Start()
     {
-//        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        inventoryManager = FindAnyObjectByType<InventoryManager>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnHandlePickupItem()
     {
-        if (collision.gameObject.tag == "Player");
-        {
-
-            //inventoryManager.AddItem(itemName, quantity);
-           
+            InventoryManager.current.Add(referenceItem);
             Destroy(gameObject);
             SoundManager.instance.PlaySFX(pickupSFX);
-        }
     }
 }

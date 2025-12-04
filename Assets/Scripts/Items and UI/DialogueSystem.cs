@@ -45,7 +45,7 @@ public class DialogueSystem : MonoBehaviour
             var selection = hit.transform;
             if (selection.CompareTag(Letter1Tag))
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetButtonDown("Interact"))
                 {
                     if (SFXObject == null)
                     {
@@ -65,7 +65,7 @@ public class DialogueSystem : MonoBehaviour
             }
             if (selection.CompareTag(Letter2Tag))
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetButtonDown("Interact"))
                 {
                     if (SFXObject == null)
                     {
@@ -85,7 +85,7 @@ public class DialogueSystem : MonoBehaviour
             }
             if (selection.CompareTag(Letter3Tag))
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetButtonDown("Interact"))
                 {
                     if (SFXObject == null)
                     {
@@ -105,7 +105,7 @@ public class DialogueSystem : MonoBehaviour
             }
         if (selection.CompareTag(Letter4Tag))
                     {
-                        if (Input.GetMouseButtonDown(0))
+                        if (Input.GetButtonDown("Interact"))
                         {
                             if (SFXObject == null)
                             {

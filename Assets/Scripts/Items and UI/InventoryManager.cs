@@ -9,7 +9,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject InventoryInterface;
     public static InventoryManager current;
     private bool menuActivated;
-    private Dictionary<InventoryItemData, InventoryItem> m_itemDictionary;
+    public Dictionary<InventoryItemData, InventoryItem> m_itemDictionary;
     public List<InventoryItem> inventory {get; private set;}
 
     void Update() //activates and deactivates inventory menu

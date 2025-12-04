@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -9,9 +10,13 @@ public class Madness : MonoBehaviour
     //other game objects
     public GunSystem gunsystem;
     public PlayerMovement pmovement;
+    public Drunk drunk;
+    public int MadnessSFX = 0;
+    public SoundManager soundManager;
+    public GameObject SFXObject;
 
     //madness death timer
-    public float madnessTimer = 0.0f;
+    public float madnessTimer = 60.0f;
 
     void Start()
     {
@@ -20,7 +25,13 @@ public class Madness : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SFXObject = GameObject.Find("SFXOneShotPrefab_Madness");
         CheckForMadness();
+
+        drunk.ConsumeAlc();
+        {
+            //!IsMad;
+        }
     }
 
     void FixedUpdate()
@@ -34,7 +45,9 @@ public class Madness : MonoBehaviour
     public void CheckForMadness()
     {
         if (IsMad)
+        {
             EnterMadness();
+        }
     }
 
     public void MadBuildup(int mad)
@@ -59,6 +72,10 @@ public class Madness : MonoBehaviour
 
     public void EnterMadness() // renamed method
     {
+        if (SFXObject == null)
+        {
+            SoundManager.instance.PlaySFX(MadnessSFX); // Play madness sound effect
+        }
         IsMad = true;
         if (gunsystem != null)
         {
@@ -78,7 +95,6 @@ public class Madness : MonoBehaviour
     {
         if (IsMad)
         {
-            madnessTimer = 60.0f;
             madnessTimer -= Time.deltaTime;
 
             if (madnessTimer <= 0.0f)

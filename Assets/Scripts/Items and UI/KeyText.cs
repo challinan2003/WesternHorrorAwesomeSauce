@@ -14,7 +14,7 @@ public class KeyText : MonoBehaviour
     
         private void OnTriggerEnter(Collider collision)
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.gameObject.tag == "Player" & Input.GetButtonDown("Interact"))
         {
             KeyCounter = 1;
             Debug.Log("changes objective again");

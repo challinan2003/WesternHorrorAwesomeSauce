@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2727538937281948357}
   - component: {fileID: 1115016866546730172}
   - component: {fileID: 5614091194951611336}
-  - component: {fileID: 3904284925613203369}
+  - component: {fileID: 3769922332899217434}
+  - component: {fileID: 6484037233707583051}
   m_Layer: 0
   m_Name: Cigs
   m_TagString: Untagged
@@ -90,8 +91,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3904284925613203369
-BoxCollider:
+--- !u!114 &3769922332899217434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854005655955732964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ec162acc48b964898cc869bc776cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  pickupSFX: 0
+  itemName: Pack of Cigarettes
+  quantity: 5
+  inventoryManager: {fileID: 0}
+  referenceData: {fileID: 11400000, guid: 0f47254b38f725e4c9c00e5212807967, type: 2}
+--- !u!135 &6484037233707583051
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,9 +123,9 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 2.12
   m_Center: {x: 0, y: 0, z: 0}
