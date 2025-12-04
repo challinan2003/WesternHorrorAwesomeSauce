@@ -14145,7 +14145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Drunk
   drunkenness: 0
   isDrunk: 0
-  gunsystem: {fileID: 0}
+  gunsystem: {fileID: 1267085236}
   madness: {fileID: 794906463}
   inventory: {fileID: 2080125562}
   drunkTimer: 0

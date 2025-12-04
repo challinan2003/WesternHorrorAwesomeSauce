@@ -85,9 +85,9 @@ public class Madness : MonoBehaviour
 
         if (pmovement != null)
         {
-            pmovement.walkSpeed = 9;
-            pmovement.crouchSpeed = 7;
-            pmovement.sprintSpeed = 12;
+            pmovement.walkSpeed = 6;
+            pmovement.crouchSpeed = 4;
+            pmovement.sprintSpeed = 7;
         }
     }
 
