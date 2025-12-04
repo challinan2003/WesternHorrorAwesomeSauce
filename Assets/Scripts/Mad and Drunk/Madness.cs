@@ -14,6 +14,7 @@ public class Madness : MonoBehaviour
     public int MadnessSFX = 0;
     public SoundManager soundManager;
     public GameObject SFXObject;
+    public GameObject Death;
 
     //madness death timer
     public float madnessTimer = 60.0f;
@@ -31,6 +32,12 @@ public class Madness : MonoBehaviour
         drunk.ConsumeAlc();
         {
             //!IsMad;
+        }
+
+        //madness death timer
+        if (IsMad)
+        {
+            madnessTimer -= Time.deltaTime;
         }
     }
 
@@ -95,10 +102,10 @@ public class Madness : MonoBehaviour
     {
         if (IsMad)
         {
-            madnessTimer -= Time.deltaTime;
-
-            if (madnessTimer <= 0.0f)
+            if (madnessTimer == 0.0f)
             {
+                madnessTimer = 0.0f;
+                Death.SetActive(true);
                 //YOU SUCCUMBED TO MADNESS!!!!!!!!!!!
             }
             
