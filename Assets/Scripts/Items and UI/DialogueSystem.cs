@@ -31,8 +31,6 @@ public class DialogueSystem : MonoBehaviour
     private Transform _selection;
     public GameObject SFXObject;
 
-    // Update is called once per frame
-
     void Update()
     {
         SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
@@ -123,10 +121,6 @@ public class DialogueSystem : MonoBehaviour
                             _selection = selection;
                         }
                     }
-            else
-            {
-
-            }
         }
 
 

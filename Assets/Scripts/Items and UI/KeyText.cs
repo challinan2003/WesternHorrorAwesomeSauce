@@ -14,12 +14,12 @@ public class KeyText : MonoBehaviour
     
         private void OnTriggerEnter(Collider collision)
         {
-            if (collision.gameObject.tag == "Player" & Input.GetButtonDown("Interact"))
+            if (collision.gameObject.tag == "Player")
         {
             KeyCounter = 1;
             Debug.Log("changes objective again");
             FirstObjective.text = "Return to the Station";
-            //Destroy(gameObject);
+            Destroy(gameObject);
             SoundManager.instance.PlaySFX(pickupSFX);
         }
 

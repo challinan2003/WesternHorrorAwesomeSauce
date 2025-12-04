@@ -14,10 +14,10 @@ public class Madness : MonoBehaviour
     public int MadnessSFX = 0;
     public SoundManager soundManager;
     public GameObject SFXObject;
-    public GameObject Death;
+    public  GameObject Death;
 
     //madness death timer
-    public float madnessTimer = 60.0f;
+    public float madnessTimer = 10.0f;
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class Madness : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SFXObject = GameObject.Find("SFXOneShotPrefab_Madness");
+        SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
         CheckForMadness();
 
         drunk.ConsumeAlc();
@@ -38,6 +38,12 @@ public class Madness : MonoBehaviour
         if (IsMad)
         {
             madnessTimer -= Time.deltaTime;
+        }
+        if (madnessTimer < 0.0f)
+        {
+            Death.SetActive(true);
+            Debug.Log("PLEEEEEEEEEAAAAAAASE");
+            madnessTimer = 0.0f;
         }
     }
 
@@ -82,6 +88,7 @@ public class Madness : MonoBehaviour
         if (SFXObject == null)
         {
             SoundManager.instance.PlaySFX(MadnessSFX); // Play madness sound effect
+            Debug.Log("playing audio please god");
         }
         IsMad = true;
         if (gunsystem != null)
@@ -98,17 +105,14 @@ public class Madness : MonoBehaviour
         }
     }
 
-    public void MadnessDeath()
-    {
-        if (IsMad)
-        {
-            if (madnessTimer == 0.0f)
-            {
-                madnessTimer = 0.0f;
-                Death.SetActive(true);
-                //YOU SUCCUMBED TO MADNESS!!!!!!!!!!!
-            }
+    //public void MadnessDeath()
+    //{
+    //    if (IsMad && madnessTimer == 0.0f)
+    //    {
+    //        Death.SetActive(true);
+    //        Debug.Log("PLEEEEEEEEEAAAAAAASE");
+            //YOU SUCCUMBED TO MADNESS!!!!!!!!!!!
             
-        }
-    }
+    //    }
+   // }
 }
