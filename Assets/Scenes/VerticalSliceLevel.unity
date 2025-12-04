@@ -15658,7 +15658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Drunk
   drunkenness: 0
   isDrunk: 0
-  gunsystem: {fileID: 1267085236}
+  gunsystem: {fileID: 0}
   madness: {fileID: 794906463}
   inventory: {fileID: 2080125562}
   drunkTimer: 0
@@ -15683,7 +15683,7 @@ MonoBehaviour:
   soundManager: {fileID: 1452354029}
   SFXObject: {fileID: 5173983664519720195, guid: 7e86e7f0bfc83dd4894fdd8c67c585e8, type: 3}
   Death: {fileID: 1263565100}
-  madnessTimer: 10
+  madnessTimer: 80
 --- !u!114 &794906464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20743,35 +20743,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 653443458}
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 653443457}
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 653443456}
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 653443455}
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 653443460}
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 653443463}
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 653443462}
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 653443464}
-    - targetCorrespondingSourceObject: {fileID: 8453103736861549022, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1253166823}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
+--- !u!4 &1013439188 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
+  m_PrefabInstance: {fileID: 1013439187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1013496935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37373,6 +37351,7 @@ Transform:
   - {fileID: 203201238}
   - {fileID: 377056528}
   - {fileID: 36523898}
+  - {fileID: 1013439188}
   m_Father: {fileID: 1038695910}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1612013287
@@ -39297,7 +39276,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1671714345}
   - component: {fileID: 1671714346}
-  - component: {fileID: 1671714347}
   m_Layer: 0
   m_Name: ~~~~~~~~~  UI ~~~~~~~~~~
   m_TagString: Untagged
