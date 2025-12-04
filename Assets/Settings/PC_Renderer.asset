@@ -18,7 +18,7 @@ MonoBehaviour:
   requirements: 0
   passMaterial: {fileID: 2100000, guid: a986275bd18afec49a8a72c29412cc5a, type: 2}
   passIndex: 0
-  bindDepthStencilAttachment: 0
+  bindDepthStencilAttachment: 1
   m_Version: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -91,9 +91,9 @@ MonoBehaviour:
   m_Name: FullScreenPassRendererFeature
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.FullScreenPassRendererFeature
   m_Active: 1
-  injectionPoint: 600
+  injectionPoint: 450
   fetchColorBuffer: 1
-  requirements: 1
+  requirements: 0
   passMaterial: {fileID: 2100000, guid: e20d84f5f19324846957a6423a7335da, type: 2}
   passIndex: 0
   bindDepthStencilAttachment: 1
