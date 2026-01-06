@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int playerWalkSFX = 21;
+    //public int playerWalkSFX = 0;
     //SoundManager.instance.PlaySFX(playerWalkSFX);
     [Header("Movement")]
     public float moveSpeed;
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private float startYScale;
     public float staminaDuration;
     private bool isCrouching = false;
-
+    public GameObject SFXObject;
 
     [Header("Ground Check")]
     public Transform groundCheck;
@@ -76,6 +76,12 @@ public class PlayerMovement : MonoBehaviour
         TrackInput();
         SpeedControl();
         StateHandler();
+
+        if (state == MovementState.walking)
+        {
+            SoundManager.instance.PlayAudioResource(Random.Range(23, 26));
+            //SoundManager.instance.PlaySFX(playerWalkSFX);
+        }
 
         //handle drag
         if (grounded)
@@ -147,6 +153,8 @@ public class PlayerMovement : MonoBehaviour
         else if (grounded && !isCrouching)
         {
             state = MovementState.walking;
+            //SoundManager.instance.PlaySFX(playerWalkSFX);
+            //SoundManager.instance.PlayAudioResource(Random.Range(23, 26));
             moveSpeed = walkSpeed;
             if (staminaDuration < 4)
             {
@@ -172,16 +180,16 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.air;
         }
 
-
     }
     
 
     void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-
-        if (grounded)
+        if (grounded) 
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+  
+
 
         else if (!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
@@ -200,6 +208,7 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new UnityEngine.Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
         }
     }
+    
 
     private void Jump()
     {

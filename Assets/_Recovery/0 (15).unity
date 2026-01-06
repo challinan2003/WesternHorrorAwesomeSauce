@@ -8350,7 +8350,7 @@ PrefabInstance:
       objectReference: {fileID: 5173983664519720195, guid: 7e86e7f0bfc83dd4894fdd8c67c585e8, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: sfxList.Array.size
-      value: 23
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: enemySFXOneShotPrefab
@@ -8427,7 +8427,7 @@ PrefabInstance:
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'sfxList.Array.data[17]'
       value: 
-      objectReference: {fileID: 8300000, guid: 8930632eed1d0bf4fb32c739b37b114a, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'sfxList.Array.data[18]'
       value: 
@@ -8451,7 +8451,19 @@ PrefabInstance:
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'sfxList.Array.data[23]'
       value: 
-      objectReference: {fileID: 8300000, guid: 03cd3973275e2094da6f993c4f1b8b91, type: 3}
+      objectReference: {fileID: 8300000, guid: 8c0cf4382542c2d458ffeb274d9dfcb8, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[24]'
+      value: 
+      objectReference: {fileID: 8300000, guid: bd2886fbda298ab4a9a0d3e68de2a06f, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[25]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 998acea2805a4ce468c55c83eb95eb87, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[26]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 696ce5c936e00b24382752488e9e7edf, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: audioResources.Array.size
       value: 5
@@ -15522,6 +15534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ce1b6bdb5b4324fa20637fbe98c571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  playerWalkSFX: 17
   moveSpeed: 0
   walkSpeed: 3.5
   sprintSpeed: 4.5
@@ -15532,7 +15545,7 @@ MonoBehaviour:
   airMultiplier: 0.4
   crouchYScale: 0.6
   staminaDuration: 4
-  SFXObject: {fileID: 1883256353}
+  SFXObject: {fileID: 0}
   groundCheck: {fileID: 583667605}
   groundDistance: 0.1
   whatIsGround:
@@ -33939,7 +33952,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
   m_PrefabInstance: {fileID: 443782398}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1883256353}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 420f93b7223c99b4a80c9b0731d5e93e, type: 3}
@@ -43294,11 +43307,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4001969200261726, guid: 41165376852919b4dbdf58d033204553, type: 3}
   m_PrefabInstance: {fileID: 1878345336}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1883256353 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8921399942365065397, guid: 58a3737772a6d684381033c927fddcea, type: 3}
-  m_PrefabInstance: {fileID: 443782398}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1885243244
 PrefabInstance:
