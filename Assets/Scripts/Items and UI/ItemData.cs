@@ -12,9 +12,9 @@ public class ItemData : MonoBehaviour
     public InventoryManager inventoryManager;
     public SoundManager soundManager;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
-        if (CompareTag("Gin") && collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (CompareTag("Gin") && collision.gameObject.CompareTag("Player") && (Input.GetKeyDown(KeyCode.E)))
         {
             inventoryManager.alcoholCount += 1;
             Destroy(gameObject);
@@ -22,7 +22,7 @@ public class ItemData : MonoBehaviour
             Debug.Log("Picked up ALCOHOL");
         }
 
-        if (CompareTag("Cigs") && collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (CompareTag("Cigs") && collision.gameObject.CompareTag("Player") && (Input.GetKeyDown(KeyCode.E)))
         {
             inventoryManager.cigaretteCount += 5;
             Destroy(gameObject);
@@ -30,7 +30,7 @@ public class ItemData : MonoBehaviour
             Debug.Log("Picked up CIGARETTES");
         }
 
-        if (CompareTag("Bullet") && collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (CompareTag("Bullets") && collision.gameObject.CompareTag("Player") && (Input.GetKeyDown(KeyCode.E)))
         {
             inventoryManager.bulletCount += 6;
             Destroy(gameObject);

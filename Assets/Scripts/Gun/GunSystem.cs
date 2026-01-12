@@ -16,7 +16,7 @@ public class GunSystem : MonoBehaviour
     public int magazineSize, bulletsPerTap;
     public bool allowButtonHold;
     int bulletsLeft, bulletsShot;
-    int inventoryBullets;
+    int invBullets;
 
     //bools
     bool shooting, readyToShoot, reloading;
@@ -36,14 +36,14 @@ public class GunSystem : MonoBehaviour
 
     private void Awake()
     {
-        inventoryBullets = inventoryManager.bulletCount;
+        invBullets = inventoryManager.bulletCount;
         bulletsLeft = magazineSize;
         readyToShoot = true;
     }
     private void Update()
     {
         MyInput();
-        text.SetText(bulletsLeft + " / " + inventoryBullets);
+        text.SetText(bulletsLeft + " / " + invBullets);
         UnityEngine.Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward, UnityEngine.Color.green);
     }
 
@@ -123,7 +123,14 @@ public class GunSystem : MonoBehaviour
     }
     private void ReloadFinished()
     {
+        if (invBullets >= bulletsLeft)
+        {
         bulletsLeft = magazineSize;
+        }
+        if (invBullets < magazineSize)
+        {
+            magazineSize = invBullets;
+        }
         reloading = false;
     }
 }
