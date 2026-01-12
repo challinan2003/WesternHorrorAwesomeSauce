@@ -691,7 +691,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 846501422}
   m_Father: {fileID: 1073019323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &202296010
@@ -1707,6 +1708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 476937527}
   - component: {fileID: 476937528}
+  - component: {fileID: 476937529}
   m_Layer: 0
   m_Name: GunHolder
   m_TagString: Untagged
@@ -1744,6 +1746,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GunSway
   smooth: 8
   swayMultiplier: 2
+--- !u!114 &476937529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476937526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32fe5dec984bd2540829d244399ea909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeadBobV2
+  amount: 0.003
+  frequency: 12
+  smooth: 15.6
+  playerMovement: {fileID: 1073019324}
 --- !u!1 &488104533
 GameObject:
   m_ObjectHideFlags: 0
@@ -3954,6 +3972,55 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &846501421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 846501422}
+  - component: {fileID: 846501423}
+  m_Layer: 0
+  m_Name: HeadBobControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &846501422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846501421}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.31502962, y: -6.20102, z: 2.77839}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1908824725}
+  m_Father: {fileID: 202053308}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &846501423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846501421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32fe5dec984bd2540829d244399ea909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeadBobV2
+  amount: 0.008
+  frequency: 12
+  smooth: 10
+  playerMovement: {fileID: 1073019324}
 --- !u!1 &856427179
 GameObject:
   m_ObjectHideFlags: 0
@@ -4307,7 +4374,6 @@ Transform:
   - {fileID: 676282853}
   - {fileID: 241129446}
   - {fileID: 1468131123}
-  - {fileID: 1908824725}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1073019324
@@ -4332,6 +4398,7 @@ MonoBehaviour:
   jumpCooldown: 0.4
   airMultiplier: 0.4
   crouchYScale: 0.6
+  playerModel: {fileID: 2090929997}
   staminaDuration: 4
   groundCheck: {fileID: 241129446}
   groundDistance: 0.4
@@ -4398,7 +4465,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073019322}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 103b2bd2c162e5d4b9a39e86b4e113e2, type: 3}
   m_Name: 
@@ -16861,7 +16928,6 @@ GameObject:
   - component: {fileID: 1805550783}
   - component: {fileID: 1805550782}
   - component: {fileID: 1805550785}
-  - component: {fileID: 1805550786}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -17003,22 +17069,6 @@ MonoBehaviour:
   xSens: 400
   ySens: 400
   orientation: {fileID: 202053308}
---- !u!114 &1805550786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805550780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 086eaa4a78295f54994c583868748f15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fog
-  fogShader: {fileID: 4800000, guid: 02cfa472823040049bdbe7c3355436a1, type: 3}
-  fogColor: {r: 0.16981131, g: 0.039248843, b: 0.039248843, a: 0}
-  fogDensity: 1
-  fogOffset: 65.4
 --- !u!1 &1841116209 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
@@ -17996,7 +18046,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1908824725}
   - component: {fileID: 1908824724}
-  - component: {fileID: 1908824726}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -18026,28 +18075,13 @@ Transform:
   m_GameObject: {fileID: 1908824723}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3499999, y: 0, z: -0.19999981}
+  m_LocalPosition: {x: -0.034970284, y: 5.70102, z: -2.9783897}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1805550781}
-  m_Father: {fileID: 1073019323}
+  m_Father: {fileID: 846501422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1908824726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908824723}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32fe5dec984bd2540829d244399ea909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HeadBobV2
-  amount: 0.002
-  frequency: 10
-  smooth: 10
 --- !u!1 &1921978796
 GameObject:
   m_ObjectHideFlags: 0
@@ -18496,7 +18530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2088833581
 MonoBehaviour:
   m_ObjectHideFlags: 0

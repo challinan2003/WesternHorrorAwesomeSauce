@@ -7,7 +7,8 @@ public class HeadBobV2 : MonoBehaviour
     [SerializeField, Range (10f, 100f)] private float smooth = 10.0f;
 
     UnityEngine.Vector3 startPos;
-
+    public PlayerMovement playerMovement;
+ 
     void Start()
     {
         startPos = transform.localPosition;
@@ -24,7 +25,7 @@ public class HeadBobV2 : MonoBehaviour
         float inputMagnitude = new UnityEngine.Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).magnitude;
         
 
-        if (inputMagnitude > 0)
+        if (playerMovement.moveSpeed > 0)
         {
             StartHeadBob();       
         }
@@ -33,8 +34,8 @@ public class HeadBobV2 : MonoBehaviour
     private UnityEngine.Vector3 StartHeadBob()
     {
         UnityEngine.Vector3 pos = UnityEngine.Vector3.zero;
-        pos.y += Mathf.Lerp(pos.y, Mathf.Sin(Time.deltaTime * frequency) * amount * 1.4f, smooth * Time.deltaTime);
-        pos.x += Mathf.Lerp(pos.x, Mathf.Cos(Time.deltaTime * frequency / 2f) * amount * 1.6f, smooth * Time.deltaTime);
+        pos.y += Mathf.Lerp(pos.y, Mathf.Sin(Time.time * frequency) * amount * 1.4f, smooth * Time.deltaTime);
+        pos.x += Mathf.Lerp(pos.x, Mathf.Cos(Time.time * frequency / 2f) * amount * 1.6f, smooth * Time.deltaTime);
         transform.localPosition += pos;
 
 

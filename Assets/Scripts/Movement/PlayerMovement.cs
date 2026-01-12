@@ -24,9 +24,11 @@ public class PlayerMovement : MonoBehaviour
     bool readyToJump;
     public float crouchYScale;
     private float startYScale;
+    public Transform playerModel;
     public float staminaDuration;
     private bool isCrouching = false;
     public GameObject SFXObject;
+
 
     [Header("Ground Check")]
     public Transform groundCheck;
@@ -52,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
     public enum MovementState
     {
+        idling,
         walking,
         sprinting,
         crouching,
@@ -122,7 +125,8 @@ public class PlayerMovement : MonoBehaviour
         //Is crouching
         if (Input.GetKeyDown(crouchKey))
         {
-            transform.localScale = new UnityEngine.Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+            //if 
+            playerModel.localScale = new UnityEngine.Vector3(playerModel.localScale.x, crouchYScale, playerModel.localScale.z);
             rb.AddForce(UnityEngine.Vector3.down * 5f, ForceMode.Impulse);
             isCrouching = true;
         }
@@ -130,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
         //not crouching 
         if (Input.GetKeyUp(crouchKey))
         {
-            transform.localScale = new UnityEngine.Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+            playerModel.localScale = new UnityEngine.Vector3(playerModel.localScale.x, startYScale, playerModel.localScale.z);
             rb.AddForce(UnityEngine.Vector3.up * 3f, ForceMode.Impulse);
             isCrouching = false;
         }
