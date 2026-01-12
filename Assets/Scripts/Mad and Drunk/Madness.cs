@@ -4,8 +4,11 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Madness : MonoBehaviour
 {
+    //madness specific variables
     public float madbuildup;
     public bool IsMad;
+    public bool madResist;
+    
 
     //other game objects
     public GunSystem gunsystem;
@@ -16,12 +19,14 @@ public class Madness : MonoBehaviour
     public GameObject SFXObject;
     public  GameObject Death;
 
-    //madness death timer
-    public float madnessTimer = 10.0f;
+    //timers
+    public float madnessTimer = 60.0f;
+    public float madResistTimer = 0.0f;
 
     void Start()
     {
         madbuildup = 0;
+        madResist = false;
     }
     // Update is called once per frame
     void Update()
@@ -29,31 +34,39 @@ public class Madness : MonoBehaviour
         SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
         CheckForMadness();
 
-        drunk.ConsumeAlc();
-        {
-            //!IsMad;
-        }
-
         //madness death timer
         if (IsMad)
-        {
+        { 
             madnessTimer -= Time.deltaTime;
         }
         if (madnessTimer < 0.0f)
         {
             Death.SetActive(true);
+            Time.timeScale = 0;
             Debug.Log("PLEEEEEEEEEAAAAAAASE");
             madnessTimer = 0.0f;
         }
-    }
 
-    void FixedUpdate()
-    {
-        if (!IsMad)
+        if (madResist)
         {
-            MadBuildup(1);
+            madResistTimer = Mathf.Clamp(madResistTimer, 0, 15);
+            madResistTimer -= Time.deltaTime;
         }
     }
+
+    //constant madness buildup
+    void FixedUpdate()
+    {
+        if (!IsMad && !madResist)
+        {
+            MadBuildup(1.0f);
+        }
+        else if (madResist == true)
+        {
+            MadBuildup(0.1f);
+        }
+    }
+
 
     public void CheckForMadness()
     {
@@ -63,14 +76,16 @@ public class Madness : MonoBehaviour
         }
     }
 
-    public void MadBuildup(int mad)
+
+    public void MadBuildup(float mad)
     {
-        if (madbuildup < 1000)
+        if (madbuildup < 1000.0f)
         {
+            madnessTimer = 60.0f;
             madbuildup += mad;
         }
-        // clamp to [0,100] using Unity's Mathf
-        madbuildup = Mathf.Clamp(madbuildup, 0, 1000);
+        // clamp to [0,1000] to ensure it doesn't exceed bounds
+        madbuildup = Mathf.Clamp(madbuildup, 0.0f, 1000.0f);
 
         if (madbuildup == 1000 && !IsMad)
         {
@@ -91,28 +106,16 @@ public class Madness : MonoBehaviour
             Debug.Log("playing audio please god");
         }
         IsMad = true;
-        if (gunsystem != null)
+        
+        //madness effects
+        if (IsMad)
         {
-            gunsystem.damage = 15;
-            gunsystem.reloadTime = 2;
-        }
+            gunsystem.damage = 5;
+            gunsystem.reloadTime = 10;
 
-        if (pmovement != null)
-        {
-            pmovement.walkSpeed = 6;
-            pmovement.crouchSpeed = 4;
-            pmovement.sprintSpeed = 7;
+            pmovement.walkSpeed = 3;
+            pmovement.crouchSpeed = 2;
+            pmovement.sprintSpeed = 4;
         }
     }
-
-    //public void MadnessDeath()
-    //{
-    //    if (IsMad && madnessTimer == 0.0f)
-    //    {
-    //        Death.SetActive(true);
-    //        Debug.Log("PLEEEEEEEEEAAAAAAASE");
-            //YOU SUCCUMBED TO MADNESS!!!!!!!!!!!
-            
-    //    }
-   // }
 }

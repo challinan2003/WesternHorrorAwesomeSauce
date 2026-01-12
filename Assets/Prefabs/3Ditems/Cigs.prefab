@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6484037233707583051}
   m_Layer: 0
   m_Name: Cigs
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,10 +104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   pickupSFX: 0
-  itemName: Pack of Cigarettes
-  quantity: 5
   inventoryManager: {fileID: 0}
-  referenceData: {fileID: 11400000, guid: 0f47254b38f725e4c9c00e5212807967, type: 2}
+  referenceItem: {fileID: 11400000, guid: 0f47254b38f725e4c9c00e5212807967, type: 2}
 --- !u!135 &6484037233707583051
 SphereCollider:
   m_ObjectHideFlags: 0

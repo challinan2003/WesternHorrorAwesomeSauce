@@ -25,6 +25,7 @@ public class GunSystem : MonoBehaviour
     public Transform attackPoint;
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
+    public InventoryManager inventoryManager;
 
     //graphics
     //public GameObject muzzleFlash, bulletHoleGraphic;
@@ -42,7 +43,6 @@ public class GunSystem : MonoBehaviour
         MyInput();
         text.SetText(bulletsLeft + " / " + magazineSize);
         UnityEngine.Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward, UnityEngine.Color.green);
-
     }
 
     //shooting input

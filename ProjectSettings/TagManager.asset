@@ -12,6 +12,9 @@ TagManager:
   - Bullet
   - Key
   - Item
+  - Gin
+  - Bullets
+  - Cigs
   layers:
   - Default
   - TransparentFX

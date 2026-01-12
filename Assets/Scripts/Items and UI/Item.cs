@@ -4,17 +4,25 @@ public class Item : MonoBehaviour
 {
     public int pickupSFX = 0;
     public InventoryManager inventoryManager;
-    public InventoryItemData referenceItem;
+    //public InventoryItemData referenceItem;
 
-    void Start()
+    //void Start()
+    //{
+        //inventoryManager = FindAnyObjectByType<InventoryManager>();
+    //}
+
+    private void OnTriggerEnter(Collider collision)
     {
-        inventoryManager = FindAnyObjectByType<InventoryManager>();
+        if (tag == "Item" && Input.GetButtonDown("Interact") && collision.gameObject.tag == "Player")
+        {
+            //OnHandlePickupItem();
+        }
     }
 
-    public void OnHandlePickupItem()
-    {
-            InventoryManager.current.Add(referenceItem);
-            Destroy(gameObject);
-            SoundManager.instance.PlaySFX(pickupSFX);
-    }
+    //public void OnHandlePickupItem()
+    //{
+            //InventoryManager.current.Add(referenceItem);
+            //Destroy(gameObject);
+           // SoundManager.instance.PlaySFX(pickupSFX);
+    //}
 }

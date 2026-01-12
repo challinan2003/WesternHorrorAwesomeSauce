@@ -13,17 +13,40 @@ public class Drunk : MonoBehaviour
     public void Update()
     {
         ConsumeAlc();
+        drunk();
+        madnessResistEnd();
+        //natural drunk decay
+        if (drunkenness > 0.0f)
+        {
+            drunkenness -= 0.05f;
+        }
     }
     public void ConsumeAlc()
     {
         //once inventory is reworked, this function will check inventory for alcohol
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.V) && inventory.alcoholCount > 0)
         {
-            madness.madbuildup -= 400;
+            madness.madbuildup -= 400.0f;
             drunkenness += 25;
             drunkenness = Mathf.Clamp(drunkenness, 0, 100);
 
+            //madness resist
+            madness.IsMad = false;
+            madness.madResist = true;
+            madness.madResistTimer = 15.0f;
+            
+            
+
             Debug.Log("Drinking ALCOHOL!!!!");
+        }
+    }
+
+    public void madnessResistEnd()
+    {
+        if (madness.madResistTimer <= 0.0f)
+        {
+            madness.madResist = false;
+            madness.madResistTimer = 0.0f;
         }
     }
 
@@ -34,16 +57,27 @@ public class Drunk : MonoBehaviour
         {
             isDrunk = true;
             gunsystem.reloadTime = 5;
-            drunkenness -= 0.5f;
+            drunkTimer = 30.0f;
+        }
+
+        if (isDrunk)
+        {
+            drunkTimer -= Time.deltaTime;
+            if (drunkTimer <= 0.0f)
+            {
+                isDrunk = false;
+                gunsystem.reloadTime = 2;
+                drunkenness = 0.0f;
+            }
         }
     }
     
-    public void drunkDeath()
-    {
-        if (isDrunk == true)
-        {
-            drunkTimer = 60.0f;
-            drunkTimer -= Time.deltaTime;
-        }
-    }
+    //public void drunkDeath()
+    //{
+        //if (isDrunk == true)
+        //{
+            //drunkTimer = 60.0f;
+            //drunkTimer -= Time.deltaTime;
+       // }
+   // }
 }
