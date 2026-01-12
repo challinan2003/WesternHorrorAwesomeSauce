@@ -15530,16 +15530,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 0
-  walkSpeed: 3.5
-  sprintSpeed: 4.5
+  walkSpeed: 2.5
+  sprintSpeed: 3.5
   crouchSpeed: 3
   groundDrag: 5
   jumpForce: 4
   jumpCooldown: 1
   airMultiplier: 0.4
   crouchYScale: 0.6
+  playerModel: {fileID: 0}
   staminaDuration: 4
-  SFXObject: {fileID: 1883256353}
   groundCheck: {fileID: 583667605}
   groundDistance: 0.1
   whatIsGround:
@@ -18979,7 +18979,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.64
+  m_Radius: 0.73
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -33559,7 +33559,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
   m_PrefabInstance: {fileID: 443782398}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1883256353}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 420f93b7223c99b4a80c9b0731d5e93e, type: 3}
@@ -42820,11 +42820,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4001969200261726, guid: 41165376852919b4dbdf58d033204553, type: 3}
   m_PrefabInstance: {fileID: 1878345336}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1883256353 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8921399942365065397, guid: 58a3737772a6d684381033c927fddcea, type: 3}
-  m_PrefabInstance: {fileID: 443782398}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1883256354 stripped
 Transform:

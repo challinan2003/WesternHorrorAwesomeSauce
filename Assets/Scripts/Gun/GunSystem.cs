@@ -16,6 +16,7 @@ public class GunSystem : MonoBehaviour
     public int magazineSize, bulletsPerTap;
     public bool allowButtonHold;
     int bulletsLeft, bulletsShot;
+    int inventoryBullets;
 
     //bools
     bool shooting, readyToShoot, reloading;
@@ -35,13 +36,14 @@ public class GunSystem : MonoBehaviour
 
     private void Awake()
     {
+        inventoryBullets = inventoryManager.bulletCount;
         bulletsLeft = magazineSize;
         readyToShoot = true;
     }
     private void Update()
     {
         MyInput();
-        text.SetText(bulletsLeft + " / " + magazineSize);
+        text.SetText(bulletsLeft + " / " + inventoryBullets);
         UnityEngine.Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward, UnityEngine.Color.green);
     }
 
@@ -51,7 +53,10 @@ public class GunSystem : MonoBehaviour
         if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
         else shooting = Input.GetKeyDown(KeyCode.Mouse0);
 
-        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
+        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading && inventoryManager.bulletCount > 0) 
+        {
+            Reload();
+        }
 
         //shooting
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)

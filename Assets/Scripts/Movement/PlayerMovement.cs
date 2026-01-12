@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform playerModel;
     public float staminaDuration;
     private bool isCrouching = false;
-    public GameObject SFXObject;
+    //public GameObject SFXObject;
 
 
     [Header("Ground Check")]
@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (state == MovementState.walking)
         {
-            SoundManager.instance.PlayAudioResource(Random.Range(23, 26));
+            //SoundManager.instance.PlayAudioResource(Random.Range(23, 26));
             //SoundManager.instance.PlaySFX(playerWalkSFX);
         }
 

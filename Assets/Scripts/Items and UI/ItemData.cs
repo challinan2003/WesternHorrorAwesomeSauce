@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ItemData : MonoBehaviour
@@ -11,9 +12,9 @@ public class ItemData : MonoBehaviour
     public InventoryManager inventoryManager;
     public SoundManager soundManager;
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (tag == "Gin" && collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        if (CompareTag("Gin") && collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
             inventoryManager.alcoholCount += 1;
             Destroy(gameObject);
@@ -21,7 +22,7 @@ public class ItemData : MonoBehaviour
             Debug.Log("Picked up ALCOHOL");
         }
 
-        if (tag == "Cigs" && collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        if (CompareTag("Cigs") && collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
             inventoryManager.cigaretteCount += 5;
             Destroy(gameObject);
@@ -29,7 +30,7 @@ public class ItemData : MonoBehaviour
             Debug.Log("Picked up CIGARETTES");
         }
 
-        if (tag == "Bullet" && collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        if (CompareTag("Bullet") && collision.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
             inventoryManager.bulletCount += 6;
             Destroy(gameObject);
