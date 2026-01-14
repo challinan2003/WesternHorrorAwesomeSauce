@@ -43,7 +43,7 @@ public class DialogueSystem : MonoBehaviour
             var selection = hit.transform;
             if (selection.CompareTag(Letter1Tag))
             {
-                if (Input.GetButtonDown("Interact"))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     if (SFXObject == null)
                     {
@@ -63,7 +63,23 @@ public class DialogueSystem : MonoBehaviour
             }
             if (selection.CompareTag(Letter2Tag))
             {
-                if (Input.GetButtonDown("Interact"))
+                if ((Input.GetKeyDown(KeyCode.E)))
+                {
+                    if (SFXObject == null)
+                    {
+                        // activates dialogue
+                        var selectionRenderer = selection.GetComponent<Renderer>();
+                        if (selectionRenderer != null)
+                        {
+                            Debug.Log("active letter");
+                            Letter2.SetActive(true);
+                            //Time.timeScale = 0;
+                            SoundManager.instance.PlaySFX(Letter2SFX);
+                            StartDialogue();
+                        }
+                    }
+                    _selection = selection;
+                }
                 {
                     if (SFXObject == null)
                     {
@@ -83,7 +99,7 @@ public class DialogueSystem : MonoBehaviour
             }
             if (selection.CompareTag(Letter3Tag))
             {
-                if (Input.GetButtonDown("Interact"))
+                if ((Input.GetKeyDown(KeyCode.E)))
                 {
                     if (SFXObject == null)
                     {
@@ -103,7 +119,7 @@ public class DialogueSystem : MonoBehaviour
             }
         if (selection.CompareTag(Letter4Tag))
                     {
-                        if (Input.GetButtonDown("Interact"))
+                        if (Input.GetKeyDown(KeyCode.E))
                         {
                             if (SFXObject == null)
                             {

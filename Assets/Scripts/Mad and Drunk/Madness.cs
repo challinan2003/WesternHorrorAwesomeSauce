@@ -100,11 +100,7 @@ public class Madness : MonoBehaviour
 
     public void EnterMadness() // renamed method
     {
-        if (SFXObject == null)
-        {
-            SoundManager.instance.PlaySFX(MadnessSFX); // Play madness sound effect
-            Debug.Log("playing audio please god");
-        }
+        
         IsMad = true;
         
         //madness effects
@@ -116,6 +112,20 @@ public class Madness : MonoBehaviour
             pmovement.walkSpeed = 3;
             pmovement.crouchSpeed = 2;
             pmovement.sprintSpeed = 4;
+            if (SFXObject == null)
+        {
+            SoundManager.instance.PlaySFX(MadnessSFX); // Play madness sound effect
+            Debug.Log("playing audio please god");
+        }
+        }
+        else
+        {
+            gunsystem.damage = 25;
+            gunsystem.reloadTime = 2;
+
+            pmovement.walkSpeed = 5;
+            pmovement.crouchSpeed = 3;
+            pmovement.sprintSpeed = 7;
         }
     }
 }

@@ -37,12 +37,13 @@ public class GunSystem : MonoBehaviour
     private void Awake()
     {
         invBullets = inventoryManager.bulletCount;
-        bulletsLeft = magazineSize;
+        
         readyToShoot = true;
     }
     private void Update()
     {
         MyInput();
+        bulletsLeft = magazineSize;
         text.SetText(bulletsLeft + " / " + invBullets);
         UnityEngine.Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward, UnityEngine.Color.green);
     }
