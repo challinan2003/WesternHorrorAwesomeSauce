@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             //SoundManager.instance.PlayAudioResource(Random.Range(22, 25));
-            if(soundManager.)
+            //if(soundManager.)
             SoundManager.instance.PlaySFX(Walk1SFX);
             Debug.Log("playing walk");
         }
