@@ -2,6 +2,7 @@ using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
+using System.Xml.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -27,7 +28,10 @@ public class PlayerMovement : MonoBehaviour
     public Transform playerModel;
     public float staminaDuration;
     private bool isCrouching = false;
-    //public GameObject SFXObject;
+    public int Walk1SFX = 0;
+    public SoundManager soundManager;
+    public GameObject SFXObject;
+    public bool ismoving = false;
 
 
     [Header("Ground Check")]
@@ -73,18 +77,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
         //check if player is grounded 
         grounded = Physics.CheckSphere(groundCheck.position, groundDistance, whatIsGround);
 
         TrackInput();
         SpeedControl();
         StateHandler();
-
-        if (state == MovementState.walking)
-        {
-            //SoundManager.instance.PlayAudioResource(Random.Range(23, 26));
-            //SoundManager.instance.PlaySFX(playerWalkSFX);
-        }
 
         //handle drag
         if (grounded)
@@ -99,7 +98,25 @@ public class PlayerMovement : MonoBehaviour
         {
             staminaDuration = 4;
         }
+        if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))){
 
+            ismoving = true;
+        }
+        else
+        {
+           ismoving = false;
+        }
+        if (!ismoving)
+        {
+            Debug.Log("notmoving");
+        }
+        else
+        {
+            //SoundManager.instance.PlayAudioResource(Random.Range(22, 25));
+            if(soundManager.)
+            SoundManager.instance.PlaySFX(Walk1SFX);
+            Debug.Log("playing walk");
+        }
     }
 
     void FixedUpdate()
