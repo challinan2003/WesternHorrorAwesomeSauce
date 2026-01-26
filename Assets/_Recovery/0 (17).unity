@@ -15757,7 +15757,7 @@ MonoBehaviour:
   gunSystem: {fileID: 1885243249}
   pMovement: {fileID: 794906459}
   drunk: {fileID: 794906462}
-  madnessSFX: 0
+  madnessSFX: 9
   soundManager: {fileID: 1452354029}
   SFXObject: {fileID: 5173983664519720195, guid: 7e86e7f0bfc83dd4894fdd8c67c585e8, type: 3}
   Death: {fileID: 1263565100}

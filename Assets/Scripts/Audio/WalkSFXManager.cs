@@ -42,6 +42,5 @@ public class WalkSFXManager : MonoBehaviour
         var sfx = Instantiate(WalkSFXOneShotPrefab, transform.position, Quaternion.identity);
         AudioSource audioSource = sfx.GetComponent<AudioSource>();
         audioSource.pitch = audioSource.pitch * pitchMultiplier;
-        //        sfx.GetComponent<SFXOneShotPrefab>().PlaySFXOneShot(audioResources[index]);
     }
 }

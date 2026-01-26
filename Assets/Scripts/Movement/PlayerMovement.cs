@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public float staminaDuration;
     private bool isCrouching = false;
     public int Walk1SFX = 0;
+    public int Nothing = 0;
     public WalkSFXManager WalkSFXManager;
     public GameObject WSFXObject;
     public bool iswalking = false;
@@ -106,6 +107,14 @@ public class PlayerMovement : MonoBehaviour
         {
             iswalking = false;
         }
+        if (iswalking && state == MovementState.walking)
+        {
+            if (WSFXObject == null)
+            {
+                WalkSFXManager.instance.PlaySFX(Random.Range(1, 4));
+                Debug.Log("playing walk");
+            }
+        }
     }
 
     void FixedUpdate()
@@ -163,8 +172,6 @@ public class PlayerMovement : MonoBehaviour
         else if (grounded && !isCrouching)
         {
             state = MovementState.walking;
-            //SoundManager.instance.PlaySFX(playerWalkSFX);
-            //SoundManager.instance.PlayAudioResource(Random.Range(23, 26));
             moveSpeed = walkSpeed;
             if (staminaDuration < 4)
             {
@@ -189,9 +196,7 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.air;
         }
-
     }
-
 
     void MovePlayer()
     {
@@ -230,24 +235,5 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
-    }
-    public void MovementSounds()
-    {
-        if (!iswalking)
-
-        {
-            Debug.Log("notmoving");
-        }
-        else
-        {
-            if (WSFXObject == null)
-            {
-                WalkSFXManager.instance.PlaySFX(Walk1SFX);
-                //SoundManager.instance.PlayAudioResource(Random.Range(22, 25));
-                //if(soundManager.)
-                Debug.Log("playing walk");
-            }
-
-        }
     }
 }
