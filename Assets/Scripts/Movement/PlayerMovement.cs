@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
             if (WSFXObject == null)
             {
                 WalkSFXManager.instance.PlaySFX(Random.Range(1, 4));
-                Debug.Log("playing walk");
+                //Debug.Log("playing walk");
             }
         }
     }
