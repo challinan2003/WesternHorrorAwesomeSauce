@@ -84,7 +84,7 @@ public class Patrols : MonoBehaviour
         //Player Spotted
         if (UnityEngine.Physics.Raycast(transform.position, transform.TransformDirection(UnityEngine.Vector3.forward), out RaycastHit hitinfo, 20f, Player))
         {
-            sightTimerCountdown = 5;
+            sightTimerCountdown = 3;
             canSeePlayer = true;
             //SoundManager.instance.PlaySFX(enemyWalkSFX);
         }
@@ -101,7 +101,7 @@ public class Patrols : MonoBehaviour
         {
             canSeePlayer = false;
             GotoNextPoint();
-            sightTimerCountdown = Random.Range(2, 6);
+            sightTimerCountdown = Random.Range(4, 6);
         }
 
         //When in patrol, if enemy doesn't see player, enemy moves to next position
