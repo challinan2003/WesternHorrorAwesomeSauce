@@ -122,7 +122,7 @@ public class Patrols : MonoBehaviour
         if (enemyHealth <= 0)
         {
         
-           EnemySoundManager.instance.PlaySFX(Random.Range(1,2));
+           //EnemySoundManager.instance.PlaySFX(Random.Range(1,2));
 
             Destroy(gameObject);
         }
@@ -132,9 +132,8 @@ public class Patrols : MonoBehaviour
     {
         if (bullet.CompareTag("Bullet"))
         {
-            SoundManager.instance.PlaySFX(enemyImpact);
-            SoundManager.instance.PlayAudioResource(Random.Range(3,5));
-            
+            //EnemySoundManager.instance.PlaySFX(enemyImpact);
+            //EnemySoundManager.instance.PlaySFX(Random.Range(3,5));
             UnityEngine.Debug.Log("bullet hit!");
             enemyHealth -= gunSystem.damage;
             UnityEngine.Debug.Log(enemyHealth);
