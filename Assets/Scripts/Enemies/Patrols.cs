@@ -1,18 +1,21 @@
-using UnityEngine;
 using System.Collections;
-using System.Diagnostics;
 using System.Configuration.Assemblies;
+using System.Diagnostics;
 using System.Drawing;
-using System.Threading.Tasks;
 using System.Numerics;
-using UnityEngine.AI;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using UnityEngine;
+using UnityEngine.AI;
 
 
 public class Patrols : MonoBehaviour 
 {
-    public int enemyWalkSFX = 0;
+    public EnemySoundManager EnemySoundManager;
+    public int enemyImpact = 0;
+    //public int enemyWalkSFX = 0;
     [Header("Movement Variables")]
         private bool canSeePlayer = false;
         private float sightTimerCountdown = 5f;
@@ -27,8 +30,7 @@ public class Patrols : MonoBehaviour
     [Header("Health")]
     public int enemyHealth = 60;
     public GunSystem gunSystem;
-    public GameObject EnemySFXObject;
-    public GameObject SFXObject;
+    public GameObject ESFXObject;
         
     public enum EnemyState
     {
@@ -80,7 +82,7 @@ public class Patrols : MonoBehaviour
 
     void Update()
     {
-        SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
+        ESFXObject = GameObject.Find("enemySFXOneShotPrefab(Clone)");
         //Player Spotted
         if (UnityEngine.Physics.Raycast(transform.position, transform.TransformDirection(UnityEngine.Vector3.forward), out RaycastHit hitinfo, 20f, Player))
         {
@@ -92,6 +94,7 @@ public class Patrols : MonoBehaviour
         //Enemy chases down player - Start Timer if enemy can no longer see player
         if (canSeePlayer == true)
         {
+            EnemySoundManager.instance.PlaySFX(Random.Range(4, 5));
             agent.SetDestination(chasePos.position);
             SightTimer();
         }
@@ -113,8 +116,8 @@ public class Patrols : MonoBehaviour
         if (enemyHealth <= 0)
         {
         
-           SoundManager.instance.PlayAudioResource(Random.Range(4,5));
-            
+           EnemySoundManager.instance.PlaySFX(Random.Range(4,5));
+
             Destroy(gameObject);
         }
     }
@@ -123,8 +126,8 @@ public class Patrols : MonoBehaviour
     {
         if (bullet.CompareTag("Bullet"))
         {
-     
-            SoundManager.instance.PlayAudioResource(Random.Range(0,3));
+            SoundManager.instance.PlaySFX(enemyImpact);
+            SoundManager.instance.PlayAudioResource(Random.Range(3,5));
             
             UnityEngine.Debug.Log("bullet hit!");
             enemyHealth -= gunSystem.damage;

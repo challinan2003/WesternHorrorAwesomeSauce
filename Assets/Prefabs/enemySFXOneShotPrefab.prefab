@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1246870392994136929}
   - component: {fileID: -7083356188426601023}
-  - component: {fileID: 7855905418134843661}
+  - component: {fileID: 431961825640433478}
   m_Layer: 0
   m_Name: enemySFXOneShotPrefab
   m_TagString: Untagged
@@ -130,7 +130,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7855905418134843661
+--- !u!114 &431961825640433478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,6 +139,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5881577710961670273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d437fbf159a03fc4d8320367d7caf2ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 37dbee0b0a4cb094faaecd9aeca4930b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemySFXScript
+  m_EditorClassIdentifier: Assembly-CSharp::SFXOneShotPrefab
