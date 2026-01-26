@@ -8266,7 +8266,7 @@ PrefabInstance:
       objectReference: {fileID: 5173983664519720195, guid: 7e86e7f0bfc83dd4894fdd8c67c585e8, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: sfxList.Array.size
-      value: 26
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: enemySFXOneShotPrefab
@@ -8363,19 +8363,19 @@ PrefabInstance:
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'sfxList.Array.data[22]'
       value: 
-      objectReference: {fileID: 8300000, guid: 8c0cf4382542c2d458ffeb274d9dfcb8, type: 3}
+      objectReference: {fileID: 8300000, guid: f113314c1068d5d45a367a3ac0c51929, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'sfxList.Array.data[23]'
       value: 
-      objectReference: {fileID: 8300000, guid: bd2886fbda298ab4a9a0d3e68de2a06f, type: 3}
+      objectReference: {fileID: 8300000, guid: f113314c1068d5d45a367a3ac0c51929, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'sfxList.Array.data[24]'
       value: 
-      objectReference: {fileID: 8300000, guid: 998acea2805a4ce468c55c83eb95eb87, type: 3}
+      objectReference: {fileID: 8300000, guid: f113314c1068d5d45a367a3ac0c51929, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'sfxList.Array.data[25]'
       value: 
-      objectReference: {fileID: 8300000, guid: 696ce5c936e00b24382752488e9e7edf, type: 3}
+      objectReference: {fileID: 8300000, guid: f113314c1068d5d45a367a3ac0c51929, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: audioResources.Array.size
       value: 5
