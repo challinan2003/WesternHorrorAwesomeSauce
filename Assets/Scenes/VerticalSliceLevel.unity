@@ -8266,7 +8266,7 @@ PrefabInstance:
       objectReference: {fileID: 5173983664519720195, guid: 7e86e7f0bfc83dd4894fdd8c67c585e8, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: sfxList.Array.size
-      value: 23
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: enemySFXOneShotPrefab
@@ -8363,11 +8363,19 @@ PrefabInstance:
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'sfxList.Array.data[22]'
       value: 
-      objectReference: {fileID: 8300000, guid: 89d145dbf5c66dd4b9a36bfa41a15193, type: 3}
+      objectReference: {fileID: 8300000, guid: 8c0cf4382542c2d458ffeb274d9dfcb8, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'sfxList.Array.data[23]'
       value: 
-      objectReference: {fileID: 8300000, guid: 03cd3973275e2094da6f993c4f1b8b91, type: 3}
+      objectReference: {fileID: 8300000, guid: bd2886fbda298ab4a9a0d3e68de2a06f, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[24]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 998acea2805a4ce468c55c83eb95eb87, type: 3}
+    - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
+      propertyPath: 'sfxList.Array.data[25]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 696ce5c936e00b24382752488e9e7edf, type: 3}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: audioResources.Array.size
       value: 5
@@ -15606,6 +15614,10 @@ MonoBehaviour:
   crouchYScale: 0.6
   playerModel: {fileID: 0}
   staminaDuration: 4
+  Walk1SFX: 22
+  soundManager: {fileID: 1452354029}
+  SFXObject: {fileID: 0}
+  ismoving: 0
   groundCheck: {fileID: 583667605}
   groundDistance: 0.1
   whatIsGround:
