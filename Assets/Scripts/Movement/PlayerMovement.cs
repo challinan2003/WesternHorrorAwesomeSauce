@@ -29,9 +29,9 @@ public class PlayerMovement : MonoBehaviour
     public float staminaDuration;
     private bool isCrouching = false;
     public int Walk1SFX = 0;
-    public SoundManager soundManager;
-    public GameObject SFXObject;
-    public bool ismoving = false;
+    public WalkSFXManager WalkSFXManager;
+    public GameObject WSFXObject;
+    public bool iswalking = false;
 
 
     [Header("Ground Check")]
@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
+        WSFXObject = GameObject.Find("WalkSFXOneShotPrefab(Clone)");
         //check if player is grounded 
         grounded = Physics.CheckSphere(groundCheck.position, groundDistance, whatIsGround);
 
@@ -98,24 +98,13 @@ public class PlayerMovement : MonoBehaviour
         {
             staminaDuration = 4;
         }
-        if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))){
-
-            ismoving = true;
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+        {
+            iswalking = true;
         }
         else
         {
-           ismoving = false;
-        }
-        if (!ismoving)
-        {
-            Debug.Log("notmoving");
-        }
-        else
-        {
-            //SoundManager.instance.PlayAudioResource(Random.Range(22, 25));
-            //if(soundManager.)
-            SoundManager.instance.PlaySFX(Walk1SFX);
-            Debug.Log("playing walk");
+            iswalking = false;
         }
     }
 
@@ -202,14 +191,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-    
+
 
     void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        if (grounded) 
+        if (grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-  
+
 
 
         else if (!grounded)
@@ -229,7 +218,7 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new UnityEngine.Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
         }
     }
-    
+
 
     private void Jump()
     {
@@ -242,5 +231,23 @@ public class PlayerMovement : MonoBehaviour
     {
         readyToJump = true;
     }
+    public void MovementSounds()
+    {
+        if (!iswalking)
 
+        {
+            Debug.Log("notmoving");
+        }
+        else
+        {
+            if (WSFXObject == null)
+            {
+                WalkSFXManager.instance.PlaySFX(Walk1SFX);
+                //SoundManager.instance.PlayAudioResource(Random.Range(22, 25));
+                //if(soundManager.)
+                Debug.Log("playing walk");
+            }
+
+        }
+    }
 }
