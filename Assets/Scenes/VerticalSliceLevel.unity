@@ -2009,6 +2009,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4173959516970992125, guid: bbd9e2d909edb90468d7d8e77fa0bed1, type: 3}
+      propertyPath: enemySFXOneShotPrefab
+      value: 
+      objectReference: {fileID: 5881577710961670273, guid: 7c3edb2df9a49244cb0c170fafb46565, type: 3}
+    - target: {fileID: 4173959516970992125, guid: bbd9e2d909edb90468d7d8e77fa0bed1, type: 3}
       propertyPath: 'sfxList.Array.data[1]'
       value: 
       objectReference: {fileID: 8300000, guid: 4896f199ab748414bacc300838efe041, type: 3}

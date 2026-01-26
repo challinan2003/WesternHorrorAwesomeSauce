@@ -15,6 +15,7 @@ public class Patrols : MonoBehaviour
 {
     public EnemySoundManager EnemySoundManager;
     public int enemyImpact = 0;
+    public bool sawOnce = false;
     //public int enemyWalkSFX = 0;
     [Header("Movement Variables")]
         private bool canSeePlayer = false;
@@ -94,7 +95,11 @@ public class Patrols : MonoBehaviour
         //Enemy chases down player - Start Timer if enemy can no longer see player
         if (canSeePlayer == true)
         {
-            EnemySoundManager.instance.PlaySFX(Random.Range(4, 5));
+            if (!sawOnce)
+            {
+                EnemySoundManager.instance.PlaySFX(Random.Range(4, 5));
+                sawOnce = true;
+            }
             agent.SetDestination(chasePos.position);
             SightTimer();
         }
@@ -110,13 +115,14 @@ public class Patrols : MonoBehaviour
         //When in patrol, if enemy doesn't see player, enemy moves to next position
         if (agent.remainingDistance < 1f && !canSeePlayer)
         {
+            sawOnce = false;
             GotoNextPoint();
         }
 
         if (enemyHealth <= 0)
         {
         
-           EnemySoundManager.instance.PlaySFX(Random.Range(4,5));
+           EnemySoundManager.instance.PlaySFX(Random.Range(1,2));
 
             Destroy(gameObject);
         }
