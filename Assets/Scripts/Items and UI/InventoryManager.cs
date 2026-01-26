@@ -58,7 +58,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B) && cigaretteCount > 0)
         {
-            madness.madbuildup -= 100.0f;
+            madness.madBuildup -= 100.0f;
             cigaretteCount -= 1;
             Debug.Log("Using CIGARETTE!!!!");
         }

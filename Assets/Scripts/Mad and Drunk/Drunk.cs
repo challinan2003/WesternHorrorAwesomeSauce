@@ -26,12 +26,12 @@ public class Drunk : MonoBehaviour
         //once inventory is reworked, this function will check inventory for alcohol
         if (Input.GetKeyDown(KeyCode.V) && inventory.alcoholCount > 0)
         {
-            madness.madbuildup -= 400.0f;
+            madness.madBuildup -= 400.0f;
             drunkenness += 25;
             drunkenness = Mathf.Clamp(drunkenness, 0, 100);
 
             //madness resist
-            madness.IsMad = false;
+            madness.isMad = false;
             madness.madResist = true;
             madness.madResistTimer = 15.0f;
             

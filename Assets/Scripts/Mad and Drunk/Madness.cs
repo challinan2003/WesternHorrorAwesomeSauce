@@ -5,16 +5,16 @@ using static UnityEngine.GraphicsBuffer;
 public class Madness : MonoBehaviour
 {
     //madness specific variables
-    public float madbuildup;
-    public bool IsMad;
+    public float madBuildup;
+    public bool isMad;
     public bool madResist;
     
 
     //other game objects
-    public GunSystem gunsystem;
-    public PlayerMovement pmovement;
+    public GunSystem gunSystem;
+    public PlayerMovement pMovement;
     public Drunk drunk;
-    public int MadnessSFX = 0;
+    public int madnessSFX = 0;
     public SoundManager soundManager;
     public GameObject SFXObject;
     public  GameObject Death;
@@ -25,25 +25,25 @@ public class Madness : MonoBehaviour
 
     void Start()
     {
-        madbuildup = 0;
+        madBuildup = 0;
         madResist = false;
     }
     // Update is called once per frame
     void Update()
     {
         SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
-        CheckForMadness();
+        checkForMadness();
 
         //madness death timer
-        if (IsMad)
+        if (isMad)
         { 
             madnessTimer -= Time.deltaTime;
         }
-        if (madnessTimer < 0.0f)
+        if (madnessTimer <= 0.0f)
         {
             Death.SetActive(true);
             Time.timeScale = 0;
-            Debug.Log("PLEEEEEEEEEAAAAAAASE");
+            Debug.Log("You succumbed to madness.");
             madnessTimer = 0.0f;
         }
 
@@ -57,75 +57,75 @@ public class Madness : MonoBehaviour
     //constant madness buildup
     void FixedUpdate()
     {
-        if (!IsMad && !madResist)
+        if (!isMad && !madResist)
         {
-            MadBuildup(1.0f);
+            madnessBuildup(1.0f);
         }
         else if (madResist == true)
         {
-            MadBuildup(0.1f);
+            madnessBuildup(0.1f);
         }
     }
 
 
-    public void CheckForMadness()
+    public void checkForMadness()
     {
-        if (IsMad)
+        if (isMad)
         {
-            EnterMadness();
+            enterMadness();
         }
     }
 
 
-    public void MadBuildup(float mad)
+    public void madnessBuildup(float mad)
     {
-        if (madbuildup < 1000.0f)
+        if (madBuildup < 1000.0f)
         {
             madnessTimer = 60.0f;
-            madbuildup += mad;
+            madBuildup += mad;
         }
         // clamp to [0,1000] to ensure it doesn't exceed bounds
-        madbuildup = Mathf.Clamp(madbuildup, 0.0f, 1000.0f);
+        madBuildup = Mathf.Clamp(madBuildup, 0.0f, 1000.0f);
 
-        if (madbuildup == 1000 && !IsMad)
+        if (madBuildup == 1000 && !isMad)
         {
-            IsMad = true;
+            isMad = true;
         }
         else
         {
-            IsMad = false;
+            isMad = false;
         }
 
     }
 
-    public void EnterMadness() // renamed method
+    public void enterMadness() // renamed method
     {
         
-        IsMad = true;
+        isMad = true;
         
         //madness effects
-        if (IsMad)
+        if (isMad)
         {
-            gunsystem.damage = 5;
-            gunsystem.reloadTime = 10;
+            gunSystem.damage = 5;
+            gunSystem.reloadTime = 10;
 
-            pmovement.walkSpeed = 3;
-            pmovement.crouchSpeed = 2;
-            pmovement.sprintSpeed = 4;
+            pMovement.walkSpeed = 3;
+            pMovement.crouchSpeed = 2;
+            pMovement.sprintSpeed = 4;
             if (SFXObject == null)
         {
-            SoundManager.instance.PlaySFX(MadnessSFX); // Play madness sound effect
+            SoundManager.instance.PlaySFX(madnessSFX); // Play madness sound effect
             Debug.Log("playing audio please god");
         }
         }
         else
         {
-            gunsystem.damage = 25;
-            gunsystem.reloadTime = 2;
+            gunSystem.damage = 25;
+            gunSystem.reloadTime = 2;
 
-            pmovement.walkSpeed = 5;
-            pmovement.crouchSpeed = 3;
-            pmovement.sprintSpeed = 7;
+            pMovement.walkSpeed = 5;
+            pMovement.crouchSpeed = 3;
+            pMovement.sprintSpeed = 7;
         }
     }
 }
