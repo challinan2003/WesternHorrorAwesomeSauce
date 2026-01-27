@@ -122,8 +122,7 @@ public class Patrols : MonoBehaviour
         if (enemyHealth <= 0)
         {
         
-           //EnemySoundManager.instance.PlaySFX(Random.Range(1,2));
-
+            EnemySoundManager.instance.PlaySFX(Random.Range(1,2));
             Destroy(gameObject);
         }
     }

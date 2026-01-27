@@ -1,4 +1,6 @@
 using System.Numerics;
+using System.Collections;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 
@@ -17,6 +19,7 @@ public class GunSystem : MonoBehaviour
     public bool allowButtonHold;
     int bulletsLeft, bulletsShot;
     int invBullets;
+    int OverloadedBullets;
 
     //bools
     bool shooting, readyToShoot, reloading;
@@ -37,14 +40,14 @@ public class GunSystem : MonoBehaviour
     private void Awake()
     {
         invBullets = inventoryManager.bulletCount;
-        
+        bulletsLeft = magazineSize;
         readyToShoot = true;
     }
     private void Update()
     {
+        print(reloading);
         MyInput();
-        bulletsLeft = magazineSize;
-        text.SetText(bulletsLeft + " / " + invBullets);
+        text.SetText(bulletsLeft + " / " + inventoryManager.bulletCount);
         UnityEngine.Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward, UnityEngine.Color.green);
     }
 
@@ -70,6 +73,9 @@ public class GunSystem : MonoBehaviour
 
     private void Shoot()
     {
+        bulletsLeft--;
+        bulletsShot--;
+
         readyToShoot = false;
 
         //bullet spread
@@ -101,9 +107,6 @@ public class GunSystem : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
 
-        bulletsLeft--;
-        bulletsShot--;
-
         Invoke("ResetShot", timeBetweenShooting);
 
         if (bulletsShot > 0 && bulletsLeft > 0)
@@ -118,20 +121,34 @@ public class GunSystem : MonoBehaviour
     //reloading
     private void Reload()
     {
+        //added all to mag
+        bulletsLeft += inventoryManager.bulletCount;
+        inventoryManager.bulletCount = 0;
+        
         reloading = true;
+        
+        StartCoroutine(ReloadFinished());
+
         SoundManager.instance.PlaySFX(reloadSFXIndex);
-        Invoke("ReloadFinished", reloadTime);
+        if (bulletsLeft > 6)
+        {
+            MoveExcessBullets();
+        }
     }
-    private void ReloadFinished()
+    private void MoveExcessBullets()
     {
-        if (invBullets >= bulletsLeft)
-        {
-        bulletsLeft = magazineSize;
-        }
-        if (invBullets < magazineSize)
-        {
-            magazineSize = invBullets;
-        }
+        OverloadedBullets = bulletsLeft;
+        OverloadedBullets -= 6;
+        inventoryManager.bulletCount += OverloadedBullets;
+        OverloadedBullets = 0;
+        bulletsLeft = 6;
+    }
+
+    public IEnumerator ReloadFinished()
+    {
+        yield return new WaitForSeconds(2f);
+
         reloading = false;
     }
+
 }
