@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: house_a
       objectReference: {fileID: 0}
+    - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -276,6 +280,14 @@ PrefabInstance:
     - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
       propertyPath: m_Name
       value: wooden_beam_b
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4362834068098358, guid: 486ce69b957715345a58517c088d25db, type: 3}
       propertyPath: m_LocalScale.x
@@ -632,6 +644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Patrols
   EnemySoundManager: {fileID: 101047947}
   enemyImpact: 6
+  sawOnce: 0
   Player:
     serializedVersion: 2
     m_Bits: 256
@@ -1685,6 +1698,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_beam_b (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4362834068098358, guid: 486ce69b957715345a58517c088d25db, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -2193,6 +2214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: house_a (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2583,6 +2608,10 @@ PrefabInstance:
     - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_Name
       value: house_b
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3036,6 +3065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_box_b (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1716616031911040, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 77.1414
@@ -3128,6 +3161,10 @@ PrefabInstance:
     - target: {fileID: 1314974109878620, guid: d7f9cb5182824b24d803f918c4fe77f6, type: 3}
       propertyPath: m_Name
       value: machine_shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314974109878620, guid: d7f9cb5182824b24d803f918c4fe77f6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4387713004845266, guid: d7f9cb5182824b24d803f918c4fe77f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3275,6 +3312,10 @@ PrefabInstance:
     - target: {fileID: 1066890046473922, guid: f9eb5c9cb56abb549ac29de4820ee111, type: 3}
       propertyPath: m_Name
       value: general_store
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066890046473922, guid: f9eb5c9cb56abb549ac29de4820ee111, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4213709363343332, guid: f9eb5c9cb56abb549ac29de4820ee111, type: 3}
       propertyPath: m_LocalScale.y
@@ -3525,6 +3566,10 @@ PrefabInstance:
     - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_Name
       value: house_b (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalScale.x
@@ -4047,6 +4092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffin_shop
       objectReference: {fileID: 0}
+    - target: {fileID: 1706301579372228, guid: 8aef39d76887e3345b952ce70e848c40, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4736078043043448, guid: 8aef39d76887e3345b952ce70e848c40, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1
@@ -4270,6 +4319,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_beam_a (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1676008641735508, guid: 6773b53aa42e75b4cbdc8b4ac94f3a22, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676008641735508, guid: 6773b53aa42e75b4cbdc8b4ac94f3a22, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4617379544487976, guid: 6773b53aa42e75b4cbdc8b4ac94f3a22, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.1
@@ -4397,6 +4454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barn_01
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d09fa7fae47ed4249a28930813922c9a, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4460128059834885935, guid: d09fa7fae47ed4249a28930813922c9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.654
@@ -4444,6 +4505,10 @@ PrefabInstance:
     - target: {fileID: 1716616031911040, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_Name
       value: wooden_box_b (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716616031911040, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5088,6 +5153,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: wagon
       objectReference: {fileID: 0}
+    - target: {fileID: 1028076878170814, guid: f20ba9badacc1dc46b48a1af1b93338a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028076878170814, guid: f20ba9badacc1dc46b48a1af1b93338a, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739378560615858, guid: f20ba9badacc1dc46b48a1af1b93338a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4455157527723038, guid: f20ba9badacc1dc46b48a1af1b93338a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.773228
@@ -5282,9 +5359,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: wheel
       objectReference: {fileID: 0}
+    - target: {fileID: 1803958044038256, guid: fb346db967829fc4e84e5905d20588cf, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4837091757452444, guid: fb346db967829fc4e84e5905d20588cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -87.89569
+      value: -88.272675
       objectReference: {fileID: 0}
     - target: {fileID: 4837091757452444, guid: fb346db967829fc4e84e5905d20588cf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5442,6 +5523,10 @@ PrefabInstance:
     - target: {fileID: 1971394972694178, guid: 767eb853706da1a4ebd6e6ed7fa23394, type: 3}
       propertyPath: m_Name
       value: wagon_repair
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971394972694178, guid: 767eb853706da1a4ebd6e6ed7fa23394, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4398922740921754, guid: 767eb853706da1a4ebd6e6ed7fa23394, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5622,6 +5707,14 @@ PrefabInstance:
     - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
       propertyPath: m_Name
       value: house_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6094,6 +6187,14 @@ PrefabInstance:
     - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_Name
       value: house_b
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalScale.x
@@ -6947,9 +7048,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1716616031911040, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -83.319916
+      value: -83.6969
       objectReference: {fileID: 0}
     - target: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7070,6 +7175,10 @@ PrefabInstance:
     - target: {fileID: 1964584064196026, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
       propertyPath: m_Name
       value: wooden_barrel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964584064196026, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4533582007618334, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8048,6 +8157,10 @@ PrefabInstance:
     - target: {fileID: 7933529933344697852, guid: 3b2240c18b9f23c44917c20ca3977b89, type: 3}
       propertyPath: m_Name
       value: stump
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933529933344697852, guid: 3b2240c18b9f23c44917c20ca3977b89, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 7933529933345190364, guid: 3b2240c18b9f23c44917c20ca3977b89, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9483,9 +9596,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1716616031911040, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -80.803
+      value: -81.18
       objectReference: {fileID: 0}
     - target: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9703,6 +9820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sheriffs_office
       objectReference: {fileID: 0}
+    - target: {fileID: 1175788004909852, guid: 50ea23c669eeb234c8c175ff732c92de, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4327579209456982, guid: 50ea23c669eeb234c8c175ff732c92de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -92.26993
@@ -9863,6 +9984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4191871621912691053, guid: 230682619d25bb04f8c7b976ac09c57f, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9940,6 +10065,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 558a10379b25fdb4eb58a073571fd21d, type: 3}
       propertyPath: m_Name
       value: House_Standard_01
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 558a10379b25fdb4eb58a073571fd21d, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10027,6 +10156,10 @@ PrefabInstance:
     - target: {fileID: 1049781103749974, guid: 99c538df86da3294fab852f56f52f1ea, type: 3}
       propertyPath: m_Name
       value: trolley_b
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049781103749974, guid: 99c538df86da3294fab852f56f52f1ea, type: 3}
+      propertyPath: m_TagString
+      value: Metal
       objectReference: {fileID: 0}
     - target: {fileID: 4941814706468930, guid: 99c538df86da3294fab852f56f52f1ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10124,6 +10257,10 @@ PrefabInstance:
     - target: {fileID: 1028076878170814, guid: f20ba9badacc1dc46b48a1af1b93338a, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028076878170814, guid: f20ba9badacc1dc46b48a1af1b93338a, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 1739378560615858, guid: f20ba9badacc1dc46b48a1af1b93338a, type: 3}
       propertyPath: m_Layer
@@ -11060,6 +11197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_barrel
       objectReference: {fileID: 0}
+    - target: {fileID: 1964584064196026, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4533582007618334, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -81.39739
@@ -11855,6 +11996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Patrols
   EnemySoundManager: {fileID: 0}
   enemyImpact: 0
+  sawOnce: 0
   Player:
     serializedVersion: 2
     m_Bits: 256
@@ -12675,6 +12817,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_barrel
       objectReference: {fileID: 0}
+    - target: {fileID: 1964584064196026, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964584064196026, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4533582007618334, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.2223287
@@ -12833,6 +12983,10 @@ PrefabInstance:
     - target: {fileID: 1716616031911040, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_Name
       value: wooden_box_b (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716616031911040, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13434,6 +13588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Patrols
   EnemySoundManager: {fileID: 0}
   enemyImpact: 0
+  sawOnce: 0
   Player:
     serializedVersion: 2
     m_Bits: 256
@@ -13669,6 +13824,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_box_a
       objectReference: {fileID: 0}
+    - target: {fileID: 1521582082674372, guid: 41165376852919b4dbdf58d033204553, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4001969200261726, guid: 41165376852919b4dbdf58d033204553, type: 3}
       propertyPath: m_LocalPosition.x
       value: -81.865906
@@ -13762,6 +13921,10 @@ PrefabInstance:
     - target: {fileID: 1964584064196026, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
       propertyPath: m_Name
       value: wooden_barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964584064196026, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4533582007618334, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14671,6 +14834,10 @@ PrefabInstance:
     - target: {fileID: 1971394972694178, guid: 767eb853706da1a4ebd6e6ed7fa23394, type: 3}
       propertyPath: m_Name
       value: wagon_repair
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971394972694178, guid: 767eb853706da1a4ebd6e6ed7fa23394, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4398922740921754, guid: 767eb853706da1a4ebd6e6ed7fa23394, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15673,6 +15840,10 @@ PrefabInstance:
     - target: {fileID: 1716616031911040, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_Name
       value: wooden_box_b (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716616031911040, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16936,6 +17107,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gallows
       objectReference: {fileID: 0}
+    - target: {fileID: 1776699564880398, guid: 4f36902544b34c949843c0654260c931, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4824405277066802, guid: 4f36902544b34c949843c0654260c931, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.528759
@@ -17725,6 +17900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Patrols
   EnemySoundManager: {fileID: 0}
   enemyImpact: 0
+  sawOnce: 0
   Player:
     serializedVersion: 2
     m_Bits: 256
@@ -18131,6 +18307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_box_a
       objectReference: {fileID: 0}
+    - target: {fileID: 1521582082674372, guid: 41165376852919b4dbdf58d033204553, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4001969200261726, guid: 41165376852919b4dbdf58d033204553, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.24708
@@ -18229,6 +18409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: house_b
       objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2
@@ -18302,6 +18486,10 @@ PrefabInstance:
     - target: {fileID: 1521582082674372, guid: 41165376852919b4dbdf58d033204553, type: 3}
       propertyPath: m_Name
       value: wooden_box_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521582082674372, guid: 41165376852919b4dbdf58d033204553, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4001969200261726, guid: 41165376852919b4dbdf58d033204553, type: 3}
       propertyPath: m_LocalScale.x
@@ -19244,6 +19432,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: house_b
       objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalPosition.x
       value: -74.73992
@@ -19300,6 +19492,10 @@ PrefabInstance:
     - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_Name
       value: house_b
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19402,6 +19598,10 @@ PrefabInstance:
     - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
       propertyPath: m_Name
       value: house_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21009,6 +21209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffin_shop
       objectReference: {fileID: 0}
+    - target: {fileID: 1706301579372228, guid: 8aef39d76887e3345b952ce70e848c40, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4736078043043448, guid: 8aef39d76887e3345b952ce70e848c40, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -21215,9 +21419,9 @@ GameObject:
   - component: {fileID: 1026709421}
   - component: {fileID: 1026709420}
   - component: {fileID: 1026709419}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21277,7 +21481,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 998357181e031e44db53bf05ae974b32, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21636,6 +21840,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: water_tank
       objectReference: {fileID: 0}
+    - target: {fileID: 1349717751606076, guid: 1773f6c91e6e30749abfe71d7866f56a, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4340474367949408, guid: 1773f6c91e6e30749abfe71d7866f56a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.83
@@ -21811,6 +22019,10 @@ PrefabInstance:
     - target: {fileID: 1314974109878620, guid: d7f9cb5182824b24d803f918c4fe77f6, type: 3}
       propertyPath: m_Name
       value: machine_shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314974109878620, guid: d7f9cb5182824b24d803f918c4fe77f6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4387713004845266, guid: d7f9cb5182824b24d803f918c4fe77f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22228,6 +22440,10 @@ PrefabInstance:
     - target: {fileID: 1591876056793218, guid: 683bfdae9ecdf9044923a108f82ee9fe, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591876056793218, guid: 683bfdae9ecdf9044923a108f82ee9fe, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4631739626197486, guid: 683bfdae9ecdf9044923a108f82ee9fe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22823,6 +23039,10 @@ PrefabInstance:
     - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_Name
       value: house_b (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23803,6 +24023,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_beam_a
       objectReference: {fileID: 0}
+    - target: {fileID: 1676008641735508, guid: 6773b53aa42e75b4cbdc8b4ac94f3a22, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676008641735508, guid: 6773b53aa42e75b4cbdc8b4ac94f3a22, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4617379544487976, guid: 6773b53aa42e75b4cbdc8b4ac94f3a22, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -24531,6 +24759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: saloon
       objectReference: {fileID: 0}
+    - target: {fileID: 1978648709199224, guid: e46f625bd7a40e14b822f80c8260823a, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4057465660960242, guid: e46f625bd7a40e14b822f80c8260823a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.2399979
@@ -24655,6 +24887,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_barrel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1964584064196026, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4533582007618334, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -81.46777
@@ -24715,6 +24951,10 @@ PrefabInstance:
     - target: {fileID: 1307254645165548, guid: d5a382cb822bef94e9761a1d17f4454f, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307254645165548, guid: d5a382cb822bef94e9761a1d17f4454f, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4559361930665400, guid: d5a382cb822bef94e9761a1d17f4454f, type: 3}
       propertyPath: m_LocalScale.x
@@ -30558,6 +30798,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_beam_b (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4362834068098358, guid: 486ce69b957715345a58517c088d25db, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -30813,7 +31061,7 @@ GameObject:
   - component: {fileID: 1311607180}
   m_Layer: 0
   m_Name: Cube31 (1)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31128,6 +31376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bank
       objectReference: {fileID: 0}
+    - target: {fileID: 1624484001423178, guid: 9cdf748bf1709b34791435332749b7a1, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4487753755599674, guid: 9cdf748bf1709b34791435332749b7a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 123.380005
@@ -31439,6 +31691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: house_b
       objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6999999
@@ -31716,6 +31972,10 @@ PrefabInstance:
     - target: {fileID: 1720477775288296, guid: 1faf7fce14c1c9f49b1844723c52e5dd, type: 3}
       propertyPath: m_Name
       value: windmill
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720477775288296, guid: 1faf7fce14c1c9f49b1844723c52e5dd, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4957208302410700, guid: 1faf7fce14c1c9f49b1844723c52e5dd, type: 3}
       propertyPath: m_LocalScale.x
@@ -32026,6 +32286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: waggon
       objectReference: {fileID: 0}
+    - target: {fileID: 1197771449894598, guid: dfd326be01452554aa2c40c0247ef82d, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4268986830259498, guid: dfd326be01452554aa2c40c0247ef82d, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9
@@ -32226,6 +32490,14 @@ PrefabInstance:
     - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
       propertyPath: m_Name
       value: wooden_beam_b (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4362834068098358, guid: 486ce69b957715345a58517c088d25db, type: 3}
       propertyPath: m_LocalScale.x
@@ -33153,6 +33425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: waggon
       objectReference: {fileID: 0}
+    - target: {fileID: 1197771449894598, guid: dfd326be01452554aa2c40c0247ef82d, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4268986830259498, guid: dfd326be01452554aa2c40c0247ef82d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.959303
@@ -33209,6 +33485,10 @@ PrefabInstance:
     - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_Name
       value: house_b (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalScale.x
@@ -33373,6 +33653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: house_a (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33406,7 +33690,7 @@ GameObject:
   - component: {fileID: 1439032299}
   m_Layer: 6
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Dirt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -33818,6 +34102,10 @@ PrefabInstance:
     - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
       propertyPath: m_Name
       value: house_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36028,6 +36316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Patrols
   EnemySoundManager: {fileID: 0}
   enemyImpact: 0
+  sawOnce: 0
   Player:
     serializedVersion: 2
     m_Bits: 256
@@ -36410,9 +36699,9 @@ GameObject:
   - component: {fileID: 1595516444}
   - component: {fileID: 1595516443}
   - component: {fileID: 1595516442}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36472,7 +36761,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 998357181e031e44db53bf05ae974b32, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36767,7 +37056,7 @@ GameObject:
   - component: {fileID: 1605597883}
   m_Layer: 6
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37221,6 +37510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: general_store
       objectReference: {fileID: 0}
+    - target: {fileID: 1066890046473922, guid: f9eb5c9cb56abb549ac29de4820ee111, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4213709363343332, guid: f9eb5c9cb56abb549ac29de4820ee111, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.95
@@ -37387,6 +37680,10 @@ PrefabInstance:
     - target: {fileID: 1314974109878620, guid: d7f9cb5182824b24d803f918c4fe77f6, type: 3}
       propertyPath: m_Name
       value: machine_shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314974109878620, guid: d7f9cb5182824b24d803f918c4fe77f6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4387713004845266, guid: d7f9cb5182824b24d803f918c4fe77f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37611,6 +37908,10 @@ PrefabInstance:
     - target: {fileID: 4191871621912691053, guid: 230682619d25bb04f8c7b976ac09c57f, type: 3}
       propertyPath: m_Name
       value: coffin
+      objectReference: {fileID: 0}
+    - target: {fileID: 4191871621912691053, guid: 230682619d25bb04f8c7b976ac09c57f, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38995,6 +39296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: general_store
       objectReference: {fileID: 0}
+    - target: {fileID: 1066890046473922, guid: f9eb5c9cb56abb549ac29de4820ee111, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4213709363343332, guid: f9eb5c9cb56abb549ac29de4820ee111, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.1
@@ -39611,6 +39916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wagon
       objectReference: {fileID: 0}
+    - target: {fileID: 1028076878170814, guid: f20ba9badacc1dc46b48a1af1b93338a, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4455157527723038, guid: f20ba9badacc1dc46b48a1af1b93338a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.84
@@ -39780,6 +40089,10 @@ PrefabInstance:
     - target: {fileID: 1197771449894598, guid: dfd326be01452554aa2c40c0247ef82d, type: 3}
       propertyPath: m_Name
       value: waggon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197771449894598, guid: dfd326be01452554aa2c40c0247ef82d, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4268986830259498, guid: dfd326be01452554aa2c40c0247ef82d, type: 3}
       propertyPath: m_LocalScale.x
@@ -40562,6 +40875,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: general_store
       objectReference: {fileID: 0}
+    - target: {fileID: 1066890046473922, guid: f9eb5c9cb56abb549ac29de4820ee111, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066890046473922, guid: f9eb5c9cb56abb549ac29de4820ee111, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4213709363343332, guid: f9eb5c9cb56abb549ac29de4820ee111, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2
@@ -40854,9 +41175,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1521582082674372, guid: 41165376852919b4dbdf58d033204553, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4001969200261726, guid: 41165376852919b4dbdf58d033204553, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -84.79992
+      value: -85.1769
       objectReference: {fileID: 0}
     - target: {fileID: 4001969200261726, guid: 41165376852919b4dbdf58d033204553, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41033,6 +41358,10 @@ PrefabInstance:
     - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41630,6 +41959,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_beam_b (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4362834068098358, guid: 486ce69b957715345a58517c088d25db, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -41888,9 +42225,9 @@ GameObject:
   - component: {fileID: 1826775832}
   - component: {fileID: 1826775831}
   - component: {fileID: 1826775830}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41950,7 +42287,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 998357181e031e44db53bf05ae974b32, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -42744,9 +43081,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1716616031911040, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -84.93992
+      value: -85.3169
       objectReference: {fileID: 0}
     - target: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -42869,6 +43210,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 2317b0c733b0c584f82e86d22697b6c3, type: 3}
       propertyPath: m_Name
       value: House_Standard_02
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 2317b0c733b0c584f82e86d22697b6c3, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43151,6 +43496,10 @@ PrefabInstance:
     - target: {fileID: 1521582082674372, guid: 41165376852919b4dbdf58d033204553, type: 3}
       propertyPath: m_Name
       value: wooden_box_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521582082674372, guid: 41165376852919b4dbdf58d033204553, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4001969200261726, guid: 41165376852919b4dbdf58d033204553, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43444,7 +43793,7 @@ GameObject:
   - component: {fileID: 1898193912}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44136,6 +44485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: machine_shop
       objectReference: {fileID: 0}
+    - target: {fileID: 1314974109878620, guid: d7f9cb5182824b24d803f918c4fe77f6, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4387713004845266, guid: d7f9cb5182824b24d803f918c4fe77f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 68.68008
@@ -44349,6 +44702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: general_store (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1066890046473922, guid: f9eb5c9cb56abb549ac29de4820ee111, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4213709363343332, guid: f9eb5c9cb56abb549ac29de4820ee111, type: 3}
       propertyPath: m_LocalPosition.x
       value: -42.31
@@ -44411,6 +44768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: house_b
       objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.48244
@@ -44467,6 +44828,10 @@ PrefabInstance:
     - target: {fileID: 1065345457098798, guid: 44a1a43347604914cbe9dab0fcee58ad, type: 3}
       propertyPath: m_Name
       value: fence_b_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1065345457098798, guid: 44a1a43347604914cbe9dab0fcee58ad, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4558076501824638, guid: 44a1a43347604914cbe9dab0fcee58ad, type: 3}
       propertyPath: m_LocalScale.x
@@ -44979,6 +45344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: trolley_b
       objectReference: {fileID: 0}
+    - target: {fileID: 1049781103749974, guid: 99c538df86da3294fab852f56f52f1ea, type: 3}
+      propertyPath: m_TagString
+      value: Metal
+      objectReference: {fileID: 0}
     - target: {fileID: 4941814706468930, guid: 99c538df86da3294fab852f56f52f1ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -81.02
@@ -45035,6 +45404,10 @@ PrefabInstance:
     - target: {fileID: 1964584064196026, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
       propertyPath: m_Name
       value: wooden_barrel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964584064196026, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4533582007618334, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45272,6 +45645,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: wagon_repair
       objectReference: {fileID: 0}
+    - target: {fileID: 1971394972694178, guid: 767eb853706da1a4ebd6e6ed7fa23394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971394972694178, guid: 767eb853706da1a4ebd6e6ed7fa23394, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4398922740921754, guid: 767eb853706da1a4ebd6e6ed7fa23394, type: 3}
       propertyPath: m_LocalPosition.x
       value: -61.88
@@ -45457,6 +45838,10 @@ PrefabInstance:
     - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_Name
       value: house_b (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalScale.x
@@ -45648,6 +46033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_box_b
       objectReference: {fileID: 0}
+    - target: {fileID: 1716616031911040, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 76.31108
@@ -45815,6 +46204,10 @@ PrefabInstance:
     - target: {fileID: 1676743299532744, guid: 45a6741bae1dbf441b05b89946e3a1ea, type: 3}
       propertyPath: m_Name
       value: trolley_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676743299532744, guid: 45a6741bae1dbf441b05b89946e3a1ea, type: 3}
+      propertyPath: m_TagString
+      value: Metal
       objectReference: {fileID: 0}
     - target: {fileID: 4557770047959314, guid: 45a6741bae1dbf441b05b89946e3a1ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46307,6 +46700,10 @@ PrefabInstance:
     - target: {fileID: 3287397012243449296, guid: cfd29d5385a9b1a448d423edfbbe736a, type: 3}
       propertyPath: m_Name
       value: dead_tree_b (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3287397012243449296, guid: cfd29d5385a9b1a448d423edfbbe736a, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 3287397012243487216, guid: cfd29d5385a9b1a448d423edfbbe736a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47093,6 +47490,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_beam_b (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4362834068098358, guid: 486ce69b957715345a58517c088d25db, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -47420,6 +47825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: house_b
       objectReference: {fileID: 0}
+    - target: {fileID: 3454209907116147991, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2
@@ -47485,6 +47894,10 @@ PrefabInstance:
     - target: {fileID: 1971394972694178, guid: 767eb853706da1a4ebd6e6ed7fa23394, type: 3}
       propertyPath: m_Name
       value: wagon_repair
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971394972694178, guid: 767eb853706da1a4ebd6e6ed7fa23394, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: 4398922740921754, guid: 767eb853706da1a4ebd6e6ed7fa23394, type: 3}
       propertyPath: m_LocalScale.x
@@ -47854,6 +48267,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_beam_b (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955316533103804, guid: 486ce69b957715345a58517c088d25db, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4362834068098358, guid: 486ce69b957715345a58517c088d25db, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -47982,9 +48403,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden_barrel
       objectReference: {fileID: 0}
+    - target: {fileID: 1964584064196026, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4533582007618334, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -87.47362
+      value: -87.8506
       objectReference: {fileID: 0}
     - target: {fileID: 4533582007618334, guid: 6e53d8eedde60b54981dc0a83159345e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -48647,6 +49072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ranch
       objectReference: {fileID: 0}
+    - target: {fileID: 1771785872431140, guid: ab0c3195edcc6c54bb4d26b08a0cb3bd, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 4257783505363432, guid: ab0c3195edcc6c54bb4d26b08a0cb3bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -76.2
@@ -48822,6 +49251,10 @@ PrefabInstance:
     - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
       propertyPath: m_Name
       value: house_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093614450672321863, guid: c787553372e9655478d1499c7e39c837, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
