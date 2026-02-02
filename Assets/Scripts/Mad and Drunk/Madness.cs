@@ -106,26 +106,24 @@ public class Madness : MonoBehaviour
         //madness effects
         if (isMad)
         {
-            gunSystem.damage = 5;
-            gunSystem.reloadTime = 10;
+            gunSystem.damage = 15;
+            gunSystem.reloadTime = 3;
 
-            pMovement.walkSpeed = 3;
-            pMovement.crouchSpeed = 2;
-            pMovement.sprintSpeed = 4;
+            pMovement.walkSpeed = 4;
+            pMovement.crouchSpeed = 3;
+            pMovement.sprintSpeed = 5;
             if (SFXObject == null)
-        {
             SoundManager.instance.PlaySFX(madnessSFX); // Play madness sound effect
-            Debug.Log("playing audio please god");
-        }
+            Debug.Log("Playing madness SFX");
         }
         else
         {
-            gunSystem.damage = 25;
+            gunSystem.damage = 10;
             gunSystem.reloadTime = 2;
 
-            pMovement.walkSpeed = 5;
-            pMovement.crouchSpeed = 3;
-            pMovement.sprintSpeed = 7;
+            pMovement.walkSpeed = 2.5f;
+            pMovement.crouchSpeed = 2;
+            pMovement.sprintSpeed = 4;
         }
     }
 }
