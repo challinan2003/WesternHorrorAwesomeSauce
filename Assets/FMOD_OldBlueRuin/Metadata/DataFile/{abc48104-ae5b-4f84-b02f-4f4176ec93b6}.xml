@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="DataFile" id="{abc48104-ae5b-4f84-b02f-4f4176ec93b6}">
+		<property name="assetPath">
+			<value>SFX/Dirt_Walk_Step_2.wav.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1312e556-6988-4456-9862-88fd748aaf23}</destination>
+		</relationship>
+	</object>
+</objects>

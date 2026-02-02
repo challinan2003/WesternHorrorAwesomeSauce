@@ -2100,7 +2100,7 @@ PrefabInstance:
     - target: {fileID: 4173959516970992125, guid: bbd9e2d909edb90468d7d8e77fa0bed1, type: 3}
       propertyPath: 'audioResources.Array.data[5]'
       value: 
-      objectReference: {fileID: 8300000, guid: 63c9dee45b72bfb409174a44a5300202, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4173959516970992125, guid: bbd9e2d909edb90468d7d8e77fa0bed1, type: 3}
       propertyPath: 'audioResources.Array.data[6]'
       value: 
@@ -6724,6 +6724,50 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &329613463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 329613464}
+  - component: {fileID: 329613465}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &329613464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329613463}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -61.650337, y: -1.3311296, z: 11.9213295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1852727510}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &329613465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329613463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddb1f2d6fddc6048a1492d20af7008e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
 --- !u!1001 &340404206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8681,7 +8725,7 @@ PrefabInstance:
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'audioResources.Array.data[3]'
       value: 
-      objectReference: {fileID: 8300000, guid: 63c9dee45b72bfb409174a44a5300202, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: -8420179338145514551, guid: 58a3737772a6d684381033c927fddcea, type: 3}
       propertyPath: 'audioResources.Array.data[4]'
       value: 
@@ -42879,6 +42923,7 @@ Transform:
   - {fileID: 1883256354}
   - {fileID: 597927942}
   - {fileID: 101047946}
+  - {fileID: 329613464}
   - {fileID: 315676260}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43712,6 +43757,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef2352633ad04048a126b710ef17be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunSystem
+  gunShootSound:
+    Guid:
+      Data1: 39999084
+      Data2: 1169344168
+      Data3: -1321060724
+      Data4: 24788026
+    Path: event:/GunShoot
+  gunReloadSound:
+    Guid:
+      Data1: -364677291
+      Data2: 1217054981
+      Data3: 700688814
+      Data4: -1488472577
+    Path: event:/GunReload
   bullet: {fileID: 1312081192}
   shootForce: 50
   upwardForce: 0

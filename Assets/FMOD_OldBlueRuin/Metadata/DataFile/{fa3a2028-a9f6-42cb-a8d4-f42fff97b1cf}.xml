@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="DataFile" id="{fa3a2028-a9f6-42cb-a8d4-f42fff97b1cf}">
+		<property name="assetPath">
+			<value>SFX/SFX_ReloadRevolverRapid_1.wav.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1312e556-6988-4456-9862-88fd748aaf23}</destination>
+		</relationship>
+	</object>
+</objects>
