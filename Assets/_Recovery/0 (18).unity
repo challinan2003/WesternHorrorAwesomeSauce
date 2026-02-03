@@ -3717,14 +3717,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: soundManager
-      value: 
-      objectReference: {fileID: 1452354029}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -59.611202
@@ -17000,14 +16992,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: soundManager
-      value: 
-      objectReference: {fileID: 1452354029}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.437561
@@ -23730,14 +23714,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: soundManager
-      value: 
-      objectReference: {fileID: 1452354029}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -73.25189
