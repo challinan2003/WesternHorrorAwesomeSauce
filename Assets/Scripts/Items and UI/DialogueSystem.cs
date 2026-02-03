@@ -31,7 +31,7 @@ public class DialogueSystem : MonoBehaviour
     private Transform _selection;
     public GameObject SFXObject;
 
-    void Update()
+    public void Update()
     {
         SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
         //SFXObject = GameObject.Find("SFXOneShotPrefab");
@@ -53,7 +53,7 @@ public class DialogueSystem : MonoBehaviour
                         {
                             Debug.Log("active letter");
                             Letter.SetActive(true);
-                            //Time.timeScale = 0;
+                            Time.timeScale = 0;
                             SoundManager.instance.PlaySFX(Letter1SFX);
                             StartDialogue();
                         }
@@ -73,7 +73,7 @@ public class DialogueSystem : MonoBehaviour
                         {
                             Debug.Log("active letter");
                             Letter2.SetActive(true);
-                            //Time.timeScale = 0;
+                            Time.timeScale = 0;
                             SoundManager.instance.PlaySFX(Letter2SFX);
                             StartDialogue();
                         }
@@ -89,7 +89,7 @@ public class DialogueSystem : MonoBehaviour
                         {
                             Debug.Log("active letter");
                             Letter2.SetActive(true);
-                            //Time.timeScale = 0;
+                            Time.timeScale = 0;
                             SoundManager.instance.PlaySFX(Letter2SFX);
                             StartDialogue();
                         }
@@ -109,7 +109,7 @@ public class DialogueSystem : MonoBehaviour
                         {
                             Debug.Log("active letter");
                             Letter3.SetActive(true);
-                            //Time.timeScale = 0;
+                            Time.timeScale = 0;
                             SoundManager.instance.PlaySFX(Letter3SFX);
                             StartDialogue();
                         }
@@ -129,7 +129,7 @@ public class DialogueSystem : MonoBehaviour
                                 {
                                     Debug.Log("active letter");
                                     Letter4.SetActive(true);
-                                    //Time.timeScale = 0;
+                                    Time.timeScale = 0;
                                     SoundManager.instance.PlaySFX(Letter4SFX);
                                     StartDialogue();
                                 }

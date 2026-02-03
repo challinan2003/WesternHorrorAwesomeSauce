@@ -60,7 +60,7 @@ public class InventoryManager : MonoBehaviour
         {
             madness.madBuildup -= 100.0f;
             cigaretteCount -= 1;
-            Debug.Log("Using CIGARETTE!!!!");
+            Debug.Log("Smoking CIGARETTE!!!!");
         }
     }
 
