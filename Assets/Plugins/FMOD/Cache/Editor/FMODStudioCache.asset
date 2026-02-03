@@ -1,96 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6743897815952301258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-<<<<<<< Updated upstream
-  lastModified: 639056512544821102
-=======
-  lastModified: 639056520492242586
->>>>>>> Stashed changes
-  FileSizes:
-  - Name: Desktop
-    Value: 1074
-  Exists: 1
---- !u!114 &-4512882991176087359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-<<<<<<< Updated upstream
-  lastModified: 639056512544833348
-=======
-  lastModified: 639056520492242586
->>>>>>> Stashed changes
-  FileSizes:
-  - Name: Desktop
-    Value: 1002
-  Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
-  EditorBanks:
-  - {fileID: -4512882991176087359}
-  - {fileID: -6743897815952301258}
-  - {fileID: 3551238931746059691}
-  - {fileID: 107675428788960574}
-  EditorEvents:
-  - {fileID: 5328006937624983697}
-  - {fileID: 3312888109428010107}
-  - {fileID: 639718153187400472}
-  - {fileID: 1366348999434554525}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -6743897815952301258}
-  StringsBanks:
-  - {fileID: -4512882991176087359}
-  cacheVersion: 131858
-<<<<<<< Updated upstream
-  cacheTime: 639056512545222103
-=======
-  cacheTime: 639056520492263153
->>>>>>> Stashed changes
-  SerializableEventsDict:
-  - key: event:/ItemPickUP
-    index: 0
-  - key: event:/GunReload
-    index: 1
-  - key: event:/GunShoot
-    index: 2
-  - key: event:/playerWalkDirt
-    index: 3
---- !u!114 &107675428788960574
+--- !u!114 &-3700636537713381995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,12 +15,12 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/PlayerSFX.bank
   Name: PlayerSFX
   StudioPath: bank:/PlayerSFX
-  lastModified: 639056512545222103
+  lastModified: 639056579263365870
   FileSizes:
   - Name: Desktop
     Value: 37440
   Exists: 1
---- !u!114 &639718153187400472
+--- !u!114 &-1555053090485093994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,79 +29,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/GunShoot
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/GunShoot
-  Guid:
-    Data1: 39999084
-    Data2: 1169344168
-    Data3: -1321060724
-    Data4: 24788026
-  Banks:
-  - {fileID: 3551238931746059691}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1366348999434554525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/playerWalkDirt
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/playerWalkDirt
-  Guid:
-    Data1: -1127606573
-    Data2: 1304506730
-    Data3: 1686395292
-    Data4: 207801378
-  Banks:
-  - {fileID: 107675428788960574}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1200
---- !u!114 &3312888109428010107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/GunReload
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/GunReload
-  Guid:
-    Data1: -364677291
-    Data2: 1217054981
-    Data3: 700688814
-    Data4: -1488472577
-  Banks:
-  - {fileID: 3551238931746059691}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &3551238931746059691
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639056520492242586
+  FileSizes:
+  - Name: Desktop
+    Value: 1074
+  Exists: 1
+--- !u!114 &-1185246703142972094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,7 +60,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 57760
   Exists: 1
---- !u!114 &5328006937624983697
+--- !u!114 &-1110760950743810310
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,7 +79,7 @@ MonoBehaviour:
     Data3: 851109005
     Data4: -587585676
   Banks:
-  - {fileID: 3551238931746059691}
+  - {fileID: -1185246703142972094}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -238,3 +87,142 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-728973007575864169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GunReload
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/GunReload
+  Guid:
+    Data1: -364677291
+    Data2: 1217054981
+    Data3: 700688814
+    Data4: -1488472577
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
+  EditorBanks:
+  - {fileID: 7805662842229737573}
+  - {fileID: -1555053090485093994}
+  - {fileID: -3700636537713381995}
+  - {fileID: -1185246703142972094}
+  EditorEvents:
+  - {fileID: 4600703273314371863}
+  - {fileID: -1110760950743810310}
+  - {fileID: -728973007575864169}
+  - {fileID: 2527955488528454479}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -1555053090485093994}
+  StringsBanks:
+  - {fileID: 7805662842229737573}
+  cacheVersion: 131858
+  cacheTime: 639056579263365870
+  SerializableEventsDict:
+  - key: event:/playerWalkDirt
+    index: 0
+  - key: event:/ItemPickUP
+    index: 1
+  - key: event:/GunReload
+    index: 2
+  - key: event:/GunShoot
+    index: 3
+--- !u!114 &2527955488528454479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GunShoot
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/GunShoot
+  Guid:
+    Data1: 39999084
+    Data2: 1169344168
+    Data3: -1321060724
+    Data4: 24788026
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4600703273314371863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/playerWalkDirt
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/playerWalkDirt
+  Guid:
+    Data1: -1127606573
+    Data2: 1304506730
+    Data3: 1686395292
+    Data4: 207801378
+  Banks:
+  - {fileID: -3700636537713381995}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1200
+--- !u!114 &7805662842229737573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639056579263365870
+  FileSizes:
+  - Name: Desktop
+    Value: 1002
+  Exists: 1
