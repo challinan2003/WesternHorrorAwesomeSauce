@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/PlayerSFX.bank
   Name: PlayerSFX
   StudioPath: bank:/PlayerSFX
-  lastModified: 639056764959816716
+  lastModified: 639056579263365870
   FileSizes:
   - Name: Desktop
     Value: 37440
@@ -35,7 +35,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639056764959796807
+  lastModified: 639056520492242586
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -55,7 +55,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639056764959826690
+  lastModified: 639056520492263153
   FileSizes:
   - Name: Desktop
     Value: 57760
@@ -142,7 +142,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7805662842229737573}
   cacheVersion: 131858
-  cacheTime: 639056764959826690
+  cacheTime: 639056579263365870
   SerializableEventsDict:
   - key: event:/playerWalkDirt
     index: 0
@@ -221,7 +221,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639056764959806740
+  lastModified: 639056579263365870
   FileSizes:
   - Name: Desktop
     Value: 1002

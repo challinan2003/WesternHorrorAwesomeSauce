@@ -1840,8 +1840,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 900524871580310784, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 353394888}
   m_SourcePrefab: {fileID: 100100000, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+--- !u!1 &353394887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 900524871580310784, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+  m_PrefabInstance: {fileID: 353394886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &353394888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353394887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 0
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &365955500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2165,8 +2194,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 900524871580310784, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 403855306}
   m_SourcePrefab: {fileID: 100100000, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+--- !u!1 &403855305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 900524871580310784, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+  m_PrefabInstance: {fileID: 403855304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &403855306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403855305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 0
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &409008287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2625,8 +2683,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 900524871580310784, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 590947051}
   m_SourcePrefab: {fileID: 100100000, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+--- !u!1 &590947050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 900524871580310784, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+  m_PrefabInstance: {fileID: 590947049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &590947051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590947050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 0
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &611299507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2649,7 +2736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3454209907116251447, guid: 6cb82da109d7ed549bfb03415e6d9822, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3282,7 +3369,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 986453e07e20ec94e89bb72c03fc8974, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4114,8 +4201,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 900524871580310784, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 901341210}
   m_SourcePrefab: {fileID: 100100000, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+--- !u!1 &901341209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 900524871580310784, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+  m_PrefabInstance: {fileID: 901341208}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &901341210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901341209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 0
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &905309636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7231,7 +7347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4487753755599674, guid: 9cdf748bf1709b34791435332749b7a1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4487753755599674, guid: 9cdf748bf1709b34791435332749b7a1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7770,8 +7886,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 900524871580310784, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2097100113}
   m_SourcePrefab: {fileID: 100100000, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+--- !u!1 &2097100112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 900524871580310784, guid: ebd67ecd6595a1640b62e5e638fdf131, type: 3}
+  m_PrefabInstance: {fileID: 2097100111}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2097100113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097100112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 0
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
