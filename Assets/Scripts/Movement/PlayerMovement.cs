@@ -6,6 +6,7 @@ using System.Xml.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMOD.Studio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform playerModel;
     public float staminaDuration;
     private bool isCrouching = false;
+    private EventInstance playerDirtWalk;
     public int Walk1SFX = 0;
     public int Nothing = 0;
     public WalkSFXManager WalkSFXManager;
@@ -74,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
 
         startYScale = transform.localScale.y;
+        playerDirtWalk = AudioManager.instance.CreateInstance(FMODEvents.instance.dirtWalk);
     }
 
     void Update()
@@ -85,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
         TrackInput();
         SpeedControl();
         StateHandler();
+        UpdateSound();
 
         //handle drag
         if (grounded)
@@ -235,5 +239,20 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+    }
+    private void UpdateSound()
+    {
+        if (iswalking && grounded)
+        {
+            PLAYBACK_STATE playbackState;
+            playerDirtWalk.getPlaybackState(out playbackState);
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            {
+                playerDirtWalk.start();
+            }
+        }
+        else {
+            playerDirtWalk.stop(STOP_MODE.ALLOWFADEOUT);
+        }
     }
 }

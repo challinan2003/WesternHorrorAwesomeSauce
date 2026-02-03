@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="DataFile" id="{fc811ddd-1c49-4e16-aa34-dae118b7eb6b}">
 		<property name="assetPath">
-			<value>SFX/Dirt_Walk_Step_3.wav.meta</value>
+			<value>SFXPlayer/SFXPlayerWalkXX/Dirt_Walk_Step_3.wav.meta</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{1312e556-6988-4456-9862-88fd748aaf23}</destination>

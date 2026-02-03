@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{87849d1e-0190-4114-a9bd-31e39900ac28}">
+	<object class="AudioFile" id="{6449d430-2c31-4bd4-81ed-f1c2acccd8b7}">
 		<property name="assetPath">
-			<value>SFXPlayer/SFXPlayerWalkXX/Dirt_Walk_Step_3.wav</value>
+			<value>SFXPlayer/PlyrDirtWalkSFX/PlayerWalk_Dirt3.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
-			<value>0.89807256235827659</value>
+			<value>1.0012916666666667</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{1312e556-6988-4456-9862-88fd748aaf23}</destination>

@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639056490869763772
+  lastModified: 639056512544821102
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -35,10 +35,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639056490869763772
+  lastModified: 639056512544833348
   FileSizes:
   - Name: Desktop
-    Value: 918
+    Value: 1002
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -56,17 +56,19 @@ MonoBehaviour:
   - {fileID: -4512882991176087359}
   - {fileID: -6743897815952301258}
   - {fileID: 3551238931746059691}
+  - {fileID: 107675428788960574}
   EditorEvents:
   - {fileID: 5328006937624983697}
   - {fileID: 3312888109428010107}
   - {fileID: 639718153187400472}
+  - {fileID: 1366348999434554525}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6743897815952301258}
   StringsBanks:
   - {fileID: -4512882991176087359}
   cacheVersion: 131858
-  cacheTime: 639056490870455734
+  cacheTime: 639056512545222103
   SerializableEventsDict:
   - key: event:/ItemPickUP
     index: 0
@@ -74,6 +76,28 @@ MonoBehaviour:
     index: 1
   - key: event:/GunShoot
     index: 2
+  - key: event:/playerWalkDirt
+    index: 3
+--- !u!114 &107675428788960574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/PlayerSFX.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/PlayerSFX.bank
+  Name: PlayerSFX
+  StudioPath: bank:/PlayerSFX
+  lastModified: 639056512545222103
+  FileSizes:
+  - Name: Desktop
+    Value: 37440
+  Exists: 1
 --- !u!114 &639718153187400472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +125,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1366348999434554525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/playerWalkDirt
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/playerWalkDirt
+  Guid:
+    Data1: -1127606573
+    Data2: 1304506730
+    Data3: 1686395292
+    Data4: 207801378
+  Banks:
+  - {fileID: 107675428788960574}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1200
 --- !u!114 &3312888109428010107
 MonoBehaviour:
   m_ObjectHideFlags: 0

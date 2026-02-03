@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="DataFile" id="{abc48104-ae5b-4f84-b02f-4f4176ec93b6}">
+	<object class="EncodableAsset" id="{ff68255d-be44-4024-aed2-f7c833815269}">
 		<property name="assetPath">
-			<value>SFXPlayer/SFXPlayerWalkXX/Dirt_Walk_Step_2.wav.meta</value>
+			<value>SFXPlayer/SFXPlayerWalkXX/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{1312e556-6988-4456-9862-88fd748aaf23}</destination>

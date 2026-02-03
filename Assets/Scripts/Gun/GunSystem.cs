@@ -3,14 +3,12 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
-using FMODUnity;
 
 
 
 public class GunSystem : MonoBehaviour 
 {
-    [SerializeField] private EventReference gunShootSound;
-    [SerializeField] private EventReference gunReloadSound;
+
     //bullet
     public GameObject bullet;
     //bullet force
@@ -73,7 +71,7 @@ public class GunSystem : MonoBehaviour
             bulletsShot = bulletsPerTap;
             Shoot();
             //SoundManager.instance.PlaySFX(gunShootSFXIndex);
-            AudioManager.instance.PlayOneshot(gunShootSound, this.transform.position);
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.gunShoot, this.transform.position);
         }
     }
 
@@ -134,7 +132,7 @@ public class GunSystem : MonoBehaviour
         reloading = true;
         
         StartCoroutine(ReloadFinished());
-        AudioManager.instance.PlayOneshot(gunReloadSound, this.transform.position);
+        AudioManager.instance.PlayOneshot(FMODEvents.instance.gunReload, this.transform.position);
         //SoundManager.instance.PlaySFX(reloadSFXIndex);
         if (bulletsLeft > 6)
         {

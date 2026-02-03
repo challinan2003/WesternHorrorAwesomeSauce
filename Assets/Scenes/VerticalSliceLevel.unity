@@ -3119,6 +3119,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
   m_PrefabInstance: {fileID: 154264832}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &158048852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 158048853}
+  - component: {fileID: 158048854}
+  m_Layer: 0
+  m_Name: FMODEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &158048853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158048852}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 329613464}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &158048854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158048852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23fdf7ca0154e6f42b1c0aa099daeee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  <dirtWalk>k__BackingField:
+    Guid:
+      Data1: -1127606573
+      Data2: 1304506730
+      Data3: 1686395292
+      Data4: 207801378
+    Path: event:/playerWalkDirt
+  <gunShoot>k__BackingField:
+    Guid:
+      Data1: 39999084
+      Data2: 1169344168
+      Data3: -1321060724
+      Data4: 24788026
+    Path: event:/GunShoot
+  <gunReload>k__BackingField:
+    Guid:
+      Data1: -364677291
+      Data2: 1217054981
+      Data3: 700688814
+      Data4: -1488472577
+    Path: event:/GunReload
+  <itemPickup>k__BackingField:
+    Guid:
+      Data1: -2007863040
+      Data2: 1079668940
+      Data3: 851109005
+      Data4: -587585676
+    Path: event:/ItemPickUP
 --- !u!1 &161094074
 GameObject:
   m_ObjectHideFlags: 0
@@ -6753,7 +6825,8 @@ Transform:
   m_LocalPosition: {x: -61.650337, y: -1.3311296, z: 11.9213295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 158048853}
   m_Father: {fileID: 1852727510}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &329613465
@@ -43757,20 +43830,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef2352633ad04048a126b710ef17be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunSystem
-  gunShootSound:
-    Guid:
-      Data1: 39999084
-      Data2: 1169344168
-      Data3: -1321060724
-      Data4: 24788026
-    Path: event:/GunShoot
-  gunReloadSound:
-    Guid:
-      Data1: -364677291
-      Data2: 1217054981
-      Data3: 700688814
-      Data4: -1488472577
-    Path: event:/GunReload
   bullet: {fileID: 1312081192}
   shootForce: 50
   upwardForce: 0
