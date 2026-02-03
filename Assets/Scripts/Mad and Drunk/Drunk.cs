@@ -14,9 +14,9 @@ public class Drunk : MonoBehaviour
     {
         ConsumeAlc();
         drunk();
-        madnessResistEnd();
+        
         //natural drunk decay
-        if (drunkenness > 0.0f)
+        if (drunkenness > 0.0f && Time.deltaTime > 0)
         {
             drunkenness -= 0.05f;
         }
@@ -40,7 +40,6 @@ public class Drunk : MonoBehaviour
             Debug.Log("Drinking ALCOHOL!!!!");
         }
     }
-
     public void madnessResistEnd()
     {
         if (madness.madResistTimer <= 0.0f)
