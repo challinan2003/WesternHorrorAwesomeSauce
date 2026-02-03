@@ -30,10 +30,10 @@ public class PlayerMovement : MonoBehaviour
     public float staminaDuration;
     private bool isCrouching = false;
     private EventInstance playerDirtWalk;
-    public int Walk1SFX = 0;
-    public int Nothing = 0;
-    public WalkSFXManager WalkSFXManager;
-    public GameObject WSFXObject;
+    //public int Walk1SFX = 0;
+    //public int Nothing = 0;
+    //public WalkSFXManager WalkSFXManager;
+    //public GameObject WSFXObject;
     public bool iswalking = false;
 
 
@@ -76,19 +76,18 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
 
         startYScale = transform.localScale.y;
-        playerDirtWalk = AudioManager.instance.CreateInstance(FMODEvents.instance.dirtWalk);
+        playerDirtWalk = AudioManager.instance.CreateInstance(FMODEvents.instance.DirtWalk);
     }
 
     void Update()
     {
-        WSFXObject = GameObject.Find("WalkSFXOneShotPrefab(Clone)");
+        //WSFXObject = GameObject.Find("WalkSFXOneShotPrefab(Clone)");
         //check if player is grounded 
         grounded = Physics.CheckSphere(groundCheck.position, groundDistance, whatIsGround);
 
         TrackInput();
         SpeedControl();
         StateHandler();
-        UpdateSound();
 
         //handle drag
         if (grounded)
@@ -113,17 +112,33 @@ public class PlayerMovement : MonoBehaviour
         }
         if (iswalking && state == MovementState.walking)
         {
-            if (WSFXObject == null)
+            PLAYBACK_STATE playbackState;
+            playerDirtWalk.getPlaybackState(out playbackState);
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
             {
-                WalkSFXManager.instance.PlaySFX(Random.Range(1, 4));
-                //Debug.Log("playing walk");
+                playerDirtWalk.start();
             }
         }
+        else
+        {
+            playerDirtWalk.stop(STOP_MODE.ALLOWFADEOUT);
+
+
+
+
+            //if (WSFXObject == null)
+            //{
+            //   // WalkSFXManager.instance.PlaySFX(Random.Range(1, 4));
+            //    //Debug.Log("playing walk");
+            //}
+        }
+        UpdateSound();
     }
 
     void FixedUpdate()
     {
         MovePlayer();
+        UpdateSound();
     }
 
     void TrackInput()
@@ -206,8 +221,10 @@ public class PlayerMovement : MonoBehaviour
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         if (grounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-
+          
+        }
 
 
         else if (!grounded)
@@ -244,15 +261,39 @@ public class PlayerMovement : MonoBehaviour
     {
         if (iswalking && grounded)
         {
+            Debug.Log("WalkSoundPlay");
             PLAYBACK_STATE playbackState;
             playerDirtWalk.getPlaybackState(out playbackState);
-            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
-            {
+            if (playbackState == PLAYBACK_STATE.STOPPED){
                 playerDirtWalk.start();
             }
         }
-        else {
+        else
+        {
             playerDirtWalk.stop(STOP_MODE.ALLOWFADEOUT);
         }
-    }
-}
+        //    PLAYBACK_STATE playbackState;
+        //    playerDirtWalk.getPlaybackState(out playbackState);
+        //    if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+        //    {
+        //        playerDirtWalk.start();
+        //    }
+        //}
+        //else
+        //{
+        //    playerDirtWalk.stop(STOP_MODE.ALLOWFADEOUT);
+        }
+            //if (rb.linearVelocity.x != 0 && grounded)
+            //{
+            //    PLAYBACK_STATE playbackState;
+            //    playerDirtWalk.getPlaybackState(out playbackState);
+            //    if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            //    {
+            //        playerDirtWalk.start();
+            //    }
+            //}
+            //else {
+            //    playerDirtWalk.stop(STOP_MODE.ALLOWFADEOUT);
+            //}
+        }
+   

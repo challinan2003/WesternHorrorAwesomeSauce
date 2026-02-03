@@ -71,7 +71,7 @@ public class GunSystem : MonoBehaviour
             bulletsShot = bulletsPerTap;
             Shoot();
             //SoundManager.instance.PlaySFX(gunShootSFXIndex);
-            AudioManager.instance.PlayOneshot(FMODEvents.instance.gunShoot, this.transform.position);
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.GunShoot, this.transform.position);
         }
     }
 
@@ -132,7 +132,7 @@ public class GunSystem : MonoBehaviour
         reloading = true;
         
         StartCoroutine(ReloadFinished());
-        AudioManager.instance.PlayOneshot(FMODEvents.instance.gunReload, this.transform.position);
+        AudioManager.instance.PlayOneshot(FMODEvents.instance.GunReload, this.transform.position);
         //SoundManager.instance.PlaySFX(reloadSFXIndex);
         if (bulletsLeft > 6)
         {

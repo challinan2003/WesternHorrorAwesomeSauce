@@ -3163,28 +3163,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23fdf7ca0154e6f42b1c0aa099daeee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
-  <dirtWalk>k__BackingField:
+  <DirtWalk>k__BackingField:
     Guid:
       Data1: -1127606573
       Data2: 1304506730
       Data3: 1686395292
       Data4: 207801378
     Path: event:/playerWalkDirt
-  <gunShoot>k__BackingField:
+  <GunShoot>k__BackingField:
     Guid:
       Data1: 39999084
       Data2: 1169344168
       Data3: -1321060724
       Data4: 24788026
     Path: event:/GunShoot
-  <gunReload>k__BackingField:
+  <GunReload>k__BackingField:
     Guid:
       Data1: -364677291
       Data2: 1217054981
       Data3: 700688814
       Data4: -1488472577
     Path: event:/GunReload
-  <itemPickup>k__BackingField:
+  <ItemPickup>k__BackingField:
     Guid:
       Data1: -2007863040
       Data2: 1079668940
@@ -16114,10 +16114,6 @@ MonoBehaviour:
   crouchYScale: 0.6
   playerModel: {fileID: 0}
   staminaDuration: 4
-  Walk1SFX: 1
-  Nothing: 0
-  WalkSFXManager: {fileID: 597927941}
-  WSFXObject: {fileID: 1615478162471099246, guid: 4b1659309178dcf45a70bfe31d74f9a6, type: 3}
   iswalking: 0
   groundCheck: {fileID: 583667605}
   groundDistance: 0.1
