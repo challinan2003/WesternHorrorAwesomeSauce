@@ -66,7 +66,7 @@ public class GunSystem : MonoBehaviour
         }
 
         //shooting
-        if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
+        if (readyToShoot && shooting && !reloading && bulletsLeft > 0 && Time.deltaTime > 0)
         {
             bulletsShot = bulletsPerTap;
             Shoot();
