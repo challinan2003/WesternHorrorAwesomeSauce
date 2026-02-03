@@ -52,6 +52,10 @@ public class Madness : MonoBehaviour
             madResistTimer = Mathf.Clamp(madResistTimer, 0, 15);
             madResistTimer -= Time.deltaTime;
         }
+        else
+        {
+            madResistTimer = 0.0f;
+        }
     }
 
     //constant madness buildup
