@@ -50,8 +50,8 @@ public class InventoryManager : MonoBehaviour
 
     private void FixedUpdate() //updates item counts on UI
     {
-        alcoholText.SetText("Alcohol: " + alcoholCount);
-        cigaretteText.SetText("Cigarettes: " + cigaretteCount);
+        //alcoholText.SetText("Alcohol: " + alcoholCount);
+        //cigaretteText.SetText("Cigarettes: " + cigaretteCount);
     }
 
     public void UseCigarette() //uses cigarette from inventory

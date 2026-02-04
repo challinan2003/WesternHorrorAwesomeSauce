@@ -1,4 +1,12 @@
 using System.Diagnostics;
+using System.Drawing;
+using System.Numerics;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Collections;
+using System.Configuration.Assemblies;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +29,8 @@ public class HealthController : MonoBehaviour
     public KeyCode loseHealth = KeyCode.Space;
     public GameObject Death;
 
+    public LayerMask enemy;
+
     private void Start()
     {
 
@@ -28,24 +38,21 @@ public class HealthController : MonoBehaviour
 
     void UpdateHealth()
     {
-        if (Input.GetKey(loseHealth))
-        {
-            currentPlayerHealth -= 10;
-        }
-        Color splatterAlpha = redSplatterImage.color;
+        UnityEngine.Color splatterAlpha = redSplatterImage.color;
         splatterAlpha.a = 1 - (currentPlayerHealth / maxPlayerHealth);
         redSplatterImage.color = splatterAlpha;
 
-        Color hurtAlpha = hurtImage.color;
+        UnityEngine.Color hurtAlpha = hurtImage.color;
         hurtAlpha.a = 1 - (currentPlayerHealth / maxPlayerHealth);
         hurtImage.color = hurtAlpha;
 
         if (currentPlayerHealth < 100)
         {
+            recoveryTimer = 5;
             recoveryTimer -= Time.deltaTime;
         }
 
-        if (recoveryTimer == 0)
+        if (recoveryTimer >= 0)
         {
             recoveryTimer = 0;
             currentPlayerHealth += 1;
@@ -59,7 +66,6 @@ public class HealthController : MonoBehaviour
         if (currentPlayerHealth >= 0)
         {
             UpdateHealth();
-
         }
     }
 
@@ -71,6 +77,15 @@ public class HealthController : MonoBehaviour
         {
             Death.SetActive(true);
             currentPlayerHealth = 0;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            UnityEngine.Debug.Log("enemy attacking");
+            TakeDamage();
         }
     }
 }

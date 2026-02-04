@@ -48,7 +48,6 @@ public class GunSystem : MonoBehaviour
     }
     private void Update()
     {
-        print(reloading);
         MyInput();
         text.SetText(bulletsLeft + " / " + inventoryManager.bulletCount);
         UnityEngine.Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward, UnityEngine.Color.green);

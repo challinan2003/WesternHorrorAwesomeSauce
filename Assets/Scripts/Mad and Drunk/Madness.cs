@@ -118,7 +118,7 @@ public class Madness : MonoBehaviour
             pMovement.sprintSpeed = 5;
             if (SFXObject == null)
             SoundManager.instance.PlaySFX(madnessSFX); // Play madness sound effect
-            Debug.Log("Playing madness SFX");
+            //Debug.Log("Playing madness SFX");
         }
         else
         {

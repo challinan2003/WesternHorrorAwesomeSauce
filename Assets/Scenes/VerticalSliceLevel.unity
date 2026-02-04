@@ -663,7 +663,7 @@ MonoBehaviour:
   - {fileID: 377056528}
   ZombieAnim: {fileID: 0}
   enemyHealth: 60
-  gunSystem: {fileID: 0}
+  gunSystem: {fileID: 1885243249}
 --- !u!195 &36523901
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4361,6 +4361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 206887701}
   - component: {fileID: 206887702}
+  - component: {fileID: 206887703}
   m_Layer: 0
   m_Name: GunHolder
   m_TagString: Untagged
@@ -4398,6 +4399,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GunSway
   smooth: 8
   swayMultiplier: 2
+--- !u!114 &206887703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206887700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32fe5dec984bd2540829d244399ea909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeadBobV2
+  amount: 0.006
+  frequency: 10
+  smooth: 10
+  playerMovement: {fileID: 794906459}
 --- !u!1 &210428038
 GameObject:
   m_ObjectHideFlags: 0
@@ -6429,10 +6446,6 @@ MonoBehaviour:
   Letter2: {fileID: 697780612}
   Letter3: {fileID: 751277198}
   Letter4: {fileID: 1986511838}
-  Letter1SFX: 3
-  Letter2SFX: 4
-  Letter3SFX: 5
-  Letter4SFX: 6
   itemField: {fileID: 0}
   fpsController: {fileID: 1870483546}
   SFXObject: {fileID: 0}
@@ -10275,7 +10288,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1758481484}
   m_Father: {fileID: 794906458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &491799217
@@ -12513,7 +12527,7 @@ MonoBehaviour:
   - {fileID: 1093976731}
   ZombieAnim: {fileID: 0}
   enemyHealth: 60
-  gunSystem: {fileID: 0}
+  gunSystem: {fileID: 1885243249}
 --- !u!195 &602595007
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14105,7 +14119,7 @@ MonoBehaviour:
   - {fileID: 636339887}
   ZombieAnim: {fileID: 0}
   enemyHealth: 60
-  gunSystem: {fileID: 0}
+  gunSystem: {fileID: 1885243249}
 --- !u!195 &647105382
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14967,13 +14981,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714810735}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.24570036, z: 0}
+  m_LocalRotation: {x: -0, y: -0.71845806, z: -0, w: 0.6955703}
+  m_LocalPosition: {x: 81.397606, y: -0.92297983, z: -15.968452}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1870483551}
-  m_Father: {fileID: 794906458}
+  m_Father: {fileID: 1758481484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &714810737
 MonoBehaviour:
@@ -16526,7 +16540,6 @@ Transform:
   - {fileID: 490296463}
   - {fileID: 2008680671}
   - {fileID: 583667605}
-  - {fileID: 714810736}
   m_Father: {fileID: 881326588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &794906459
@@ -16613,10 +16626,6 @@ MonoBehaviour:
   Letter2: {fileID: 697780612}
   Letter3: {fileID: 751277198}
   Letter4: {fileID: 1986511838}
-  Letter1SFX: 3
-  Letter2SFX: 4
-  Letter3SFX: 5
-  Letter4SFX: 6
   itemField: {fileID: 0}
   fpsController: {fileID: 1870483546}
   SFXObject: {fileID: 0}
@@ -18535,7 +18544,7 @@ MonoBehaviour:
   - {fileID: 342490287}
   ZombieAnim: {fileID: 0}
   enemyHealth: 60
-  gunSystem: {fileID: 0}
+  gunSystem: {fileID: 1885243249}
 --- !u!195 &872228533
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -37219,7 +37228,7 @@ MonoBehaviour:
   - {fileID: 1784717912}
   ZombieAnim: {fileID: 0}
   enemyHealth: 60
-  gunSystem: {fileID: 0}
+  gunSystem: {fileID: 1885243249}
 --- !u!195 &1566340736
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -42339,6 +42348,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c787553372e9655478d1499c7e39c837, type: 3}
+--- !u!1 &1758481483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1758481484}
+  - component: {fileID: 1758481485}
+  m_Layer: 0
+  m_Name: HeadBobControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1758481484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758481483}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.71845806, z: -0, w: 0.6955703}
+  m_LocalPosition: {x: 18.594429, y: 0.6686802, z: 80.83815}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 714810736}
+  m_Father: {fileID: 490296463}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1758481485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758481483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32fe5dec984bd2540829d244399ea909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeadBobV2
+  amount: 0.016
+  frequency: 12
+  smooth: 10
+  playerMovement: {fileID: 794906459}
 --- !u!1001 &1766491957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44602,27 +44660,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7440ae4685ca6a649beeb9d6a710a1ed, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2825698
+      value: 0.14547068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7440ae4685ca6a649beeb9d6a710a1ed, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2825698
+      value: 0.14547068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7440ae4685ca6a649beeb9d6a710a1ed, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2825698
+      value: 0.14547068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7440ae4685ca6a649beeb9d6a710a1ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.862
+      value: 4.5172
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7440ae4685ca6a649beeb9d6a710a1ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.749
+      value: 7.876
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7440ae4685ca6a649beeb9d6a710a1ed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.209
+      value: -6.8239
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7440ae4685ca6a649beeb9d6a710a1ed, type: 3}
       propertyPath: m_LocalRotation.w
