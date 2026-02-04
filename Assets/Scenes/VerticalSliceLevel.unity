@@ -3296,6 +3296,13 @@ MonoBehaviour:
       Data3: -1104491857
       Data4: -666168419
     Path: event:/PlayerDrink
+  <Madness>k__BackingField:
+    Guid:
+      Data1: -519917060
+      Data2: 1139670378
+      Data3: 2143082893
+      Data4: 27144573
+    Path: event:/Madness
 --- !u!1 &161094074
 GameObject:
   m_ObjectHideFlags: 0

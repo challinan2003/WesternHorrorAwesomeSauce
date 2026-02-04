@@ -20,6 +20,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference GunReload { get; set; }
     [field: SerializeField] public EventReference ItemPickup { get; set; }
     [field: SerializeField] public EventReference PlayerDrink { get; set; }
+    [field: SerializeField] public EventReference Madness { get; set; }
     public static FMODEvents instance {  get; private set; }
     private void Awake()
     {

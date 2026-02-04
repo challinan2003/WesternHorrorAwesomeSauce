@@ -81,6 +81,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4065687386813627577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Madness
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Madness
+  Guid:
+    Data1: -519917060
+    Data2: 1139670378
+    Data3: 2143082893
+    Data4: 27144573
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3875791960242882035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +150,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639056784368532535
+  lastModified: 639057958731247001
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -170,10 +197,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639057843927176425
+  lastModified: 639057958739469584
   FileSizes:
   - Name: Desktop
-    Value: 2891712
+    Value: 3685824
   Exists: 1
 --- !u!114 &-1110760950743810310
 MonoBehaviour:
@@ -261,13 +288,14 @@ MonoBehaviour:
   - {fileID: -5144197739934426692}
   - {fileID: 5051636998342817416}
   - {fileID: 4339529255461050526}
+  - {fileID: -4065687386813627577}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1555053090485093994}
   StringsBanks:
   - {fileID: 7805662842229737573}
   cacheVersion: 131858
-  cacheTime: 639057843927176425
+  cacheTime: 639057958739469584
   SerializableEventsDict:
   - key: event:/ItemPickUP
     index: 0
@@ -476,10 +504,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639057843927100900
+  lastModified: 639057958731257060
   FileSizes:
   - Name: Desktop
-    Value: 1392
+    Value: 1430
   Exists: 1
 --- !u!114 &8855945390039065123
 MonoBehaviour:

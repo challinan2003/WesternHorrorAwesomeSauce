@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using NUnit.Framework;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
@@ -14,10 +15,12 @@ public class Madness : MonoBehaviour
     public GunSystem gunSystem;
     public PlayerMovement pMovement;
     public Drunk drunk;
-    public int madnessSFX = 0;
-    public SoundManager soundManager;
-    public GameObject SFXObject;
+    //public int madnessSFX = 0;
+    //public SoundManager soundManager;
+    //public GameObject SFXObject;
     public  GameObject Death;
+    public bool SoundPLayed = false;
+    private EventInstance PlayerMadness;
 
     //timers
     public float madnessTimer = 60.0f;
@@ -25,13 +28,14 @@ public class Madness : MonoBehaviour
 
     void Start()
     {
+        PlayerMadness = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Madness);
         madBuildup = 0;
         madResist = false;
     }
     // Update is called once per frame
     void Update()
     {
-        SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
+        //SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
         checkForMadness();
 
         //madness death timer
@@ -61,6 +65,8 @@ public class Madness : MonoBehaviour
     //constant madness buildup
     void FixedUpdate()
     {
+        MadnessAudio();
+        //MadnessSound();
         if (!isMad && !madResist)
         {
             madnessBuildup(1.0f);
@@ -116,8 +122,11 @@ public class Madness : MonoBehaviour
             pMovement.walkSpeed = 4;
             pMovement.crouchSpeed = 3;
             pMovement.sprintSpeed = 5;
-            if (SFXObject == null)
-            SoundManager.instance.PlaySFX(madnessSFX); // Play madness sound effect
+            //if (SFXObject == null)
+            //{
+            //    AudioManager.instance.PlayOneshot(FMODEvents.instance.Madness, this.transform.position);
+            //}
+            //SoundManager.instance.PlaySFX(madnessSFX); // Play madness sound effect
             //Debug.Log("Playing madness SFX");
         }
         else
@@ -129,5 +138,34 @@ public class Madness : MonoBehaviour
             pMovement.crouchSpeed = 2;
             pMovement.sprintSpeed = 4;
         }
+    }
+    private void MadnessAudio()
+    {
+        if (!SoundPLayed && isMad)
+        {
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.Madness, this.transform.position);
+            SoundPLayed = true;
+        }
+        if (SoundPLayed && madResist)
+        {
+            SoundPLayed = false;
+        }
+    }
+    private void MadnessSound()
+    {
+        if (isMad && !madResist)
+        {
+            PLAYBACK_STATE playbackState;
+            PlayerMadness.getPlaybackState(out playbackState);
+            if (playbackState == PLAYBACK_STATE.STOPPED)
+            {
+                PlayerMadness.start();
+            }
+        }
+        else
+        {
+            PlayerMadness.stop(STOP_MODE.ALLOWFADEOUT);
+        }
+
     }
 }
