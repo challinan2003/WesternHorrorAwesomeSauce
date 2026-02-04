@@ -708,6 +708,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &36523903
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36523897}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3.64, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &43693760 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: d09fa7fae47ed4249a28930813922c9a, type: 3}
@@ -4406,7 +4427,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206887700}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32fe5dec984bd2540829d244399ea909, type: 3}
   m_Name: 
@@ -10202,7 +10223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &482592764
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12107,6 +12128,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: -519650119731285489, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -12256,6 +12281,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 602595006}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 602595010}
     - targetCorrespondingSourceObject: {fileID: -3170390158340962716, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8505109}
@@ -12572,6 +12600,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &602595010
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602595001}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3.64, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &602861364
 GameObject:
   m_ObjectHideFlags: 0
@@ -13698,6 +13747,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: -519650119731285489, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -13847,6 +13900,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 647105381}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 647105385}
     - targetCorrespondingSourceObject: {fileID: -3170390158340962716, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 650331841}
@@ -14164,6 +14220,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &647105385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647105376}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3.64, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &649774912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
@@ -15659,7 +15736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &757269150
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16563,7 +16640,7 @@ MonoBehaviour:
   jumpCooldown: 1
   airMultiplier: 0.4
   crouchYScale: 0.6
-  playerModel: {fileID: 0}
+  playerModel: {fileID: 979522320}
   staminaDuration: 4
   iswalking: 0
   groundCheck: {fileID: 583667605}
@@ -16678,7 +16755,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794906457}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 103b2bd2c162e5d4b9a39e86b4e113e2, type: 3}
   m_Name: 
@@ -16691,6 +16768,9 @@ MonoBehaviour:
   hurtTimer: 0.1
   loseHealth: 32
   Death: {fileID: 0}
+  enemy:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1001 &797783804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18124,6 +18204,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: -519650119731285489, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -18273,6 +18357,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 872228532}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 872228536}
     - targetCorrespondingSourceObject: {fileID: -3170390158340962716, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1449833112}
@@ -18589,6 +18676,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &872228536
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872228527}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3.64, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &876944792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35392,6 +35500,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 36523900}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 36523903}
     - targetCorrespondingSourceObject: {fileID: -3170390158340962716, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1704994487}
@@ -36808,6 +36919,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: -519650119731285489, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -36957,6 +37072,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1566340735}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1566340739}
     - targetCorrespondingSourceObject: {fileID: -3170390158340962716, guid: a1b4b8144e2a4054199287da62cdd0da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1314285506}
@@ -37273,6 +37391,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1566340739
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566340730}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3.64, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1567751556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42388,7 +42527,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758481483}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32fe5dec984bd2540829d244399ea909, type: 3}
   m_Name: 

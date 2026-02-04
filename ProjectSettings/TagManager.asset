@@ -18,6 +18,7 @@ TagManager:
   - Wood
   - Dirt
   - Metal
+  - Enemy
   layers:
   - Default
   - TransparentFX
