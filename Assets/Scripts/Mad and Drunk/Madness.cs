@@ -166,7 +166,7 @@ public class Madness : MonoBehaviour
                 PlayerMadness.start();
             }
         }
-        else
+        else if (!isMad && madResist) 
         {
             PlayerMadness.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }

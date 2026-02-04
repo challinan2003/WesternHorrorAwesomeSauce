@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using System.ComponentModel.Design;
 using NUnit.Framework;
+using FMOD.Studio;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -30,9 +31,14 @@ public class DialogueSystem : MonoBehaviour
     
     private Transform _selection;
     public GameObject SFXObject;
+    private EventInstance PlayLetter4;
 
     public void Update()
     {
+        PlayLetter4 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
+        PLAYBACK_STATE playbackState;
+
+        PlayLetter4.getPlaybackState(out playbackState);
         SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
         //SFXObject = GameObject.Find("SFXOneShotPrefab");
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -45,7 +51,8 @@ public class DialogueSystem : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if (SFXObject == null)
+                    if (playbackState == PLAYBACK_STATE.STOPPED)
+                        //if (SFXObject == null)
                     {
                         // activates dialogue
                         var selectionRenderer = selection.GetComponent<Renderer>();
@@ -54,7 +61,8 @@ public class DialogueSystem : MonoBehaviour
                             Debug.Log("active letter");
                             Letter.SetActive(true);
                             Time.timeScale = 0;
-                            AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter4, this.transform.position);
+                            PlayLetter4.start();
+                            PlayLetter4.release();
                             StartDialogue();
                         }
                     }
@@ -144,7 +152,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void EndDialogue()
     {
-        Destroy(SFXObject);
+        //Destroy(SFXObject);
        fpsController.GetComponent<FirstPersonMovement>().enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

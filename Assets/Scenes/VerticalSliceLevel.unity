@@ -3202,11 +3202,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
   <Letter4>k__BackingField:
     Guid:
-      Data1: -1051030062
-      Data2: 1084129144
-      Data3: -1311737968
-      Data4: 1466193839
-    Path: event:/Letter4
+      Data1: -333974935
+      Data2: 1310464675
+      Data3: -1108815985
+      Data4: -1992338866
+    Path: event:/Letter4-2D
   <Letter5>k__BackingField:
     Guid:
       Data1: -1190946868
@@ -11957,19 +11957,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d8d856461d52784da0b9955161c2066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  walkSfxList:
-  - {fileID: 0}
-  - {fileID: 8300000, guid: 8c0cf4382542c2d458ffeb274d9dfcb8, type: 3}
-  - {fileID: 8300000, guid: bd2886fbda298ab4a9a0d3e68de2a06f, type: 3}
-  - {fileID: 8300000, guid: 998acea2805a4ce468c55c83eb95eb87, type: 3}
-  - {fileID: 8300000, guid: 696ce5c936e00b24382752488e9e7edf, type: 3}
-  WalkaudioResources:
-  - {fileID: 0}
-  - {fileID: 8300000, guid: 8c0cf4382542c2d458ffeb274d9dfcb8, type: 3}
-  - {fileID: 8300000, guid: bd2886fbda298ab4a9a0d3e68de2a06f, type: 3}
-  - {fileID: 8300000, guid: 998acea2805a4ce468c55c83eb95eb87, type: 3}
-  - {fileID: 8300000, guid: 696ce5c936e00b24382752488e9e7edf, type: 3}
-  WalkSFXOneShotPrefab: {fileID: 1615478162471099246, guid: 4b1659309178dcf45a70bfe31d74f9a6, type: 3}
 --- !u!4 &597927942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4352756237776159613, guid: 58a3737772a6d684381033c927fddcea, type: 3}
@@ -16636,7 +16623,6 @@ MonoBehaviour:
   playerModel: {fileID: 979522320}
   staminaDuration: 4
   iswalking: 0
-  PlayerSFX: {fileID: 794906457}
   groundCheck: {fileID: 583667605}
   groundDistance: 0.1
   whatIsGround:
