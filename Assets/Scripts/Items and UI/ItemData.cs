@@ -18,24 +18,24 @@ public class ItemData : MonoBehaviour
         {
             inventoryManager.alcoholCount += 1;
             Destroy(gameObject);
-            AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
             Debug.Log("Picked up ALCOHOL");
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
         }
 
         if (CompareTag("Cigs") && collision.gameObject.CompareTag("Player") && (Input.GetKeyDown(KeyCode.E)))
         {
             inventoryManager.cigaretteCount += 5;
             Destroy(gameObject);
-            AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
             Debug.Log("Picked up CIGARETTES");
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
         }
 
         if (CompareTag("Bullets") && collision.gameObject.CompareTag("Player") && (Input.GetKeyDown(KeyCode.E)))
         {
             inventoryManager.bulletCount += 6;
             Destroy(gameObject);
-            AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
             Debug.Log("Picked up BULLETS");
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
         }
     }
 }

@@ -1,6 +1,8 @@
 using FMOD.Studio;
+using FMODUnity;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static UnityEngine.GraphicsBuffer;
 
 public class Madness : MonoBehaviour
@@ -28,7 +30,9 @@ public class Madness : MonoBehaviour
 
     void Start()
     {
+
         PlayerMadness = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Madness);
+
         madBuildup = 0;
         madResist = false;
     }
@@ -65,8 +69,8 @@ public class Madness : MonoBehaviour
     //constant madness buildup
     void FixedUpdate()
     {
-        MadnessAudio();
-        //MadnessSound();
+        //MadnessAudio();
+        MadnessSound();
         if (!isMad && !madResist)
         {
             madnessBuildup(1.0f);
@@ -146,7 +150,7 @@ public class Madness : MonoBehaviour
             AudioManager.instance.PlayOneshot(FMODEvents.instance.Madness, this.transform.position);
             SoundPLayed = true;
         }
-        if (SoundPLayed && madResist)
+        else if (SoundPLayed && madResist)
         {
             SoundPLayed = false;
         }
@@ -164,7 +168,7 @@ public class Madness : MonoBehaviour
         }
         else
         {
-            PlayerMadness.stop(STOP_MODE.ALLOWFADEOUT);
+            PlayerMadness.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
 
     }

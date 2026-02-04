@@ -10,7 +10,7 @@ public class EnemyHitbox : MonoBehaviour
         if (bullet.CompareTag("Bullet"))
         {
      
-            SoundManager.instance.PlayAudioResource(Random.Range(0,3));
+            //SoundManager.instance.PlayAudioResource(Random.Range(0,3));
             
             UnityEngine.Debug.Log("bullet hit!");
             Patrols.enemyHealth -= gunSystem.damage;

@@ -642,7 +642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bc1a2506c4cd444834d283fdbeb4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Patrols
-  EnemySoundManager: {fileID: 101047947}
   enemyImpact: 6
   sawOnce: 0
   Player:
@@ -2188,17 +2187,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1783762905216541649, guid: bbd9e2d909edb90468d7d8e77fa0bed1, type: 3}
   m_PrefabInstance: {fileID: 101047945}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &101047947 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4173959516970992125, guid: bbd9e2d909edb90468d7d8e77fa0bed1, type: 3}
-  m_PrefabInstance: {fileID: 101047945}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8d3a2376042db44497f49abea70577a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemySoundManager
 --- !u!1001 &102801938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3298,11 +3286,11 @@ MonoBehaviour:
     Path: event:/PlayerDrink
   <Madness>k__BackingField:
     Guid:
-      Data1: -519917060
-      Data2: 1139670378
-      Data3: 2143082893
-      Data4: 27144573
-    Path: event:/Madness
+      Data1: -1871048260
+      Data2: 1110160673
+      Data3: -550884697
+      Data4: -416584294
+    Path: event:/Madness2D
 --- !u!1 &161094074
 GameObject:
   m_ObjectHideFlags: 0
@@ -12542,7 +12530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bc1a2506c4cd444834d283fdbeb4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Patrols
-  EnemySoundManager: {fileID: 0}
   enemyImpact: 0
   sawOnce: 0
   Player:
@@ -14161,7 +14148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bc1a2506c4cd444834d283fdbeb4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Patrols
-  EnemySoundManager: {fileID: 0}
   enemyImpact: 0
   sawOnce: 0
   Player:
@@ -16650,6 +16636,7 @@ MonoBehaviour:
   playerModel: {fileID: 979522320}
   staminaDuration: 4
   iswalking: 0
+  PlayerSFX: {fileID: 794906457}
   groundCheck: {fileID: 583667605}
   groundDistance: 0.1
   whatIsGround:
@@ -16749,10 +16736,8 @@ MonoBehaviour:
   gunSystem: {fileID: 1885243249}
   pMovement: {fileID: 794906459}
   drunk: {fileID: 794906462}
-  madnessSFX: 0
-  soundManager: {fileID: 1452354029}
-  SFXObject: {fileID: 5173983664519720195, guid: 7e86e7f0bfc83dd4894fdd8c67c585e8, type: 3}
   Death: {fileID: 1263565100}
+  SoundPLayed: 0
   madnessTimer: 60
   madResistTimer: 15
 --- !u!114 &794906464
@@ -18618,7 +18603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bc1a2506c4cd444834d283fdbeb4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Patrols
-  EnemySoundManager: {fileID: 0}
   enemyImpact: 0
   sawOnce: 0
   Player:
@@ -37333,7 +37317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bc1a2506c4cd444834d283fdbeb4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Patrols
-  EnemySoundManager: {fileID: 0}
   enemyImpact: 0
   sawOnce: 0
   Player:

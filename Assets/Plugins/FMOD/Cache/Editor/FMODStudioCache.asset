@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7427265049782719435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Madness2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Madness2D
+  Guid:
+    Data1: -1871048260
+    Data2: 1110160673
+    Data3: -550884697
+    Data4: -416584294
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7363640488353687473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +177,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639057958731247001
+  lastModified: 639058077806881456
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -197,10 +224,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639057958739469584
+  lastModified: 639058077807311205
   FileSizes:
   - Name: Desktop
-    Value: 3685824
+    Value: 3686784
   Exists: 1
 --- !u!114 &-1110760950743810310
 MonoBehaviour:
@@ -289,13 +316,14 @@ MonoBehaviour:
   - {fileID: 5051636998342817416}
   - {fileID: 4339529255461050526}
   - {fileID: -4065687386813627577}
+  - {fileID: -7427265049782719435}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1555053090485093994}
   StringsBanks:
   - {fileID: 7805662842229737573}
   cacheVersion: 131858
-  cacheTime: 639057958739469584
+  cacheTime: 639058077807311205
   SerializableEventsDict:
   - key: event:/ItemPickUP
     index: 0
@@ -327,6 +355,10 @@ MonoBehaviour:
     index: 13
   - key: event:/Letter7
     index: 14
+  - key: event:/Madness
+    index: 15
+  - key: event:/Madness2D
+    index: 16
 --- !u!114 &2527955488528454479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,10 +536,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639057958731257060
+  lastModified: 639058077806891460
   FileSizes:
   - Name: Desktop
-    Value: 1430
+    Value: 1474
   Exists: 1
 --- !u!114 &8855945390039065123
 MonoBehaviour:

@@ -28,7 +28,7 @@ public class Menu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.P) && !isPaused)
         {
-             SoundManager.instance.PlaySFX(menusound);
+             //SoundManager.instance.PlaySFX(menusound);
              Pausemenu.SetActive(true);
             Debug.Log("Pause menu");
             OnPauseButton(true);

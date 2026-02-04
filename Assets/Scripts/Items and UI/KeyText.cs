@@ -20,7 +20,7 @@ public class KeyText : MonoBehaviour
             Debug.Log("changes objective again");
             FirstObjective.text = "Return to the Station";
             Destroy(gameObject);
-            SoundManager.instance.PlaySFX(pickupSFX);
+            //SoundManager.instance.PlaySFX(pickupSFX);
         }
 
     }

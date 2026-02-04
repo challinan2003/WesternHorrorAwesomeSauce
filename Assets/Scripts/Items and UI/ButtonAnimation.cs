@@ -33,7 +33,7 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExit
             //play UI hover sfx
             if (hoverSFXIndex != -1)
             {
-                SoundManager.instance.PlaySFX(hoverSFXIndex);
+                //SoundManager.instance.PlaySFX(hoverSFXIndex);
             }
         }
     }
@@ -54,7 +54,7 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
             if (clickSFXIndex != -1)
             {
-                SoundManager.instance.PlaySFX(clickSFXIndex);
+                //SoundManager.instance.PlaySFX(clickSFXIndex);
             }
         }
     }

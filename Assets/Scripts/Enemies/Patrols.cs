@@ -13,7 +13,7 @@ using UnityEngine.AI;
 
 public class Patrols : MonoBehaviour 
 {
-    public EnemySoundManager EnemySoundManager;
+    //public EnemySoundManager EnemySoundManager;
     public int enemyImpact = 0;
     public bool sawOnce = false;
     //public int enemyWalkSFX = 0;
