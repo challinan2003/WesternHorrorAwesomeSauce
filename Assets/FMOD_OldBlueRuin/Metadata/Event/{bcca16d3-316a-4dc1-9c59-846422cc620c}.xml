@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{bcca16d3-316a-4dc1-9c59-846422cc620c}">
 		<property name="name">
-			<value>playerWalkDirt</value>
+			<value>playerWalkDirt3d</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -32,7 +32,7 @@
 			<destination>{b7a18e67-5f01-4370-8546-c73e7e7b52da}</destination>
 		</relationship>
 		<relationship name="banks">
-			<destination>{e6adb5f4-8497-4469-b060-6337dd429743}</destination>
+			<destination>{d1808b06-a4db-4e18-b878-bff315c143cd}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{97a2f3fa-f769-4029-9e49-906166cb9989}">

@@ -10,7 +10,7 @@ public class ItemData : MonoBehaviour
 
     //other game objects
     public InventoryManager inventoryManager;
-    public SoundManager soundManager;
+    //public SoundManager soundManager;
 
     private void OnCollisionStay(Collision collision)
     {
@@ -18,7 +18,7 @@ public class ItemData : MonoBehaviour
         {
             inventoryManager.alcoholCount += 1;
             Destroy(gameObject);
-            SoundManager.instance.PlaySFX(0);
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
             Debug.Log("Picked up ALCOHOL");
         }
 
@@ -26,7 +26,7 @@ public class ItemData : MonoBehaviour
         {
             inventoryManager.cigaretteCount += 5;
             Destroy(gameObject);
-            SoundManager.instance.PlaySFX(0);
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
             Debug.Log("Picked up CIGARETTES");
         }
 
@@ -34,7 +34,7 @@ public class ItemData : MonoBehaviour
         {
             inventoryManager.bulletCount += 6;
             Destroy(gameObject);
-            SoundManager.instance.PlaySFX(0);
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
             Debug.Log("Picked up BULLETS");
         }
     }

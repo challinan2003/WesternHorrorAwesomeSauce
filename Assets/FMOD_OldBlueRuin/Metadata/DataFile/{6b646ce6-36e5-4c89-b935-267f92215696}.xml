@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="DataFile" id="{6b646ce6-36e5-4c89-b935-267f92215696}">
 		<property name="assetPath">
-			<value>SFX/Enemy_Alert2.mp3.meta</value>
+			<value>EnemySFX/Enemy_Alert2.mp3.meta</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{1312e556-6988-4456-9862-88fd748aaf23}</destination>

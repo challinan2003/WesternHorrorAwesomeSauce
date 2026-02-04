@@ -26,6 +26,7 @@ public class Drunk : MonoBehaviour
         //once inventory is reworked, this function will check inventory for alcohol
         if (Input.GetKeyDown(KeyCode.V) && inventory.alcoholCount > 0)
         {
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.PlayerDrink, this.transform.position);
             inventory.alcoholCount -= 1;
             madness.madBuildup -= 400.0f;
             drunkenness += 25;

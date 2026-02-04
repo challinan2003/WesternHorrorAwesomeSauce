@@ -3,6 +3,15 @@ using FMODUnity;
 
 public class FMODEvents : MonoBehaviour
 {
+    [field: Header("Letters")]
+    [field: SerializeField] public EventReference Letter1 { get; set; }
+    [field: SerializeField] public EventReference Letter2 { get; set; }
+    [field: SerializeField] public EventReference Letter3 { get; set; }
+    [field: SerializeField] public EventReference Letter4 { get; set; }
+    [field: Header("EnemySFX")]
+    [field: SerializeField] public EventReference EnemyAlert {  get; set; }
+    [field: SerializeField] public EventReference EnemyDeath { get; set; }
+    [field: SerializeField] public EventReference EnemyHurt { get; set; }
     [field: Header("PlayerSFX")]
     [field: SerializeField] public EventReference DirtWalk {  get; set; }
     [field: Header("SFX")]
@@ -10,7 +19,8 @@ public class FMODEvents : MonoBehaviour
 
     [field: SerializeField] public EventReference GunReload { get; set; }
     [field: SerializeField] public EventReference ItemPickup { get; set; }
- public static FMODEvents instance {  get; private set; }
+    [field: SerializeField] public EventReference PlayerDrink { get; set; }
+    public static FMODEvents instance {  get; private set; }
     private void Awake()
     {
         if (instance != null)

@@ -664,7 +664,6 @@ MonoBehaviour:
   ZombieAnim: {fileID: 0}
   enemyHealth: 60
   gunSystem: {fileID: 0}
-  ESFXObject: {fileID: 5881577710961670273, guid: 7c3edb2df9a49244cb0c170fafb46565, type: 3}
 --- !u!195 &36523901
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3192,13 +3191,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23fdf7ca0154e6f42b1c0aa099daeee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  <Letter1>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <Letter2>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <Letter3>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <Letter4>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <EnemyAlert>k__BackingField:
+    Guid:
+      Data1: -1274780984
+      Data2: 1095258439
+      Data3: -751017841
+      Data4: 514729793
+    Path: event:/EnemyAlert
+  <EnemyDeath>k__BackingField:
+    Guid:
+      Data1: 984856706
+      Data2: 1149926094
+      Data3: 1552115864
+      Data4: 1801018951
+    Path: event:/EnemyDeath
+  <EnemyHurt>k__BackingField:
+    Guid:
+      Data1: -1871572309
+      Data2: 1271043304
+      Data3: 355178905
+      Data4: -1399609515
+    Path: event:/EnemyHurt
   <DirtWalk>k__BackingField:
     Guid:
       Data1: -1127606573
       Data2: 1304506730
       Data3: 1686395292
       Data4: 207801378
-    Path: event:/playerWalkDirt
+    Path: event:/PlayerWalkDirt3d
   <GunShoot>k__BackingField:
     Guid:
       Data1: 39999084
@@ -3220,6 +3268,13 @@ MonoBehaviour:
       Data3: 851109005
       Data4: -587585676
     Path: event:/ItemPickUP
+  <PlayerDrink>k__BackingField:
+    Guid:
+      Data1: 403494862
+      Data2: 1112311383
+      Data3: -1104491857
+      Data4: -666168419
+    Path: event:/PlayerDrink
 --- !u!1 &161094074
 GameObject:
   m_ObjectHideFlags: 0
@@ -12459,7 +12514,6 @@ MonoBehaviour:
   ZombieAnim: {fileID: 0}
   enemyHealth: 60
   gunSystem: {fileID: 0}
-  ESFXObject: {fileID: 0}
 --- !u!195 &602595007
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14052,7 +14106,6 @@ MonoBehaviour:
   ZombieAnim: {fileID: 0}
   enemyHealth: 60
   gunSystem: {fileID: 0}
-  ESFXObject: {fileID: 0}
 --- !u!195 &647105382
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -18483,7 +18536,6 @@ MonoBehaviour:
   ZombieAnim: {fileID: 0}
   enemyHealth: 60
   gunSystem: {fileID: 0}
-  ESFXObject: {fileID: 0}
 --- !u!195 &872228533
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -37168,7 +37220,6 @@ MonoBehaviour:
   ZombieAnim: {fileID: 0}
   enemyHealth: 60
   gunSystem: {fileID: 0}
-  ESFXObject: {fileID: 0}
 --- !u!195 &1566340736
 NavMeshAgent:
   m_ObjectHideFlags: 0

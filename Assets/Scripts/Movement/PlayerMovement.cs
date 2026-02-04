@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
 
         startYScale = transform.localScale.y;
-        playerDirtWalk = AudioManager.instance.CreateInstance(FMODEvents.instance.DirtWalk);
+        playerDirtWalk = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DirtWalk);
     }
 
     void Update()
@@ -116,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
             playerDirtWalk.getPlaybackState(out playbackState);
             if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
             {
-                playerDirtWalk.start();
+                
             }
         }
         else
@@ -259,7 +259,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void UpdateSound()
     {
-        if (iswalking && grounded)
+        if (rb.angularVelocity.x != 0 && grounded)
         {
             Debug.Log("WalkSoundPlay");
             PLAYBACK_STATE playbackState;

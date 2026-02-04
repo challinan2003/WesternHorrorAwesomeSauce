@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3700636537713381995
+--- !u!114 &-7363640488353687473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,17 +9,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/PlayerSFX.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/PlayerSFX.bank
-  Name: PlayerSFX
-  StudioPath: bank:/PlayerSFX
-  lastModified: 639056579263365870
-  FileSizes:
-  - Name: Desktop
-    Value: 37440
-  Exists: 1
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PlayerDrink
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/PlayerDrink
+  Guid:
+    Data1: 403494862
+    Data2: 1112311383
+    Data3: -1104491857
+    Data4: -666168419
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5835437666478138988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemyAlert
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/EnemyAlert
+  Guid:
+    Data1: -1274780984
+    Data2: 1095258439
+    Data3: -751017841
+    Data4: 514729793
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1950
 --- !u!114 &-1555053090485093994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,11 +69,38 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639056520492242586
+  lastModified: 639057629951240430
   FileSizes:
   - Name: Desktop
     Value: 1074
   Exists: 1
+--- !u!114 &-1271148245719412022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PlayerWalkDirt2d
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/PlayerWalkDirt2d
+  Guid:
+    Data1: 2042826168
+    Data2: 1281392651
+    Data3: -889987667
+    Data4: 966357444
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1146
 --- !u!114 &-1185246703142972094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,10 +116,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639056520492263153
+  lastModified: 639057629951633552
   FileSizes:
   - Name: Desktop
-    Value: 57760
+    Value: 213600
   Exists: 1
 --- !u!114 &-1110760950743810310
 MonoBehaviour:
@@ -129,29 +190,43 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 7805662842229737573}
   - {fileID: -1555053090485093994}
-  - {fileID: -3700636537713381995}
   - {fileID: -1185246703142972094}
   EditorEvents:
-  - {fileID: 4600703273314371863}
   - {fileID: -1110760950743810310}
   - {fileID: -728973007575864169}
   - {fileID: 2527955488528454479}
+  - {fileID: -5835437666478138988}
+  - {fileID: 8999178797729146050}
+  - {fileID: 3066760961730197838}
+  - {fileID: -7363640488353687473}
+  - {fileID: -1271148245719412022}
+  - {fileID: 8855945390039065123}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1555053090485093994}
   StringsBanks:
   - {fileID: 7805662842229737573}
   cacheVersion: 131858
-  cacheTime: 639056579263365870
+  cacheTime: 639057629951633552
   SerializableEventsDict:
-  - key: event:/playerWalkDirt
-    index: 0
   - key: event:/ItemPickUP
-    index: 1
+    index: 0
   - key: event:/GunReload
-    index: 2
+    index: 1
   - key: event:/GunShoot
+    index: 2
+  - key: event:/EnemyAlert
     index: 3
+  - key: event:/EnemyDeath
+    index: 4
+  - key: event:/EnemyHurt
+    index: 5
+  - key: event:/PlayerDrink
+    index: 6
+  - key: event:/PlayerWalkDirt2d
+    index: 7
+  - key: event:/PlayerWalkDirt3d
+    index: 8
 --- !u!114 &2527955488528454479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +254,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4600703273314371863
+--- !u!114 &3066760961730197838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,23 +264,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/playerWalkDirt
+  m_Name: event:/EnemyHurt
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/playerWalkDirt
+  Path: event:/EnemyHurt
   Guid:
-    Data1: -1127606573
-    Data2: 1304506730
-    Data3: 1686395292
-    Data4: 207801378
+    Data1: -1871572309
+    Data2: 1271043304
+    Data3: 355178905
+    Data4: -1399609515
   Banks:
-  - {fileID: -3700636537713381995}
+  - {fileID: -1185246703142972094}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1200
+  Length: 1306
 --- !u!114 &7805662842229737573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,8 +296,62 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639056579263365870
+  lastModified: 639057629951250446
   FileSizes:
   - Name: Desktop
-    Value: 1002
+    Value: 1182
   Exists: 1
+--- !u!114 &8855945390039065123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PlayerWalkDirt3d
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/PlayerWalkDirt3d
+  Guid:
+    Data1: -1127606573
+    Data2: 1304506730
+    Data3: 1686395292
+    Data4: 207801378
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1200
+--- !u!114 &8999178797729146050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemyDeath
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/EnemyDeath
+  Guid:
+    Data1: 984856706
+    Data2: 1149926094
+    Data3: 1552115864
+    Data4: 1801018951
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1031

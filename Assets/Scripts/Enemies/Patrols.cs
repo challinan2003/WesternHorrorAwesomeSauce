@@ -31,7 +31,7 @@ public class Patrols : MonoBehaviour
     [Header("Health")]
     public int enemyHealth = 60;
     public GunSystem gunSystem;
-    public GameObject ESFXObject;
+    //public GameObject ESFXObject;
         
     public enum EnemyState
     {
@@ -83,7 +83,7 @@ public class Patrols : MonoBehaviour
 
     void Update()
     {
-        ESFXObject = GameObject.Find("enemySFXOneShotPrefab(Clone)");
+        //ESFXObject = GameObject.Find("enemySFXOneShotPrefab(Clone)");
         //Player Spotted
         if (UnityEngine.Physics.Raycast(transform.position, transform.TransformDirection(UnityEngine.Vector3.forward), out RaycastHit hitinfo, 20f, Player))
         {
@@ -95,11 +95,7 @@ public class Patrols : MonoBehaviour
         //Enemy chases down player - Start Timer if enemy can no longer see player
         if (canSeePlayer == true)
         {
-            if (!sawOnce)
-            {
-                EnemySoundManager.instance.PlaySFX(Random.Range(4, 5));
-                sawOnce = true;
-            }
+
             agent.SetDestination(chasePos.position);
             SightTimer();
         }
@@ -121,19 +117,26 @@ public class Patrols : MonoBehaviour
 
         if (enemyHealth <= 0)
         {
-        
-            EnemySoundManager.instance.PlaySFX(Random.Range(1,2));
+
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.EnemyDeath, this.transform.position);
             Destroy(gameObject);
         }
     }
-        
+    private void FixedUpdate()
+    {
+        if (!sawOnce)
+        {
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.EnemyAlert, this.transform.position);
+            sawOnce = true;
+        }
+    }
+
     void OnTriggerEnter(Collider bullet)
     {
         if (bullet.CompareTag("Bullet"))
         {
-            //EnemySoundManager.instance.PlaySFX(enemyImpact);
-            //EnemySoundManager.instance.PlaySFX(Random.Range(3,5));
             UnityEngine.Debug.Log("bullet hit!");
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.EnemyHurt, this.transform.position);
             enemyHealth -= gunSystem.damage;
             UnityEngine.Debug.Log(enemyHealth);
             Destroy(bullet.gameObject);
