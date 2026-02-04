@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "WesternHorrorAwesomeSauce.sln"
+    "dotnet.defaultSolution": "HorrorMadness_Yaoi.slnx"
 }

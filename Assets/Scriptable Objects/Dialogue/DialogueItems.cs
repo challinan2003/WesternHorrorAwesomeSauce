@@ -1,4 +1,4 @@
-using Unity.VisualStudio.Editor;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEditor.VersionControl;
 using UnityEngine;
 
