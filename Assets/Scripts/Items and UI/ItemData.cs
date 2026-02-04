@@ -6,7 +6,7 @@ public class ItemData : MonoBehaviour
     //Item specific variables
     public string itemName;
     public int quantity;
-    public int pickupSFX = 0;
+    //public int pickupSFX = 0;
 
     //other game objects
     public InventoryManager inventoryManager;

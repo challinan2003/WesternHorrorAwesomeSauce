@@ -20,10 +20,10 @@ public class DialogueSystem : MonoBehaviour
     public GameObject Letter3;
     public GameObject Letter4;
 
-    public int Letter1SFX = 0;
-    public int Letter2SFX = 0;
-    public int Letter3SFX = 0;
-    public int Letter4SFX = 0;
+    //public int Letter1SFX = 0;
+    //public int Letter2SFX = 0;
+    //public int Letter3SFX = 0;
+    //public int Letter4SFX = 0;
      
     public Object itemField;
     public GameObject fpsController;
@@ -54,7 +54,7 @@ public class DialogueSystem : MonoBehaviour
                             Debug.Log("active letter");
                             Letter.SetActive(true);
                             Time.timeScale = 0;
-                            SoundManager.instance.PlaySFX(Letter1SFX);
+                            AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter4, this.transform.position);
                             StartDialogue();
                         }
                     }
@@ -74,7 +74,7 @@ public class DialogueSystem : MonoBehaviour
                             Debug.Log("active letter");
                             Letter2.SetActive(true);
                             Time.timeScale = 0;
-                            SoundManager.instance.PlaySFX(Letter2SFX);
+                            AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter5, this.transform.position);
                             StartDialogue();
                         }
                     }
@@ -90,7 +90,7 @@ public class DialogueSystem : MonoBehaviour
                             Debug.Log("active letter");
                             Letter2.SetActive(true);
                             Time.timeScale = 0;
-                            SoundManager.instance.PlaySFX(Letter2SFX);
+                            AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter5, this.transform.position);
                             StartDialogue();
                         }
                     }
@@ -110,7 +110,7 @@ public class DialogueSystem : MonoBehaviour
                             Debug.Log("active letter");
                             Letter3.SetActive(true);
                             Time.timeScale = 0;
-                            SoundManager.instance.PlaySFX(Letter3SFX);
+                            AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter6, this.transform.position);
                             StartDialogue();
                         }
                     }
@@ -130,8 +130,8 @@ public class DialogueSystem : MonoBehaviour
                                     Debug.Log("active letter");
                                     Letter4.SetActive(true);
                                     Time.timeScale = 0;
-                                    SoundManager.instance.PlaySFX(Letter4SFX);
-                                    StartDialogue();
+                            AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter7, this.transform.position);
+                            StartDialogue();
                                 }
                             }
                             _selection = selection;

@@ -4,10 +4,10 @@ using FMODUnity;
 public class FMODEvents : MonoBehaviour
 {
     [field: Header("Letters")]
-    [field: SerializeField] public EventReference Letter1 { get; set; }
-    [field: SerializeField] public EventReference Letter2 { get; set; }
-    [field: SerializeField] public EventReference Letter3 { get; set; }
     [field: SerializeField] public EventReference Letter4 { get; set; }
+    [field: SerializeField] public EventReference Letter5 { get; set; }
+    [field: SerializeField] public EventReference Letter6 { get; set; }
+    [field: SerializeField] public EventReference Letter7 { get; set; }
     [field: Header("EnemySFX")]
     [field: SerializeField] public EventReference EnemyAlert {  get; set; }
     [field: SerializeField] public EventReference EnemyDeath { get; set; }

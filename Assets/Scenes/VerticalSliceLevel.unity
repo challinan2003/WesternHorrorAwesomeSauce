@@ -3191,34 +3191,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23fdf7ca0154e6f42b1c0aa099daeee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
-  <Letter1>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <Letter2>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <Letter3>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   <Letter4>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1051030062
+      Data2: 1084129144
+      Data3: -1311737968
+      Data4: 1466193839
+    Path: event:/Letter4
+  <Letter5>k__BackingField:
+    Guid:
+      Data1: -1190946868
+      Data2: 1166699714
+      Data3: -897379706
+      Data4: -1981311172
+    Path: event:/Letter5
+  <Letter6>k__BackingField:
+    Guid:
+      Data1: 1424345163
+      Data2: 1099546594
+      Data3: 1960247695
+      Data4: 1355002490
+    Path: event:/Letter6
+  <Letter7>k__BackingField:
+    Guid:
+      Data1: -1685938736
+      Data2: 1125450076
+      Data3: -1544854370
+      Data4: -2071022283
+    Path: event:/Letter7
   <EnemyAlert>k__BackingField:
     Guid:
       Data1: -1274780984

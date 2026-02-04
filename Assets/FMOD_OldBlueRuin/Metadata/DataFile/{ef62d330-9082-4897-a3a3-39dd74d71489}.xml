@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="DataFile" id="{ef62d330-9082-4897-a3a3-39dd74d71489}">
+		<property name="assetPath">
+			<value>LetterSFXTemp/Ol'BlueRuin_TempVA_Letter_Last.wav.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1312e556-6988-4456-9862-88fd748aaf23}</destination>
+		</relationship>
+	</object>
+</objects>
