@@ -1,5 +1,5 @@
-using Microsoft.Unity.VisualStudio.Editor;
-using UnityEditor.VersionControl;
+//using Microsoft.Unity.VisualStudio.Editor;
+//using UnityEditor.VersionControl;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "DialogueItems", menuName = "Scriptable Objects/DialogueItems")]

@@ -3202,53 +3202,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
   <Letter4>k__BackingField:
     Guid:
-      Data1: -333974935
-      Data2: 1310464675
-      Data3: -1108815985
-      Data4: -1992338866
-    Path: event:/Letter4-2D
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <Letter5>k__BackingField:
     Guid:
-      Data1: -1190946868
-      Data2: 1166699714
-      Data3: -897379706
-      Data4: -1981311172
-    Path: event:/Letter5
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <Letter6>k__BackingField:
     Guid:
-      Data1: 1424345163
-      Data2: 1099546594
-      Data3: 1960247695
-      Data4: 1355002490
-    Path: event:/Letter6
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <Letter7>k__BackingField:
     Guid:
-      Data1: -1685938736
-      Data2: 1125450076
-      Data3: -1544854370
-      Data4: -2071022283
-    Path: event:/Letter7
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <EnemyAlert>k__BackingField:
     Guid:
-      Data1: -1274780984
-      Data2: 1095258439
-      Data3: -751017841
-      Data4: 514729793
-    Path: event:/EnemyAlert
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <EnemyDeath>k__BackingField:
     Guid:
-      Data1: 984856706
-      Data2: 1149926094
-      Data3: 1552115864
-      Data4: 1801018951
-    Path: event:/EnemyDeath
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <EnemyHurt>k__BackingField:
     Guid:
-      Data1: -1871572309
-      Data2: 1271043304
-      Data3: 355178905
-      Data4: -1399609515
-    Path: event:/EnemyHurt
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <DirtWalk>k__BackingField:
     Guid:
       Data1: -1127606573
@@ -3279,18 +3279,18 @@ MonoBehaviour:
     Path: event:/ItemPickUP
   <PlayerDrink>k__BackingField:
     Guid:
-      Data1: 403494862
-      Data2: 1112311383
-      Data3: -1104491857
-      Data4: -666168419
-    Path: event:/PlayerDrink
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <Madness>k__BackingField:
     Guid:
-      Data1: -1871048260
-      Data2: 1110160673
-      Data3: -550884697
-      Data4: -416584294
-    Path: event:/Madness2D
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &161094074
 GameObject:
   m_ObjectHideFlags: 0
@@ -16748,7 +16748,7 @@ MonoBehaviour:
   Death: {fileID: 0}
   enemy:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
 --- !u!1001 &797783804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46484,7 +46484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1944210260
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -145,7 +145,6 @@ PlayerSettings:
   bundleVersion: 0.1.0
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  - {fileID: 11400000, guid: 99f9c9493070a9d4c979a8fec7c5a8d3, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -944,11 +943,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 4b1c19d8-b8f8-4db8-84ab-af23ed34f008
+  cloudProjectId: fc4398c6-1c7a-4b80-abcb-9838181466d1
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: HorrorMadness&Yaoi
-  organizationId: rmpneil
+  organizationId: joshdlc16
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

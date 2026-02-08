@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class GunRotation : MonoBehaviour
 {
-    public Transform camera;
+    public Transform Camera;
 
     void Update()
     {
 
-        transform.rotation = camera.rotation;
+        transform.rotation = Camera.rotation;
     }
 }
