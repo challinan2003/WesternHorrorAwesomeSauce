@@ -1,10 +1,11 @@
-using UnityEngine;
+using FMOD.Studio;
+using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using System.ComponentModel.Design;
-using NUnit.Framework;
-using FMOD.Studio;
+using Unity.VisualScripting;
+using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -32,13 +33,15 @@ public class DialogueSystem : MonoBehaviour
     private Transform _selection;
     public GameObject SFXObject;
     private EventInstance PlayLetter4;
+    public bool LetterEnd = false;
+    //private PLAYBACK_STATE playbackState;
 
     public void Update()
     {
         PlayLetter4 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
         PLAYBACK_STATE playbackState;
-
         PlayLetter4.getPlaybackState(out playbackState);
+
         SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
         //SFXObject = GameObject.Find("SFXOneShotPrefab");
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -62,9 +65,15 @@ public class DialogueSystem : MonoBehaviour
                             Letter.SetActive(true);
                             Time.timeScale = 0;
                             PlayLetter4.start();
-                            PlayLetter4.release();
                             StartDialogue();
+                            PlayLetter4.release();
                         }
+                        else if (LetterEnd) 
+  
+                            PlayLetter4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    }
+                    else if (LetterEnd)
+                        {
                     }
                     _selection = selection;
                 }
@@ -153,7 +162,8 @@ public class DialogueSystem : MonoBehaviour
     public void EndDialogue()
     {
         //Destroy(SFXObject);
-       fpsController.GetComponent<FirstPersonMovement>().enabled = true;
+        LetterEnd = true;
+        fpsController.GetComponent<FirstPersonMovement>().enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
