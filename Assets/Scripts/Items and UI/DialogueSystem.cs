@@ -5,6 +5,7 @@ using System.ComponentModel.Design;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
+using FMODUnity;
 using FMOD.Studio;
 
 public class DialogueSystem : MonoBehaviour
@@ -54,22 +55,26 @@ public class DialogueSystem : MonoBehaviour
                 PlayLetter4.getPlaybackState(out playbackState);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if (playbackState == PLAYBACK_STATE.STOPPED && !LetterEnd)
-                    //if (SFXObject == null)
+
+                    if (!LetterEnd)
                     {
-                        // activates dialogue
-                        var selectionRenderer = selection.GetComponent<Renderer>();
-                        if (selectionRenderer != null)
+                        if (playbackState == PLAYBACK_STATE.STOPPED)
+                        //if (SFXObject == null)
                         {
-                            Debug.Log("active letter");
-                            Letter.SetActive(true);
-                            Time.timeScale = 0;
-                            PlayLetter4.start();
-                            StartDialogue();
-                            PlayLetter4.release();
+                            // activates dialogue
+                            var selectionRenderer = selection.GetComponent<Renderer>();
+                            if (selectionRenderer != null)
+                            {
+                                Debug.Log("active letter");
+                                Letter.SetActive(true);
+                                Time.timeScale = 0;
+                                PlayLetter4.start();
+                                StartDialogue();
+                                PlayLetter4.release();
+                            }
                         }
                     }
-                    else
+                    else if (LetterEnd)
                     {
                         PlayLetter4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                     }

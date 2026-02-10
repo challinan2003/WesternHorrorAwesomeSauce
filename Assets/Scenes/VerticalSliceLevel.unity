@@ -3202,53 +3202,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
   <Letter4>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -333974935
+      Data2: 1310464675
+      Data3: -1108815985
+      Data4: -1992338866
+    Path: event:/Letter4-2D
   <Letter5>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1190946868
+      Data2: 1166699714
+      Data3: -897379706
+      Data4: -1981311172
+    Path: event:/Letter5
   <Letter6>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1424345163
+      Data2: 1099546594
+      Data3: 1960247695
+      Data4: 1355002490
+    Path: event:/Letter6
   <Letter7>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1685938736
+      Data2: 1125450076
+      Data3: -1544854370
+      Data4: -2071022283
+    Path: event:/Letter7
   <EnemyAlert>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1274780984
+      Data2: 1095258439
+      Data3: -751017841
+      Data4: 514729793
+    Path: event:/EnemyAlert
   <EnemyDeath>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 984856706
+      Data2: 1149926094
+      Data3: 1552115864
+      Data4: 1801018951
+    Path: event:/EnemyDeath
   <EnemyHurt>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1871572309
+      Data2: 1271043304
+      Data3: 355178905
+      Data4: -1399609515
+    Path: event:/EnemyHurt
   <DirtWalk>k__BackingField:
     Guid:
       Data1: -1127606573
@@ -3286,11 +3286,11 @@ MonoBehaviour:
     Path: 
   <Madness>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1871048260
+      Data2: 1110160673
+      Data3: -550884697
+      Data4: -416584294
+    Path: event:/Madness2D
 --- !u!1 &161094074
 GameObject:
   m_ObjectHideFlags: 0
@@ -6465,6 +6465,7 @@ MonoBehaviour:
   itemField: {fileID: 0}
   fpsController: {fileID: 1870483546}
   SFXObject: {fileID: 0}
+  LetterEnd: 0
 --- !u!4 &315676260
 Transform:
   m_ObjectHideFlags: 0
@@ -16686,6 +16687,7 @@ MonoBehaviour:
   itemField: {fileID: 0}
   fpsController: {fileID: 1870483546}
   SFXObject: {fileID: 0}
+  LetterEnd: 0
 --- !u!114 &794906462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16738,17 +16740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103b2bd2c162e5d4b9a39e86b4e113e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthController
-  currentPlayerHealth: 100
-  recoveryTimer: 4
-  maxPlayerHealth: 100
-  redSplatterImage: {fileID: 757269151}
-  hurtImage: {fileID: 482592765}
-  hurtTimer: 0.1
-  loseHealth: 32
-  Death: {fileID: 0}
-  enemy:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1001 &797783804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44948,7 +44939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ed432e695d6214a989146567ff1995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunRotation
-  camera: {fileID: 1870483551}
+  Camera: {fileID: 0}
 --- !u!114 &1894390005
 MonoBehaviour:
   m_ObjectHideFlags: 0

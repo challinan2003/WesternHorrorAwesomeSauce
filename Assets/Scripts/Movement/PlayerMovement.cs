@@ -270,7 +270,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (iswalking && grounded)
         {
-            Debug.Log("WalkSoundPlay");
+            //Debug.Log("WalkSoundPlay");
             PLAYBACK_STATE playbackState;
             playerDirtWalk.getPlaybackState(out playbackState);
             if (playbackState == PLAYBACK_STATE.STOPPED)
