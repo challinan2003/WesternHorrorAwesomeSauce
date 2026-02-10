@@ -32,15 +32,32 @@ public class DialogueSystem : MonoBehaviour
     public GameObject fpsController;
     
     private Transform _selection;
-    public GameObject SFXObject;
+    //public GameObject SFXObject;
     private EventInstance PlayLetter4;
-    public bool LetterEnd = false;
-    //private PLAYBACK_STATE playbackState;
+    private EventInstance PlayLetter5;
+    private EventInstance PlayLetter6;
+    private EventInstance PlayLetter7;
+    //public bool LetterEnd = false;
 
     public void Update()
     {
+        PlayLetter4 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
+        PLAYBACK_STATE playbackState;
+        PlayLetter4.getPlaybackState(out playbackState);
 
-        SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
+        PlayLetter5 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
+        PlayLetter5.getPlaybackState(out playbackState);
+
+        PlayLetter6 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
+        PlayLetter6.getPlaybackState(out playbackState);
+
+                            PlayLetter7 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
+                    PlayLetter7.getPlaybackState(out playbackState);
+
+
+
+
+        //SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
         //SFXObject = GameObject.Find("SFXOneShotPrefab");
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         //Debug.DrawRay(myCamera.transform.position, mousePosition-myCamera.transform.position, Color.green);
@@ -50,122 +67,121 @@ public class DialogueSystem : MonoBehaviour
             var selection = hit.transform;
             if (selection.CompareTag(Letter1Tag))
             {
-                PlayLetter4 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
-                PLAYBACK_STATE playbackState;
-                PlayLetter4.getPlaybackState(out playbackState);
+                //PlayLetter4 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
+                //PLAYBACK_STATE playbackState;
+                //PlayLetter4.getPlaybackState(out playbackState);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-
-                    if (!LetterEnd)
+                    if (playbackState == PLAYBACK_STATE.STOPPED)
+                    //if (SFXObject == null)
+                    {
+                        // activates dialogue
+                        var selectionRenderer = selection.GetComponent<Renderer>();
+                        if (selectionRenderer != null)
+                        {
+                            Debug.Log("active letter");
+                            Letter.SetActive(true);
+                            Time.timeScale = 0;
+                            PlayLetter4.start();
+                            //PlayLetter4.release();
+                            StartDialogue();
+                            
+                        }
+                        _selection = selection;
+                    }
+                }
+                if (selection.CompareTag(Letter2Tag))
+                {
+                    if ((Input.GetKeyDown(KeyCode.E)))
                     {
                         if (playbackState == PLAYBACK_STATE.STOPPED)
-                        //if (SFXObject == null)
                         {
                             // activates dialogue
                             var selectionRenderer = selection.GetComponent<Renderer>();
                             if (selectionRenderer != null)
                             {
                                 Debug.Log("active letter");
-                                Letter.SetActive(true);
+                                Letter2.SetActive(true);
                                 Time.timeScale = 0;
-                                PlayLetter4.start();
+                                AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter5, this.transform.position);
                                 StartDialogue();
-                                PlayLetter4.release();
                             }
                         }
-                    }
-                    else if (LetterEnd)
-                    {
-                        PlayLetter4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                    }
                         _selection = selection;
-                }
-            }
-            if (selection.CompareTag(Letter2Tag))
-            {
-                if ((Input.GetKeyDown(KeyCode.E)))
-                {
-                    if (SFXObject == null)
-                    {
-                        // activates dialogue
-                        var selectionRenderer = selection.GetComponent<Renderer>();
-                        if (selectionRenderer != null)
-                        {
-                            Debug.Log("active letter");
-                            Letter2.SetActive(true);
-                            Time.timeScale = 0;
-                            AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter5, this.transform.position);
-                            StartDialogue();
-                        }
                     }
-                    _selection = selection;
+                    //{
+                    //    if (SFXObject == null)
+                    //    {
+                    //        // activates dialogue
+                    //        var selectionRenderer = selection.GetComponent<Renderer>();
+                    //        if (selectionRenderer != null)
+                    //        {
+                    //            Debug.Log("active letter");
+                    //            Letter2.SetActive(true);
+                    //            Time.timeScale = 0;
+                    //            AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter5, this.transform.position);
+                    //            StartDialogue();
+                    //        }
+                    //    }
+                    //    _selection = selection;
+                    //}
                 }
+                if (selection.CompareTag(Letter3Tag))
                 {
-                    if (SFXObject == null)
+                    if ((Input.GetKeyDown(KeyCode.E)))
                     {
-                        // activates dialogue
-                        var selectionRenderer = selection.GetComponent<Renderer>();
-                        if (selectionRenderer != null)
+                      
+                        if (playbackState == PLAYBACK_STATE.STOPPED)
                         {
-                            Debug.Log("active letter");
-                            Letter2.SetActive(true);
-                            Time.timeScale = 0;
-                            AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter5, this.transform.position);
-                            StartDialogue();
-                        }
-                    }
-                    _selection = selection;
-                }
-            }
-            if (selection.CompareTag(Letter3Tag))
-            {
-                if ((Input.GetKeyDown(KeyCode.E)))
-                {
-                    if (SFXObject == null)
-                    {
-                        // activates dialogue
-                        var selectionRenderer = selection.GetComponent<Renderer>();
-                        if (selectionRenderer != null)
-                        {
-                            Debug.Log("active letter");
-                            Letter3.SetActive(true);
-                            Time.timeScale = 0;
-                            AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter6, this.transform.position);
-                            StartDialogue();
-                        }
-                    }
-                    _selection = selection;
-                }
-            }
-        if (selection.CompareTag(Letter4Tag))
-                    {
-                        if (Input.GetKeyDown(KeyCode.E))
-                        {
-                            if (SFXObject == null)
+                            // activates dialogue
+                            var selectionRenderer = selection.GetComponent<Renderer>();
+                            if (selectionRenderer != null)
                             {
-                                // activates dialogue
-                                var selectionRenderer = selection.GetComponent<Renderer>();
-                                if (selectionRenderer != null)
-                                {
-                                    Debug.Log("active letter");
-                                    Letter4.SetActive(true);
-                                    Time.timeScale = 0;
-                            AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter7, this.transform.position);
-                            StartDialogue();
-                                }
+                                Debug.Log("active letter");
+                                Letter3.SetActive(true);
+                                Time.timeScale = 0;
+                                AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter6, this.transform.position);
+                                StartDialogue();
                             }
-                            _selection = selection;
                         }
+                        _selection = selection;
                     }
+                }
+                if (selection.CompareTag(Letter4Tag))
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        if (playbackState == PLAYBACK_STATE.STOPPED)
+                        {
+                            // activates dialogue
+                            var selectionRenderer = selection.GetComponent<Renderer>();
+                            if (selectionRenderer != null)
+                            {
+                                Debug.Log("active letter");
+                                Letter4.SetActive(true);
+                                Time.timeScale = 0;
+                                AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter7, this.transform.position);
+                                StartDialogue();
+                            }
+                        }
+                        _selection = selection;
+                    }
+                }
+            }
         }
-
-
     }
 
     public void EndDialogue()
     {
+        Debug.Log("stopingsound");
+        PlayLetter4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        PlayLetter5.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        PlayLetter6.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        PlayLetter7.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         //Destroy(SFXObject);
-        LetterEnd = true;
+        //LetterEnd = true;
+        Debug.Log("release controls");
+
         fpsController.GetComponent<FirstPersonMovement>().enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

@@ -6464,8 +6464,6 @@ MonoBehaviour:
   Letter4: {fileID: 1986511838}
   itemField: {fileID: 0}
   fpsController: {fileID: 1870483546}
-  SFXObject: {fileID: 0}
-  LetterEnd: 0
 --- !u!4 &315676260
 Transform:
   m_ObjectHideFlags: 0
@@ -16686,8 +16684,6 @@ MonoBehaviour:
   Letter4: {fileID: 1986511838}
   itemField: {fileID: 0}
   fpsController: {fileID: 1870483546}
-  SFXObject: {fileID: 0}
-  LetterEnd: 0
 --- !u!114 &794906462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44939,7 +44935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ed432e695d6214a989146567ff1995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunRotation
-  Camera: {fileID: 0}
+  Camera: {fileID: 1870483551}
 --- !u!114 &1894390005
 MonoBehaviour:
   m_ObjectHideFlags: 0
