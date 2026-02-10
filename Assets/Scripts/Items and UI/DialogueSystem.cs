@@ -1,4 +1,3 @@
-using FMOD.Studio;
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,6 +5,7 @@ using System.ComponentModel.Design;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
+using FMOD.Studio;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -38,9 +38,6 @@ public class DialogueSystem : MonoBehaviour
 
     public void Update()
     {
-        PlayLetter4 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
-        PLAYBACK_STATE playbackState;
-        PlayLetter4.getPlaybackState(out playbackState);
 
         SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
         //SFXObject = GameObject.Find("SFXOneShotPrefab");
@@ -52,10 +49,13 @@ public class DialogueSystem : MonoBehaviour
             var selection = hit.transform;
             if (selection.CompareTag(Letter1Tag))
             {
+                PlayLetter4 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
+                PLAYBACK_STATE playbackState;
+                PlayLetter4.getPlaybackState(out playbackState);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if (playbackState == PLAYBACK_STATE.STOPPED)
-                        //if (SFXObject == null)
+                    if (playbackState == PLAYBACK_STATE.STOPPED && !LetterEnd)
+                    //if (SFXObject == null)
                     {
                         // activates dialogue
                         var selectionRenderer = selection.GetComponent<Renderer>();
@@ -68,14 +68,12 @@ public class DialogueSystem : MonoBehaviour
                             StartDialogue();
                             PlayLetter4.release();
                         }
-                        else if (LetterEnd) 
-  
-                            PlayLetter4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                     }
-                    else if (LetterEnd)
-                        {
+                    else
+                    {
+                        PlayLetter4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                     }
-                    _selection = selection;
+                        _selection = selection;
                 }
             }
             if (selection.CompareTag(Letter2Tag))
