@@ -16613,8 +16613,7 @@ MonoBehaviour:
   moveSpeed: 0
   walkSpeed: 2.5
   sprintSpeed: 3.5
-  crouchSpeed: 1.5
-  idleSpeed: 0
+  crouchSpeed: 3
   groundDrag: 5
   jumpForce: 4
   jumpCooldown: 1
@@ -16623,7 +16622,6 @@ MonoBehaviour:
   playerModel: {fileID: 979522320}
   staminaDuration: 4
   iswalking: 0
-  inputNotActive: 0
   groundCheck: {fileID: 583667605}
   groundDistance: 0.1
   whatIsGround:
@@ -16634,8 +16632,6 @@ MonoBehaviour:
   sprintKey: 304
   crouchKey: 306
   orientation: {fileID: 490296463}
-  headBobScript: {fileID: 206887703}
-  camera: {fileID: 1870483547}
   state: 0
 --- !u!54 &794906460
 Rigidbody:
@@ -42500,7 +42496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeadBobV2
   amount: 0.016
-  frequency: 15
+  frequency: 12
   smooth: 10
   playerMovement: {fileID: 794906459}
 --- !u!1001 &1766491957

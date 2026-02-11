@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public float walkSpeed;
     public float sprintSpeed;
     public float crouchSpeed;
+    public float idleSpeed;
 
     public float groundDrag;
 
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     //public WalkSFXManager WalkSFXManager;
     //public GameObject WSFXObject;
     public bool iswalking = false;
+    public bool inputNotActive = false;
     //public GameObject PlayerSFX;
 
 
@@ -55,6 +57,10 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontalInput;
     float verticalInput;
+
+    public HeadBobV2 headBobScript;
+    private bool headbobSprintCheck;
+    public Camera camera;
 
     UnityEngine.Vector3 moveDirection;
 
@@ -109,10 +115,12 @@ public class PlayerMovement : MonoBehaviour
         if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
         {
             iswalking = true;
+            inputNotActive = false;
         }
         else
         {
             iswalking = false;
+            inputNotActive = true;
         }
     }
     //    if (iswalking && grounded)
@@ -188,18 +196,22 @@ public class PlayerMovement : MonoBehaviour
         if (grounded && Input.GetKey(sprintKey) && staminaDuration > 0)
         {
             state = MovementState.sprinting;
+            headBobScript.frequency = 14;
+            camera.fieldOfView = Mathf.Lerp(60,63, Mathf.SmoothStep(0,1,1));
             moveSpeed = sprintSpeed;
             staminaDuration -= Time.deltaTime;
         }
 
         //"Walk it like I talk it" - Migos 
         // WALKING
-        else if (grounded && !isCrouching)
+        else if (grounded && !isCrouching && !inputNotActive)
         {
             if (iswalking)
             {
                 state = MovementState.walking;
                 moveSpeed = walkSpeed;
+                headBobScript.frequency = 10;
+                camera.fieldOfView = Mathf.Lerp(60, 63, Mathf.SmoothStep(0, 1, 0));
                 if (staminaDuration < 4)
                 {
                     staminaDuration += Time.deltaTime;
@@ -213,12 +225,20 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
+            camera.fieldOfView = Mathf.Lerp(60, 63, Mathf.SmoothStep(0, 1, 0));
+            headBobScript.frequency = 8;
             if (staminaDuration < 4)
             {
                 staminaDuration += Time.deltaTime;
             }
         }
 
+        else if (grounded && inputNotActive)
+        {
+            state = MovementState.idling;
+            moveSpeed = idleSpeed;
+            camera.fieldOfView = Mathf.Lerp(60, 63, Mathf.SmoothStep(0, 1, 0));
+        }
         //AIR
         else
         {

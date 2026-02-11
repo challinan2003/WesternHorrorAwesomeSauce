@@ -3279,11 +3279,11 @@ MonoBehaviour:
     Path: event:/ItemPickUP
   <PlayerDrink>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 403494862
+      Data2: 1112311383
+      Data3: -1104491857
+      Data4: -666168419
+    Path: event:/PlayerDrink
   <Madness>k__BackingField:
     Guid:
       Data1: -1871048260
@@ -6464,6 +6464,7 @@ MonoBehaviour:
   Letter4: {fileID: 1986511838}
   itemField: {fileID: 0}
   fpsController: {fileID: 1870483546}
+  SFXObject: {fileID: 0}
 --- !u!4 &315676260
 Transform:
   m_ObjectHideFlags: 0
@@ -16613,8 +16614,7 @@ MonoBehaviour:
   moveSpeed: 0
   walkSpeed: 2.5
   sprintSpeed: 3.5
-  crouchSpeed: 1.5
-  idleSpeed: 0
+  crouchSpeed: 3
   groundDrag: 5
   jumpForce: 4
   jumpCooldown: 1
@@ -16623,7 +16623,6 @@ MonoBehaviour:
   playerModel: {fileID: 979522320}
   staminaDuration: 4
   iswalking: 0
-  inputNotActive: 0
   groundCheck: {fileID: 583667605}
   groundDistance: 0.1
   whatIsGround:
@@ -16634,8 +16633,6 @@ MonoBehaviour:
   sprintKey: 304
   crouchKey: 306
   orientation: {fileID: 490296463}
-  headBobScript: {fileID: 206887703}
-  camera: {fileID: 1870483547}
   state: 0
 --- !u!54 &794906460
 Rigidbody:
@@ -16688,6 +16685,7 @@ MonoBehaviour:
   Letter4: {fileID: 1986511838}
   itemField: {fileID: 0}
   fpsController: {fileID: 1870483546}
+  SFXObject: {fileID: 0}
 --- !u!114 &794906462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16740,6 +16738,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103b2bd2c162e5d4b9a39e86b4e113e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthController
+  currentPlayerHealth: 100
+  recoveryTimer: 4
+  maxPlayerHealth: 100
+  redSplatterImage: {fileID: 757269151}
+  hurtImage: {fileID: 482592765}
+  hurtTimer: 0.1
+  loseHealth: 32
+  Death: {fileID: 0}
+  enemy:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1001 &797783804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42500,7 +42509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeadBobV2
   amount: 0.016
-  frequency: 15
+  frequency: 12
   smooth: 10
   playerMovement: {fileID: 794906459}
 --- !u!1001 &1766491957
@@ -44939,7 +44948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ed432e695d6214a989146567ff1995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunRotation
-  Camera: {fileID: 1870483551}
+  camera: {fileID: 1870483551}
 --- !u!114 &1894390005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46475,7 +46484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1944210260
 MonoBehaviour:
   m_ObjectHideFlags: 0

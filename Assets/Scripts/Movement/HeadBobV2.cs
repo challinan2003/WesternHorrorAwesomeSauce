@@ -3,7 +3,7 @@ using UnityEngine;
 public class HeadBobV2 : MonoBehaviour
 {
     [SerializeField, Range (0.001f, 0.1f)] private float amount = 0.002f;
-    [SerializeField, Range (1f, 30f)] private float frequency = 10.0f;
+    [SerializeField, Range (1f, 30f)] public float frequency = 10.0f;
     [SerializeField, Range (10f, 100f)] private float smooth = 10.0f;
 
     UnityEngine.Vector3 startPos;
@@ -29,6 +29,7 @@ public class HeadBobV2 : MonoBehaviour
         {
             StartHeadBob();       
         }
+
     }
 
     private UnityEngine.Vector3 StartHeadBob()

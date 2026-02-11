@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dither
-  m_Shader: {fileID: -6465566751694194690, guid: 7fac6e06796cde14a8fdda4a0b3f1e1f, type: 3}
+  m_Name: Madness 1
+  m_Shader: {fileID: -6465566751694194690, guid: 3594db88f3d660246ae8bef59446274e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -37,9 +37,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 2.28
-    - _ColorRes: 3.51
-    - _DitherSpread: 0.02
-    m_Colors: []
+    - _Fullscreen_AlphaBlendOperation: 0
+    - _Fullscreen_BlendMode: 2
+    - _Fullscreen_ColorBlendOperation: 0
+    - _Fullscreen_DepthWrite: 0
+    - _Fullscreen_DstAlphaBlend: 10
+    - _Fullscreen_DstColorBlend: 10
+    - _Fullscreen_SrcAlphaBlend: 1
+    - _Fullscreen_SrcColorBlend: 1
+    - _Intensity: 5.12
+    - _TimeMultiplier: 0.07
+    m_Colors:
+    - _BodyColor: {r: 0, g: 0.0999527, b: 0.64705884, a: 1}
+    - _VignetteEdgeColor: {r: 0, g: 1252.0173, b: 1153.6912, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
