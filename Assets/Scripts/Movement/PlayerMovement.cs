@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     private float startYScale;
     public Transform playerModel;
     public float staminaDuration;
+    private bool staminaRecharge;
+    private float rechargeTimer;
     private bool isCrouching = false;
     private EventInstance playerDirtWalk;
     //public int Walk1SFX = 0;
@@ -106,11 +108,25 @@ public class PlayerMovement : MonoBehaviour
             rb.linearDamping = 0;
 
         if (staminaDuration <= 0)
+        {
             staminaDuration = 0;
+            staminaRecharge = false;
+        }
+
+        if (rechargeTimer >= -4)
+        {
+            rechargeTimer -= Time.deltaTime;
+        }
 
         if (staminaDuration >= 4)
         {
             staminaDuration = 4;
+        }
+
+        if (staminaRecharge == false && rechargeTimer <= -4)
+        {
+            rechargeTimer = 0;
+            staminaRecharge = true;
         }
         if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
         {
@@ -193,11 +209,11 @@ public class PlayerMovement : MonoBehaviour
 
         //"Ride like the wind" - Christopher Cross 
         // RUNNING
-        if (grounded && Input.GetKey(sprintKey) && staminaDuration > 0)
+        if (grounded && Input.GetKey(sprintKey) && staminaDuration > 0 && staminaRecharge)
         {
             state = MovementState.sprinting;
             headBobScript.frequency = 14;
-            camera.fieldOfView = Mathf.Lerp(60,63, Mathf.SmoothStep(0,1,1));
+            camera.fieldOfView = Mathf.SmoothStep(60,63,1);
             moveSpeed = sprintSpeed;
             staminaDuration -= Time.deltaTime;
         }
@@ -211,7 +227,7 @@ public class PlayerMovement : MonoBehaviour
                 state = MovementState.walking;
                 moveSpeed = walkSpeed;
                 headBobScript.frequency = 10;
-                camera.fieldOfView = Mathf.Lerp(60, 63, Mathf.SmoothStep(0, 1, 0));
+                camera.fieldOfView = Mathf.SmoothStep(63, 60, 1);
                 if (staminaDuration < 4)
                 {
                     staminaDuration += Time.deltaTime;
@@ -225,7 +241,7 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
-            camera.fieldOfView = Mathf.Lerp(60, 63, Mathf.SmoothStep(0, 1, 0));
+            camera.fieldOfView = Mathf.SmoothStep(63, 60, 1);
             headBobScript.frequency = 8;
             if (staminaDuration < 4)
             {
@@ -237,7 +253,7 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.idling;
             moveSpeed = idleSpeed;
-            camera.fieldOfView = Mathf.Lerp(60, 63, Mathf.SmoothStep(0, 1, 0));
+            camera.fieldOfView = Mathf.SmoothStep(63, 60, 1);
         }
         //AIR
         else
