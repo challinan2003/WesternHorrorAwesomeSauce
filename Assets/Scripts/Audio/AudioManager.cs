@@ -6,10 +6,17 @@ using UnityEngine.UIElements;
 
 public class AudioManager : MonoBehaviour
 {
+   
     private List<EventInstance> eventInstances;
     public static AudioManager instance { get; private set; }
+    FMOD.Studio.Bus MasterBus;
+    public void Start()
+    {
+        MasterBus = FMODUnity.RuntimeManager.GetBus("bus:/Letters");
+    }
     private void Awake()
     {
+
 
         if (instance != null)
         {

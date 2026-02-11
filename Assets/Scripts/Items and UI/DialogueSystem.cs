@@ -5,8 +5,9 @@ using System.ComponentModel.Design;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
-using FMODUnity;
 using FMOD.Studio;
+using FMODUnity;
+using System;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class DialogueSystem : MonoBehaviour
     //public int Letter3SFX = 0;
     //public int Letter4SFX = 0;
      
-    public Object itemField;
+    public UnityEngine.Object itemField;
     public GameObject fpsController;
     
     private Transform _selection;
@@ -39,6 +40,11 @@ public class DialogueSystem : MonoBehaviour
     private EventInstance PlayLetter7;
     //public bool LetterEnd = false;
 
+    FMOD.Studio.Bus MasterBus;
+    private void Start()
+    {
+        MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/music");
+    }
     public void Update()
     {
         PlayLetter4 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
@@ -174,10 +180,11 @@ public class DialogueSystem : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("stopingsound");
-        PlayLetter4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        PlayLetter5.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        PlayLetter6.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        PlayLetter7.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        //PlayLetter4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        //PlayLetter5.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        //PlayLetter6.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        //PlayLetter7.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         //Destroy(SFXObject);
         //LetterEnd = true;
         Debug.Log("release controls");
