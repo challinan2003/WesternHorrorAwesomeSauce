@@ -3202,11 +3202,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
   <Letter4>k__BackingField:
     Guid:
-      Data1: -333974935
-      Data2: 1310464675
-      Data3: -1108815985
-      Data4: -1992338866
-    Path: event:/Letter4-2D
+      Data1: -663677463
+      Data2: 1281410478
+      Data3: -2123863636
+      Data4: -1759587869
+    Path: event:/Letter4-2D-TL
   <Letter5>k__BackingField:
     Guid:
       Data1: -1190946868

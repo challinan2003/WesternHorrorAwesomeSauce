@@ -34,31 +34,34 @@ public class DialogueSystem : MonoBehaviour
     
     private Transform _selection;
     //public GameObject SFXObject;
-    private EventInstance PlayLetter4;
+    private EventInstance PlayLetter1;
     private EventInstance PlayLetter5;
     private EventInstance PlayLetter6;
     private EventInstance PlayLetter7;
     //public bool LetterEnd = false;
-
-    FMOD.Studio.Bus MasterBus;
+    PLAYBACK_STATE playbackState = PLAYBACK_STATE.STOPPED;
+ 
+    //FMOD.Studio.Bus MasterBus;
     private void Start()
     {
-        MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/music");
+        //MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/music");
+        
     }
     public void Update()
     {
-        PlayLetter4 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
-        PLAYBACK_STATE playbackState;
-        PlayLetter4.getPlaybackState(out playbackState);
+    
+        //playletter4 = audiomanager.instance.createeventinstance(fmodevents.instance.letter4);
+        //playback_state playbackstate;
+        //playletter4.getplaybackstate(out playbackstate);
 
-        PlayLetter5 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
-        PlayLetter5.getPlaybackState(out playbackState);
+        //playletter5 = audiomanager.instance.createeventinstance(fmodevents.instance.letter4);
+        //playletter5.getplaybackstate(out playbackstate);
 
-        PlayLetter6 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
-        PlayLetter6.getPlaybackState(out playbackState);
+        //playletter6 = audiomanager.instance.createeventinstance(fmodevents.instance.letter4);
+        //playletter6.getplaybackstate(out playbackstate);
 
-                            PlayLetter7 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
-                    PlayLetter7.getPlaybackState(out playbackState);
+        //playletter7 = audiomanager.instance.createeventinstance(fmodevents.instance.letter4);
+        //playletter7.getplaybackstate(out playbackstate);
 
 
 
@@ -78,20 +81,24 @@ public class DialogueSystem : MonoBehaviour
                 //PlayLetter4.getPlaybackState(out playbackState);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+
                     if (playbackState == PLAYBACK_STATE.STOPPED)
-                    //if (SFXObject == null)
                     {
+                        //if (SFXObject == null)
+
                         // activates dialogue
                         var selectionRenderer = selection.GetComponent<Renderer>();
                         if (selectionRenderer != null)
                         {
+                            PlayLetter1 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
+                            playbackState = PLAYBACK_STATE.PLAYING;
                             Debug.Log("active letter");
                             Letter.SetActive(true);
                             Time.timeScale = 0;
-                            PlayLetter4.start();
-                            //PlayLetter4.release();
+                            PlayLetter1.start();
+                            //PlayLetter1.release();
                             StartDialogue();
-                            
+
                         }
                         _selection = selection;
                     }
@@ -100,7 +107,7 @@ public class DialogueSystem : MonoBehaviour
                 {
                     if ((Input.GetKeyDown(KeyCode.E)))
                     {
-                        if (playbackState == PLAYBACK_STATE.STOPPED)
+                        //if (playbackState == PLAYBACK_STATE.STOPPED)
                         {
                             // activates dialogue
                             var selectionRenderer = selection.GetComponent<Renderer>();
@@ -137,7 +144,7 @@ public class DialogueSystem : MonoBehaviour
                     if ((Input.GetKeyDown(KeyCode.E)))
                     {
                       
-                        if (playbackState == PLAYBACK_STATE.STOPPED)
+                        //if (playbackState == PLAYBACK_STATE.STOPPED)
                         {
                             // activates dialogue
                             var selectionRenderer = selection.GetComponent<Renderer>();
@@ -157,19 +164,21 @@ public class DialogueSystem : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        if (playbackState == PLAYBACK_STATE.STOPPED)
-                        {
+                        //if (playbackState == PLAYBACK_STATE.STOPPED)
+                        
                             // activates dialogue
                             var selectionRenderer = selection.GetComponent<Renderer>();
                             if (selectionRenderer != null)
                             {
+                                //PlayLetter4 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
                                 Debug.Log("active letter");
-                                Letter4.SetActive(true);
+                                Letter.SetActive(true);
                                 Time.timeScale = 0;
-                                AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter7, this.transform.position);
+                                //PlayLetter4.start();
+                                //PlayLetter4.release();
                                 StartDialogue();
                             }
-                        }
+                        
                         _selection = selection;
                     }
                 }
@@ -180,8 +189,10 @@ public class DialogueSystem : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("stopingsound");
-        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        //PlayLetter4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        playbackState = PLAYBACK_STATE.STOPPED;
+        PlayLetter1.release();
+        //MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        PlayLetter1.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         //PlayLetter5.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         //PlayLetter6.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         //PlayLetter7.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
