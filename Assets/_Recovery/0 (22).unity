@@ -16706,7 +16706,6 @@ MonoBehaviour:
   madness: {fileID: 794906463}
   inventory: {fileID: 2080125562}
   drunkTimer: 0
-  madnessMat: {fileID: 2100000, guid: 78fb45fd21667d447a419c52fee9fda0, type: 2}
 --- !u!114 &794906463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16729,9 +16728,9 @@ MonoBehaviour:
   SoundPLayed: 0
   madnessTimer: 60
   madResistTimer: 15
-  madnessMat: {fileID: 2100000, guid: 78fb45fd21667d447a419c52fee9fda0, type: 2}
+  madness: {fileID: 2100000, guid: 78fb45fd21667d447a419c52fee9fda0, type: 2}
   opacityTargetValue: 0
-  vignetteTargetValue: 10
+  vignetteTargetValue: 4
 --- !u!114 &794906464
 MonoBehaviour:
   m_ObjectHideFlags: 0

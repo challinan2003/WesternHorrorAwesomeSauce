@@ -28,6 +28,11 @@ public class Madness : MonoBehaviour
     public float madnessTimer = 60.0f;
     public float madResistTimer = 0.0f;
 
+    //VFX Work
+    public Material madnessMat;
+    public float opacityTargetValue = 0f;
+    public float vignetteTargetValue = 10f;
+
     void Start()
     {
 
@@ -35,6 +40,8 @@ public class Madness : MonoBehaviour
 
         madBuildup = 0;
         madResist = false;
+        madnessMat.SetFloat("_Opacity", 0.01f);
+        madnessMat.SetFloat("_Intensity", 10f);
     }
     // Update is called once per frame
     void Update()
@@ -46,6 +53,10 @@ public class Madness : MonoBehaviour
         if (isMad)
         { 
             madnessTimer -= Time.deltaTime;
+            opacityTargetValue = Mathf.Clamp(opacityTargetValue, 0.01f, 1.0f);
+            opacityTargetValue += 0.016f * Time.deltaTime;
+            vignetteTargetValue = Mathf.Clamp(vignetteTargetValue, 4.0f, 10.0f);
+            vignetteTargetValue -= 0.1f * Time.deltaTime;
         }
         if (madnessTimer <= 0.0f)
         {
@@ -64,6 +75,9 @@ public class Madness : MonoBehaviour
         {
             madResistTimer = 0.0f;
         }
+
+        madnessMat.SetFloat("_Opacity", opacityTargetValue);
+        madnessMat.SetFloat("_Intensity", vignetteTargetValue);
     }
 
     //constant madness buildup
