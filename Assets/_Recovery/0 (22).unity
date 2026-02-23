@@ -1057,18 +1057,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 2111735163}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1099,15 +1087,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
-  bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  bulletCount: 12
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &62509541
 GameObject:
   m_ObjectHideFlags: 0
@@ -3830,25 +3818,13 @@ PrefabInstance:
       value: Gin (2)
       objectReference: {fileID: 0}
     - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: soundManager
       value: 
       objectReference: {fileID: 1452354029}
     - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: inventoryManager
       value: 
       objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -59.611202
@@ -3919,15 +3895,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &191779858
 GameObject:
   m_ObjectHideFlags: 0
@@ -4973,6 +4949,97 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242513930}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &243018518
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1341288737}
+    m_Modifications:
+    - target: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_Name
+      value: Cigs
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -134.56767
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.970064
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5878706
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 243018521}
+  m_SourcePrefab: {fileID: 100100000, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+--- !u!4 &243018519 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 243018518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &243018520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 243018518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &243018521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243018520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 20
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!43 &246259181
 Mesh:
   m_ObjectHideFlags: 0
@@ -5613,18 +5680,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -135.91544
@@ -5695,15 +5750,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!114 &266826635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6289,18 +6344,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -178.92345
@@ -6371,15 +6414,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &315676258
 GameObject:
   m_ObjectHideFlags: 0
@@ -7464,18 +7507,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 2111735163}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7506,15 +7537,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
-  bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  bulletCount: 12
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &363395408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7704,18 +7735,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.481747
@@ -7786,15 +7805,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &377056527
 GameObject:
   m_ObjectHideFlags: 0
@@ -8528,18 +8547,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 2111735163}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8570,15 +8577,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
-  bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  bulletCount: 12
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &428649549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8905,6 +8912,97 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439485448}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &443669840
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1341288737}
+    m_Modifications:
+    - target: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_Name
+      value: Cigs (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -67.068924
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08545017
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.4353695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 443669843}
+  m_SourcePrefab: {fileID: 100100000, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+--- !u!4 &443669841 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 443669840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &443669842 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 443669840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &443669843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443669842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 20
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &443782398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9665,18 +9763,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 2111735163}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9707,15 +9793,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
-  bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  bulletCount: 12
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &460888577
 GameObject:
   m_ObjectHideFlags: 0
@@ -10508,18 +10594,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -147.32755
@@ -10590,15 +10664,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &507876271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14146,6 +14220,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3.64, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &649774912 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 7682602211957016936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &650331840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14890,6 +14969,7 @@ Transform:
   m_Children:
   - {fileID: 103454069}
   - {fileID: 712912188}
+  - {fileID: 1341288737}
   m_Father: {fileID: 908691352}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712912187
@@ -14978,6 +15058,97 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraPosition
   cameraPosition: {fileID: 2008680671}
+--- !u!1001 &715156981
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1341288737}
+    m_Modifications:
+    - target: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_Name
+      value: Cigs (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -65.78536
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08546829
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -64.2751
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 715156984}
+  m_SourcePrefab: {fileID: 100100000, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+--- !u!4 &715156982 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 715156981}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &715156983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 715156981}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &715156984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715156983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 20
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &721799346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15030,18 +15201,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 2111735163}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15072,15 +15231,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
-  bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  bulletCount: 12
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &724900489
 GameObject:
   m_ObjectHideFlags: 0
@@ -16544,10 +16703,9 @@ MonoBehaviour:
   drunkenness: 0
   isDrunk: 0
   gunsystem: {fileID: 1885243249}
-  Madness: {fileID: 794906463}
-  InventoryManager: {fileID: 2080125562}
+  madness: {fileID: 794906463}
+  inventory: {fileID: 2080125562}
   drunkTimer: 0
-  madnessMat: {fileID: 2100000, guid: 78fb45fd21667d447a419c52fee9fda0, type: 2}
 --- !u!114 &794906463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16570,9 +16728,9 @@ MonoBehaviour:
   SoundPLayed: 0
   madnessTimer: 60
   madResistTimer: 15
-  madnessMat: {fileID: 2100000, guid: 78fb45fd21667d447a419c52fee9fda0, type: 2}
+  madness: {fileID: 2100000, guid: 78fb45fd21667d447a419c52fee9fda0, type: 2}
   opacityTargetValue: 0
-  vignetteTargetValue: 10
+  vignetteTargetValue: 4
 --- !u!114 &794906464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16597,18 +16755,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -90.880005
@@ -16679,15 +16825,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!4 &805283377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4596667510343998, guid: a76415d90e57bdc4cb40d97501555c18, type: 3}
@@ -17373,25 +17519,13 @@ PrefabInstance:
       value: Gin (1)
       objectReference: {fileID: 0}
     - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: soundManager
       value: 
       objectReference: {fileID: 1452354029}
     - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: inventoryManager
       value: 
       objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.437561
@@ -17462,15 +17596,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &864063337
 GameObject:
   m_ObjectHideFlags: 0
@@ -20830,6 +20964,97 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4764846146110564, guid: 051698e558f340c499da8c17ef4b9acf, type: 3}
   m_PrefabInstance: {fileID: 2110417318}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &999918366
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1341288737}
+    m_Modifications:
+    - target: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_Name
+      value: Cigs (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -166.28032
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08547592
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 66.63954
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 999918369}
+  m_SourcePrefab: {fileID: 100100000, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+--- !u!4 &999918367 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 999918366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &999918368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 999918366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &999918369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999918368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 20
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &1000718255
 GameObject:
   m_ObjectHideFlags: 0
@@ -22660,18 +22885,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -143.48875
@@ -22742,15 +22955,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &1081759914
 GameObject:
   m_ObjectHideFlags: 0
@@ -24149,25 +24362,13 @@ PrefabInstance:
       value: Gin
       objectReference: {fileID: 0}
     - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: soundManager
       value: 
       objectReference: {fileID: 1452354029}
     - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: inventoryManager
       value: 
       objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -73.25189
@@ -24238,15 +24439,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 2111735163}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &1143972159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24259,18 +24460,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -87.95453
@@ -24341,15 +24530,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &1148558246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24490,18 +24679,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -155.79236
@@ -24572,15 +24749,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!114 &1160850130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31234,6 +31411,97 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4596667510343998, guid: a76415d90e57bdc4cb40d97501555c18, type: 3}
   m_PrefabInstance: {fileID: 1283930269}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1290884652
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1341288737}
+    m_Modifications:
+    - target: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_Name
+      value: Cigs (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.081894
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08549595
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -32.124718
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1290884655}
+  m_SourcePrefab: {fileID: 100100000, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+--- !u!4 &1290884653 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 1290884652}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1290884654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 1290884652}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1290884655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290884654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 20
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &1292218213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31354,18 +31622,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -41.432854
@@ -31436,15 +31692,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &1297653565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32230,6 +32486,47 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2031909992}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1341288736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1341288737}
+  m_Layer: 0
+  m_Name: Cigs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1341288737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341288736}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 649774912}
+  - {fileID: 243018519}
+  - {fileID: 1696023939}
+  - {fileID: 1290884653}
+  - {fileID: 443669841}
+  - {fileID: 1561776837}
+  - {fileID: 715156982}
+  - {fileID: 2074455677}
+  - {fileID: 1711551635}
+  - {fileID: 999918367}
+  m_Father: {fileID: 706779861}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1345297530
 PrefabInstance:
@@ -36278,18 +36575,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 2111735163}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36320,15 +36605,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
+  bulletCount: 12
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
+--- !u!1001 &1561776836
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1341288737}
+    m_Modifications:
+    - target: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_Name
+      value: Cigs (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -45.99333
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.085467815
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -46.773766
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1561776839}
+  m_SourcePrefab: {fileID: 100100000, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+--- !u!4 &1561776837 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 1561776836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1561776838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 1561776836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1561776839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561776838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 20
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!114 &1564513518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38074,18 +38450,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -120.28471
@@ -38156,15 +38520,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &1612013287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40227,6 +40591,97 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8821697709493552272, guid: 72985ee5942665f41bc190893ebe5e8c, type: 3}
   m_PrefabInstance: {fileID: 1695945442}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1696023938
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1341288737}
+    m_Modifications:
+    - target: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_Name
+      value: Cigs (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.856323
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.61031485
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.315828
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1696023941}
+  m_SourcePrefab: {fileID: 100100000, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+--- !u!4 &1696023939 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 1696023938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1696023940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 1696023938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1696023941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696023940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 20
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &1703767570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40761,6 +41216,97 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4268986830259498, guid: dfd326be01452554aa2c40c0247ef82d, type: 3}
   m_PrefabInstance: {fileID: 1710476255}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1711551634
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1341288737}
+    m_Modifications:
+    - target: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_Name
+      value: Cigs (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -168.40054
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6103625
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.627677
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1711551637}
+  m_SourcePrefab: {fileID: 100100000, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+--- !u!4 &1711551635 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 1711551634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1711551636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 1711551634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1711551637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711551636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 20
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &1712456583
 GameObject:
   m_ObjectHideFlags: 0
@@ -42012,18 +42558,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 2111735163}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -42054,15 +42588,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
-  bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  bulletCount: 12
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &1770618923
 GameObject:
   m_ObjectHideFlags: 0
@@ -42768,18 +43302,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 2111735163}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -42810,15 +43332,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
-  bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  bulletCount: 12
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &1823433038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44406,7 +44928,7 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
-  InventoryManager: {fileID: 2080125562}
+  inventoryManager: {fileID: 2080125562}
   text: {fileID: 144613849}
 --- !u!114 &1885243250
 MonoBehaviour:
@@ -44966,18 +45488,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -127.69322
@@ -45048,15 +45558,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &1916602057
 GameObject:
   m_ObjectHideFlags: 0
@@ -46193,18 +46703,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gin (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 2660018734029287356, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -59.126743
@@ -46275,15 +46773,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1 &1953362037
 GameObject:
   m_ObjectHideFlags: 0
@@ -48452,6 +48950,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044856066}
   m_CullTransparentMesh: 1
+--- !u!1001 &2074455676
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1341288737}
+    m_Modifications:
+    - target: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_Name
+      value: Cigs (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -135.43002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.036419
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.112166
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2074455679}
+  m_SourcePrefab: {fileID: 100100000, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+--- !u!4 &2074455677 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 2074455676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2074455678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 2074455676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2074455679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074455678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 20
+  bulletCount: 0
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &2074948599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48874,7 +49463,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
+  madness: {fileID: 794906463}
   gunsystem: {fileID: 1885243249}
   alcoholText: {fileID: 628533352}
   cigaretteText: {fileID: 2134119701}
@@ -50285,25 +50874,13 @@ PrefabInstance:
       value: Gin
       objectReference: {fileID: 0}
     - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: soundManager
       value: 
       objectReference: {fileID: 1452354029}
     - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: inventoryManager
       value: 
       objectReference: {fileID: 2080125562}
-    - target: {fileID: 907106306556142625, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 1667280621}
     - target: {fileID: 1648329040539289896, guid: 4d344ebae52fd5145a03f8af16610aae, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -50377,15 +50954,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1001 &2217115813679501888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50443,25 +51020,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: alcoholText
-      value: 
-      objectReference: {fileID: 628533352}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
       propertyPath: soundManager
       value: 
       objectReference: {fileID: 1452354029}
     - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryManager
-      value: 
-      objectReference: {fileID: 2080125562}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
       propertyPath: inventoryManager
       value: 
       objectReference: {fileID: 2080125562}
-    - target: {fileID: 4867505650979406058, guid: a08584c3ce6f1354c9d1830e7ce1dcfe, type: 3}
-      propertyPath: InventoryInterface
-      value: 
-      objectReference: {fileID: 2111735163}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -50487,15 +51052,117 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryInterface: {fileID: 1667280621}
+  InventoryInterface: {fileID: 0}
   alcoholCount: 0
   cigaretteCount: 0
+  bulletCount: 12
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
+--- !u!1001 &7682602211957016936
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1341288737}
+    m_Modifications:
+    - target: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_Name
+      value: Cigs
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286598266146825155, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_Radius
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.54400015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.191
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175535277344203786, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838169638910129135, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 1452354029}
+    - target: {fileID: 7838169638910129135, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 2080125562}
+    - target: {fileID: 8472551525308737781, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e8e46699d89f524b917f125603d9f5a, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7682602211957016938}
+  m_SourcePrefab: {fileID: 100100000, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+--- !u!1 &7682602211957016937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1880955650587476338, guid: aaaa358180fb61d4d8834097c09964ee, type: 3}
+  m_PrefabInstance: {fileID: 7682602211957016936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7682602211957016938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7682602211957016937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed66edd716fa7db42b01fa72b5880791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryInterface: {fileID: 0}
+  alcoholCount: 0
+  cigaretteCount: 20
   bulletCount: 0
-  drunk: {fileID: 794906462}
-  Madness: {fileID: 794906463}
-  gunsystem: {fileID: 1885243249}
-  alcoholText: {fileID: 628533352}
-  cigaretteText: {fileID: 2134119701}
+  drunk: {fileID: 0}
+  madness: {fileID: 0}
+  gunsystem: {fileID: 0}
+  alcoholText: {fileID: 0}
+  cigaretteText: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

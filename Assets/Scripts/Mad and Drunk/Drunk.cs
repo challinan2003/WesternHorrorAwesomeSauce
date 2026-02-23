@@ -8,6 +8,7 @@ public class Drunk : MonoBehaviour
     public Madness Madness;
     public InventoryManager InventoryManager;
     public float drunkTimer = 0.0f;
+    public Material madnessMat;
 
     //getting drunk
     public void Update()
@@ -29,6 +30,8 @@ public class Drunk : MonoBehaviour
             AudioManager.instance.PlayOneshot(FMODEvents.instance.PlayerDrink, this.transform.position);
             InventoryManager.alcoholCount -= 1;
             Madness.madBuildup -= 400.0f;
+            Madness.vignetteTargetValue += 4.0f;
+            Madness.opacityTargetValue -= 0.4f;
             drunkenness += 25;
             drunkenness = Mathf.Clamp(drunkenness, 0, 100);
 
