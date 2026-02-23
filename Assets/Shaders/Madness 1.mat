@@ -46,8 +46,13 @@ Material:
     - _Fullscreen_SrcAlphaBlend: 1
     - _Fullscreen_SrcColorBlend: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - _Intensity: 13.797798
     - _Opacity: -0.3576475
+=======
+    - _Intensity: 10
+    - _Opacity: 0
+>>>>>>> Stashed changes
 =======
     - _Intensity: 10
     - _Opacity: 0

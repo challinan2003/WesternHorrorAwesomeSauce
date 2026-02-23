@@ -9,6 +9,7 @@ public class Drunk : MonoBehaviour
     public InventoryManager InventoryManager;
     public float drunkTimer = 0.0f;
     public Material madnessMat;
+    public Material drunkMat;
 
     //getting drunk
     public void Update()
@@ -58,11 +59,27 @@ public class Drunk : MonoBehaviour
     //being drunk
     public void drunk()
     {
+        //set up VFX
+        if (drunkenness < 50)
+        {
+            drunkMat.SetFloat("_Blend", 0.00f);
+        }
+        if (drunkenness >= 50)
+        {
+            drunkMat.SetFloat("_Blend", 0.03f);
+        }
+
+        if (drunkenness >= 75)
+        {
+            drunkMat.SetFloat("_Blend", 0.06f);
+        }
+
         if (drunkenness == 100)
         {
             isDrunk = true;
             gunsystem.reloadTime = 5;
             drunkTimer = 30.0f;
+            drunkMat.SetFloat("_Blend", 0.12f);
         }
 
         if (isDrunk)
