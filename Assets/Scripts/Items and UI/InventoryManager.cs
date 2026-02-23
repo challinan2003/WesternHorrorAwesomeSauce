@@ -8,7 +8,7 @@ using TMPro;
 public class InventoryManager : MonoBehaviour
 {
     public GameObject InventoryInterface;
-    public static InventoryManager current;
+    //public static InventoryManager current;
     private bool menuActivated;
 
     //item counts
@@ -18,7 +18,7 @@ public class InventoryManager : MonoBehaviour
 
     //other game objects
     public Drunk drunk;
-    public Madness madness;
+    public Madness Madness;
     public GunSystem gunsystem;
 
     //UI Elements
@@ -58,7 +58,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B) && cigaretteCount > 0)
         {
-            madness.madBuildup -= 100.0f;
+            Madness.madBuildup -= 100.0f;
             cigaretteCount -= 1;
             Debug.Log("Smoking CIGARETTE!!!!");
         }

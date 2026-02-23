@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public int pickupSFX = 0;
-    public InventoryManager inventoryManager;
+    //public int pickupSFX = 0;
+    //public InventoryManager inventoryManager;
     //public InventoryItemData referenceItem;
 
     //void Start()
@@ -11,13 +11,13 @@ public class Item : MonoBehaviour
         //inventoryManager = FindAnyObjectByType<InventoryManager>();
     //}
 
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (tag == "Item" && Input.GetButtonDown("Interact") && collision.gameObject.tag == "Player")
-        {
+    //private void OnTriggerEnter(Collider collision)
+    //{
+        //if (tag == "Item" && Input.GetButtonDown("Interact") && collision.gameObject.tag == "Player")
+        //{
             //OnHandlePickupItem();
-        }
-    }
+        //}
+    //}
 
     //public void OnHandlePickupItem()
     //{

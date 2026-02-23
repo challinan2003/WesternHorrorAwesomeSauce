@@ -9,10 +9,12 @@ public class AudioManager : MonoBehaviour
    
     private List<EventInstance> eventInstances;
     public static AudioManager instance { get; private set; }
-    FMOD.Studio.Bus MasterBus;
+    //FMOD.Studio.Bus MasterBus;
+    //freaking master bus bruh
+
     public void Start()
     {
-        MasterBus = FMODUnity.RuntimeManager.GetBus("bus:/Letters");
+        //MasterBus = FMODUnity.RuntimeManager.GetBus("bus:/Letters");
     }
     private void Awake()
     {

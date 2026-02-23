@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using TMPro;
 
 public class ItemData : MonoBehaviour
 {
@@ -9,14 +10,17 @@ public class ItemData : MonoBehaviour
     //public int pickupSFX = 0;
 
     //other game objects
-    public InventoryManager inventoryManager;
+    public InventoryManager InventoryManager;
+    public GameObject InventoryInterface;
+    public TextMeshProUGUI alcoholText;
     //public SoundManager soundManager;
 
     private void OnCollisionStay(Collision collision)
     {
         if (CompareTag("Gin") && collision.gameObject.CompareTag("Player") && (Input.GetKeyDown(KeyCode.E)))
         {
-            inventoryManager.alcoholCount += 1;
+            InventoryManager.alcoholCount += 1;
+            alcoholText.SetText("Alcohol: " + InventoryManager.alcoholCount);
             Destroy(gameObject);
             Debug.Log("Picked up ALCOHOL");
             AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
@@ -24,7 +28,7 @@ public class ItemData : MonoBehaviour
 
         if (CompareTag("Cigs") && collision.gameObject.CompareTag("Player") && (Input.GetKeyDown(KeyCode.E)))
         {
-            inventoryManager.cigaretteCount += 5;
+            InventoryManager.cigaretteCount += 5;
             Destroy(gameObject);
             Debug.Log("Picked up CIGARETTES");
             AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
@@ -32,7 +36,7 @@ public class ItemData : MonoBehaviour
 
         if (CompareTag("Bullets") && collision.gameObject.CompareTag("Player") && (Input.GetKeyDown(KeyCode.E)))
         {
-            inventoryManager.bulletCount += 6;
+            InventoryManager.bulletCount += 6;
             Destroy(gameObject);
             Debug.Log("Picked up BULLETS");
             AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
