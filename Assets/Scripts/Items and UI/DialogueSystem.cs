@@ -24,28 +24,26 @@ public class DialogueSystem : MonoBehaviour
     public GameObject Letter3;
     public GameObject Letter4;
 
-    //public int Letter1SFX = 0;
-    //public int Letter2SFX = 0;
-    //public int Letter3SFX = 0;
-    //public int Letter4SFX = 0;
      
     public UnityEngine.Object itemField;
     public GameObject fpsController;
     
     private Transform _selection;
-    //public GameObject SFXObject;
+
+
     private EventInstance PlayLetter1;
-    private EventInstance PlayLetter5;
-    private EventInstance PlayLetter6;
-    private EventInstance PlayLetter7;
-    //public bool LetterEnd = false;
-    PLAYBACK_STATE playbackState = PLAYBACK_STATE.STOPPED;
+    //private EventInstance PlayLetter5;
+    //private EventInstance PlayLetter6;
+    //private EventInstance PlayLetter7;
+    public bool LetterEnd = false;
+    //PLAYBACK_STATE playbackState = PLAYBACK_STATE.STOPPED;
  
     //FMOD.Studio.Bus MasterBus;
     private void Start()
     {
         //MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/music");
-        
+        PlayLetter1 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
+        //PlayLetter1.getPlaybackState(out playbackState);
     }
     public void Update()
     {
@@ -64,43 +62,48 @@ public class DialogueSystem : MonoBehaviour
         //playletter7.getplaybackstate(out playbackstate);
 
 
-
-
-        //SFXObject = GameObject.Find("SFXOneShotPrefab(Clone)");
-        //SFXObject = GameObject.Find("SFXOneShotPrefab");
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //Debug.DrawRay(myCamera.transform.position, mousePosition-myCamera.transform.position, Color.green);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
             var selection = hit.transform;
             if (selection.CompareTag(Letter1Tag))
             {
-                //PlayLetter4 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
-                //PLAYBACK_STATE playbackState;
-                //PlayLetter4.getPlaybackState(out playbackState);
+
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-
-                    if (playbackState == PLAYBACK_STATE.STOPPED)
+                    if (!LetterEnd)
                     {
-                        //if (SFXObject == null)
+                        PLAYBACK_STATE playbackState;
+                        PlayLetter1.getPlaybackState(out playbackState);
 
-                        // activates dialogue
-                        var selectionRenderer = selection.GetComponent<Renderer>();
-                        if (selectionRenderer != null)
+                        if (playbackState == PLAYBACK_STATE.STOPPED)
                         {
-                            PlayLetter1 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
-                            playbackState = PLAYBACK_STATE.PLAYING;
-                            Debug.Log("active letter");
-                            Letter.SetActive(true);
-                            Time.timeScale = 0;
-                            PlayLetter1.start();
-                            //PlayLetter1.release();
-                            StartDialogue();
+                            //if (SFXObject == null)
 
+                            // activates dialogue
+                            var selectionRenderer = selection.GetComponent<Renderer>();
+                            if (selectionRenderer != null)
+                            {
+                                //PlayLetter1 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
+
+                                Debug.Log("active letter");
+                                Letter.SetActive(true);
+                                PlayLetter1.start();
+                                Time.timeScale = 1;
+
+                                //PlayLetter1.release();
+                                StartDialogue();
+
+                            }
+                            _selection = selection;
                         }
-                        _selection = selection;
+                    }
+                    else if (LetterEnd)
+                    {
+                      PlayLetter1.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                      Letter.SetActive(false);
+
                     }
                 }
                 if (selection.CompareTag(Letter2Tag))
@@ -115,8 +118,8 @@ public class DialogueSystem : MonoBehaviour
                             {
                                 Debug.Log("active letter");
                                 Letter2.SetActive(true);
-                                Time.timeScale = 0;
-                                AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter5, this.transform.position);
+                                Time.timeScale = 1;
+                                //AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter5, this.transform.position);
                                 StartDialogue();
                             }
                         }
@@ -153,7 +156,7 @@ public class DialogueSystem : MonoBehaviour
                                 Debug.Log("active letter");
                                 Letter3.SetActive(true);
                                 Time.timeScale = 0;
-                                AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter6, this.transform.position);
+                               // AudioManager.instance.PlayOneshot(FMODEvents.instance.Letter6, this.transform.position);
                                 StartDialogue();
                             }
                         }
@@ -173,7 +176,7 @@ public class DialogueSystem : MonoBehaviour
                                 //PlayLetter4 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
                                 Debug.Log("active letter");
                                 Letter.SetActive(true);
-                                Time.timeScale = 0;
+                                Time.timeScale = 1;
                                 //PlayLetter4.start();
                                 //PlayLetter4.release();
                                 StartDialogue();
@@ -189,15 +192,16 @@ public class DialogueSystem : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("stopingsound");
-        playbackState = PLAYBACK_STATE.STOPPED;
-        PlayLetter1.release();
-        //MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        PlayLetter1.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        LetterEnd = true;
+        //if (playbackState != PLAYBACK_STATE.STOPPED)
+        //{
+        //    PlayLetter1.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        //}
+
         //PlayLetter5.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         //PlayLetter6.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         //PlayLetter7.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        //Destroy(SFXObject);
-        //LetterEnd = true;
+
         Debug.Log("release controls");
 
         fpsController.GetComponent<FirstPersonMovement>().enabled = true;
