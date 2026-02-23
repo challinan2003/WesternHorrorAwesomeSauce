@@ -105,7 +105,7 @@ public class DialogueSystem : MonoBehaviour
                 }
                 if (selection.CompareTag(Letter2Tag))
                 {
-                    if ((Input.GetKeyDown(KeyCode.E)))
+                    if (Input.GetKeyDown(KeyCode.E))
                     {
                         //if (playbackState == PLAYBACK_STATE.STOPPED)
                         {
@@ -141,7 +141,7 @@ public class DialogueSystem : MonoBehaviour
                 }
                 if (selection.CompareTag(Letter3Tag))
                 {
-                    if ((Input.GetKeyDown(KeyCode.E)))
+                    if (Input.GetKeyDown(KeyCode.E))
                     {
                       
                         //if (playbackState == PLAYBACK_STATE.STOPPED)
