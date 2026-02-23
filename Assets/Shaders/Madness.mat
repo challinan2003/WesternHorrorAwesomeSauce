@@ -45,8 +45,8 @@ Material:
     - _Fullscreen_DstColorBlend: 10
     - _Fullscreen_SrcAlphaBlend: 1
     - _Fullscreen_SrcColorBlend: 1
-    - _Intensity: 4.7277
-    - _Opacity: 0.8535759
+    - _Intensity: 9.457855
+    - _Opacity: 0.09674307
     m_Colors:
     - _BodyColor: {r: 0, g: 0.1933893, b: 1.971058, a: 1}
     - _VignetteEdgeColor: {r: 0, g: 646.6831, b: 766.9962, a: 1}

@@ -5,10 +5,11 @@ public class EndingTrigger : MonoBehaviour
     public int KeyValue;
     public GameObject Ending;
     public GameObject fpsController;
+    public KeyText keyText;
     // Update is called once per frame
     public void Update()
     {
-        KeyValue = GameObject.Find("StationKey").GetComponent<KeyText>().KeyCounter;
+        //KeyValue = GameObject.Find("StationKey").GetComponent<KeyText>().KeyCounter;
     }
 
         public void OnTriggerEnter(Collider collision)

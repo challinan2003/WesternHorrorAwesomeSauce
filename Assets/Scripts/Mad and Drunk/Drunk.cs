@@ -21,7 +21,7 @@ public class Drunk : MonoBehaviour
         //natural drunk decay
         if (drunkenness > 0.0f && Time.deltaTime > 0)
         {
-            drunkenness -= 0.05f;
+            drunkenness -= 0.001f;
         }
     }
     public void ConsumeAlc()
