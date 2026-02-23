@@ -13,6 +13,7 @@ public class Drunk : MonoBehaviour
     //getting drunk
     public void Update()
     {
+        print(drunkenness);
         ConsumeAlc();
         drunk();
         
@@ -30,8 +31,8 @@ public class Drunk : MonoBehaviour
             AudioManager.instance.PlayOneshot(FMODEvents.instance.PlayerDrink, this.transform.position);
             InventoryManager.alcoholCount -= 1;
             Madness.madBuildup -= 400.0f;
-            Madness.vignetteTargetValue += 4.0f;
-            Madness.opacityTargetValue -= 0.4f;
+            madnessMat.SetFloat("_Opacity", 0.01f);
+            madnessMat.SetFloat("_Intensity", 10f);
             drunkenness += 25;
             drunkenness = Mathf.Clamp(drunkenness, 0, 100);
 

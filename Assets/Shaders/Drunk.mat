@@ -40,7 +40,7 @@ Material:
     - _Blend: 0.06
     - _BlueOffset: 0
     - _GreenOffset: 0
-    - _NoiseScale: 10
+    - _NoiseScale: 26.67
     - _RedOffset: 0
     - _amplitude: 0.24
     m_Colors:
