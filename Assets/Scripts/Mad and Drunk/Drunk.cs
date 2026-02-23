@@ -5,8 +5,8 @@ public class Drunk : MonoBehaviour
     public float drunkenness;
     public bool isDrunk = false;
     public GunSystem gunsystem;
-    public Madness madness;
-    public InventoryManager inventory;
+    public Madness Madness;
+    public InventoryManager InventoryManager;
     public float drunkTimer = 0.0f;
 
     //getting drunk
@@ -24,18 +24,18 @@ public class Drunk : MonoBehaviour
     public void ConsumeAlc()
     {
         //once inventory is reworked, this function will check inventory for alcohol
-        if (Input.GetKeyDown(KeyCode.V) && inventory.alcoholCount > 0)
+        if (Input.GetKeyDown(KeyCode.V) && InventoryManager.alcoholCount > 0)
         {
             AudioManager.instance.PlayOneshot(FMODEvents.instance.PlayerDrink, this.transform.position);
-            inventory.alcoholCount -= 1;
-            madness.madBuildup -= 400.0f;
+            InventoryManager.alcoholCount -= 1;
+            Madness.madBuildup -= 400.0f;
             drunkenness += 25;
             drunkenness = Mathf.Clamp(drunkenness, 0, 100);
 
             //madness resist
-            madness.isMad = false;
-            madness.madResist = true;
-            madness.madResistTimer = 15.0f;
+            Madness.isMad = false;
+            Madness.madResist = true;
+            Madness.madResistTimer = 15.0f;
             
             
 
@@ -44,10 +44,10 @@ public class Drunk : MonoBehaviour
     }
     public void madnessResistEnd()
     {
-        if (madness.madResistTimer <= 0.0f)
+        if (Madness.madResistTimer <= 0.0f)
         {
-            madness.madResist = false;
-            madness.madResistTimer = 0.0f;
+            Madness.madResist = false;
+            Madness.madResistTimer = 0.0f;
         }
     }
 

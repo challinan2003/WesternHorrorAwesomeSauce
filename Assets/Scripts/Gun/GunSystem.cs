@@ -32,7 +32,7 @@ public class GunSystem : MonoBehaviour
     public Transform attackPoint;
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
-    public InventoryManager inventoryManager;
+    public InventoryManager InventoryManager;
 
     //graphics
     //public GameObject muzzleFlash, bulletHoleGraphic;
@@ -42,14 +42,14 @@ public class GunSystem : MonoBehaviour
 
     private void Awake()
     {
-        invBullets = inventoryManager.bulletCount;
+        invBullets = InventoryManager.bulletCount;
         bulletsLeft = magazineSize;
         readyToShoot = true;
     }
     private void Update()
     {
         MyInput();
-        text.SetText(bulletsLeft + " / " + inventoryManager.bulletCount);
+        text.SetText(bulletsLeft + " / " + InventoryManager.bulletCount);
         UnityEngine.Debug.DrawRay(fpsCam.transform.position, fpsCam.transform.forward, UnityEngine.Color.green);
     }
 
@@ -59,7 +59,7 @@ public class GunSystem : MonoBehaviour
         if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
         else shooting = Input.GetKeyDown(KeyCode.Mouse0);
 
-        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading && inventoryManager.bulletCount > 0) 
+        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading && InventoryManager.bulletCount > 0) 
         {
             Reload();
         }
@@ -125,8 +125,8 @@ public class GunSystem : MonoBehaviour
     private void Reload()
     {
         //added all to mag
-        bulletsLeft += inventoryManager.bulletCount;
-        inventoryManager.bulletCount = 0;
+        bulletsLeft += InventoryManager.bulletCount;
+        InventoryManager.bulletCount = 0;
         
         reloading = true;
         
@@ -142,7 +142,7 @@ public class GunSystem : MonoBehaviour
     {
         OverloadedBullets = bulletsLeft;
         OverloadedBullets -= 6;
-        inventoryManager.bulletCount += OverloadedBullets;
+        InventoryManager.bulletCount += OverloadedBullets;
         OverloadedBullets = 0;
         bulletsLeft = 6;
     }
