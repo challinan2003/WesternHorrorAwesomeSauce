@@ -36,14 +36,23 @@ public class DialogueSystem : MonoBehaviour
     //private EventInstance PlayLetter6;
     //private EventInstance PlayLetter7;
     public bool LetterEnd = false;
-    //PLAYBACK_STATE playbackState = PLAYBACK_STATE.STOPPED;
- 
+    PLAYBACK_STATE playbackState = PLAYBACK_STATE.STOPPED;
+    private string letterevent = "event:/AllLetters";
+
     //FMOD.Studio.Bus MasterBus;
     private void Start()
     {
         //MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/music");
-        PlayLetter1 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
+        //PlayLetter1 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
         //PlayLetter1.getPlaybackState(out playbackState);
+    }
+    private void PlayRead(int letters)
+    {
+        EventInstance ReadLetter = RuntimeManager.CreateInstance(letterevent);
+        ReadLetter.setParameterByName("Letters", letters);
+        ReadLetter.start();
+        ReadLetter.release();
+        ReadLetter.getPlaybackState(out playbackState);
     }
     public void Update()
     {
@@ -72,10 +81,11 @@ public class DialogueSystem : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if (!LetterEnd)
-                    {
-                        PLAYBACK_STATE playbackState;
-                        PlayLetter1.getPlaybackState(out playbackState);
+                    //if (!LetterEnd)
+                    //{
+                        //PLAYBACK_STATE playbackState;
+                        
+                        
 
                         if (playbackState == PLAYBACK_STATE.STOPPED)
                         {
@@ -89,22 +99,23 @@ public class DialogueSystem : MonoBehaviour
 
                                 Debug.Log("active letter");
                                 Letter.SetActive(true);
-                                PlayLetter1.start();
-                                Time.timeScale = 1;
+                                //PlayLetter1.start();
+                                PlayRead(3);
+                                //Time.timeScale = 1;
 
                                 //PlayLetter1.release();
                                 StartDialogue();
 
                             }
                             _selection = selection;
-                        }
+                        //}
                     }
-                    else if (LetterEnd)
-                    {
-                      PlayLetter1.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                      Letter.SetActive(false);
+                    //else if (LetterEnd)
+                    //{
+                    //  PlayLetter1.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                    //  Letter.SetActive(false);
 
-                    }
+                    //}
                 }
                 if (selection.CompareTag(Letter2Tag))
                 {
@@ -192,10 +203,16 @@ public class DialogueSystem : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("stopingsound");
+        
+        PlayRead(0);
         LetterEnd = true;
+        //playbackState = PLAYBACK_STATE.STOPPED;
         //if (playbackState != PLAYBACK_STATE.STOPPED)
         //{
-        //    PlayLetter1.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        //    //PlayLetter1.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+
+        //    PlayRead(0);
+            
         //}
 
         //PlayLetter5.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);

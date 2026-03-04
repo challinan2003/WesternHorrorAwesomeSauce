@@ -1092,7 +1092,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 12
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -3202,31 +3202,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
   <Letter4>k__BackingField:
     Guid:
-      Data1: -663677463
-      Data2: 1281410478
-      Data3: -2123863636
-      Data4: -1759587869
+      Data1: -389304351
+      Data2: 1088839348
+      Data3: 1054903487
+      Data4: 169930400
     Path: event:/Letter4-2D-TL
   <Letter5>k__BackingField:
     Guid:
-      Data1: -1190946868
-      Data2: 1166699714
-      Data3: -897379706
-      Data4: -1981311172
+      Data1: -1871048260
+      Data2: 1110160673
+      Data3: -550884697
+      Data4: -416584294
     Path: event:/Letter5
   <Letter6>k__BackingField:
     Guid:
-      Data1: 1424345163
-      Data2: 1099546594
-      Data3: 1960247695
-      Data4: 1355002490
+      Data1: -333974935
+      Data2: 1310464675
+      Data3: -1108815985
+      Data4: -1992338866
     Path: event:/Letter6
   <Letter7>k__BackingField:
     Guid:
-      Data1: -1685938736
-      Data2: 1125450076
-      Data3: -1544854370
-      Data4: -2071022283
+      Data1: 1943607192
+      Data2: 1168592667
+      Data3: -637224057
+      Data4: -465525931
     Path: event:/Letter7
   <EnemyAlert>k__BackingField:
     Guid:
@@ -3286,10 +3286,10 @@ MonoBehaviour:
     Path: 
   <Madness>k__BackingField:
     Guid:
-      Data1: -1871048260
-      Data2: 1110160673
-      Data3: -550884697
-      Data4: -416584294
+      Data1: -1685938736
+      Data2: 1125450076
+      Data3: -1544854370
+      Data4: -2071022283
     Path: event:/Madness2D
 --- !u!1 &161094074
 GameObject:
@@ -3900,7 +3900,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -5036,7 +5036,7 @@ MonoBehaviour:
   cigaretteCount: 20
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -5755,7 +5755,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -6419,7 +6419,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -6464,6 +6464,7 @@ MonoBehaviour:
   Letter4: {fileID: 1986511838}
   itemField: {fileID: 0}
   fpsController: {fileID: 1870483546}
+  LetterEnd: 0
 --- !u!4 &315676260
 Transform:
   m_ObjectHideFlags: 0
@@ -7542,7 +7543,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 12
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -7810,7 +7811,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -8582,7 +8583,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 12
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -8999,7 +9000,7 @@ MonoBehaviour:
   cigaretteCount: 20
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -9798,7 +9799,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 12
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -10669,7 +10670,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -15145,7 +15146,7 @@ MonoBehaviour:
   cigaretteCount: 20
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -15236,7 +15237,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 12
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -16623,6 +16624,7 @@ MonoBehaviour:
   playerModel: {fileID: 979522320}
   staminaDuration: 4
   iswalking: 0
+  isidle: 0
   inputNotActive: 0
   groundCheck: {fileID: 583667605}
   groundDistance: 0.1
@@ -16688,6 +16690,7 @@ MonoBehaviour:
   Letter4: {fileID: 1986511838}
   itemField: {fileID: 0}
   fpsController: {fileID: 1870483546}
+  LetterEnd: 0
 --- !u!114 &794906462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16703,9 +16706,11 @@ MonoBehaviour:
   drunkenness: 0
   isDrunk: 0
   gunsystem: {fileID: 1885243249}
-  madness: {fileID: 794906463}
-  inventory: {fileID: 2080125562}
+  Madness: {fileID: 0}
+  InventoryManager: {fileID: 0}
   drunkTimer: 0
+  madnessMat: {fileID: 0}
+  drunkMat: {fileID: 0}
 --- !u!114 &794906463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16728,7 +16733,7 @@ MonoBehaviour:
   SoundPLayed: 0
   madnessTimer: 60
   madResistTimer: 15
-  madness: {fileID: 2100000, guid: 78fb45fd21667d447a419c52fee9fda0, type: 2}
+  madnessMat: {fileID: 0}
   opacityTargetValue: 0
   vignetteTargetValue: 4
 --- !u!114 &794906464
@@ -16743,6 +16748,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103b2bd2c162e5d4b9a39e86b4e113e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthController
+  currentPlayerHealth: 100
+  recoveryTimer: 2
+  maxPlayerHealth: 100
+  redSplatterImage: {fileID: 0}
+  hurtImage: {fileID: 0}
+  hurtTimer: 5
+  Death: {fileID: 0}
+  enemy:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &797783804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16830,7 +16845,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -17601,7 +17616,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -17945,6 +17960,7 @@ MonoBehaviour:
   FirstObjective: {fileID: 1283501014}
   pickupSFX: 20
   KeyCounter: 0
+  endingTrigger: {fileID: 0}
 --- !u!135 &865342753
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21051,7 +21067,7 @@ MonoBehaviour:
   cigaretteCount: 20
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -22960,7 +22976,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -24444,7 +24460,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -24535,7 +24551,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -24754,7 +24770,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -31498,7 +31514,7 @@ MonoBehaviour:
   cigaretteCount: 20
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -31697,7 +31713,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -33302,6 +33318,7 @@ MonoBehaviour:
   KeyValue: 0
   Ending: {fileID: 129219239}
   fpsController: {fileID: 1870483546}
+  keyText: {fileID: 0}
 --- !u!65 &1376435676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36610,7 +36627,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 12
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -36701,7 +36718,7 @@ MonoBehaviour:
   cigaretteCount: 20
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -38525,7 +38542,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -40678,7 +40695,7 @@ MonoBehaviour:
   cigaretteCount: 20
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -41303,7 +41320,7 @@ MonoBehaviour:
   cigaretteCount: 20
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -42593,7 +42610,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 12
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -43337,7 +43354,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 12
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -44928,7 +44945,7 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
-  inventoryManager: {fileID: 2080125562}
+  InventoryManager: {fileID: 0}
   text: {fileID: 144613849}
 --- !u!114 &1885243250
 MonoBehaviour:
@@ -45563,7 +45580,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -46778,7 +46795,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -49037,7 +49054,7 @@ MonoBehaviour:
   cigaretteCount: 20
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -49463,7 +49480,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 794906462}
-  madness: {fileID: 794906463}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 1885243249}
   alcoholText: {fileID: 628533352}
   cigaretteText: {fileID: 2134119701}
@@ -50959,7 +50976,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -51057,7 +51074,7 @@ MonoBehaviour:
   cigaretteCount: 0
   bulletCount: 12
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}
@@ -51159,7 +51176,7 @@ MonoBehaviour:
   cigaretteCount: 20
   bulletCount: 0
   drunk: {fileID: 0}
-  madness: {fileID: 0}
+  Madness: {fileID: 0}
   gunsystem: {fileID: 0}
   alcoholText: {fileID: 0}
   cigaretteText: {fileID: 0}

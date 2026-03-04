@@ -14,6 +14,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference EnemyHurt { get; set; }
     [field: Header("PlayerSFX")]
     [field: SerializeField] public EventReference DirtWalk {  get; set; }
+    //[field: SerializeField] public EventReference FootSteps { get; set; }
     [field: Header("SFX")]
     [field: SerializeField] public EventReference GunShoot { get; set; }
 

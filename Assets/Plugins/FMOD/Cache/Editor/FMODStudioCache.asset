@@ -81,7 +81,31 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1950
---- !u!114 &-5144197739934426692
+--- !u!114 &-4312642192748424290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerSteps/WalkRun
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: WalkRun
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 163296963
+    data2: 2894404124
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4175000913520345158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,23 +115,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Letter1
+  m_Name: event:/Letters/Letter4-2D-TL
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Letter1
+  Path: event:/Letters/Letter4-2D-TL
   Guid:
-    Data1: -389304351
-    Data2: 1088839348
-    Data3: 1054903487
-    Data4: 169930400
+    Data1: -663677463
+    Data2: 1281410478
+    Data3: -2123863636
+    Data4: -1759587869
   Banks:
+  - {fileID: -1555053090485093994}
   - {fileID: -1185246703142972094}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 36000
 --- !u!114 &-4065687386813627577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +160,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3875791960242882035
+--- !u!114 &-3928948625105632338
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,20 +170,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Letter2
+  m_Name: event:/Letters/Letter5
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Letter2
+  Path: event:/Letters/Letter5
   Guid:
-    Data1: 1943607192
-    Data2: 1168592667
-    Data3: -637224057
-    Data4: -465525931
+    Data1: -1190946868
+    Data2: 1166699714
+    Data3: -897379706
+    Data4: -1981311172
   Banks:
   - {fileID: -1185246703142972094}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3828939143990645050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PlayerSteps
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/PlayerSteps
+  Guid:
+    Data1: 876250085
+    Data2: 1075000637
+    Data3: -1405476464
+    Data4: 447719163
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1875179351780880103}
+  - {fileID: -4312642192748424290}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -177,11 +231,38 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639073842773428956
+  lastModified: 639081736831818101
   FileSizes:
   - Name: Desktop
-    Value: 382688
+    Value: 4681760
   Exists: 1
+--- !u!114 &-1334695931338281931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Letters/Letter7
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Letters/Letter7
+  Guid:
+    Data1: -1685938736
+    Data2: 1125450076
+    Data3: -1544854370
+    Data4: -2071022283
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1271148245719412022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,10 +305,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639073842773728469
+  lastModified: 639082168223477100
   FileSizes:
   - Name: Desktop
-    Value: 3687712
+    Value: 5776192
   Exists: 1
 --- !u!114 &-1110760950743810310
 MonoBehaviour:
@@ -250,6 +331,33 @@ MonoBehaviour:
   Banks:
   - {fileID: -1185246703142972094}
   IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-872498592193627475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Letters/Letter4
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Letters/Letter4
+  Guid:
+    Data1: -1051030062
+    Data2: 1084129144
+    Data3: -1311737968
+    Data4: 1466193839
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
@@ -309,23 +417,25 @@ MonoBehaviour:
   - {fileID: -7363640488353687473}
   - {fileID: -1271148245719412022}
   - {fileID: 8855945390039065123}
-  - {fileID: -3875791960242882035}
-  - {fileID: 4476881312454953981}
-  - {fileID: 7511618532621169426}
-  - {fileID: -5144197739934426692}
-  - {fileID: 5051636998342817416}
-  - {fileID: 4339529255461050526}
   - {fileID: -4065687386813627577}
   - {fileID: -7427265049782719435}
-  - {fileID: 6207648685872727313}
-  - {fileID: 562926221869435441}
+  - {fileID: -4175000913520345158}
+  - {fileID: 5623744235048883266}
+  - {fileID: 2132471193370070759}
+  - {fileID: 3639926236218297844}
+  - {fileID: -3928948625105632338}
+  - {fileID: -1334695931338281931}
+  - {fileID: -872498592193627475}
+  - {fileID: 1520139316308630330}
+  - {fileID: -3828939143990645050}
+  - {fileID: 3395425995265122901}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1555053090485093994}
   StringsBanks:
   - {fileID: 7805662842229737573}
   cacheVersion: 131858
-  cacheTime: 639073842773728469
+  cacheTime: 639082168223477100
   SerializableEventsDict:
   - key: event:/ItemPickUP
     index: 0
@@ -345,27 +455,31 @@ MonoBehaviour:
     index: 7
   - key: event:/PlayerWalkDirt3d
     index: 8
-  - key: event:/Letter2
-    index: 9
-  - key: event:/Letter5
-    index: 10
-  - key: event:/Letter4
-    index: 11
-  - key: event:/Letter1
-    index: 12
-  - key: event:/Letter6
-    index: 13
-  - key: event:/Letter7
-    index: 14
   - key: event:/Madness
-    index: 15
+    index: 9
   - key: event:/Madness2D
+    index: 10
+  - key: event:/Letters/Letter4-2D-TL
+    index: 11
+  - key: event:/Letters/Letter6
+    index: 12
+  - key: event:/Letters/Letter4-2D
+    index: 13
+  - key: event:/Letters/Letter2
+    index: 14
+  - key: event:/Letters/Letter5
+    index: 15
+  - key: event:/Letters/Letter7
     index: 16
-  - key: event:/Letter4-2D
+  - key: event:/Letters/Letter4
     index: 17
-  - key: event:/Letter4-2D-TL
+  - key: event:/Letters/Letter1
     index: 18
---- !u!114 &562926221869435441
+  - key: event:/PlayerSteps
+    index: 19
+  - key: event:/AllLetters
+    index: 20
+--- !u!114 &1520139316308630330
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -375,23 +489,74 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Letter4-2D-TL
+  m_Name: event:/Letters/Letter1
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Letter4-2D-TL
+  Path: event:/Letters/Letter1
   Guid:
-    Data1: -663677463
-    Data2: 1281410478
-    Data3: -2123863636
-    Data4: -1759587869
+    Data1: -389304351
+    Data2: 1088839348
+    Data3: 1054903487
+    Data4: 169930400
   Banks:
-  - {fileID: -1555053090485093994}
+  - {fileID: -1185246703142972094}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1875179351780880103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerSteps/Terrain
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Terrain
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 3954617116
+    data2: 991146172
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &2132471193370070759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Letters/Letter4-2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Letters/Letter4-2D
+  Guid:
+    Data1: -333974935
+    Data2: 1310464675
+    Data3: -1108815985
+    Data4: -1992338866
+  Banks:
+  - {fileID: -1185246703142972094}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 37115
+  Length: 0
 --- !u!114 &2527955488528454479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,7 +611,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1306
---- !u!114 &4339529255461050526
+--- !u!114 &3395425995265122901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -456,14 +621,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Letter7
+  m_Name: event:/AllLetters
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Letter7
+  Path: event:/AllLetters
   Guid:
-    Data1: -1685938736
-    Data2: 1125450076
-    Data3: -1544854370
-    Data4: -2071022283
+    Data1: -1957415835
+    Data2: 1167497275
+    Data3: 91847322
+    Data4: 631223744
+  Banks:
+  - {fileID: -1555053090485093994}
+  - {fileID: -1185246703142972094}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5361981717514053349}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3639926236218297844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Letters/Letter2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Letters/Letter2
+  Guid:
+    Data1: 1943607192
+    Data2: 1168592667
+    Data3: -637224057
+    Data4: -465525931
   Banks:
   - {fileID: -1185246703142972094}
   IsStream: 1
@@ -473,7 +667,31 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4476881312454953981
+--- !u!114 &5361981717514053349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AllLetters/Letters
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Letters
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 2328946226
+    data2: 4232776206
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5623744235048883266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -483,95 +701,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Letter5
+  m_Name: event:/Letters/Letter6
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Letter5
-  Guid:
-    Data1: -1190946868
-    Data2: 1166699714
-    Data3: -897379706
-    Data4: -1981311172
-  Banks:
-  - {fileID: -1185246703142972094}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &5051636998342817416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Letter6
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Letter6
+  Path: event:/Letters/Letter6
   Guid:
     Data1: 1424345163
     Data2: 1099546594
     Data3: 1960247695
     Data4: 1355002490
-  Banks:
-  - {fileID: -1185246703142972094}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6207648685872727313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Letter4-2D
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Letter4-2D
-  Guid:
-    Data1: -333974935
-    Data2: 1310464675
-    Data3: -1108815985
-    Data4: -1992338866
-  Banks:
-  - {fileID: -1185246703142972094}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &7511618532621169426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Letter4
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Letter4
-  Guid:
-    Data1: -1051030062
-    Data2: 1084129144
-    Data3: -1311737968
-    Data4: 1466193839
   Banks:
   - {fileID: -1185246703142972094}
   IsStream: 1
@@ -596,10 +733,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639073842773428956
+  lastModified: 639081736831828100
   FileSizes:
   - Name: Desktop
-    Value: 1602
+    Value: 1824
   Exists: 1
 --- !u!114 &8855945390039065123
 MonoBehaviour:

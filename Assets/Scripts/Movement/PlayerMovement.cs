@@ -9,11 +9,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using static PlayerMovement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //public int playerWalkSFX = 0;
-    //SoundManager.instance.PlaySFX(playerWalkSFX);
+
     [Header("Movement")]
     public float moveSpeed;
     public float walkSpeed;
@@ -34,14 +34,11 @@ public class PlayerMovement : MonoBehaviour
     private bool staminaRecharge;
     private float rechargeTimer;
     private bool isCrouching = false;
-    private EventInstance playerDirtWalk;
-    //public int Walk1SFX = 0;
-    //public int Nothing = 0;
-    //public WalkSFXManager WalkSFXManager;
-    //public GameObject WSFXObject;
+    //private EventInstance playerDirtWalk;
+
     public bool iswalking = false;
+    public bool isidle = false;
     public bool inputNotActive = false;
-    //public GameObject PlayerSFX;
 
 
     [Header("Ground Check")]
@@ -80,6 +77,18 @@ public class PlayerMovement : MonoBehaviour
         air
     }
 
+    public enum Current_Terrain {Dirt, Wood, Metal}
+    [SerializeField]
+    private Current_Terrain currentTerrain;
+    private string StepEvent = "event:/Playersteps";
+    //private int terrain;
+
+    private EventInstance PlayerFootSteps;
+    float timer = 0.0f;
+    [SerializeField]
+    float footstepSpeed = 0.10f;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -87,10 +96,95 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
 
         startYScale = transform.localScale.y;
-        playerDirtWalk = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DirtWalk);
-        playerDirtWalk.set3DAttributes(RuntimeUtils.To3DAttributes(playerModel.gameObject));
+        //playerDirtWalk = AudioManager.instance.CreateEventInstance(FMODEvents.instance.DirtWalk);
+        //playerDirtWalk.set3DAttributes(RuntimeUtils.To3DAttributes(playerModel.gameObject));
     }
 
+
+    private void DetermineTerrain()
+    {
+        RaycastHit[] hit;
+        hit = Physics.RaycastAll(transform.position, UnityEngine.Vector3.down, 10.0f);
+        foreach (RaycastHit rayhit in hit)
+        {
+            if(rayhit.collider.tag == "Dirt")
+            {
+                //Debug.Log("dirt");
+                currentTerrain = Current_Terrain.Dirt;
+            }
+            else if (rayhit.collider.tag == "Wood")
+            {
+                currentTerrain = Current_Terrain.Wood;
+            }
+            else if (rayhit.collider.tag == "Metal")
+            {
+                currentTerrain = Current_Terrain.Metal;
+            }
+        }
+
+
+    }
+
+
+    public void SelectAndPlay()
+    {
+        switch (currentTerrain) 
+        { 
+        case Current_Terrain.Dirt:
+                if (iswalking && state == MovementState.walking)
+                {
+                    PlayWalkSteps(0);
+                }
+                else if (iswalking && state == MovementState.sprinting)
+                {
+                    PlayRunSteps(0);
+                }
+                break;
+        
+        case Current_Terrain.Wood:
+                if (iswalking && state == MovementState.sprinting)
+                {
+                    PlayWalkSteps(1);
+                }
+                else if (iswalking && state == MovementState.sprinting)
+                {
+                    PlayRunSteps(1);
+                }
+                break;
+        case Current_Terrain.Metal:
+                if (iswalking && state == MovementState.walking)
+                {
+                    PlayWalkSteps(2);
+                }
+                else if (iswalking && state == MovementState.sprinting)
+                {
+                    PlayRunSteps(2);
+                }
+                break;
+
+        }
+    }
+
+    private void PlayWalkSteps(int terrain)
+    {
+        //DetermineTerrain();
+        EventInstance Walk = RuntimeManager.CreateInstance(StepEvent);
+        Walk.setParameterByName("Terrain", terrain,false);
+        Walk.setParameterByName("WalkRun", 0, false);
+        Walk.set3DAttributes(RuntimeUtils.To3DAttributes(playerModel.gameObject));
+        Walk.start();
+        Walk.release();
+    }
+    private void PlayRunSteps(int terrain)
+    {
+        //DetermineTerrain();
+        EventInstance Run = RuntimeManager.CreateInstance(StepEvent);
+        Run.setParameterByName("Terrain", terrain);
+        Run.setParameterByName("WalkRun", 0, false);
+        Run.set3DAttributes(RuntimeUtils.To3DAttributes(playerModel.gameObject));
+        Run.start();
+        Run.release();
+    }
     void Update()
     {
         //WSFXObject = GameObject.Find("WalkSFXOneShotPrefab(Clone)");
@@ -100,6 +194,7 @@ public class PlayerMovement : MonoBehaviour
         TrackInput();
         SpeedControl();
         StateHandler();
+        PlayStep();
 
         //handle drag
         if (grounded)
@@ -139,36 +234,25 @@ public class PlayerMovement : MonoBehaviour
             inputNotActive = true;
         }
     }
-    //    if (iswalking && grounded)
-    //    {
-    //        PLAYBACK_STATE playbackState;
-    //        playerDirtWalk.getPlaybackState(out playbackState);
-    //        if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
-    //        {
-    //            Debug.Log("WalkSoundPLay");
-    //            playerDirtWalk.start();
-    //        }
-    //    }
-    //    else
-    //    {
-    //        playerDirtWalk.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
-
-
-
-    //        //if (WSFXObject == null)
-    //        //{
-    //        //   // WalkSFXManager.instance.PlaySFX(Random.Range(1, 4));
-    //        //    //Debug.Log("playing walk");
-    //        //}
-    //    }
-        
-    //}
 
     void FixedUpdate()
     {
         MovePlayer();
-        UpdateSound();
+        //UpdateSound();
+    }
+    private void PlayStep()
+    {
+        DetermineTerrain();
+        if (iswalking && grounded)
+        {
+            if (timer > footstepSpeed)
+            {
+                SelectAndPlay();
+                timer = 0.0f;
+            }
+            timer += Time.deltaTime;
+        }
     }
 
     void TrackInput()
@@ -251,9 +335,12 @@ public class PlayerMovement : MonoBehaviour
 
         else if (grounded && inputNotActive)
         {
-            state = MovementState.idling;
-            moveSpeed = idleSpeed;
-            camera.fieldOfView = Mathf.SmoothStep(63, 60, 1);
+            if (isidle)
+            {
+                state = MovementState.idling;
+                moveSpeed = idleSpeed;
+                camera.fieldOfView = Mathf.SmoothStep(63, 60, 1);
+            }
         }
         //AIR
         else
@@ -302,23 +389,38 @@ public class PlayerMovement : MonoBehaviour
     {
         readyToJump = true;
     }
-    private void UpdateSound()
-    {
-        if (iswalking && grounded)
-        {
-            //Debug.Log("WalkSoundPlay");
-            PLAYBACK_STATE playbackState;
-            playerDirtWalk.getPlaybackState(out playbackState);
-            if (playbackState == PLAYBACK_STATE.STOPPED)
-            {
-                playerDirtWalk.start();
-                //playerDirtWalk.release();
-            }
-        }
-        else if (!iswalking)
-        {
-            playerDirtWalk.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        }
+    //private void UpdateSound()
+    //{
+    //    if (!isidle && grounded)
+    //    {
+    //        //Debug.Log("WalkSoundPlay");
+    //        PLAYBACK_STATE playbackState;
+    //        FootSteps.getPlaybackState(out playbackState);
+    //        if (playbackState == PLAYBACK_STATE.STOPPED)
+    //        {
+    //            FootSteps.start();
+    //            //playerDirtWalk.release();
+    //        }
+    //    }
+    //    else if (isidle)
+    //    {
+    //        FootSteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    //    }
+    //     private void UpdateSound()
+    //{
+    //    if (iswalking && grounded)
+    //    {
+    //        //Debug.Log("WalkSoundPlay");
+    //        PLAYBACK_STATE playbackState;
+    //        playerDirtWalk.getPlaybackState(out playbackState);
+    //        if (playbackState == PLAYBACK_STATE.STOPPED)
+    //        {
+    //            playerDirtWalk.start();
+    //            //playerDirtWalk.release();
+    //        }
+    //    }
+    //    else if (!iswalking)
+    //    {
+    //        playerDirtWalk.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    //    }
     }
-}
-   

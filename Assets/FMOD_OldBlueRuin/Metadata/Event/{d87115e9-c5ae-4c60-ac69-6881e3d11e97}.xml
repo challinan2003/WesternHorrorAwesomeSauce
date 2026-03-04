@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{1a4ec4ce-ee0b-47b9-9ce9-85db1fc364ed}</destination>
+			<destination>{b7aeede8-c755-4764-ab4c-7a55cd8cf25b}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{7ebb3334-008f-4b15-85ee-4893f6b8d5a0}</destination>
@@ -33,6 +33,7 @@
 		</relationship>
 		<relationship name="banks">
 			<destination>{628ea0c6-5c6e-46d0-a3c1-fa052c7ed8af}</destination>
+			<destination>{d1808b06-a4db-4e18-b878-bff315c143cd}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{7ebb3334-008f-4b15-85ee-4893f6b8d5a0}">
@@ -70,6 +71,9 @@
 		<relationship name="modules">
 			<destination>{7aa3d4ca-74ae-4b67-887a-5750b4fe48ec}</destination>
 		</relationship>
+		<relationship name="markers">
+			<destination>{0804f00a-b4bf-4eb6-b391-0ead14c235d8}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{22dc5537-48d0-42cc-9c02-cf0fd9bacde5}">
 		<relationship name="effectChain">
@@ -90,7 +94,7 @@
 	<object class="MixerBusPanner" id="{8bf1ad41-5af3-4a50-a804-f765786d7e3b}" />
 	<object class="SingleSound" id="{7aa3d4ca-74ae-4b67-887a-5750b4fe48ec}">
 		<property name="length">
-			<value>37.115979166666669</value>
+			<value>36</value>
 		</property>
 		<property name="timelockedOffset">
 			<value>1</value>
@@ -111,6 +115,23 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{22dc5537-48d0-42cc-9c02-cf0fd9bacde5}</destination>
+		</relationship>
+	</object>
+	<object class="LoopRegion" id="{0804f00a-b4bf-4eb6-b391-0ead14c235d8}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="length">
+			<value>36</value>
+		</property>
+		<property name="looping">
+			<value>0</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{a462e0e8-eb34-4e12-9aa9-0e3320193b66}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{7a0203ec-025b-42f3-9147-dfdf35396374}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{b0afceea-2a71-4fac-9b6b-e9b3bde5aa77}">
