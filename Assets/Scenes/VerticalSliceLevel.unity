@@ -16686,7 +16686,6 @@ MonoBehaviour:
   redSplatterImage: {fileID: 757269151}
   hurtImage: {fileID: 482592765}
   hurtTimer: 5
-<<<<<<< Updated upstream
   Death: {fileID: 482592763}
   enemy:
     serializedVersion: 2
@@ -16703,12 +16702,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f206720516c2a645baf52f2b474a226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFootsteps
-=======
-  Death: {fileID: 210428038}
-  enemy:
-    serializedVersion: 2
-    m_Bits: 128
->>>>>>> Stashed changes
 --- !u!1001 &797783804
 PrefabInstance:
   m_ObjectHideFlags: 0
