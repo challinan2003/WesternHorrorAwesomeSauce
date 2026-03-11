@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndingTrigger : MonoBehaviour
 {
@@ -18,10 +19,7 @@ public class EndingTrigger : MonoBehaviour
         {
             if (KeyValue == 1)
         {
-            fpsController.GetComponent<FirstPersonMovement>().enabled = false;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Confined;
-            Ending.SetActive(true);
+            SceneManager.LoadScene(3);
             Debug.Log("Completed the level");
         }
         else
