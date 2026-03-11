@@ -179,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //DetermineTerrain();
         EventInstance Run = RuntimeManager.CreateInstance(StepEvent);
-        Run.setParameterByName("Terrain", terrain);
+        Run.setParameterByName("Terrain", terrain ,false);
         Run.setParameterByName("WalkRun", 0, false);
         Run.set3DAttributes(RuntimeUtils.To3DAttributes(playerModel.gameObject));
         Run.start();

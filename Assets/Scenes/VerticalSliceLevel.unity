@@ -22173,6 +22173,10 @@ PrefabInstance:
       value: coffin_shop
       objectReference: {fileID: 0}
     - target: {fileID: 1706301579372228, guid: 8aef39d76887e3345b952ce70e848c40, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1706301579372228, guid: 8aef39d76887e3345b952ce70e848c40, type: 3}
       propertyPath: m_TagString
       value: Wood
       objectReference: {fileID: 0}
