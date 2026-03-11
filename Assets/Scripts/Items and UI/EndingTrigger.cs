@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using FMODUnity;
+using FMOD.Studio;
 
 public class EndingTrigger : MonoBehaviour
 {
@@ -39,8 +41,10 @@ public class EndingTrigger : MonoBehaviour
                     finalCutscene.Play();
                     videoTrigger = true;
                     Debug.Log("Completed the level");
-                }
+                    AudioManager.instance.PlayOneshot(FMODEvents.instance.FinalCS, this.transform.position);
+
             }
+        }
             else
             {
                 Debug.Log("not completed");
