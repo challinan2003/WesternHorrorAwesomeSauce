@@ -46,10 +46,11 @@ public class HealthController : MonoBehaviour
     {
         UpdateHealth();
 
-        if (currentPlayerHealth <= 0)
+        if (currentPlayerHealth == 0)
         {
-            Death.SetActive(true);
             currentPlayerHealth = 0;
+            Death.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
@@ -63,25 +64,24 @@ public class HealthController : MonoBehaviour
         hurtAlpha.a = 1 - (currentPlayerHealth / maxPlayerHealth);
         hurtImage.color = hurtAlpha;
 
-        if (currentPlayerHealth < 100)
+        if (currentPlayerHealth < 100 && currentPlayerHealth != 0)
         {
-           recoveryTimer = 2f;
+           recoveryTimer = 10f;
             recoveryTimer -= Time.deltaTime;
         }
 
-        if (recoveryTimer >= 0)
+        if (recoveryTimer >= 0 && currentPlayerHealth != 0)
         {
             recoveryTimer = 0;
-            currentPlayerHealth += 1;
+            currentPlayerHealth += 0.1f;
             currentPlayerHealth = Mathf.Clamp(currentPlayerHealth, 0, maxPlayerHealth);
         }
-
     }
 
 
     public void TakeDamage()
     {
-        currentPlayerHealth -= 20f;
+        currentPlayerHealth -= 30f;
         if (currentPlayerHealth >= 0)
         {
             UpdateHealth();
