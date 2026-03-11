@@ -126,7 +126,7 @@ public class Patrols : MonoBehaviour
     {
         if (!sawOnce)
         {
-            AudioManager.instance.PlayOneshot(FMODEvents.instance.EnemyAlert, this.transform.position);
+            //AudioManager.instance.PlayOneshot(FMODEvents.instance.EnemyAlert, this.transform.position);
             sawOnce = true;
         }
     }
