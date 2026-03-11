@@ -32,7 +32,9 @@ public class DialogueSystem : MonoBehaviour
 
 
     private EventInstance PlayLetter1;
-
+    //private EventInstance PlayLetter5;
+    //private EventInstance PlayLetter6;
+    //private EventInstance PlayLetter7;
     public bool LetterEnd = false;
     PLAYBACK_STATE playbackState = PLAYBACK_STATE.STOPPED;
     private string letterevent = "event:/AllLetters";
@@ -40,7 +42,9 @@ public class DialogueSystem : MonoBehaviour
     //FMOD.Studio.Bus MasterBus;
     private void Start()
     {
-
+        //MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/music");
+        //PlayLetter1 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
+        //PlayLetter1.getPlaybackState(out playbackState);
     }
     private void PlayRead(int letters)
     {
@@ -52,7 +56,19 @@ public class DialogueSystem : MonoBehaviour
     }
     public void Update()
     {
+    
+        //playletter4 = audiomanager.instance.createeventinstance(fmodevents.instance.letter4);
+        //playback_state playbackstate;
+        //playletter4.getplaybackstate(out playbackstate);
 
+        //playletter5 = audiomanager.instance.createeventinstance(fmodevents.instance.letter4);
+        //playletter5.getplaybackstate(out playbackstate);
+
+        //playletter6 = audiomanager.instance.createeventinstance(fmodevents.instance.letter4);
+        //playletter6.getplaybackstate(out playbackstate);
+
+        //playletter7 = audiomanager.instance.createeventinstance(fmodevents.instance.letter4);
+        //playletter7.getplaybackstate(out playbackstate);
 
 
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -64,28 +80,42 @@ public class DialogueSystem : MonoBehaviour
             {
 
                 if (Input.GetKeyDown(KeyCode.E))
-                {   
+                {
+                    //if (!LetterEnd)
+                    //{
+                        //PLAYBACK_STATE playbackState;
+                        
+                        
 
                         if (playbackState == PLAYBACK_STATE.STOPPED)
                         {
+                            //if (SFXObject == null)
 
+                            // activates dialogue
                             var selectionRenderer = selection.GetComponent<Renderer>();
                             if (selectionRenderer != null)
                             {
-
+                                //PlayLetter1 = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Letter4);
 
                                 Debug.Log("active letter");
                                 Letter.SetActive(true);
-
+                                //PlayLetter1.start();
                                 PlayRead(3);
                                 //Time.timeScale = 1;
 
+                                //PlayLetter1.release();
                                 StartDialogue();
 
                             }
                             _selection = selection;
+                        //}
                     }
+                    //else if (LetterEnd)
+                    //{
+                    //  PlayLetter1.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                    //  Letter.SetActive(false);
 
+                    //}
                 }
                 if (selection.CompareTag(Letter2Tag))
                 {

@@ -1,8 +1,6 @@
 using System;
 using UnityEngine;
 using TMPro;
-using FMODUnity;
-using FMOD.Studio;
 
 public class ItemData : MonoBehaviour
 {
