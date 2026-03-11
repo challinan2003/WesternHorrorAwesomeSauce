@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{b42688ee-46ad-4aa6-a376-68c007bc23a3}">
+		<property name="assetPath">
+			<value>VideoSound/BartenderScene.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>94.76133333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1312e556-6988-4456-9862-88fd748aaf23}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -231,10 +231,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639084659582182112
+  lastModified: 639088214369646107
   FileSizes:
   - Name: Desktop
-    Value: 4681760
+    Value: 5359904
   Exists: 1
 --- !u!114 &-1334695931338281931
 MonoBehaviour:
@@ -305,10 +305,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639084659582569294
+  lastModified: 639088214380651311
   FileSizes:
   - Name: Desktop
-    Value: 5776192
+    Value: 8391264
   Exists: 1
 --- !u!114 &-1110760950743810310
 MonoBehaviour:
@@ -429,13 +429,16 @@ MonoBehaviour:
   - {fileID: 1520139316308630330}
   - {fileID: -3828939143990645050}
   - {fileID: 3395425995265122901}
+  - {fileID: 1427085283575954779}
+  - {fileID: 7082395310891720426}
+  - {fileID: 8038063971369598907}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1555053090485093994}
   StringsBanks:
   - {fileID: 7805662842229737573}
   cacheVersion: 131858
-  cacheTime: 639084659582569294
+  cacheTime: 639088214380651311
   SerializableEventsDict:
   - key: event:/ItemPickUP
     index: 0
@@ -479,6 +482,34 @@ MonoBehaviour:
     index: 19
   - key: event:/AllLetters
     index: 20
+--- !u!114 &1427085283575954779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PrologueSound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/PrologueSound
+  Guid:
+    Data1: -1581763096
+    Data2: 1175839696
+    Data3: -1268574838
+    Data4: 389177828
+  Banks:
+  - {fileID: -1555053090485093994}
+  - {fileID: -1185246703142972094}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1520139316308630330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,6 +749,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7082395310891720426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BartenderSound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/BartenderSound
+  Guid:
+    Data1: -1683560922
+    Data2: 1161825541
+    Data3: -1296111948
+    Data4: 640898245
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7805662842229737573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,11 +791,38 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639084659582192122
+  lastModified: 639088214369661167
   FileSizes:
   - Name: Desktop
-    Value: 1824
+    Value: 1966
   Exists: 1
+--- !u!114 &8038063971369598907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SheriffSound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SheriffSound
+  Guid:
+    Data1: -874124869
+    Data2: 1297352176
+    Data3: -889852511
+    Data4: 866488001
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8855945390039065123
 MonoBehaviour:
   m_ObjectHideFlags: 0

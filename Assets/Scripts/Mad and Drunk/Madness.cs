@@ -36,7 +36,7 @@ public class Madness : MonoBehaviour
     void Start()
     {
 
-        //PlayerMadness = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Madness);
+        PlayerMadness = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Madness);
 
         madBuildup = 0;
         madResist = false;
@@ -141,12 +141,7 @@ public class Madness : MonoBehaviour
             pMovement.walkSpeed = 4;
             pMovement.crouchSpeed = 3;
             pMovement.sprintSpeed = 5;
-            //if (SFXObject == null)
-            //{
-            //    AudioManager.instance.PlayOneshot(FMODEvents.instance.Madness, this.transform.position);
-            //}
-            //SoundManager.instance.PlaySFX(madnessSFX); // Play madness sound effect
-            //Debug.Log("Playing madness SFX");
+
         }
         else
         {

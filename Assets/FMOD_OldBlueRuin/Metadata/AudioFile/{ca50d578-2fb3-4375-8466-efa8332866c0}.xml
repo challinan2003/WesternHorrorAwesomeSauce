@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{ca50d578-2fb3-4375-8466-efa8332866c0}">
+		<property name="assetPath">
+			<value>VideoSound/EndScene.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>140.44029166666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1312e556-6988-4456-9862-88fd748aaf23}</destination>
+		</relationship>
+	</object>
+</objects>

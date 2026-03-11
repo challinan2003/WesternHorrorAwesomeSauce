@@ -65,7 +65,7 @@ public class Patrols : MonoBehaviour
             agent.destination = points[destPoint].position;
             //IT WAS THIS ONE
             destPoint = (destPoint + 1) % points.Length;
-            //SoundManager.instance.PlaySFX(enemyWalkSFX);
+       
 
         }
         

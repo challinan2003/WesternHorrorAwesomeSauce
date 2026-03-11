@@ -8,6 +8,11 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference Letter5 { get; set; }
     [field: SerializeField] public EventReference Letter6 { get; set; }
     [field: SerializeField] public EventReference Letter7 { get; set; }
+    [field: Header("CutScene")]
+    [field: SerializeField] public EventReference ProCS { get; set; }
+    [field: SerializeField] public EventReference SheriffCS { get; set; }
+    [field: SerializeField] public EventReference BartenderCS { get; set; }
+    [field: SerializeField] public EventReference FinalCS { get; set; }
     [field: Header("EnemySFX")]
     [field: SerializeField] public EventReference EnemyAlert {  get; set; }
     [field: SerializeField] public EventReference EnemyDeath { get; set; }
