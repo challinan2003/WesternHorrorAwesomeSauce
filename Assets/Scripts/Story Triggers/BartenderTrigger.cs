@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class BartenderTrigger : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class BartenderTrigger : MonoBehaviour
                 bartenderCutscene.Stop();
                 bartenderCanvas.alpha = 0;
                 renderTexture.Release();
+                SceneManager.LoadScene(2);
             }
         }
     }
