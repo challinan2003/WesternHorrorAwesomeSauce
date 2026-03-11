@@ -66,7 +66,7 @@ public class Madness : MonoBehaviour
             madnessTimer = 0.0f;
         }
 
-        madResistTimer = Mathf.Clamp(madResistTimer, 0, 15);
+        
 
         if (madResist && Time.deltaTime > 0)
         { 

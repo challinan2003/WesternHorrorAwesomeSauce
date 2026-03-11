@@ -319,7 +319,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        //I cant come up with a song for short people
+        //I cant come up with a song for short people (joshua edit: shorty a little baddie (shorty got the fatty (shorty got the fatty)))
         //CROUCHING
         else if (grounded && isCrouching)
         {
