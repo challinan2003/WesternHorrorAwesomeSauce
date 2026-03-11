@@ -1505,6 +1505,63 @@ CapsuleCollider:
   m_Height: 0.61
   m_Direction: 0
   m_Center: {x: -0.15, y: 0, z: 0}
+--- !u!1 &257680149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 257680150}
+  - component: {fileID: 257680151}
+  m_Layer: 0
+  m_Name: Script - MouseDetection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &257680150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257680149}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -61.650337, y: -1.3311296, z: 11.9213295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2016803674}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &257680151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257680149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d1ac5bc7ff5d3448532c6d539eed14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem
+  Letter1Tag: Letter
+  Letter2Tag: Letter2
+  Letter3Tag: Letter3
+  Letter4Tag: Letter4
+  highlightMaterial: {fileID: 0}
+  defaultMaterial: {fileID: 0}
+  Letter: {fileID: 0}
+  Letter2: {fileID: 0}
+  Letter3: {fileID: 0}
+  Letter4: {fileID: 0}
+  itemField: {fileID: 0}
+  fpsController: {fileID: 0}
+  LetterEnd: 0
 --- !u!1 &267844814
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,7 +3317,7 @@ MonoBehaviour:
   camera: {fileID: 1617441878}
   state: 0
   currentTerrain: 0
-  footstepSpeed: 0.1
+  footstepSpeed: 0.7
 --- !u!114 &591992986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11211,6 +11268,51 @@ CapsuleCollider:
   m_Height: 0.38
   m_Direction: 0
   m_Center: {x: -0.06, y: -0.04, z: 0}
+--- !u!1 &1059386363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1059386364}
+  - component: {fileID: 1059386365}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1059386364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059386363}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -61.650337, y: -1.3311296, z: 11.9213295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2078253561}
+  m_Father: {fileID: 2016803674}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1059386365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059386363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddb1f2d6fddc6048a1492d20af7008e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
 --- !u!1001 &1089400841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11869,6 +11971,8 @@ GameObject:
   - component: {fileID: 1184672038}
   - component: {fileID: 1184672037}
   - component: {fileID: 1184672040}
+  - component: {fileID: 1184672041}
+  - component: {fileID: 1184672042}
   m_Layer: 0
   m_Name: Bartender_trigger
   m_TagString: Untagged
@@ -11988,6 +12092,41 @@ MonoBehaviour:
   BartenderSet: {fileID: 66907085}
   bartenderCanvas: {fileID: 66907087}
   renderTexture: {fileID: 8400000, guid: f3453d39f1de3024ebab840e549db262, type: 2}
+--- !u!114 &1184672041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184672035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0cc2d49d5c1564b8c5e3ef80d000e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BartenderSoundTrigger
+  Player:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &1184672042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184672035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84be1f9eaf25fb842a5f481943b03001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BartenderTrigger
+  Player:
+    serializedVersion: 2
+    m_Bits: 0
+  bartenderCutscene: {fileID: 0}
+  videoCanvas: {fileID: 0}
+  BartenderSet: {fileID: 0}
+  bartenderCanvas: {fileID: 0}
+  renderTexture: {fileID: 0}
 --- !u!1001 &1190302730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14027,6 +14166,7 @@ GameObject:
   - component: {fileID: 1497153942}
   - component: {fileID: 1497153941}
   - component: {fileID: 1497153940}
+  - component: {fileID: 1497153944}
   m_Layer: 0
   m_Name: Sheriff_trigger
   m_TagString: Untagged
@@ -14146,6 +14286,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497153938}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1497153944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497153938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e85fd44b95cf05a468eac06f4b9c7b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SheriffSoundTrigger
+  Player:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1507148290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17176,6 +17331,39 @@ CapsuleCollider:
   m_Height: 0.49
   m_Direction: 0
   m_Center: {x: -0.18, y: 0, z: 0}
+--- !u!1 &2016803673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2016803674}
+  m_Layer: 0
+  m_Name: ~~~~~~~~~ Sound ~~~~~~~~~~
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2016803674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016803673}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 59.95794, y: 8.00499, z: -19.53505}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1059386364}
+  - {fileID: 257680150}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2021082029
 GameObject:
   m_ObjectHideFlags: 0
@@ -17371,6 +17559,169 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3287397012243487216, guid: cfd29d5385a9b1a448d423edfbbe736a, type: 3}
   m_PrefabInstance: {fileID: 2057590159}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2078253560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2078253561}
+  - component: {fileID: 2078253562}
+  m_Layer: 0
+  m_Name: FMODEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2078253561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078253560}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1059386364}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2078253562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078253560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23fdf7ca0154e6f42b1c0aa099daeee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  <Letter4>k__BackingField:
+    Guid:
+      Data1: -663677463
+      Data2: 1281410478
+      Data3: -2123863636
+      Data4: -1759587869
+    Path: event:/Letters/Letter4-2D-TL
+  <Letter5>k__BackingField:
+    Guid:
+      Data1: -1190946868
+      Data2: 1166699714
+      Data3: -897379706
+      Data4: -1981311172
+    Path: event:/Letters/Letter5
+  <Letter6>k__BackingField:
+    Guid:
+      Data1: 1424345163
+      Data2: 1099546594
+      Data3: 1960247695
+      Data4: 1355002490
+    Path: event:/Letters/Letter6
+  <Letter7>k__BackingField:
+    Guid:
+      Data1: -1685938736
+      Data2: 1125450076
+      Data3: -1544854370
+      Data4: -2071022283
+    Path: event:/Letters/Letter7
+  <ProCS>k__BackingField:
+    Guid:
+      Data1: -1581763096
+      Data2: 1175839696
+      Data3: -1268574838
+      Data4: 389177828
+    Path: event:/VideoSound/PrologueSound
+  <SheriffCS>k__BackingField:
+    Guid:
+      Data1: -874124869
+      Data2: 1297352176
+      Data3: -889852511
+      Data4: 866488001
+    Path: event:/VideoSound/SheriffSound
+  <BartenderCS>k__BackingField:
+    Guid:
+      Data1: -1683560922
+      Data2: 1161825541
+      Data3: -1296111948
+      Data4: 640898245
+    Path: event:/VideoSound/BartenderSound
+  <FinalCS>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <EnemyAlert>k__BackingField:
+    Guid:
+      Data1: -1274780984
+      Data2: 1095258439
+      Data3: -751017841
+      Data4: 514729793
+    Path: event:/EnemyAlert
+  <EnemyDeath>k__BackingField:
+    Guid:
+      Data1: 984856706
+      Data2: 1149926094
+      Data3: 1552115864
+      Data4: 1801018951
+    Path: event:/EnemyDeath
+  <EnemyHurt>k__BackingField:
+    Guid:
+      Data1: -1871572309
+      Data2: 1271043304
+      Data3: 355178905
+      Data4: -1399609515
+    Path: event:/EnemyHurt
+  <DirtWalk>k__BackingField:
+    Guid:
+      Data1: -1127606573
+      Data2: 1304506730
+      Data3: 1686395292
+      Data4: 207801378
+    Path: event:/PlayerWalkDirt3d
+  <GunShoot>k__BackingField:
+    Guid:
+      Data1: 39999084
+      Data2: 1169344168
+      Data3: -1321060724
+      Data4: 24788026
+    Path: event:/GunShoot
+  <GunReload>k__BackingField:
+    Guid:
+      Data1: -364677291
+      Data2: 1217054981
+      Data3: 700688814
+      Data4: -1488472577
+    Path: event:/GunReload
+  <ItemPickup>k__BackingField:
+    Guid:
+      Data1: -2007863040
+      Data2: 1079668940
+      Data3: 851109005
+      Data4: -587585676
+    Path: event:/ItemPickUP
+  <PlayerDrink>k__BackingField:
+    Guid:
+      Data1: 403494862
+      Data2: 1112311383
+      Data3: -1104491857
+      Data4: -666168419
+    Path: event:/PlayerDrink
+  <Madness>k__BackingField:
+    Guid:
+      Data1: -1871048260
+      Data2: 1110160673
+      Data3: -550884697
+      Data4: -416584294
+    Path: event:/Madness2D
 --- !u!1 &2115737039
 GameObject:
   m_ObjectHideFlags: 0
@@ -17483,7 +17834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2135034673}
   - component: {fileID: 2135034672}
-  - component: {fileID: 2135034671}
+  - component: {fileID: 2135034674}
   m_Layer: 0
   m_Name: BartenderCutscene
   m_TagString: Untagged
@@ -17491,103 +17842,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &2135034671
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135034670}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b9af30fdb9536bd4b8e405559b47291d, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!328 &2135034672
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -17611,7 +17865,7 @@ VideoPlayer:
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 1
   m_TargetAudioSources:
-  - {fileID: 2135034671}
+  - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
   m_Url: 
@@ -17639,6 +17893,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 66907086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2135034674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135034670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: -1683560922
+      Data2: 1161825541
+      Data3: -1296111948
+      Data4: 640898245
+    Path: event:/BartenderSound
+  Event: 
+  EventPlayTrigger: 3
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -17655,3 +17940,4 @@ SceneRoots:
   - {fileID: 204673671}
   - {fileID: 1446333374}
   - {fileID: 511720536}
+  - {fileID: 2016803674}

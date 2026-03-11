@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using FMODUnity;
+using FMOD.Studio;
 
 public class BartenderTrigger : MonoBehaviour
 {
-    public LayerMask Player;
+    public LayerMask Player;     
     public VideoPlayer bartenderCutscene;
     public Canvas videoCanvas;
     private bool videoTrigger = false;
@@ -20,6 +22,7 @@ public class BartenderTrigger : MonoBehaviour
             print("woah");
             bartenderCutscene.Play();
             videoTrigger = true;
+           // AudioManager.instance.PlayOneshot(FMODEvents.instance.BartenderCS, this.transform.position);
         }
     }
 
