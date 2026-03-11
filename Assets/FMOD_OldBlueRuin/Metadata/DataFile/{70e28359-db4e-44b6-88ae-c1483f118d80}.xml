@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="DataFile" id="{70e28359-db4e-44b6-88ae-c1483f118d80}">
+		<property name="assetPath">
+			<value>VideoSound/PrologueScene.pkf</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1312e556-6988-4456-9862-88fd748aaf23}</destination>
+		</relationship>
+	</object>
+</objects>

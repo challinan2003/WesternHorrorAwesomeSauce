@@ -36,7 +36,7 @@ public class Madness : MonoBehaviour
     void Start()
     {
 
-        //PlayerMadness = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Madness);
+        PlayerMadness = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Madness);
 
         madBuildup = 0;
         madResist = false;

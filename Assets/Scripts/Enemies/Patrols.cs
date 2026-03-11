@@ -108,7 +108,7 @@ public class Patrols : MonoBehaviour
             sightTimerCountdown = Random.Range(4, 6);
         }
 
-        //When in patrol, if enemy doesn't see player, enemy moves to next position
+        //When in patrol, if enemy doesn't see player, enemy moves to next position 
         if (agent.remainingDistance < 1f && !canSeePlayer)
         {
             sawOnce = false;
@@ -126,7 +126,7 @@ public class Patrols : MonoBehaviour
     {
         if (!sawOnce)
         {
-            //AudioManager.instance.PlayOneshot(FMODEvents.instance.EnemyAlert, this.transform.position);
+            AudioManager.instance.PlayOneshot(FMODEvents.instance.EnemyAlert, this.transform.position);
             sawOnce = true;
         }
     }

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using FMODUnity;
+using FMOD.Studio;
 
 public class BartenderTrigger : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class BartenderTrigger : MonoBehaviour
             print("woah");
             bartenderCutscene.Play();
             videoTrigger = true;
+            //AudioManager.instance.PlayOneshot(FMODEvents.instance.BartenderCS, this.transform.position);
         }
     }
 
