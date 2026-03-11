@@ -1,6 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class Menu : MonoBehaviour
 {
@@ -8,11 +9,24 @@ public class Menu : MonoBehaviour
     public GameObject Pausemenu;
     public bool isPaused;
     public int menusound;
+    public VideoPlayer firstCutscene;
+    public Canvas videoCanvas;
+    private bool videoTrigger = false;
+    private float videoTimer;
 
     public void OnPlayButton()
     {
+        videoCanvas.sortingOrder = 150;
+        firstCutscene.Play();
+        videoTrigger = true;
+        //DOVirtual.DelayedCall(0.65f, () => SceneManager.LoadScene(1));
+    }
+
+    private void GoToStartLevel()
+    {
         DOVirtual.DelayedCall(0.65f, () => SceneManager.LoadScene(1));
     }
+
 
     public void OnQuitButton()
     {
@@ -26,6 +40,7 @@ public class Menu : MonoBehaviour
 
     public void Update()
     {
+        
         if(Input.GetKeyDown(KeyCode.P) && !isPaused)
         {
              //SoundManager.instance.PlaySFX(menusound);
@@ -41,6 +56,14 @@ public class Menu : MonoBehaviour
             OnPauseButton(false);
         }
 
+        //change level if video finishes
+
+        if (firstCutscene.isPlaying && videoTrigger == true)
+        {
+            videoTimer += Time.deltaTime;
+            if (videoTimer >= firstCutscene.length)
+                GoToStartLevel();
+        }
     }
     public void OnPauseButton(bool state)
     {

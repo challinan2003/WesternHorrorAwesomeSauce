@@ -14,7 +14,6 @@ public class Drunk : MonoBehaviour
     //getting drunk
     public void Update()
     {
-        print(drunkenness);
         ConsumeAlc();
         drunk();
         
