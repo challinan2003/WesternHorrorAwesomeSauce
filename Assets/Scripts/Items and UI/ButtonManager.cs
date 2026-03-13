@@ -2,6 +2,8 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
+using FMODUnity;
+using FMOD.Studio;
 
 public class Menu : MonoBehaviour
 {
@@ -19,6 +21,7 @@ public class Menu : MonoBehaviour
         videoCanvas.sortingOrder = 150;
         firstCutscene.Play();
         videoTrigger = true;
+        AudioManager.instance.PlayOneshot(FMODEvents.instance.ProCS, this.transform.position);
         //DOVirtual.DelayedCall(0.65f, () => SceneManager.LoadScene(1));
     }
 
