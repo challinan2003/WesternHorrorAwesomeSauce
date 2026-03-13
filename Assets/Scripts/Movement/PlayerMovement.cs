@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
     private EventInstance PlayerFootSteps;
     float timer = 0.0f;
     [SerializeField]
-    float footstepSpeed = 0.10f;
+    float footstepSpeed = 0.75f;
 
 
     void Start()
@@ -180,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
         //DetermineTerrain();
         EventInstance Run = RuntimeManager.CreateInstance(StepEvent);
         Run.setParameterByName("Terrain", terrain ,false);
-        Run.setParameterByName("WalkRun", 0, false);
+        Run.setParameterByName("WalkRun", 1, false);
         Run.set3DAttributes(RuntimeUtils.To3DAttributes(playerModel.gameObject));
         Run.start();
         Run.release();
