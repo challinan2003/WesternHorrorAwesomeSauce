@@ -148,6 +148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2134845815}
   - {fileID: 592038879}
   - {fileID: 499216666}
   m_Father: {fileID: 0}
@@ -711,37 +712,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddb1f2d6fddc6048a1492d20af7008e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
---- !u!1 &724276375
-GameObject:
+--- !u!1001 &749531285
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 724276376}
-  m_Layer: 0
-  m_Name: ~~~~~~~~~~ Sound ~~~~~~~
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &724276376
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724276375}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 540, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 66197424}
+    m_Modifications:
+    - target: {fileID: 297494819785632725, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -61.650337
+      objectReference: {fileID: 0}
+    - target: {fileID: 297494819785632725, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.3311296
+      objectReference: {fileID: 0}
+    - target: {fileID: 297494819785632725, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.9213295
+      objectReference: {fileID: 0}
+    - target: {fileID: 297494819785632725, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 297494819785632725, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 297494819785632725, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 297494819785632725, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 297494819785632725, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 297494819785632725, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 297494819785632725, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115445028511481105, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+      propertyPath: m_Name
+      value: MainMenuMusic
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
 --- !u!1 &877905872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,6 +1027,7 @@ MonoBehaviour:
   menusound: 0
   firstCutscene: {fileID: 588471336}
   videoCanvas: {fileID: 380443797}
+  MainMenuMuisc: {fileID: 2134845813}
 --- !u!1 &1219535823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1521,13 @@ MonoBehaviour:
       Data3: -715743325
       Data4: 187260135
     Path: event:/VideoSound/FinalSound
+  <MenuMusic>k__BackingField:
+    Guid:
+      Data1: -1295874103
+      Data2: 1286505788
+      Data3: 1493486255
+      Data4: 1854133493
+    Path: event:/MenuMusic
   <EnemyAlert>k__BackingField:
     Guid:
       Data1: -1274780984
@@ -1936,6 +1971,16 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &2134845813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1115445028511481105, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+  m_PrefabInstance: {fileID: 749531285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2134845815 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 297494819785632725, guid: cd271994fc2639040ad5de8301b396f3, type: 3}
+  m_PrefabInstance: {fileID: 749531285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1946,7 +1991,6 @@ SceneRoots:
   - {fileID: 884356904}
   - {fileID: 1796924212}
   - {fileID: 1591966149}
-  - {fileID: 724276376}
   - {fileID: 380443798}
   - {fileID: 588471337}
   - {fileID: 66197424}

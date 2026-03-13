@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 using FMODUnity;
 using FMOD.Studio;
+using Unity.VisualScripting;
 
 public class Menu : MonoBehaviour
 {
@@ -15,11 +16,13 @@ public class Menu : MonoBehaviour
     public Canvas videoCanvas;
     private bool videoTrigger = false;
     private float videoTimer;
+    public GameObject MainMenuMuisc;
 
     public void OnPlayButton()
     {
         videoCanvas.sortingOrder = 150;
         firstCutscene.Play();
+        Destroy(MainMenuMuisc);
         videoTrigger = true;
         AudioManager.instance.PlayOneshot(FMODEvents.instance.ProCS, this.transform.position);
         //DOVirtual.DelayedCall(0.65f, () => SceneManager.LoadScene(1));
