@@ -1,6 +1,26 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8945343063175730996
+--- !u!114 &-8479214319961670861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 639090058739624589
+  FileSizes:
+  - Name: Desktop
+    Value: 2835680
+  Exists: 1
+--- !u!114 &-7499798026431997187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,23 +30,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VideoSound/FinalCS
+  m_Name: event:/MenuMusic
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/VideoSound/FinalCS
+  Path: event:/MenuMusic
   Guid:
-    Data1: 1861411330
-    Data2: 1140554772
-    Data3: -1791105870
-    Data4: 1766151513
+    Data1: -1295874103
+    Data2: 1286505788
+    Data3: 1493486255
+    Data4: 1854133493
   Banks:
-  - {fileID: -1185246703142972094}
+  - {fileID: -8479214319961670861}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 240483
 --- !u!114 &-7427265049782719435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +263,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2136114884908312841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VideoSound/SheriffSound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VideoSound/SheriffSound
+  Guid:
+    Data1: -41071750
+    Data2: 1221349023
+    Data3: 937408143
+    Data4: 1476583493
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1555053090485093994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,10 +305,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639088233788946939
+  lastModified: 639090058738265532
   FileSizes:
   - Name: Desktop
-    Value: 5359904
+    Value: 4681760
   Exists: 1
 --- !u!114 &-1334695931338281931
 MonoBehaviour:
@@ -332,7 +379,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639088233804401238
+  lastModified: 639090063172366480
   FileSizes:
   - Name: Desktop
     Value: 10049504
@@ -359,33 +406,6 @@ MonoBehaviour:
   - {fileID: -1185246703142972094}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-948433928521098003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VideoSound/SheriffSound
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/VideoSound/SheriffSound
-  Guid:
-    Data1: -874124869
-    Data2: 1297352176
-    Data3: -889852511
-    Data4: 866488001
-  Banks:
-  - {fileID: -1185246703142972094}
-  IsStream: 1
-  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -461,6 +481,8 @@ MonoBehaviour:
   - {fileID: 7805662842229737573}
   - {fileID: -1555053090485093994}
   - {fileID: -1185246703142972094}
+  - {fileID: -8479214319961670861}
+  - {fileID: 461716771452822759}
   EditorEvents:
   - {fileID: -1110760950743810310}
   - {fileID: -728973007575864169}
@@ -483,17 +505,18 @@ MonoBehaviour:
   - {fileID: 1520139316308630330}
   - {fileID: -3828939143990645050}
   - {fileID: 3395425995265122901}
-  - {fileID: 6552511026230516167}
-  - {fileID: 5117546247005304526}
-  - {fileID: -948433928521098003}
-  - {fileID: -8945343063175730996}
+  - {fileID: -7499798026431997187}
+  - {fileID: 6064222469179204269}
+  - {fileID: 2583072023176185894}
+  - {fileID: -2136114884908312841}
+  - {fileID: 6979993657262087974}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1555053090485093994}
   StringsBanks:
   - {fileID: 7805662842229737573}
   cacheVersion: 131858
-  cacheTime: 639088233804401238
+  cacheTime: 639090063172421565
   SerializableEventsDict:
   - key: event:/ItemPickUP
     index: 0
@@ -537,14 +560,36 @@ MonoBehaviour:
     index: 19
   - key: event:/AllLetters
     index: 20
-  - key: event:/VideoSound/PrologueSound
+  - key: event:/MenuMusic
     index: 21
-  - key: event:/VideoSound/BartenderSound
+  - key: event:/VideoSound/PrologueSound
     index: 22
-  - key: event:/VideoSound/SheriffSound
+  - key: event:/VideoSound/BartenderSound
     index: 23
-  - key: event:/VideoSound/FinalCS
+  - key: event:/VideoSound/SheriffSound
     index: 24
+  - key: event:/VideoSound/FinalSound
+    index: 25
+--- !u!114 &461716771452822759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Videos.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Videos.bank
+  Name: Videos
+  StudioPath: bank:/Videos
+  lastModified: 639090063172421565
+  FileSizes:
+  - Name: Desktop
+    Value: 506
+  Exists: 1
 --- !u!114 &1520139316308630330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,6 +695,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2583072023176185894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VideoSound/BartenderSound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VideoSound/BartenderSound
+  Guid:
+    Data1: 2104276776
+    Data2: 1303063397
+    Data3: 1940989601
+    Data4: -523992328
+  Banks:
+  - {fileID: -1185246703142972094}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3066760961730197838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,33 +805,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &5117546247005304526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VideoSound/BartenderSound
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/VideoSound/BartenderSound
-  Guid:
-    Data1: -1683560922
-    Data2: 1161825541
-    Data3: -1296111948
-    Data4: 640898245
-  Banks:
-  - {fileID: -1185246703142972094}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &5361981717514053349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,7 +856,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &6552511026230516167
+--- !u!114 &6064222469179204269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -825,12 +870,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
   Path: event:/VideoSound/PrologueSound
   Guid:
-    Data1: -1581763096
-    Data2: 1175839696
-    Data3: -1268574838
-    Data4: 389177828
+    Data1: -11629553
+    Data2: 1316485097
+    Data3: -2139908168
+    Data4: -951884837
   Banks:
-  - {fileID: -1555053090485093994}
+  - {fileID: -1185246703142972094}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6979993657262087974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VideoSound/FinalSound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/VideoSound/FinalSound
+  Guid:
+    Data1: -671963262
+    Data2: 1304336967
+    Data3: -715743325
+    Data4: 187260135
+  Banks:
   - {fileID: -1185246703142972094}
   IsStream: 1
   Is3D: 0
@@ -854,10 +925,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639088233788956928
+  lastModified: 639090058738280584
   FileSizes:
   - Name: Desktop
-    Value: 2016
+    Value: 2336
   Exists: 1
 --- !u!114 &8855945390039065123
 MonoBehaviour:
