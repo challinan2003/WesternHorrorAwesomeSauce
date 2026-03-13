@@ -142,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
         
         case Current_Terrain.Wood:
-                if (iswalking && state == MovementState.sprinting)
+                if (iswalking && state == MovementState.walking)
                 {
                     PlayWalkSteps(1);
                 }
