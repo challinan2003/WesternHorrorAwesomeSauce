@@ -628,7 +628,7 @@ VideoPlayer:
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: f3453d39f1de3024ebab840e549db262, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 2b980738c720a9e4a86407d829e9e081, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
@@ -1028,6 +1028,7 @@ MonoBehaviour:
   firstCutscene: {fileID: 588471336}
   videoCanvas: {fileID: 380443797}
   MainMenuMuisc: {fileID: 2134845813}
+  renderTexture: {fileID: 8400000, guid: 2b980738c720a9e4a86407d829e9e081, type: 2}
 --- !u!1 &1219535823
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class Menu : MonoBehaviour
     private bool videoTrigger = false;
     private float videoTimer;
     public GameObject MainMenuMuisc;
+    public RenderTexture renderTexture;
 
     public void OnPlayButton()
     {
@@ -68,7 +69,12 @@ public class Menu : MonoBehaviour
         {
             videoTimer += Time.deltaTime;
             if (videoTimer >= firstCutscene.length)
+            {
+                firstCutscene.Stop();
+                renderTexture.Release();
                 GoToStartLevel();
+            }
+                
         }
     }
     public void OnPauseButton(bool state)
