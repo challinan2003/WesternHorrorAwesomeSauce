@@ -17,7 +17,7 @@ public class Menu : MonoBehaviour
     private bool videoTrigger = false;
     private float videoTimer;
     public GameObject MainMenuMuisc;
-    public RenderTexture renderTexture;
+
 
     public void OnPlayButton()
     {
@@ -26,7 +26,6 @@ public class Menu : MonoBehaviour
         Destroy(MainMenuMuisc);
         videoTrigger = true;
         AudioManager.instance.PlayOneshot(FMODEvents.instance.ProCS, this.transform.position);
-        //DOVirtual.DelayedCall(0.65f, () => SceneManager.LoadScene(1));
     }
 
     private void GoToStartLevel()
@@ -69,9 +68,7 @@ public class Menu : MonoBehaviour
         {
             videoTimer += Time.deltaTime;
             if (videoTimer >= firstCutscene.length)
-            {
-                firstCutscene.Stop();
-                renderTexture.Release();
+            { 
                 GoToStartLevel();
             }
                 

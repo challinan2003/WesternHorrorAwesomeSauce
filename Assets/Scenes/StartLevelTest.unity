@@ -3269,6 +3269,7 @@ GameObject:
   - component: {fileID: 591992989}
   - component: {fileID: 591992990}
   - component: {fileID: 591992986}
+  - component: {fileID: 591992992}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3456,6 +3457,19 @@ Transform:
   - {fileID: 1230834298}
   m_Father: {fileID: 1885895362}
   m_LocalEulerAnglesHint: {x: 0, y: -21.102, z: 0}
+--- !u!114 &591992992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591992984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca64651ea034793459b3f255feba8b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  rt: {fileID: 8400000, guid: 2b980738c720a9e4a86407d829e9e081, type: 2}
 --- !u!1001 &611299507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12122,11 +12136,11 @@ MonoBehaviour:
   Player:
     serializedVersion: 2
     m_Bits: 0
-  bartenderCutscene: {fileID: 0}
-  videoCanvas: {fileID: 0}
-  BartenderSet: {fileID: 0}
-  bartenderCanvas: {fileID: 0}
-  renderTexture: {fileID: 0}
+  bartenderCutscene: {fileID: 2135034672}
+  videoCanvas: {fileID: 2115737042}
+  BartenderSet: {fileID: 66907085}
+  bartenderCanvas: {fileID: 66907087}
+  renderTexture: {fileID: 8400000, guid: f3453d39f1de3024ebab840e549db262, type: 2}
 --- !u!1001 &1190302730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17659,6 +17673,13 @@ MonoBehaviour:
       Data3: -715743325
       Data4: 187260135
     Path: event:/VideoSound/FinalSound
+  <MenuMusic>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <EnemyAlert>k__BackingField:
     Guid:
       Data1: -1274780984
@@ -17734,6 +17755,8 @@ GameObject:
   - component: {fileID: 2115737042}
   - component: {fileID: 2115737041}
   - component: {fileID: 2115737040}
+  - component: {fileID: 2115737045}
+  - component: {fileID: 2115737044}
   m_Layer: 5
   m_Name: BartenderVideoCanvas
   m_TagString: Untagged
@@ -17824,6 +17847,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2115737044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115737039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 8400000, guid: f3453d39f1de3024ebab840e549db262, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &2115737045
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115737039}
+  m_CullTransparentMesh: 1
 --- !u!1 &2135034670
 GameObject:
   m_ObjectHideFlags: 0
