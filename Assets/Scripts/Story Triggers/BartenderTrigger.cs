@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Video;
-using UnityEngine.SceneManagement;
 using FMODUnity;
 using FMOD.Studio;
 
@@ -9,7 +8,7 @@ public class BartenderTrigger : MonoBehaviour
     public LayerMask Player;     
     public VideoPlayer bartenderCutscene;
     public Canvas videoCanvas;
-    private bool videoTrigger = false;
+    public bool videoTriggerBartender = false;
     private float videoTimer;
     public GameObject BartenderSet;
     public CanvasGroup bartenderCanvas;
@@ -19,16 +18,15 @@ public class BartenderTrigger : MonoBehaviour
     {
         if (player.CompareTag("Player"))
         {
-            print("woah");
             bartenderCutscene.Play();
-            videoTrigger = true;
+            videoTriggerBartender = true;
            // AudioManager.instance.PlayOneshot(FMODEvents.instance.BartenderCS, this.transform.position);
         }
     }
 
     void Update()
     {
-        if (videoTrigger == true)
+        if (videoTriggerBartender == true)
         {
             videoTimer += Time.deltaTime;
             if (videoTimer >= bartenderCutscene.length)
@@ -36,7 +34,7 @@ public class BartenderTrigger : MonoBehaviour
                 bartenderCutscene.Stop();
                 bartenderCanvas.alpha = 0;
                 renderTexture.Release();
-                SceneManager.LoadScene(2);
+                Destroy(BartenderSet);
             }
         }
     }

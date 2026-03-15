@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193883420}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32fe5dec984bd2540829d244399ea909, type: 3}
   m_Name: 
@@ -2749,7 +2749,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406864670}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32fe5dec984bd2540829d244399ea909, type: 3}
   m_Name: 
@@ -2909,7 +2909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &511720536
 Transform:
   m_ObjectHideFlags: 0
@@ -3061,7 +3061,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3400,7 +3400,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591992984}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81885fefe58fd8b408e4acf15fd96196, type: 3}
   m_Name: 
@@ -10244,7 +10244,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843665324}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -11984,7 +11984,6 @@ GameObject:
   - component: {fileID: 1184672039}
   - component: {fileID: 1184672038}
   - component: {fileID: 1184672037}
-  - component: {fileID: 1184672040}
   - component: {fileID: 1184672041}
   - component: {fileID: 1184672042}
   m_Layer: 0
@@ -12086,26 +12085,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184672035}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1184672040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184672035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84be1f9eaf25fb842a5f481943b03001, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BartenderTrigger
-  Player:
-    serializedVersion: 2
-    m_Bits: 256
-  bartenderCutscene: {fileID: 2135034672}
-  videoCanvas: {fileID: 2115737042}
-  BartenderSet: {fileID: 66907085}
-  bartenderCanvas: {fileID: 66907087}
-  renderTexture: {fileID: 8400000, guid: f3453d39f1de3024ebab840e549db262, type: 2}
 --- !u!114 &1184672041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12135,9 +12114,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BartenderTrigger
   Player:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   bartenderCutscene: {fileID: 2135034672}
   videoCanvas: {fileID: 2115737042}
+  videoTriggerBartender: 0
   BartenderSet: {fileID: 66907085}
   bartenderCanvas: {fileID: 66907087}
   renderTexture: {fileID: 8400000, guid: f3453d39f1de3024ebab840e549db262, type: 2}
@@ -13800,7 +13780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1446333374
 Transform:
   m_ObjectHideFlags: 0
@@ -14179,8 +14159,8 @@ GameObject:
   - component: {fileID: 1497153943}
   - component: {fileID: 1497153942}
   - component: {fileID: 1497153941}
-  - component: {fileID: 1497153940}
   - component: {fileID: 1497153944}
+  - component: {fileID: 1497153945}
   m_Layer: 0
   m_Name: Sheriff_trigger
   m_TagString: Untagged
@@ -14203,26 +14183,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 831937255}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1497153940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497153938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84be1f9eaf25fb842a5f481943b03001, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BartenderTrigger
-  Player:
-    serializedVersion: 2
-    m_Bits: 256
-  bartenderCutscene: {fileID: 1311743595}
-  videoCanvas: {fileID: 701093632}
-  BartenderSet: {fileID: 831937253}
-  bartenderCanvas: {fileID: 831937254}
-  renderTexture: {fileID: 8400000, guid: 3256f6a0cf69c58408c51924d780f0f2, type: 2}
 --- !u!65 &1497153941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14314,7 +14274,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SheriffSoundTrigger
   Player:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
+--- !u!114 &1497153945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497153938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd6c40b9ff862a40b4bc3723d81af96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SheriffTrigger
+  Player:
+    serializedVersion: 2
+    m_Bits: 256
+  sheriffCutscene: {fileID: 1311743595}
+  videoCanvas: {fileID: 701093632}
+  sheriffSet: {fileID: 831937253}
+  sheriffCanvas: {fileID: 831937254}
+  renderTexture: {fileID: 8400000, guid: 3256f6a0cf69c58408c51924d780f0f2, type: 2}
+  bartenderTrigger: {fileID: 1184672042}
 --- !u!1001 &1507148290
 PrefabInstance:
   m_ObjectHideFlags: 0

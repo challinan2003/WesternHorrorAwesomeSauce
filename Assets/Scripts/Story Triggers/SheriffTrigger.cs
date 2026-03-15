@@ -1,22 +1,26 @@
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class SheriffTrigger : MonoBehaviour
 {
     public LayerMask Player;
     public VideoPlayer sheriffCutscene;
-    public Canvas sheriffVideoCanvas;
+    public Canvas videoCanvas;
     private bool videoTrigger = false;
     private float videoTimer;
+    public GameObject sheriffSet;
+    public CanvasGroup sheriffCanvas;
     public RenderTexture renderTexture;
+    public BartenderTrigger bartenderTrigger;
 
     void OnTriggerEnter(Collider player)
     {
-        if (player.CompareTag("Player"))
+        if (player.CompareTag("Player") && bartenderTrigger.videoTriggerBartender == true)
         {
-            print("woah");
             sheriffCutscene.Play();
             videoTrigger = true;
+            // AudioManager.instance.PlayOneshot(FMODEvents.instance.BartenderCS, this.transform.position);
         }
     }
 
@@ -28,9 +32,11 @@ public class SheriffTrigger : MonoBehaviour
             if (videoTimer >= sheriffCutscene.length)
             {
                 sheriffCutscene.Stop();
-                renderTexture.Release();
+                sheriffCanvas.alpha = 0;
+                SceneManager.LoadScene(2);
             }
         }
     }
+
 
 }
