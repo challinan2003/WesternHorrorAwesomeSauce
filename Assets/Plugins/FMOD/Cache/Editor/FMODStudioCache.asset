@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639098581918997069
+  lastModified: 639098831851997172
   FileSizes:
   - Name: Desktop
     Value: 5141792
@@ -171,8 +171,8 @@ MonoBehaviour:
     Data3: -2123863636
     Data4: -1759587869
   Banks:
-  - {fileID: -1185246703142972094}
   - {fileID: -1555053090485093994}
+  - {fileID: -1185246703142972094}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -305,7 +305,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639098581894238907
+  lastModified: 639098831851814202
   FileSizes:
   - Name: Desktop
     Value: 2287872
@@ -379,7 +379,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639098557425128860
+  lastModified: 639098831852389586
   FileSizes:
   - Name: Desktop
     Value: 8843744
@@ -517,7 +517,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7805662842229737573}
   cacheVersion: 131858
-  cacheTime: 639098581918997069
+  cacheTime: 639098831852389586
   SerializableEventsDict:
   - key: event:/ItemPickUP
     index: 0
@@ -588,7 +588,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Videos.bank
   Name: Videos
   StudioPath: bank:/Videos
-  lastModified: 639090063172421565
+  lastModified: 639098831852389586
   FileSizes:
   - Name: Desktop
     Value: 506
@@ -771,8 +771,8 @@ MonoBehaviour:
     Data3: 91847322
     Data4: 631223744
   Banks:
-  - {fileID: -1185246703142972094}
   - {fileID: -1555053090485093994}
+  - {fileID: -1185246703142972094}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -928,7 +928,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639098581894248921
+  lastModified: 639098831851814202
   FileSizes:
   - Name: Desktop
     Value: 2386
