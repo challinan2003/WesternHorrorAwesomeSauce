@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VerticalSliceLevel.unity
     guid: 2ae1502db72d83f41aac8f464a2cc30e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RailwayLevelTest.unity
     guid: dfa757f111afffc4f93ea904c46db8cf
   m_configObjects:
