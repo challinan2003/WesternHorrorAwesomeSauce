@@ -12,7 +12,6 @@ public class BartenderSoundTrigger : MonoBehaviour
     {
         if (player.CompareTag("Player"))
         {
-            print("woah");
             videoTrigger = true;
             AudioManager.instance.PlayOneshot(FMODEvents.instance.BartenderCS, this.transform.position);
 

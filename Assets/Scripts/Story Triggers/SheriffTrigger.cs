@@ -13,10 +13,11 @@ public class SheriffTrigger : MonoBehaviour
     public CanvasGroup sheriffCanvas;
     public RenderTexture renderTexture;
     public BartenderTrigger bartenderTrigger;
+    public Madness madness;
 
     void OnTriggerEnter(Collider player)
     {
-        if (player.CompareTag("Player") && bartenderTrigger.videoTriggerBartender == true)
+        if (player.CompareTag("Player"))
         {
             sheriffCutscene.Play();
             videoTrigger = true;
@@ -28,11 +29,13 @@ public class SheriffTrigger : MonoBehaviour
     {
         if (videoTrigger == true)
         {
+            madness.playerLocked = true;
             videoTimer += Time.deltaTime;
             if (videoTimer >= sheriffCutscene.length)
             {
                 sheriffCutscene.Stop();
                 sheriffCanvas.alpha = 0;
+                madness.playerLocked = false;
                 SceneManager.LoadScene(2);
             }
         }

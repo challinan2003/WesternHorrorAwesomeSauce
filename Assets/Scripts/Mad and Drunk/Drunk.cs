@@ -10,6 +10,7 @@ public class Drunk : MonoBehaviour
     public float drunkTimer = 0.0f;
     public Material madnessMat;
     public Material drunkMat;
+    public ItemData itemData;
 
     //getting drunk
     public void Update()
@@ -35,6 +36,7 @@ public class Drunk : MonoBehaviour
             madnessMat.SetFloat("_Intensity", 10f);
             drunkenness += 25;
             drunkenness = Mathf.Clamp(drunkenness, 0, 100);
+            itemData.alcoholText.SetText("Alcohol: " + InventoryManager.alcoholCount);
 
             //madness resist
             Madness.isMad = false;

@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193883420}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32fe5dec984bd2540829d244399ea909, type: 3}
   m_Name: 
@@ -1559,6 +1559,7 @@ MonoBehaviour:
   Letter2: {fileID: 0}
   Letter3: {fileID: 0}
   Letter4: {fileID: 0}
+  madness: {fileID: 0}
   itemField: {fileID: 0}
   fpsController: {fileID: 0}
   LetterEnd: 0
@@ -2749,7 +2750,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406864670}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32fe5dec984bd2540829d244399ea909, type: 3}
   m_Name: 
@@ -3363,6 +3364,7 @@ MonoBehaviour:
   Letter2: {fileID: 0}
   Letter3: {fileID: 0}
   Letter4: {fileID: 0}
+  madness: {fileID: 0}
   itemField: {fileID: 0}
   fpsController: {fileID: 1617441873}
   LetterEnd: 0
@@ -3400,7 +3402,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591992984}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81885fefe58fd8b408e4acf15fd96196, type: 3}
   m_Name: 
@@ -3418,6 +3420,7 @@ MonoBehaviour:
   madnessMat: {fileID: 2100000, guid: 9dae0533e4a2de045b4ad287afc72962, type: 2}
   opacityTargetValue: 0
   vignetteTargetValue: 10
+  playerLocked: 0
 --- !u!114 &591992990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3438,6 +3441,7 @@ MonoBehaviour:
   drunkTimer: 0
   madnessMat: {fileID: 2100000, guid: 9dae0533e4a2de045b4ad287afc72962, type: 2}
   drunkMat: {fileID: 2100000, guid: fa38d098944a0794e8a4c192bf412716, type: 2}
+  itemData: {fileID: 0}
 --- !u!4 &591992991
 Transform:
   m_ObjectHideFlags: 0
@@ -12121,6 +12125,7 @@ MonoBehaviour:
   BartenderSet: {fileID: 66907085}
   bartenderCanvas: {fileID: 66907087}
   renderTexture: {fileID: 8400000, guid: f3453d39f1de3024ebab840e549db262, type: 2}
+  madness: {fileID: 591992989}
 --- !u!1001 &1190302730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14296,6 +14301,7 @@ MonoBehaviour:
   sheriffCanvas: {fileID: 831937254}
   renderTexture: {fileID: 8400000, guid: 3256f6a0cf69c58408c51924d780f0f2, type: 2}
   bartenderTrigger: {fileID: 1184672042}
+  madness: {fileID: 591992989}
 --- !u!1001 &1507148290
 PrefabInstance:
   m_ObjectHideFlags: 0

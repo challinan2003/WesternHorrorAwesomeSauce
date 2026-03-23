@@ -13,6 +13,7 @@ public class BartenderTrigger : MonoBehaviour
     public GameObject BartenderSet;
     public CanvasGroup bartenderCanvas;
     public RenderTexture renderTexture;
+    public Madness madness;
 
     void OnTriggerEnter(Collider player)
     {
@@ -28,12 +29,15 @@ public class BartenderTrigger : MonoBehaviour
     {
         if (videoTriggerBartender == true)
         {
+            madness.playerLocked = true;
             videoTimer += Time.deltaTime;
             if (videoTimer >= bartenderCutscene.length)
             {
                 bartenderCutscene.Stop();
                 bartenderCanvas.alpha = 0;
                 renderTexture.Release();
+                madness.playerLocked = false;
+                videoTriggerBartender = false;
                 Destroy(BartenderSet);
             }
         }

@@ -32,6 +32,9 @@ public class Madness : MonoBehaviour
     public Material madnessMat;
     public float opacityTargetValue = 0f;
     public float vignetteTargetValue = 10f;
+    
+    //player locked in video or letter
+    public bool playerLocked = false;
 
     void Start()
     {
@@ -50,7 +53,7 @@ public class Madness : MonoBehaviour
         checkForMadness();
 
         //madness death timer
-        if (isMad)
+        if (isMad && playerLocked == false)
         { 
             madnessTimer -= Time.deltaTime;
             opacityTargetValue = Mathf.Clamp(opacityTargetValue, 0.01f, 1.0f);
@@ -108,7 +111,7 @@ public class Madness : MonoBehaviour
 
     public void madnessBuildup(float mad)
     {
-        if (madBuildup < 1000.0f)
+        if (madBuildup < 1000.0f && playerLocked == false)
         {
             madnessTimer = 60.0f;
             madBuildup += mad;

@@ -23,6 +23,7 @@ public class DialogueSystem : MonoBehaviour
     public GameObject Letter2;
     public GameObject Letter3;
     public GameObject Letter4;
+    public Madness madness;
 
      
     public UnityEngine.Object itemField;
@@ -224,6 +225,7 @@ public class DialogueSystem : MonoBehaviour
         fpsController.GetComponent<FirstPersonMovement>().enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        madness.playerLocked = false;
     }
     
     public void StartDialogue()
@@ -231,6 +233,7 @@ public class DialogueSystem : MonoBehaviour
       fpsController.GetComponent<FirstPersonMovement>().enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
+        madness.playerLocked = true;
   
     }
 

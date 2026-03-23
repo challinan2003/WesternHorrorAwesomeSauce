@@ -326,12 +326,9 @@ public class PlayerMovement : MonoBehaviour
 
         else if (grounded && inputNotActive)
         {
-            if (isidle)
-            {
-                state = MovementState.idling;
-                moveSpeed = idleSpeed;
-                camera.fieldOfView = Mathf.SmoothStep(63, 60, 1);
-            }
+            state = MovementState.idling;
+            moveSpeed = idleSpeed;
+            camera.fieldOfView = Mathf.SmoothStep(63, 60, 1);
         }
         //AIR
         else
