@@ -16,7 +16,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference FinalCS { get; set; }
     [field: Header("Music")]
     [field: SerializeField] public EventReference MenuMusic{ get; set; }
-
+    [field: SerializeField] public EventReference GOMusic { get; set; }
     [field: Header("EnemySFX")]
     [field: SerializeField] public EventReference EnemyAlert {  get; set; }
     [field: SerializeField] public EventReference EnemyDeath { get; set; }

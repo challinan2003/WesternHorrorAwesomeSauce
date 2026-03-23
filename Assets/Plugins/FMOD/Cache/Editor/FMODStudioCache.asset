@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639090058739624589
+  lastModified: 639098581918997069
   FileSizes:
   - Name: Desktop
-    Value: 2835680
+    Value: 5141792
   Exists: 1
 --- !u!114 &-7499798026431997187
 MonoBehaviour:
@@ -171,8 +171,8 @@ MonoBehaviour:
     Data3: -2123863636
     Data4: -1759587869
   Banks:
-  - {fileID: -1555053090485093994}
   - {fileID: -1185246703142972094}
+  - {fileID: -1555053090485093994}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -305,7 +305,7 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639098557424467026
+  lastModified: 639098581894238907
   FileSizes:
   - Name: Desktop
     Value: 2287872
@@ -510,13 +510,14 @@ MonoBehaviour:
   - {fileID: 2583072023176185894}
   - {fileID: -2136114884908312841}
   - {fileID: 6979993657262087974}
+  - {fileID: 9197547322495718502}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1555053090485093994}
   StringsBanks:
   - {fileID: 7805662842229737573}
   cacheVersion: 131858
-  cacheTime: 639098557425128860
+  cacheTime: 639098581918997069
   SerializableEventsDict:
   - key: event:/ItemPickUP
     index: 0
@@ -570,6 +571,8 @@ MonoBehaviour:
     index: 24
   - key: event:/VideoSound/FinalSound
     index: 25
+  - key: event:/GO_Music
+    index: 26
 --- !u!114 &461716771452822759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,8 +771,8 @@ MonoBehaviour:
     Data3: 91847322
     Data4: 631223744
   Banks:
-  - {fileID: -1555053090485093994}
   - {fileID: -1185246703142972094}
+  - {fileID: -1555053090485093994}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -925,10 +928,10 @@ MonoBehaviour:
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639098557424477025
+  lastModified: 639098581894248921
   FileSizes:
   - Name: Desktop
-    Value: 2336
+    Value: 2386
   Exists: 1
 --- !u!114 &8855945390039065123
 MonoBehaviour:
@@ -984,3 +987,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1031
+--- !u!114 &9197547322495718502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GO_Music
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/GO_Music
+  Guid:
+    Data1: 784847247
+    Data2: 1257187014
+    Data3: 276085910
+    Data4: 5465337
+  Banks:
+  - {fileID: -8479214319961670861}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 195328

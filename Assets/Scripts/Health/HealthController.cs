@@ -10,6 +10,8 @@ using System.Configuration.Assemblies;
 //using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
+using FMOD.Studio;
 
 public class HealthController : MonoBehaviour
 {
@@ -30,9 +32,11 @@ public class HealthController : MonoBehaviour
     public GameObject Death;
 
     public LayerMask enemy;
+    private EventInstance GameOverMusic;
 
     private void Start()
     {
+        GameOverMusic = AudioManager.instance.CreateEventInstance(FMODEvents.instance.GOMusic);
         UnityEngine.Color splatterAlpha = redSplatterImage.color;
         splatterAlpha.a = 0;
         redSplatterImage.color = splatterAlpha;
@@ -50,7 +54,14 @@ public class HealthController : MonoBehaviour
         {
             currentPlayerHealth = 0;
             Death.SetActive(true);
+
             Time.timeScale = 0;
+            PLAYBACK_STATE playbackState;
+            GameOverMusic.getPlaybackState(out playbackState);
+            if (playbackState == PLAYBACK_STATE.STOPPED)
+            {
+                GameOverMusic.start();
+            }
         }
     }
 

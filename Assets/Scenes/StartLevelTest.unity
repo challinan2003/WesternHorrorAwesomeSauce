@@ -17662,11 +17662,18 @@ MonoBehaviour:
     Path: event:/VideoSound/FinalSound
   <MenuMusic>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1295874103
+      Data2: 1286505788
+      Data3: 1493486255
+      Data4: 1854133493
+    Path: event:/MenuMusic
+  <GOMusic>k__BackingField:
+    Guid:
+      Data1: 784847247
+      Data2: 1257187014
+      Data3: 276085910
+      Data4: 5465337
+    Path: event:/GO_Music
   <EnemyAlert>k__BackingField:
     Guid:
       Data1: -1274780984
