@@ -1,15 +1,6 @@
 using FMOD.Studio;
 using FMODUnity;
-using System.Numerics;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Runtime.Serialization;
-using System.Xml.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
-using static PlayerMovement;
 
 public class PlayerMovement : MonoBehaviour
 {
