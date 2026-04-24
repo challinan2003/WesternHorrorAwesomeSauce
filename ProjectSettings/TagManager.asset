@@ -19,11 +19,6 @@ TagManager:
   - Dirt
   - Metal
   - Enemy
-  - Letter5
-  - Letter6
-  - Letter8
-  - Letter9
-  - Letter7
   layers:
   - Default
   - TransparentFX
