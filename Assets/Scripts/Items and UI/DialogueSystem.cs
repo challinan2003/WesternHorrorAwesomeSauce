@@ -72,7 +72,6 @@ public class DialogueSystem : MonoBehaviour
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
-            
         {
             var selection = hit.transform;
             if (selection.CompareTag(Letter1Tag))
@@ -251,9 +250,8 @@ public class DialogueSystem : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        Debug.Log("Open Letter");
-                        //if (playbackState == PLAYBACK_STATE.STOPPED)
-                        //{
+                        if (playbackState == PLAYBACK_STATE.STOPPED)
+                        {
                             //if (SFXObject == null)
 
                             // activates dialogue
@@ -267,7 +265,7 @@ public class DialogueSystem : MonoBehaviour
 
                             }
                             _selection = selection;
-                        //}
+                        }
 
                     }
 
