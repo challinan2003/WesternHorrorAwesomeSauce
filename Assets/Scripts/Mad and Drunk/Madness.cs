@@ -71,13 +71,18 @@ public class Madness : MonoBehaviour
 
         
 
-        if (madResist && Time.deltaTime > 0)
+        if (madResist && madResistTimer >= 0 && Time.deltaTime > 0)
         { 
             madResistTimer -= Time.deltaTime;
         }
-        else
+        
+        if (madResistTimer <= 0.0f)
         {
             madResistTimer = 0.0f;
+        }
+        if (madResistTimer == 0.0f)
+        {
+            madResist = false;
         }
 
         madnessMat.SetFloat("_Opacity", opacityTargetValue);
@@ -91,11 +96,11 @@ public class Madness : MonoBehaviour
         MadnessSound();
         if (!isMad && !madResist)
         {
-            madnessBuildup(1.0f);
+            madnessBuildup(0.3f);
         }
         else if (madResist == true)
         {
-            madnessBuildup(0.1f);
+            madnessBuildup(0.05f);
         }
     }
 

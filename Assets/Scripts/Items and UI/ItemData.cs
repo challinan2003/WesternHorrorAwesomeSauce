@@ -22,12 +22,12 @@ public class ItemData : MonoBehaviour
         if (CompareTag("Gin") && collision.gameObject.CompareTag("Player") && (Input.GetKeyDown(KeyCode.E)))
         {
             InventoryManager.alcoholCount += 1;
-            alcoholText.SetText("Alcohol: " + InventoryManager.alcoholCount);
+            alcoholText.SetText("" + InventoryManager.alcoholCount);
             Destroy(gameObject);
             Debug.Log("Picked up ALCOHOL");
             AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
         }
-
+        /*
         if (CompareTag("Cigs") && collision.gameObject.CompareTag("Player") && (Input.GetKeyDown(KeyCode.E)))
         {
             InventoryManager.cigaretteCount += 5;
@@ -35,7 +35,7 @@ public class ItemData : MonoBehaviour
             Debug.Log("Picked up CIGARETTES");
             AudioManager.instance.PlayOneshot(FMODEvents.instance.ItemPickup, this.transform.position);
         }
-
+        */
         if (CompareTag("Bullets") && collision.gameObject.CompareTag("Player") && (Input.GetKeyDown(KeyCode.E)))
         {
             InventoryManager.bulletCount += 6;

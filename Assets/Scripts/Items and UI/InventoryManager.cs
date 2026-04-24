@@ -46,14 +46,16 @@ public class InventoryManager : MonoBehaviour
             menuActivated = true;
             //Awake();
         }
+        //alcoholText.SetText("" + alcoholCount);
     }
 
     private void FixedUpdate() //updates item counts on UI
     {
-        //alcoholText.SetText("Alcohol: " + alcoholCount);
+        //alcoholText.SetText("" + alcoholCount);
         //cigaretteText.SetText("Cigarettes: " + cigaretteCount);
     }
 
+    /*
     public void UseCigarette() //uses cigarette from inventory
     {
         if (Input.GetKeyDown(KeyCode.B) && cigaretteCount > 0)
@@ -63,7 +65,7 @@ public class InventoryManager : MonoBehaviour
             Debug.Log("Smoking CIGARETTE!!!!");
         }
     }
-
+    */
     //private void Awake()
     //{
         //inventory = new List<InventoryItem>();

@@ -34,7 +34,7 @@ public class Drunk : MonoBehaviour
             Madness.madBuildup -= 400.0f;
             madnessMat.SetFloat("_Opacity", 0.01f);
             madnessMat.SetFloat("_Intensity", 10f);
-            drunkenness += 25;
+            drunkenness += 34;
             drunkenness = Mathf.Clamp(drunkenness, 0, 100);
             itemData.alcoholText.SetText("Alcohol: " + InventoryManager.alcoholCount);
 
