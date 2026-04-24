@@ -16,6 +16,11 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private string Letter2Tag = "Letter2";
     [SerializeField] private string Letter3Tag = "Letter3";
     [SerializeField] private string Letter4Tag = "Letter4";
+    [SerializeField] private string Letter5Tag = "Letter5";
+    [SerializeField] private string Letter6Tag = "Letter6";
+    [SerializeField] private string Letter7Tag = "Letter7";
+    [SerializeField] private string Letter8Tag = "Letter8";
+    [SerializeField] private string Letter9Tag = "Letter9";
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
 
@@ -23,6 +28,11 @@ public class DialogueSystem : MonoBehaviour
     public GameObject Letter2;
     public GameObject Letter3;
     public GameObject Letter4;
+    public GameObject Letter5;
+    public GameObject Letter6;
+    public GameObject Letter7;
+    public GameObject Letter8;
+    public GameObject Letter9;
     public Madness madness;
 
      
@@ -84,7 +94,7 @@ public class DialogueSystem : MonoBehaviour
 
                                 StartDialogue();
 
-                            }
+                        }
                             _selection = selection;
                     }
 
@@ -165,6 +175,125 @@ public class DialogueSystem : MonoBehaviour
 
                     }
                 }
+                if (selection.CompareTag(Letter5Tag))
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        if (playbackState == PLAYBACK_STATE.STOPPED)
+                        {
+                            //if (SFXObject == null)
+
+                            // activates dialogue
+                            var selectionRenderer = selection.GetComponent<Renderer>();
+                            if (selectionRenderer != null)
+                            {
+                                madness.playerLocked = true;
+                                Debug.Log("active letter");
+                                Letter.SetActive(true);
+                                PlayRead(5);
+
+                                StartDialogue();
+
+                            }
+                            _selection = selection;
+                        }
+
+                    }
+                }
+                if (selection.CompareTag(Letter6Tag))
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        if (playbackState == PLAYBACK_STATE.STOPPED)
+                        {
+                            //if (SFXObject == null)
+
+                            // activates dialogue
+                            var selectionRenderer = selection.GetComponent<Renderer>();
+                            if (selectionRenderer != null)
+                            {
+                                madness.playerLocked = true;
+                                Debug.Log("active letter");
+                                Letter.SetActive(true);
+                                
+
+                            }
+                            _selection = selection;
+                        }
+
+                    }
+                }
+                if (selection.CompareTag(Letter7Tag))
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        if (playbackState == PLAYBACK_STATE.STOPPED)
+                        {
+                            //if (SFXObject == null)
+
+                            // activates dialogue
+                            var selectionRenderer = selection.GetComponent<Renderer>();
+                            if (selectionRenderer != null)
+                            {
+                                madness.playerLocked = true;
+                                Debug.Log("active letter");
+                                Letter.SetActive(true);
+
+
+                            }
+                            _selection = selection;
+                        }
+
+                    }
+                }
+                if (selection.CompareTag(Letter8Tag))
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        if (playbackState == PLAYBACK_STATE.STOPPED)
+                        {
+                            //if (SFXObject == null)
+
+                            // activates dialogue
+                            var selectionRenderer = selection.GetComponent<Renderer>();
+                            if (selectionRenderer != null)
+                            {
+                                madness.playerLocked = true;
+                                Debug.Log("active letter");
+                                Letter.SetActive(true);
+
+
+                            }
+                            _selection = selection;
+                        }
+
+                    }
+
+                }
+                if (selection.CompareTag(Letter9Tag))
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        if (playbackState == PLAYBACK_STATE.STOPPED)
+                        {
+                            //if (SFXObject == null)
+
+                            // activates dialogue
+                            var selectionRenderer = selection.GetComponent<Renderer>();
+                            if (selectionRenderer != null)
+                            {
+                                madness.playerLocked = true;
+                                Debug.Log("active letter");
+                                Letter.SetActive(true);
+
+
+                            }
+                            _selection = selection;
+                        }
+
+                    }
+                }
+
             }
         }
     }

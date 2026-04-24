@@ -40,6 +40,7 @@ public class Madness : MonoBehaviour
     {
 
         PlayerMadness = AudioManager.instance.CreateEventInstance(FMODEvents.instance.Madness);
+        PlayerMadness.setPaused(false);
 
         madBuildup = 0;
         madResist = false;
@@ -188,6 +189,14 @@ public class Madness : MonoBehaviour
         {
             PlayerMadness.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
+        //else if (isMad && playerLocked)
+        //{
+        //    PlayerMadness.setPaused(true);
+        //}
+        //else if (isMad && !madResist && !playerLocked)
+        //{
+
+        //}
 
     }
 }
