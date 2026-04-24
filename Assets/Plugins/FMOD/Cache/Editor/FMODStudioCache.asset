@@ -176,17 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Videos.bank
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-<<<<<<< HEAD
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Videos.bank
   Name: Videos
   StudioPath: bank:/Videos
   lastModified: 639090063172421565
-=======
-  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 639108388385197023
->>>>>>> parent of d94fb8e (Update FMODStudioCache.asset)
   FileSizes:
   - Name: Desktop
     Value: 506
@@ -621,17 +614,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Music.bank
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-<<<<<<< HEAD
   Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
   lastModified: 639098581918997069
-=======
-  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 639108388385039948
->>>>>>> parent of d94fb8e (Update FMODStudioCache.asset)
   FileSizes:
   - Name: Desktop
     Value: 5141792
@@ -689,33 +675,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-<<<<<<< HEAD
   Length: 240483
 --- !u!114 &2821209256278867405
-=======
-  Length: 1146
---- !u!114 &-1185246703142972094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 639108388385447441
-  FileSizes:
-  - Name: Desktop
-    Value: 8843744
-  Exists: 1
---- !u!114 &-1110760950743810310
->>>>>>> parent of d94fb8e (Update FMODStudioCache.asset)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -769,166 +730,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
-<<<<<<< HEAD
 --- !u!114 &3158097333362000267
-=======
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
-  EditorBanks:
-  - {fileID: 7805662842229737573}
-  - {fileID: -1555053090485093994}
-  - {fileID: -1185246703142972094}
-  - {fileID: -8479214319961670861}
-  - {fileID: 461716771452822759}
-  EditorEvents:
-  - {fileID: -1110760950743810310}
-  - {fileID: -728973007575864169}
-  - {fileID: 2527955488528454479}
-  - {fileID: -5835437666478138988}
-  - {fileID: 8999178797729146050}
-  - {fileID: 3066760961730197838}
-  - {fileID: -7363640488353687473}
-  - {fileID: -1271148245719412022}
-  - {fileID: 8855945390039065123}
-  - {fileID: -4065687386813627577}
-  - {fileID: -7427265049782719435}
-  - {fileID: -4175000913520345158}
-  - {fileID: 5623744235048883266}
-  - {fileID: 2132471193370070759}
-  - {fileID: 3639926236218297844}
-  - {fileID: -3928948625105632338}
-  - {fileID: -1334695931338281931}
-  - {fileID: -872498592193627475}
-  - {fileID: 1520139316308630330}
-  - {fileID: -3828939143990645050}
-  - {fileID: 3395425995265122901}
-  - {fileID: -7499798026431997187}
-  - {fileID: 6064222469179204269}
-  - {fileID: 2583072023176185894}
-  - {fileID: -2136114884908312841}
-  - {fileID: 6979993657262087974}
-  - {fileID: 9197547322495718502}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -1555053090485093994}
-  StringsBanks:
-  - {fileID: 7805662842229737573}
-  cacheVersion: 131858
-  cacheTime: 639108388385447441
-  SerializableEventsDict:
-  - key: event:/ItemPickUP
-    index: 0
-  - key: event:/GunReload
-    index: 1
-  - key: event:/GunShoot
-    index: 2
-  - key: event:/EnemyAlert
-    index: 3
-  - key: event:/EnemyDeath
-    index: 4
-  - key: event:/EnemyHurt
-    index: 5
-  - key: event:/PlayerDrink
-    index: 6
-  - key: event:/PlayerWalkDirt2d
-    index: 7
-  - key: event:/PlayerWalkDirt3d
-    index: 8
-  - key: event:/Madness
-    index: 9
-  - key: event:/Madness2D
-    index: 10
-  - key: event:/Letters/Letter4-2D-TL
-    index: 11
-  - key: event:/Letters/Letter6
-    index: 12
-  - key: event:/Letters/Letter4-2D
-    index: 13
-  - key: event:/Letters/Letter2
-    index: 14
-  - key: event:/Letters/Letter5
-    index: 15
-  - key: event:/Letters/Letter7
-    index: 16
-  - key: event:/Letters/Letter4
-    index: 17
-  - key: event:/Letters/Letter1
-    index: 18
-  - key: event:/PlayerSteps
-    index: 19
-  - key: event:/AllLetters
-    index: 20
-  - key: event:/MenuMusic
-    index: 21
-  - key: event:/VideoSound/PrologueSound
-    index: 22
-  - key: event:/VideoSound/BartenderSound
-    index: 23
-  - key: event:/VideoSound/SheriffSound
-    index: 24
-  - key: event:/VideoSound/FinalSound
-    index: 25
-  - key: event:/GO_Music
-    index: 26
---- !u!114 &461716771452822759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Videos.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Videos.bank
-  Name: Videos
-  StudioPath: bank:/Videos
-  lastModified: 639090170783957553
-  FileSizes:
-  - Name: Desktop
-    Value: 506
-  Exists: 1
---- !u!114 &1520139316308630330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Letters/Letter1
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Letters/Letter1
-  Guid:
-    Data1: -389304351
-    Data2: 1088839348
-    Data3: 1054903487
-    Data4: 169930400
-  Banks:
-  - {fileID: -1185246703142972094}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1875179351780880103
->>>>>>> parent of d94fb8e (Update FMODStudioCache.asset)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1096,58 +898,7 @@ MonoBehaviour:
     Data3: -889987667
     Data4: 966357444
   Banks:
-<<<<<<< HEAD
   - {fileID: -1434285693772839965}
-=======
-  - {fileID: -1185246703142972094}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &7805662842229737573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Assets/FMOD_OldBlueRuin/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 639108388385049971
-  FileSizes:
-  - Name: Desktop
-    Value: 2386
-  Exists: 1
---- !u!114 &8855945390039065123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/PlayerWalkDirt3d
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/PlayerWalkDirt3d
-  Guid:
-    Data1: -1127606573
-    Data2: 1304506730
-    Data3: 1686395292
-    Data4: 207801378
-  Banks:
-  - {fileID: -1185246703142972094}
->>>>>>> parent of d94fb8e (Update FMODStudioCache.asset)
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
